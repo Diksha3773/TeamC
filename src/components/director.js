@@ -25,7 +25,7 @@ function Director() {
                                    md:relative right-[180px]
                                    2xl:mb-10
                 
-                " src="https://www.nitj.ac.in/images/faculty/22030775924.jpg" alt="" height={280} /></div>
+                " src="https://www.nitj.ac.in/images/faculty/22030775924.jpg" alt="" height={281} /></div>
             
                 <div className="lg:hidden  text-justify  m-12
                                 md:text-lg relative bottom-8
