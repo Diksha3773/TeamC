@@ -1,4 +1,5 @@
 import React from "react";
+
 import CompImg from './Img/CompImg.png'
 import StudImg from './Img/StudImg.png'
 import rupee from './Img/rupee.png'

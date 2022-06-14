@@ -2,16 +2,18 @@
 // import { Container } from 'postcss';
 import './App.css';
 import Director from './components/director';
-import Test from "./component/Placement";
-import Checker from "./component/Institute";
+import Count from './components/Placement';
+import Checker from './components/Institute';
+
+
 
 function App() {
   return(
-    
+    <div>
 <Director></Director>
-<Test/>
-<Checker/>
-  
+<Checker></Checker>
+<Count></Count>
+</div>
   );
 }
 

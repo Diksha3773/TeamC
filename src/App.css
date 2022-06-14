@@ -67,7 +67,7 @@
    padding: 0.8rem;
    color: white;
    /* background-color: black; */
-   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./Component/Img/bgplace.png');
+   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./components/Img/bgplace.png');
    height: 100%;
    width: 100;
    background-position: center;
@@ -81,7 +81,7 @@
    padding: 0.8rem;
    color: white;
    /* background-color: black; */
-   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./Component/Img/bgcamp.png');
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./components/Img/bgcamp.png');
    height: 100%;
    background-position: center;
    background-repeat: no-repeat;
