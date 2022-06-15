@@ -3,15 +3,12 @@ import CountUp from "react-countup";
 import VisibilitySensor from 'react-visibility-sensor';
 
 function Checker() {
-    // const countUpRef = useRef();
     const [viewPortEntered, setViewPortEntered] = useState(false);
-    const [viewPortEntered1, setViewPortEntered1] = useState(false);
-    const [viewPortEntered2, setViewPortEntered2] = useState(false);
     return (
         <>
         <div className="instcount1">
-            <h2 className="text-center mt-3">INSTITUTION IN NUMBERS</h2>
-            <div className="container container1">
+            <h2 className="text-center mt-3 text-4xl font-semibold">INSTITUTION IN NUMBERS</h2>
+            <div className="container1 columns-2">
                 <div className="count-text">
                     <div style={{display:"flex", justifyContent:"center"}}>
                     <CountUp end={5000} start={viewPortEntered ? null : 1000} duration = {1}>
@@ -31,7 +28,7 @@ function Checker() {
                             );
                         }}
                     </CountUp>
-                    <span>+</span></div>
+                    <span className="mt-2">+</span></div>
                     <div className='ctext'>Students</div>
                 </div>
                 <div className="count-text">
@@ -53,7 +50,7 @@ function Checker() {
                                 );
                             }}
                         </CountUp>
-                        <span>+</span></div>
+                        <span className="mt-2">+</span></div>
                     <div className='ctext'>Faculty and Staff</div>
                 </div>
                 <div className="count-text">
