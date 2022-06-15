@@ -1,43 +1,6 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .count-text{
+   display:flex;
+   flex-direction:column;
    min-width: 200px;
    margin:0rem 2rem;
    padding:1rem;
@@ -45,6 +8,7 @@
    text-align: center;
    font-size: 50px;
    font-weight: 600;
+   height:167px;
 }
 .count-text1{
    margin-top: 0.7rem;
@@ -58,6 +22,7 @@
    align-items: center;
    justify-content: center;
 }
+
 .mt-3{
    margin-top: 2rem;
 }
@@ -100,7 +65,7 @@
       margin: 0.5rem 0rem;
    }
    .ctext{
-      font-size: 1.3rem;
+      font-size: 1.4rem;
    }
    .count-text{
       font-weight: 400;
@@ -109,10 +74,34 @@
       font-weight: 400;
    }
 }
-@media screen and (width < 992px) {
+@media screen and (width > 647px) and (width < 992px) {
    .container1{
-      display: flex;
-      flex-direction: column;
+      display: block;
+   }
+   .r2c2{
+     display:flex;
+     align-items:center
+   }
+   .ptext{
+      font-size: 1.5rem; 
+      margin: 0.5rem 0rem;
+   }
+   .ctext{
+      font-size: 1.7rem;
+   }
+   .count-text{
+      font-weight: 480;
+   }
+   
+}
+@media screen and (width < 648px) {
+   .container1{
+      display:flex;
+      flex-direction:column;
+   }
+   .r2c2{
+     display:flex;
+     align-items:center
    }
    .ptext{
       font-size: 1.5rem; 
@@ -126,5 +115,40 @@
    }
    .count-text1{
       font-weight: 480;
+   }
+}
+.dwh{
+   height:166px;
+   width:94%
+}
+.flex1{
+   display:flex;
+}
+.disbool1{
+   display:none;
+}
+@media screen and (width<780px) and (width>619px){
+   
+   .disbool1{
+      display: flex;
+   }
+   .disbool{
+      display:none;
+   }
+}
+@media screen and (width<620px){
+   .flex1{
+      flex-direction:column;
+      align-items:center;
+   }
+   .disbool1{
+      display: flex;
+   }
+   .disbool{
+      display:none;
+   }
+   .mx{
+     margin:1rem 0rem;
+     padding:0rem;
    }
 }
