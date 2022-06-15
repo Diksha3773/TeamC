@@ -1,17 +1,13 @@
 import React from "react";
-
 import CompImg from './Img/CompImg.png'
 import StudImg from './Img/StudImg.png'
 import rupee from './Img/rupee.png'
 import idea from './Img/idea.png'
-// import CountUp from "react-countup";
-// import VisibilitySensor from 'react-visibility-sensor';
 function Count() {
-    // const countUpRef = useRef();
     return (
         <div className="instcount">
-            <h2 className="text-center mt-3" style={{font:"bold"}}>PLACEMENT STATS</h2>
-            <div className="container container1">
+            <h2 className="text-center mt-3 text-4xl font-semibold">PLACEMENT STATS</h2>
+            <div className="container1 columns-2">
                 <div className="count-text">
                     <img src={StudImg} alt="..." style={{width:"59px",height:"70px"}}/>
                     <div className = 'ptext'>995+ Students Placed</div>
