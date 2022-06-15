@@ -3,7 +3,7 @@ import React from 'react'
 function Director() {
     return (
         <>
-            <div className='flex flex-col justify-center m-4 p-8 mx'>
+            <div className='flex flex-col justify-center my-4 mx-2'>
                 <h1 className='text-center font-extrabold text-3xl text-orange-600 font-serif m-2'>DIRECTOR'S CORNER</h1>
                 <div className='flex1 bg-indigo-300 shadow-lg shadow-blue-500/50 p-8 rounded-md'>
                     <div className='bg-blue-900 block shadow-lg shadow-blue-900/90 rounded'style={{height:"176px",width:"162px"}}>
