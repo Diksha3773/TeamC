@@ -148,7 +148,8 @@
       display:none;
    }
    .mx{
-     margin:1rem 0.5rem;
+     margin:1rem 0rem;
      padding:0rem;
+     text-align:center;
    }
 }
