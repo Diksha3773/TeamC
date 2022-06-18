@@ -7,13 +7,16 @@ import Checker from './components/Institute';
 
 function App() {
   return (
-    <div>
-        <Navbar/>
-       <Director/>
+    // <div>
     
-       <Count/>
-      <Checker/> 
+    //    <Director/>
+    
+    //    <Count/>
+    //   <Checker/> 
       
+    // </div>
+    <div>
+ <Navbar/>
     </div>
 
   );
