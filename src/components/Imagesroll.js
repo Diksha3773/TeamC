@@ -24,14 +24,8 @@ function Imagesroll() {
     }, [value])
     return (
         <>
-            {/* <div className="max-w-sm rounded overflow-hidden shadow-lg m-2">
-                <img className="w-full" src={hq} alt="Sunset in the mountains" />
-                <div className="px-1 h-20 overflow-y-hidden py-4 flex">
-                    <img className='h-12 w-12 rounded-full mr-2' src={image[value]} alt='' />
-                </div>
-            </div> */}
-            {value ? <div className="overflow-hidden shadow-lg">
-                <img className="w-full" src={image[value]} alt="..." />  
+            {value ? <div className="overflow-hidden shadow-lg bg-blend-darken">
+                <img className="w-full shadow-lg bg-gradient-to-r from-gray-500 to-gray-400" src={image[value]} alt="..." />  
             </div>
                 : <div className='flex flex-col instcount items-center justify-center text-center align-middle'>
                     <div className='font-semibold text-4xl m-4'>
