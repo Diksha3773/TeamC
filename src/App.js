@@ -1,22 +1,21 @@
 import './App.css';
 import Director from './components/director';
 import Count from './components/Placement';
+import Navbar from './components/Navbar';
 import Checker from './components/Institute';
-import Department from './components/department';
-
 
 
 function App() {
   return (
     <div>
+        <Navbar/>
        <Director/>
-      <Count/>
+    
+       <Count/>
       <Checker/> 
       
     </div>
-//     <div>
-//  <Department/>
-//     </div>
+
   );
 }
 
