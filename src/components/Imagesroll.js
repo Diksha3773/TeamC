@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import first from './Img/001_1.jpeg'
+import first from './Img/homepage.jpg'
 import sec from './Img/003.jpg'
 import third from './Img/02.jpeg'
 import four from './Img/002.jpg'
