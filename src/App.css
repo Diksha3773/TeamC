@@ -30,19 +30,29 @@
 }
 
 .instcount {
-   border: 2px solid rgb(163, 160, 160);
+   /* border: 2px solid rgb(163, 160, 160); */
    margin: 0rem 1rem 0rem 0rem;
    padding: 0.8rem;
    color: white;
    /* background-color: black; */
-   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('./components/Img/001_1.jpeg');
+   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('./components/Img/bgplace.png');
    height: 100%;
    width: 100%;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
 }
-
+.instcount2 {
+   margin: 0rem 1rem 0rem 0rem;
+   padding: 0.8rem;
+   color: white;
+   /* background-color: black; */
+   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./components/Img/001_1.jpeg');
+   width: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
 .instcount1 {
    border: 2px solid rgb(163, 160, 160);
    margin: 0.2rem;
@@ -233,4 +243,3 @@
    bottom: 0;
    opacity: 30% !important;
 }
-
