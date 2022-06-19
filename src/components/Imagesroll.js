@@ -19,7 +19,7 @@ function Imagesroll() {
     useEffect(() => {
         const interval = setInterval(() => {
             setValue(() => (value === 5 ? 0 : value + 1));
-        }, 3000);
+        }, 10000);
         return () => clearInterval(interval);
     }, [value])
     return (
