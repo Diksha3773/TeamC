@@ -1,14 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import logo from './Img/logo.png'
 import comp from './Vedio/comp.mp4'
 import Hambur from './Img/menu.png'
 import Imagesroll from './Imagesroll'
 function Navbar() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
+    const [width, setWidth] = useState(0)
+    const myref = useRef();
+    const getListsize=() => {
+        const width1 = myref.current.clientWidth;
+        setWidth(width1);
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', getListsize)
+    }, [])
+    console.log(width)
     return (
         <>
-            <div className='flex flex-col h-auto w-full lg:h-screen'>
-                <div className='h-24 p-2 flex bg-zinc-900 text-white w-full items-center bg-gradient-to-tr'>
+            <div className='flex flex-col h-auto w-full lg:h-screen'ref={myref}>
+                <div className='h-24 p-2 py-4 flex bg-zinc-900 text-white w-full items-center bg-gradient-to-tr'>
                     <div className='flex items-center my-2'>
                         <img src={logo} className='h-20' alt='' />
                         <div className='mx-2'>
@@ -20,14 +31,14 @@ function Navbar() {
                         </div>
                     </div>
                 </div>
-                <button className='p-3 bg-zinc-900 flex items-center md:hidden'onClick={()=>{setOpen(!open)}} >
+                <button className='p-3 bg-zinc-900 flex items-center md:hidden' onClick={() => { setOpen(!open) }} >
                     <img src={Hambur} alt="..." className='h-8 w-8 m-1 mx-2 p-1 rounded-lg hover:border' />
                 </button>
-                <div className='flex-col md:flex w-full justify-center md:p-2 md:items-center md:flex-row' style={open?{dispay:"flex"}:{display:"none"}}>
+                <div className='flex-col md:flex w-full justify-center md:items-center md:flex-row' style={open ? { dispay: "flex" } : width < 768 ? { display: "none" } : { display: "flex" }}>
                     <div className='group bg-neutral-800 text-white shadow-sm p-2 m-0 md:border-none md:bg-white md:text-black'><a href='/' className='my-2 mx-4 font-medium hover:text-blue-600'>Home</a></div>
                     <div className='group bg-neutral-800 text-white shadow-sm p-2 m-0 md:border-none md:bg-white md:text-black'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>About us</span>
-                        <div className='absolute z-10 mx-2 hidden border rounded-b-md bg-neutral-900 text-white group-hover:block'>
+                        <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 text-white float-right group-hover:block'>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Vision and Missions</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Infrastructure: At a glance</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>HODs Message</a></div>
@@ -37,7 +48,7 @@ function Navbar() {
                     </div>
                     <div className='group bg-neutral-800 text-white shadow-sm p-2 m-0 md:border-none md:bg-white md:text-black'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>Academics</span>
-                        <div className='absolute z-10 mx-2 hidden border rounded-b-md bg-neutral-900 text-white group-hover:block'>
+                        <div className='absolute right-[15%] md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 text-white group-hover:block'>
                             <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Programmes</a></div>
                             <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Academic Coordinates</a></div>
                             <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Syllabus</a></div>
@@ -47,7 +58,7 @@ function Navbar() {
                     </div>
                     <div className='group bg-neutral-800 text-white shadow-sm p-2 m-0 md:border-none md:bg-white md:text-black'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>People</span>
-                        <div className='absolute z-10 mx-2 hidden border rounded-b-md bg-neutral-900 text-white group-hover:block'>
+                        <div className='absolute right-1/2 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 text-white group-hover:block'>
                             <div><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Faculty</a></div>
                             <div><a href='/' className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>PhD Scholars</a></div>
                             <div><a href='/' className='flex justify-center p-2 w-fullfont-medium hover:bg-neutral-600'>Students</a></div>
@@ -122,7 +133,7 @@ function Navbar() {
                     </div>
 
                 </div>
-                <Imagesroll/>
+                <Imagesroll />
             </div>
         </>
     )
