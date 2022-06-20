@@ -47,7 +47,7 @@ function Navbar() {
                     </Tippy>
                     <div className='hidden md:block'><Clock /></div>
                 </div>
-                <div className='flex justify-between items-center border bg-zinc-900'>
+                <div className='flex justify-between items-center bg-zinc-900'>
                     <button className='p-3  flex items-center md:hidden' onClick={() => { setOpen(!open) }} >
                         <img src={Hambur} alt="..." className='h-8 w-8 m-1 mx-2 p-1 rounded-lg hover:border' />
                     </button>
