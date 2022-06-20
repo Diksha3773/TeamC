@@ -5,7 +5,7 @@ import third from './Img/02.jpeg'
 import four from './Img/002.jpg'
 import five from './Img/002.png'
 import six from './Img/03.jpeg'
-function Imagesroll() {
+function Imagesroll({opencheck}) {
     const image = [
         first,
         sec,
@@ -16,12 +16,14 @@ function Imagesroll() {
     ]
     const [value, setValue] = useState(0);
 
+    console.log(opencheck,'scroll');
     useEffect(() => {
         const interval = setInterval(() => {
-            setValue(() => (value === 5 ? 0 : value + 1));
-        }, 10000);
+            console.log(opencheck,'scrollI');
+            setValue(() => (opencheck?(value === 5 ? 0 : value + 1):value));
+        }, 3000);
         return () => clearInterval(interval);
-    }, [value])
+    }, [value,opencheck])
     return (
         <>
 
