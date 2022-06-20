@@ -19,7 +19,7 @@ function App() {
 // components on department website
     <div>
   <Navbar/>  
-  <Departmentupper/>
+//   <Departmentupper/>
     </div>
   // <div>
   
