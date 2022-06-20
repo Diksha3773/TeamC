@@ -53,7 +53,7 @@ const news =['Congratulations to Yogita, B. Tech Final year, ECE Department for 
 </div>
 
 
-<iframe className=' mt-20 w-44 rounded-2xl sm: ml-20  h-96 md:w-[560px] lg: h-[315px] w-[460px]
+<iframe className=' mt-20 w-36 rounded-2xl sm: ml-20  h-96 md:w-[560px] lg: h-[315px] w-[460px]
 
 ' src="https://www.youtube.com/embed/fd2hUOmm8kA?controls=0&amp;start=280&mute=1" title="NITJ" ></iframe>
 

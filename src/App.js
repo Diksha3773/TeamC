@@ -30,12 +30,6 @@ function App() {
       <Departmentlower/>
   </div>
   
-
-  
-
-
-
-
   );
 }
 
