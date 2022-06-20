@@ -18,9 +18,9 @@ function App() {
 
 // components on department website
     <div>
-  <Navbar/>  
-//   <Departmentupper/>
+       <Navbar/>
     </div>
+//   <Departmentupper/>
   // <div>
   
   //  <Departmentlower/>
