@@ -3,7 +3,7 @@ import Director from './components/director';
 import Count from './components/Placement';
 import Navbar from './components/Navbar';
 import Checker from './components/Institute';
-import { Departmentupper, Departmentlower } from './components/Department';
+import { Departmentupper, Departmentlower } from './components/department';
 
 
 function App() {
