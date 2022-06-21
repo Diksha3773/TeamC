@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = ({image,title,body}) => {
   return (
-    <div className='w-[300px] overflow-hidden shadow-md shadow-teal-600'>
+    <div className='w-[300px] overflow-hidden shadow-md shadow-teal-700'>
    <div className='overflow-hidden h-[200px]'> 
     <img  src={image} alt="club image"></img>
    </div> 
