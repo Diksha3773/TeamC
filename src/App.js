@@ -1,10 +1,10 @@
 import './App.css';
-import Director from './components/director';
+import Director from './components/Director';
 import Count from './components/Placement';
 import Navbar from './components/Navbar';
 import Checker from './components/Institute';
-import { Departmentupper, Departmentlower } from './components/department';
-
+import { Departmentupper, Departmentlower } from './components/Department';
+import Card from './components/Card';
 
 function App() {
   return (
@@ -29,6 +29,8 @@ function App() {
       and an outstanding record of contributions to the profession and community."
         departmentimage='https://www.nitj.ac.in/cse/images/carousel/001_1.jpeg' />
     </div>
+    
+
 
   );
 }
