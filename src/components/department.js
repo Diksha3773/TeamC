@@ -21,11 +21,11 @@ const Departmentupper = (props) => {
                 <h1 className='text-teal-900 text-lg md:text-xl font-medium'>{props.nameofhod}</h1>
                 <p className='text-center p-1 md:text-lg md:p-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita.</p>
             </div>
-          
+
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2'>
                 <i className='text-2xl font-serif text-center md:text-start'><b>What's New ?</b></i>
                 <div className='overflow-y-scroll scrollbar border rounded shadow-lg'>
-                 
+
                     {/* news */}
                     <ol>
                         {
@@ -37,7 +37,7 @@ const Departmentupper = (props) => {
                     <button className='float-right bg-[#21b684]  w-20 h-10 p-2 m-4 text-white rounded-lg'>View All</button>
                 </div>
             </div>
-        
+
 
         </div>
 
@@ -60,16 +60,16 @@ const Departmentlower = (props) => {
             </div>
             {/* video */}
             <div className='flex justify-center items-center w-full md:w-1/2 my-3 md:m-auto'>
-              
+
                 <iframe className='block border p-0 shadow-lg rounded-xl h-[250px] w-[90%]'
                     src="https://www.youtube.com/embed/fd2hUOmm8kA?controls=0&amp;start=280&mute=1" title="NITJ" ></iframe>
             </div>
-            <div className=''><Card title="Coding Club" 
-      image=" https://bccompsci.club/_next/static/images/inspiration-c8e785599b0c4c54cca810b44092d200.jpg" 
-      body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita."/> </div>
+
+            <div className=''><Card title="Coding Club" image='https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq'
+                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita." /> </div>
         </div>
     )
-} 
+}
 export {
     Departmentupper,
     Departmentlower
