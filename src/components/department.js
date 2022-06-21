@@ -47,8 +47,8 @@ const Departmentlower = (props) => {
         <button className='bg-[#21b684] text-white float-right rounded-lg p-1'>View All</button>
       </div>
       {/* video */}
-
-      <iframe className=' mt-10  w-[200px] rounded-2xl sm: ml-20  h-96 md:w-[560px] lg: h-[315px] w-[460px]'
+       <a className='text-center text-blue-600 underline mt-3 md:hidden ' href='https://www.youtube.com/embed/fd2hUOmm8kA?controls=0&amp;start=280'>Watch Video</a>
+      <iframe className='hidden  md:block rounded-xl w-[560px] lg: h-[315px] w-[460px]'
         src="https://www.youtube.com/embed/fd2hUOmm8kA?controls=0&amp;start=280&mute=1" title="NITJ" ></iframe>
     </div>
   )
