@@ -28,7 +28,7 @@ function Navbar() {
     console.log(opencheck, 'nav');
     return (
         <>
-            <div className='flex flex-col h-auto w-full lg:h-screen' ref={myref}>
+            <div className='flex flex-col h-auto w-full xl:h-screen' ref={myref}>
                 <div className='h-24 p-2 py-4 flex bg-zinc-900 text-white w-full items-center justify-between'>
                     <div className='flex items-center my-2'>
                         <img src={logo} className='h-20' alt='' />
