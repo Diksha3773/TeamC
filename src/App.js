@@ -4,7 +4,8 @@ import Count from './components/Placement';
 import Navbar from './components/Navbar';
 import Checker from './components/Institute';
 import { Departmentupper, Departmentlower } from './components/department';
-import Card from './components/Card';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
@@ -28,9 +29,8 @@ function App() {
      in 1990 as the Department of Computer Science & Engineering, we have an excellent & rich history
       and an outstanding record of contributions to the profession and community."
         departmentimage='https://www.nitj.ac.in/cse/images/carousel/001_1.jpeg' />
+        <Footer/>
     </div>
-    
-
 
   );
 }
