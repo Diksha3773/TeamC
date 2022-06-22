@@ -34,7 +34,8 @@ const Departmentupper = (props) => {
                     </ol>
                 </div>
                 <div className='block'>
-                    <button className='float-right bg-[#21b684]  w-20 h-10 p-2 m-4 text-white rounded-lg'>View All</button>
+                    <button className='float-right bg-blue-800  w-20 h-10 p-2 m-4 text-white rounded-lg
+                                       hover:bg-[#21b684] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
                 </div>
             </div>
 
