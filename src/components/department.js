@@ -59,7 +59,8 @@ const Departmentlower = (props) => {
                 </div>
             </div>
             {/* video */}
-            <div className='flex justify-center items-center w-full md:w-1/2 my-3 md:m-auto'>
+            <div className='flex flex-col'>
+                <div className='flex justify-center items-center w-full md:w-1/2 my-3 md:m-auto'>
 
                 <iframe className='block border p-0 shadow-lg rounded-xl h-[250px] w-[90%]'
                     src="https://www.youtube.com/embed/fd2hUOmm8kA?controls=0&amp;start=280&mute=1" title="NITJ" ></iframe>
@@ -67,6 +68,7 @@ const Departmentlower = (props) => {
 
             <div className=''><Card title="Coding Club" image='https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq'
                 body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita." /> </div>
+            </div>
         </div>
     )
 }
