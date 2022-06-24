@@ -9,26 +9,44 @@ const news = ['Congratulations to Yogita, B. Tech Final year, ECE Department for
     'Congratulations to Prof. Binod Kumar Kanaujia for getting research funding for R&amp;D project “Design and Development of Biologically Inspired Retinal Prosthesis Based Biomedical Implant to Restore Vision to the Blind” worth Rs. 23.28 Lacs under the Empowerment and Equity Opportunities for Excellence in Science Grant Scheme of SERB, Government of India (March, 2022)',
     'Kirandeep Kaur Sahota (Batch 2017 passed out) brought glory and pride to the institute and department of ECE by securing AIR-331 in UPSC Civil Service Examination, 2020'];
 
+const studentactivity = ['Website Launch by Mr. Ravneet Kotwal, (Director of Sales and Marketing, Texas Instruments, India. )',
+    'Short Term Courseon Low Power VLSI Design for Communication systems and Networks', 'Congratulations to Yogita, B. Tech Final year, ECE Department for getting placed at Atlassian at a whopping CTC of 52LPA through an off-campus drive.',
+    'Online Short Term Course on “Research Trends in Communication and Signal Processing” (December 20-24, 2021)',
+    ' Dr Sukwinder Singh registered a start-up “RFvis Technologies”under TBI at NITJ (March, 2022)',
+    'Research Article Tulika Chawla, Mamta Khosla and Balwinder Raj, “Extended Gate to source overlap Heterojunction Vertical TFET: Design, analysis and optimization with process parameter variations” got published in “Materials Science in Semiconductor Processing”, vol.145, 2022. ( SCI, Impact Factor 3.927)',
+    'Congratulations to Prof. Binod Kumar Kanaujia for getting research funding for R&amp;D project “Design and Development of Biologically Inspired Retinal Prosthesis Based Biomedical Implant to Restore Vision to the Blind” worth Rs. 23.28 Lacs under the Empowerment and Equity Opportunities for Excellence in Science Grant Scheme of SERB, Government of India (March, 2022)',
+    'Kirandeep Kaur Sahota (Batch 2017 passed out) brought glory and pride to the institute and department of ECE by securing AIR-331 in UPSC Civil Service Examination, 2020'];
+
+const highlights = ['Applications are Invited for the ', '<b>Selected Candidates for PhD</b>', 'Online GIAN Course on "Nonwoven Technology and Recent Developments" ',
+    '(June 20 - 24, 2022)Note: The Last Date for Registration has been extended upto 18th June, 2022', 'Self Sponsored Three Days Workshop on "Molecular Dynamics Simulation & Analysis" (August 05 - 07, 2022) ',
+    'Online Short Term Course on “Research Trends in Communication and Signal Processing” (December 20-24, 2021)',
+    ' Dr Sukwinder Singh registered a start-up “RFvis Technologies”under TBI at NITJ (March, 2022)',
+    'Research Article Tulika Chawla, Mamta Khosla and Balwinder Raj, “Extended Gate to source overlap Heterojunction Vertical TFET: Design, analysis and optimization with process parameter variations” got published in “Materials Science in Semiconductor Processing”, vol.145, 2022. ( SCI, Impact Factor 3.927)',
+    'Congratulations to Prof. Binod Kumar Kanaujia for getting research funding for R&amp;D project “Design and Development of Biologically Inspired Retinal Prosthesis Based Biomedical Implant to Restore Vision to the Blind” worth Rs. 23.28 Lacs under the Empowerment and Equity Opportunities for Excellence in Science Grant Scheme of SERB, Government of India (March, 2022)',
+    'Kirandeep Kaur Sahota (Batch 2017 passed out) brought glory and pride to the institute and department of ECE by securing AIR-331 in UPSC Civil Service Examination, 2020']
 const Departmentupper = (props) => {
     return (
         <div className='flex flex-col 
-                    md:flex-row justify-evenly my-4'>
-            <div className='flex border rounded shadow-lg flex-col m-4 p-2 items-center justify-center md:w-[35%] lg:w-1/3 h-[500px]'>
+                    md:flex-row justify-around mx-4 my-4'>
+            {/* HOD */}
+            {/* <div className='flex border rounded shadow-lg flex-col m-4 p-2 items-center justify-center md:w-[35%] lg:w-1/3 h-[500px]'>
                 <div className='flex flex-col items-center justify-center'>
                     <h1 className='text-2xl md:text-xl lg:text-3xl text-[#045F5F] m-2'><b>Head Of Department</b></h1>
                     <img className='border rounded-4 shadow-lg rounded-teal-900 rounded-md m-4 h-72 w-56 md:h-52 md:w-40 ' src={props.hod} alt=''/>
                 </div>
                 <h1 className='text-teal-900 text-lg md:text-xl font-medium'>{props.nameofhod}</h1>
                 <p className='text-center p-1 md:text-lg md:p-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita.</p>
-            </div>
-            {/* department  */}
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2'>
-                <i className='text-2xl font-serif text-center md:text-start'><b>What's New ?</b></i>
-                <div className='overflow-y-scroll scrollbar border rounded shadow-lg'>
-                  
+            </div> */}
+
+
+
+            {/* Student Activity  */}
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
+                <i className='text-2xl font-serif text-center'><b>Student Activities</b></i>
+                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-md shadow-green-700  border-t-2 border-green-500'>
                     <ol>
                         {
-                            news.map((n) => <li key={uuid()} className='list-disc border rounded-b-2 rounded-gray-300 text-base p-3 list-inside hover:bg-yellow-100  '>{n}</li>)
+                            studentactivity.map((n) => <li key={uuid()} className='list-[square] border text-base p-3 list-inside hover:bg-green-100  '>{n}</li>)
                         }
                     </ol>
                 </div>
@@ -36,8 +54,42 @@ const Departmentupper = (props) => {
                     <button className='float-right bg-teal-900  w-20 h-10 p-2 m-4 text-white rounded-lg 
                                        hover:bg-blue-700  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
                 </div>
+
             </div>
-        
+            {/* news */}
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
+                <i className='text-2xl font-serif text-center '><b>What's New ?</b></i>
+                <div className='overflow-y-scroll scrollbar  rounded shadow-md shadow-red-600 border-t-2 border-red-500'>
+
+                    <ol>
+                        {
+                            news.map((n) => <li key={uuid()} className='list-disc border  text-base p-3 list-inside hover:bg-red-100  '>{n}</li>)
+                        }
+                    </ol>
+                </div>
+                <div className='block'>
+                    <button className='float-right bg-red-800  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                                       hover:bg-blue-700  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                </div>
+                {/* highlights */}
+            </div>
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
+                <i className='text-2xl font-serif text-center '><b>Highlights</b></i>
+                <div className='overflow-y-scroll scrollbar rounded shadow-md shadow-blue-600 border-t-2 border-blue-500'>
+
+                    <ol>
+                        {
+                            highlights.map((n) => <li key={uuid()} className='list-[square] border  text-base p-3 list-inside hover:bg-blue-100  '>{n}</li>)
+                        }
+                    </ol>
+                </div>
+                <div className='block'>
+                    <button className='float-right bg-blue-900  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                                       hover:bg-blue-700  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -54,7 +106,7 @@ const Departmentlower = (props) => {
                         <img className="rounded-t-lg" src={props.departmentimage} alt="" />
                     </a>
                 </div>
-                
+
                 <div className="p-5">
                     <a href="/">
                         <h1 className='underline text-center text-2xl m-2'> <b>Department of {props.name}</b></h1>
