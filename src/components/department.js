@@ -16,29 +16,28 @@ const Departmentupper = (props) => {
             <div className='flex border rounded shadow-lg flex-col m-4 p-2 items-center justify-center md:w-[35%] lg:w-1/3 h-[500px]'>
                 <div className='flex flex-col items-center justify-center'>
                     <h1 className='text-2xl md:text-xl lg:text-3xl text-[#045F5F] m-2'><b>Head Of Department</b></h1>
-                    <img className='border rounded-4 shadow-lg rounded-teal-900 rounded-md m-4 h-72 w-56 md:h-52 md:w-40' src={props.hod}></img>
+                    <img className='border rounded-4 shadow-lg rounded-teal-900 rounded-md m-4 h-72 w-56 md:h-52 md:w-40 ' src={props.hod} alt=''/>
                 </div>
                 <h1 className='text-teal-900 text-lg md:text-xl font-medium'>{props.nameofhod}</h1>
                 <p className='text-center p-1 md:text-lg md:p-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita.</p>
             </div>
-
+            {/* department  */}
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2'>
                 <i className='text-2xl font-serif text-center md:text-start'><b>What's New ?</b></i>
                 <div className='overflow-y-scroll scrollbar border rounded shadow-lg'>
-
-                    {/* news */}
+                  
                     <ol>
                         {
-                            news.map((n) => <li key={uuid()} className='list-disc border rounded-b-2 rounded-gray-300 text-base p-3 list-inside '>{n}</li>)
+                            news.map((n) => <li key={uuid()} className='list-disc border rounded-b-2 rounded-gray-300 text-base p-3 list-inside hover:bg-yellow-100  '>{n}</li>)
                         }
                     </ol>
                 </div>
                 <div className='block'>
-                    <button className='float-right bg-blue-800  w-20 h-10 p-2 m-4 text-white rounded-lg
-                                       hover:bg-[#21b684] focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                    <button className='float-right bg-teal-900  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                                       hover:bg-blue-700  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
                 </div>
             </div>
-
+        
 
         </div>
 
@@ -48,26 +47,32 @@ const Departmentupper = (props) => {
 
 const Departmentlower = (props) => {
     return (
-        <div className='m-3 mt-10 flex flex-col md:flex-row justify-center items-center md:justify-evenly'>
-            <div className='m-2 flex flex-col justify-between w-full md:w-1/2 overflow-hidden  md:h-[500px]  lg:h-auto border rounded shadow-lg '>
-                <div>
-                    <img src={props.departmentimage} className='shadow-lg'></img>
-                    <h1 className='underline text-center text-2xl m-2'> <b>Department of {props.name}</b></h1>
-                    <p className='p-3 text-justify '> {props.introduction} </p>
+        <div className='m-3 mt-10 flex flex-col md:flex-row justify-center items-center md:justify-evenly overflow-y-hidden'>
+            <div className="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 md:w-1/2 ">
+                <div className='flex justify-center items-center'>
+                    <a href="/">
+                        <img className="rounded-t-lg" src={props.departmentimage} alt="" />
+                    </a>
                 </div>
-                <div className='block m-2 p-2'>
-                    <button className=' float-right text-green-500 '>Read More  &rarr;</button>
+                
+                <div className="p-5">
+                    <a href="/">
+                        <h1 className='underline text-center text-2xl m-2'> <b>Department of {props.name}</b></h1>
+                    </a>
+                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{props.introduction}</p>
+                    <div className='block m-2 p-2'>
+                        <button className=' float-right text-green-700 hover:font-semibold hover:text-blue-700 '>Read More  &rarr;</button>
+                    </div>
                 </div>
             </div>
-            {/* video */}
-            <div className='flex justify-center items-center w-full md:w-1/2 my-3 md:m-auto'>
-
-                <iframe className='block border p-0 shadow-lg rounded-xl h-[250px] w-[90%]'
-                    src="https://www.youtube.com/embed/fd2hUOmm8kA?controls=0&amp;start=280&mute=1" title="NITJ" ></iframe>
+            <div className='flex flex-col justify-center items-center w-full md:w-1/2 md:mx-3 aspect-video'>
+                <div className='w-full my-2 flex justify-center items-center'>
+                    <iframe className='block border p-0 shadow-lg rounded-xl h-[250px] w-[90%]'
+                        src="https://www.youtube.com/embed/fd2hUOmm8kA?controls=0&amp;start=280&mute=1" title="NITJ" ></iframe>
+                </div>
+                <div className='w-full my-2 flex justify-center items-center'><Card title="Coding Club" image='https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq'
+                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita." /> </div>
             </div>
-
-            <div className=''><Card title="Coding Club" image='https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq'
-                body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita." /> </div>
         </div>
     )
 }
