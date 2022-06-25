@@ -9,7 +9,7 @@ const news = ['Congratulations to Yogita, B. Tech Final year, ECE Department for
     'Congratulations to Prof. Binod Kumar Kanaujia for getting research funding for R&amp;D project “Design and Development of Biologically Inspired Retinal Prosthesis Based Biomedical Implant to Restore Vision to the Blind” worth Rs. 23.28 Lacs under the Empowerment and Equity Opportunities for Excellence in Science Grant Scheme of SERB, Government of India (March, 2022)',
     'Kirandeep Kaur Sahota (Batch 2017 passed out) brought glory and pride to the institute and department of ECE by securing AIR-331 in UPSC Civil Service Examination, 2020'];
 
-const studentactivity = ['Website Launch by Mr. Ravneet Kotwal, (Director of Sales and Marketing, Texas Instruments, India. )',
+const activity = ['Website Launch by Mr. Ravneet Kotwal, (Director of Sales and Marketing, Texas Instruments, India. )',
     'Short Term Courseon Low Power VLSI Design for Communication systems and Networks', 'Congratulations to Yogita, B. Tech Final year, ECE Department for getting placed at Atlassian at a whopping CTC of 52LPA through an off-campus drive.',
     'Online Short Term Course on “Research Trends in Communication and Signal Processing” (December 20-24, 2021)',
     ' Dr Sukwinder Singh registered a start-up “RFvis Technologies”under TBI at NITJ (March, 2022)',
@@ -27,7 +27,7 @@ const highlights = ['Applications are Invited for the ', '<b>Selected Candidates
 const Departmentupper = (props) => {
     return (
         <div className='flex flex-col 
-                    md:flex-row justify-around mx-4 my-4'>
+                    md:flex-row justify-around mx-20 '>
             {/* HOD */}
             {/* <div className='flex border rounded shadow-lg flex-col m-4 p-2 items-center justify-center md:w-[35%] lg:w-1/3 h-[500px]'>
                 <div className='flex flex-col items-center justify-center'>
@@ -40,52 +40,52 @@ const Departmentupper = (props) => {
 
 
 
-            {/* Student Activity  */}
+            {/*  Activity  */}
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
-                <i className='text-2xl font-serif text-center'><b>Student Activities</b></i>
-                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-md shadow-green-700  border-t-2 border-green-500'>
+                <i className='text-2xl font-serif text-center'><b>Activities</b></i>
+                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-md border-t-2 border-green-500'>
                     <ol>
                         {
-                            studentactivity.map((n) => <li key={uuid()} className='list-[square] border text-base p-3 list-inside hover:bg-green-100  '>{n}</li>)
+                            activity.map((n) => <li key={uuid()} className='list-[square] border text-base p-3 list-inside bg-green-100 hover:bg-yellow-400  '>{n}</li>)
                         }
                     </ol>
                 </div>
                 <div className='block'>
-                    <button className='float-right bg-teal-900  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                                       hover:bg-blue-700  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                    <button className='float-right bg-teal-700  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
                 </div>
 
             </div>
             {/* news */}
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
                 <i className='text-2xl font-serif text-center '><b>What's New ?</b></i>
-                <div className='overflow-y-scroll scrollbar  rounded shadow-md shadow-red-600 border-t-2 border-red-500'>
+                <div className='overflow-y-scroll scrollbar  rounded shadow-md  border-t-2 border-red-500'>
 
                     <ol>
                         {
-                            news.map((n) => <li key={uuid()} className='list-disc border  text-base p-3 list-inside hover:bg-red-100  '>{n}</li>)
+                            news.map((n) => <li key={uuid()} className='list-disc border  text-base p-3 list-inside bg-red-100 hover:bg-yellow-400  '>{n}</li>)
                         }
                     </ol>
                 </div>
                 <div className='block'>
-                    <button className='float-right bg-red-800  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                                       hover:bg-blue-700  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                    <button className='float-right bg-red-600  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
                 </div>
                 {/* highlights */}
             </div>
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
                 <i className='text-2xl font-serif text-center '><b>Highlights</b></i>
-                <div className='overflow-y-scroll scrollbar rounded shadow-md shadow-blue-600 border-t-2 border-blue-500'>
+                <div className='overflow-y-scroll scrollbar rounded shadow-md  border-t-2 border-blue-500'>
 
                     <ol>
                         {
-                            highlights.map((n) => <li key={uuid()} className='list-[square] border  text-base p-3 list-inside hover:bg-blue-100  '>{n}</li>)
+                            highlights.map((n) => <li key={uuid()} className='list-[square] border  text-base p-3 list-inside bg-blue-100 hover:bg-yellow-400  '>{n}</li>)
                         }
                     </ol>
                 </div>
                 <div className='block'>
                     <button className='float-right bg-blue-900  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                                       hover:bg-blue-700  focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                                       hover:bg-blue-700  hover:text-sm focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
                 </div>
 
             </div>
