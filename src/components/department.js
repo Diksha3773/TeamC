@@ -17,7 +17,7 @@ const activity = ['Website Launch by Mr. Ravneet Kotwal, (Director of Sales and 
     'Congratulations to Prof. Binod Kumar Kanaujia for getting research funding for R&amp;D project “Design and Development of Biologically Inspired Retinal Prosthesis Based Biomedical Implant to Restore Vision to the Blind” worth Rs. 23.28 Lacs under the Empowerment and Equity Opportunities for Excellence in Science Grant Scheme of SERB, Government of India (March, 2022)',
     'Kirandeep Kaur Sahota (Batch 2017 passed out) brought glory and pride to the institute and department of ECE by securing AIR-331 in UPSC Civil Service Examination, 2020'];
 
-const highlights = ['Applications are Invited for the ', '<b>Selected Candidates for PhD</b>', 'Online GIAN Course on "Nonwoven Technology and Recent Developments" ',
+const highlights = ['Applications are Invited for the ', 'Selected Candidates for PhD', 'Online GIAN Course on "Nonwoven Technology and Recent Developments" ',
     '(June 20 - 24, 2022)Note: The Last Date for Registration has been extended upto 18th June, 2022', 'Self Sponsored Three Days Workshop on "Molecular Dynamics Simulation & Analysis" (August 05 - 07, 2022) ',
     'Online Short Term Course on “Research Trends in Communication and Signal Processing” (December 20-24, 2021)',
     ' Dr Sukwinder Singh registered a start-up “RFvis Technologies”under TBI at NITJ (March, 2022)',
@@ -26,8 +26,8 @@ const highlights = ['Applications are Invited for the ', '<b>Selected Candidates
     'Kirandeep Kaur Sahota (Batch 2017 passed out) brought glory and pride to the institute and department of ECE by securing AIR-331 in UPSC Civil Service Examination, 2020']
 const Departmentupper = (props) => {
     return (
-        <div className='flex flex-col 
-                    md:flex-row justify-around mx-20 '>
+        <div className='flex flex-col sm:mx-5
+                    md:flex-row justify-around lg:mx-12 '>
             {/* HOD */}
             {/* <div className='flex border rounded shadow-lg flex-col m-4 p-2 items-center justify-center md:w-[35%] lg:w-1/3 h-[500px]'>
                 <div className='flex flex-col items-center justify-center'>
@@ -42,50 +42,50 @@ const Departmentupper = (props) => {
 
             {/*  Activity  */}
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
-                <i className='text-2xl font-serif text-center'><b>Activities</b></i>
-                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-md border-t-2 border-green-500'>
+                <i className='text-2xl font-serif text-center animate-pulse'><b>Activities</b></i>
+                <div className='overflow-y-scroll scrollbar shadow-md rounded-lg  border-t-2 border-green-500'>
                     <ol>
                         {
-                            activity.map((n) => <li key={uuid()} className='list-[square] border text-base p-3 list-inside bg-green-100 hover:bg-yellow-400  '>{n}</li>)
+                            activity.map((n) => <li key={uuid()} className='list-[square] text-base p-3 list-inside  bg-green-100 hover:bg-yellow-400  '>{n}</li>)
                         }
                     </ol>
                 </div>
                 <div className='block'>
                     <button className='float-right bg-teal-700  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View All</button>
                 </div>
 
             </div>
             {/* news */}
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
-                <i className='text-2xl font-serif text-center '><b>What's New ?</b></i>
-                <div className='overflow-y-scroll scrollbar  rounded shadow-md  border-t-2 border-red-500'>
+                <i className='text-2xl font-serif text-center animate-pulse '><b>What's New ?</b></i>
+                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-md  border-t-2 border-red-500'>
 
                     <ol>
                         {
-                            news.map((n) => <li key={uuid()} className='list-disc border  text-base p-3 list-inside bg-red-100 hover:bg-yellow-400  '>{n}</li>)
+                            news.map((n) => <li key={uuid()} className='list-disc text-base p-3 list-inside bg-red-100 hover:bg-yellow-400  '>{n}</li>)
                         }
                     </ol>
                 </div>
                 <div className='block'>
                     <button className='float-right bg-red-600  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View All</button>
                 </div>
                 {/* highlights */}
             </div>
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
-                <i className='text-2xl font-serif text-center '><b>Highlights</b></i>
-                <div className='overflow-y-scroll scrollbar rounded shadow-md  border-t-2 border-blue-500'>
+                <i className='text-2xl font-serif text-center animate-pulse'><b>Highlights</b></i>
+                <div className='overflow-y-scroll scrollbar rounded-lg shadow-md  border-t-2 border-blue-500'>
 
                     <ol>
                         {
-                            highlights.map((n) => <li key={uuid()} className='list-[square] border  text-base p-3 list-inside bg-blue-100 hover:bg-yellow-400  '>{n}</li>)
+                            highlights.map((n) => <li key={uuid()} className='list-[square] text-base p-3 list-inside bg-blue-100 hover:bg-yellow-400  '>{n}</li>)
                         }
                     </ol>
                 </div>
                 <div className='block'>
                     <button className='float-right bg-blue-900  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                                       hover:bg-blue-700  hover:text-sm focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 '>View All</button>
+                                       hover:bg-blue-700  hover:text-sm focus:ring-4 focus:ring-blue-300'>View All</button>
                 </div>
 
             </div>
