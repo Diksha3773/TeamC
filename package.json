@@ -9,7 +9,6 @@
     "@testing-library/user-event": "^13.5.0",
     "@tippyjs/react": "^4.2.6",
     "bootstrap": "^5.1.3",
-    "gh-pages": "^4.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-countup": "^6.2.0",
@@ -23,6 +22,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "go": "vite",
     "build": "react-scripts build",

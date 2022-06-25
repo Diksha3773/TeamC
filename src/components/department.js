@@ -43,7 +43,7 @@ const Departmentupper = (props) => {
             {/*  Activity  */}
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg rounded'>
                 <i className='text-2xl font-serif text-center animate-pulse'><b>Activities</b></i>
-                <div className='overflow-y-scroll scrollbar shadow-md rounded-lg  border-t-2 border-green-500'>
+                <div className='overflow-y-scroll scrollbar rounded-lg  border-t-2 border-green-500'>
                     <ol>
                         {
                             activity.map((n) => <li key={uuid()} className='list-[square] text-base p-3 list-inside  bg-green-100 hover:bg-yellow-400  '>{n}</li>)
@@ -57,7 +57,7 @@ const Departmentupper = (props) => {
 
             </div>
             {/* news */}
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg'>
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2'>
                 <i className='text-2xl font-serif text-center animate-pulse '><b>What's New ?</b></i>
                 <div className='overflow-y-scroll scrollbar  rounded-lg shadow-lg  border-t-2 border-red-500'>
 
