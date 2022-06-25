@@ -8,8 +8,8 @@ function TopPlacement() {
         <>
             <div className='flex flex-col justify-center rounded items-center w-full sm:w-[98%] mx-auto text-center shadow-md'>
                 <div className='flex flex-col p-2 m-2 text-center'>
-                    <span className='text-3xl font-sans font-bold'>Top Placements </span>
-                    <span className='text-lg font-mono font-semibold'> (Computer Science and Engineering)</span>
+                    <span className='text-3xl font-sans font-bold animate-bounce '>Top Placements </span>
+                    <span className='text-lg font-mono font-semibold '> (Computer Science and Engineering)</span>
                 </div>
                 <div className='grid sm:grid-cols-2 lg:grid-cols-4 m-2 lg:mx-4 w-full items-center justify-center'>
                     <div className='w-screen sm:w-auto relative m-2  h-[21rem] flex items-center justify-center group'>
@@ -57,8 +57,9 @@ function TopPlacement() {
                         </div>
                     </div>
                 </div>
-                <div className='bg-green-400 shadow-lg p-1 m-2 rounded-lg'>
-                    <button className='text-lg text-white p-1 hover:text-lg hover:font-medium'>View All</button>
+                <div >
+                    <button className=' bg-teal-700  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:ring-blue-300'>View All</button>
                 </div>
             </div>
         </>

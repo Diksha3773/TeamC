@@ -9,7 +9,7 @@ const Card = ({ title, image, body }) => {
                 </div>
                 <div className="w-full text-justify py-4 px-6 text-gray-800 flex flex-col justify-between">
                     <h3 className="font-semibold text-xl my-1 leading-tight truncate">{title}</h3>
-                    <p className="mt-2">
+                    <p className="mt-2 md:hidden lg:block">
                         {body}
                     </p>
                     <div className='block m-2 p-2'>
