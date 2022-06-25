@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Checker from './components/Institute';
 import { Departmentupper, Departmentlower } from './components/department';
 import Footer from './components/Footer';
+import TopPlacement from './components/TopPlacement';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Navbar />
       <Departmentupper nameofhod=" ~Dr Geeta Sikka" hod='https://www.nitj.ac.in/images/faculty/20071962443.jpg'
       />
+       <TopPlacement/>
       <Departmentlower name="CSE" introduction="Located in Jalandhar district of Punjab, NIT Jalandhar enjoys a really scenic environment 
     and pleasant weather. Established in the year 1987, as REC Jalandhar, NIT Jalandhar has been 
     declared as the Institute of National Importance under the Act of Parliament, 2007. Established

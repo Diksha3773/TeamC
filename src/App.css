@@ -331,6 +331,20 @@
       font-weight: 450;
    }
 }
+@media screen and (width < 475px) {
+   .navsize{
+      height:12rem;
+   }
+   .navimg{
+      height:21rem;
+   }
+   .logocon{
+      flex-direction:column;
+   }
+   .xsw-full{
+      width:100%;
+   }
+}
 .scrollbar::-webkit-scrollbar {
   width: 0px;
   height: 10px;

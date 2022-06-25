@@ -41,7 +41,7 @@ const Departmentupper = (props) => {
 
 
             {/*  Activity  */}
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg rounded'>
                 <i className='text-2xl font-serif text-center animate-pulse'><b>Activities</b></i>
                 <div className='overflow-y-scroll scrollbar shadow-md rounded-lg  border-t-2 border-green-500'>
                     <ol>
@@ -57,9 +57,9 @@ const Departmentupper = (props) => {
 
             </div>
             {/* news */}
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg'>
                 <i className='text-2xl font-serif text-center animate-pulse '><b>What's New ?</b></i>
-                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-md  border-t-2 border-red-500'>
+                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-lg  border-t-2 border-red-500'>
 
                     <ol>
                         {
@@ -73,7 +73,7 @@ const Departmentupper = (props) => {
                 </div>
                 {/* highlights */}
             </div>
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 '>
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg'>
                 <i className='text-2xl font-serif text-center animate-pulse'><b>Highlights</b></i>
                 <div className='overflow-y-scroll scrollbar rounded-lg shadow-md  border-t-2 border-blue-500'>
 

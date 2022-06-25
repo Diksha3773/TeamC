@@ -29,9 +29,11 @@ function Navbar() {
     return (
         <>
             <div className='flex flex-col h-auto w-full xl:h-screen' ref={myref}>
-                <div className='h-24 p-2 py-4 flex bg-zinc-900 text-white w-full items-center justify-between'>
-                    <div className='flex items-center my-2'>
-                        <img src={logo} className='h-20' alt='' />
+                <div className='h-24 p-2 py-4 flex bg-zinc-900 text-white w-full items-center justify-between navsize bg-opacity-90'>
+                    <div className='flex items-center my-2  logocon'>
+                        <div className='block xsw-full'>
+                            <img src={logo} className='h-20 float-left' alt='' />
+                        </div>
                         <div className='mx-2'>
                             <div className='font-semibold'>
                                 Department of Computer Science and Engineering
@@ -47,7 +49,7 @@ function Navbar() {
                     </Tippy>
                     <div className='hidden md:block'><Clock /></div>
                 </div>
-                <div className='flex justify-between items-center bg-zinc-900'>
+                <div className='flex justify-between items-center bg-zinc-900 bg-opacity-90'>
                     <button className='p-3  flex items-center md:hidden' onClick={() => { setOpen(!open) }} >
                         <img src={Hambur} alt="..." className='h-8 w-8 m-1 mx-2 p-1 rounded-lg hover:border' />
                     </button>

@@ -15,11 +15,8 @@ function Imagesroll({opencheck}) {
         six
     ]
     const [value, setValue] = useState(0);
-
-    console.log(opencheck,'scroll');
     useEffect(() => {
         const interval = setInterval(() => {
-            console.log(opencheck,'scrollI');
             setValue(() => (opencheck?(value === 5 ? 0 : value + 1):value));
         }, 3000);
         return () => clearInterval(interval);
@@ -34,7 +31,7 @@ function Imagesroll({opencheck}) {
                     <button className='float-right flex h-16 w-16 translate-y-1/2 text-white z-10 transition bg-opacity-50 text-3xl  rounded-full bg-blue-300 items-center justify-center font-bold hover:bg-blue-900 m-2' onClick={() => { setValue(value === 0 ? 5 : value - 1) }}>&rarr;</button>
                 </div>
             </div>
-                : <div className='flex flex-col group instcount2 items-center justify-center text-center align-middle border-none h-[calc(100vw*0.7)] sm:h-[calc(100vw*0.5625)]'>
+                : <div className='flex flex-col group instcount2 items-center justify-center text-center align-middle border-none h-[calc(100vw*0.7)] sm:h-[calc(100vw*0.5625)] navimg'>
                     <div className='font-semibold text-xl m-4 lg:text-4xl'>
                         Computer Science and Engineering
                     </div>
