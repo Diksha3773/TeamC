@@ -41,9 +41,9 @@ const Departmentupper = (props) => {
 
 
             {/*  Activity  */}
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg rounded'>
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 md:border md:shadow-lg rounded'>
                 <i className='text-2xl font-serif text-center animate-pulse'><b>Activities</b></i>
-                <div className='overflow-y-scroll scrollbar rounded-lg  border-t-2 border-green-500'>
+                <div className='overflow-y-scroll scrollbar rounded-lg shadow-md  border-t-2 border-green-500'>
                     <ol>
                         {
                             activity.map((n) => <li key={uuid()} className='list-[square] text-base p-3 list-inside  bg-green-100 hover:bg-yellow-400  '>{n}</li>)
@@ -57,9 +57,9 @@ const Departmentupper = (props) => {
 
             </div>
             {/* news */}
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2'>
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 mx-2 p-2 md:border md:shadow-lg'>
                 <i className='text-2xl font-serif text-center animate-pulse '><b>What's New ?</b></i>
-                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-lg  border-t-2 border-red-500'>
+                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-md  border-t-2 border-red-500'>
 
                     <ol>
                         {
@@ -73,7 +73,7 @@ const Departmentupper = (props) => {
                 </div>
                 {/* highlights */}
             </div>
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg'>
+            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 md:border md:shadow-lg'>
                 <i className='text-2xl font-serif text-center animate-pulse'><b>Highlights</b></i>
                 <div className='overflow-y-scroll scrollbar rounded-lg shadow-md  border-t-2 border-blue-500'>
 
@@ -117,13 +117,14 @@ const Departmentlower = (props) => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col justify-center items-center w-full md:w-1/2 md:mx-3 aspect-video'>
-                <div className='w-full my-2 flex justify-center items-center'>
-                    <iframe className='block border p-0 shadow-lg rounded-xl h-[250px] w-[90%]'
+            <div className='flex flex-col mt-4 justify-center items-center w-full md:w-1/2 md:mx-3 aspect-video'>
+                <div className='w-full my-2 md:my-1 flex justify-center items-center'><Card title="Coding Club" image='https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq'
+                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita Lorem ipsum dolor sit amet consectetur adipisicing elit." /> </div>
+                <div className='w-full my-1 flex justify-center items-center'>
+                    <iframe className='block border p-0 shadow-lg rounded-xl sm:aspect-video md:aspect-auto lg:aspect-video w-[90%]'
                         src="https://www.youtube.com/embed/fd2hUOmm8kA?controls=0&amp;start=280&mute=1" title="NITJ" ></iframe>
                 </div>
-                <div className='w-full my-2 flex justify-center items-center'><Card title="Coding Club" image='https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq'
-                    body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita." /> </div>
+
             </div>
         </div>
     )
