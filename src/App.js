@@ -1,8 +1,8 @@
 import './App.css';
-import Director from './components/director';
-import Count from './components/Placement';
+// import Director from './components/director';
+// import Count from './components/Placement';
 import Navbar from './components/Navbar';
-import Checker from './components/Institute';
+// import Checker from './components/Institute';
 import {Department}from './components/department';
 import Footer from './components/Footer';
 import TopPlacement from './components/TopPlacement';

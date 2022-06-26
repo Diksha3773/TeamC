@@ -30,7 +30,7 @@ const highlights = ['Applications are Invited for the ', 'Selected Candidates fo
     md:flex-row justify-around lg:mx-12 '>
 
 {/*  Activity  */}
-<div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg'>
+<div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 rounded border shadow-lg'>
 <i className='text-2xl font-serif text-center animate-pulse'><b>Activities</b></i>
 <div className='overflow-y-scroll scrollbar rounded-lg  border-t-2 border-green-500'>
     <ol>
@@ -40,13 +40,13 @@ const highlights = ['Applications are Invited for the ', 'Selected Candidates fo
     </ol>
 </div>
 <div className='block'>
-    <button className='float-right bg-teal-700  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View All</button>
+    <button className='float-right bg-teal-600  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                       hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View All</button>
 </div>
 
 </div>
 {/* news */}
-<div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg'>
+<div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border rounded shadow-lg mx-2'>
 <i className='text-2xl font-serif text-center animate-pulse '><b>What's New ?</b></i>
 <div className='overflow-y-scroll scrollbar  rounded-lg shadow-lg  border-t-2 border-red-500'>
 
@@ -57,13 +57,13 @@ const highlights = ['Applications are Invited for the ', 'Selected Candidates fo
     </ol>
 </div>
 <div className='block'>
-    <button className='float-right bg-red-600  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                       hover:bg-blue-700 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View All</button>
+    <button className='float-right bg-red-500  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                       hover:bg-red-700 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View All</button>
 </div>
 {/* highlights */}
 </div>
 {/* highlights */}
-<div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border shadow-lg'>
+<div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border rounded shadow-lg'>
 <i className='text-2xl font-serif text-center animate-pulse'><b>Highlights</b></i>
 <div className='overflow-y-scroll scrollbar rounded-lg shadow-md  border-t-2 border-blue-500'>
 
@@ -74,8 +74,8 @@ const highlights = ['Applications are Invited for the ', 'Selected Candidates fo
     </ol>
 </div>
 <div className='block'>
-    <button className='float-right bg-blue-900  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                       hover:bg-blue-700  hover:text-sm focus:ring-4 focus:ring-blue-300'>View All</button>
+    <button className='float-right bg-blue-600  w-20 h-10 p-2 m-4 text-white rounded-lg 
+                       hover:bg-blue-800  hover:text-sm focus:ring-4 focus:ring-blue-300'>View All</button>
 </div>
 
 </div>

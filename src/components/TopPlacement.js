@@ -6,13 +6,13 @@ import top4 from './Img/top4.png'
 function TopPlacement() {
     return (
         <>
-            <div className='flex flex-col justify-center rounded items-center w-full sm:w-[98%] mx-auto text-center shadow-md'>
+            <div className='flex flex-col justify-center rounded items-center w-full sm:w-[98%] mx-auto text-center shadow-md my-8'>
                 <div className='flex flex-col p-2 m-2 text-center'>
                     <span className='text-3xl font-sans font-bold animate-bounce '>Top Placements </span>
                     <span className='text-lg font-mono font-semibold '> (Computer Science and Engineering)</span>
                 </div>
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-2 lg:mx-4 w-full items-center justify-center'>
-                    <div className='w-full relative m-2  h-[21rem] flex items-center justify-center group'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-2 lg:mx-4 w-full items-center justify-center place-items-center'>
+                    <div className='w-[85%] sm:w-full relative m-2  h-[21rem] flex items-center justify-center group'>
                         <div class="flex flex-col items-center justify-center max-w-sm bg-white rounded-lg border-2  h-[19rem] border-gray-200 shadow w-[90%] lg:w-[97%] hover:h-[21rem] hover:w-full hover:absolute">
                             <div className='text-center font-medium text-xl m-2 p-2 group-hover:text-2xl'>Rahul Thapliyal</div>
                             <div class="flex flex-col items-center pb-10">
@@ -23,7 +23,7 @@ function TopPlacement() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-full relative m-2  h-[21rem] flex items-center justify-center group'>
+                    <div className='w-[85%] sm:w-full relative m-2  h-[21rem] flex items-center justify-center group'>
                         <div class="flex flex-col items-center justify-center max-w-sm bg-white rounded-lg border-2  h-[19rem] border-gray-200 shadow w-[90%] lg:w-[97%] hover:h-[21rem] hover:w-full hover:absolute">
                             <div className='text-center font-medium text-xl m-2 p-2 group-hover:text-2xl'>Taranjeet Kaur</div>
                             <div class="flex flex-col items-center pb-10">
@@ -34,7 +34,7 @@ function TopPlacement() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-full relative m-2  h-[21rem] flex items-center justify-center group'>
+                    <div className='w-[85%] sm:w-full relative m-2  h-[21rem] flex items-center justify-center group'>
                         <div class="flex flex-col items-center justify-center max-w-sm bg-white rounded-lg border-2  h-[19rem] border-gray-200 shadow w-[90%] lg:w-[97%] hover:h-[21rem] hover:w-full hover:absolute">
                             <div className='text-center font-medium text-xl m-2 p-2 group-hover:text-2xl'>Himakshi Salhotra</div>
                             <div class="flex flex-col items-center pb-10">
@@ -45,7 +45,7 @@ function TopPlacement() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-full relative m-2 h-[21rem] flex items-center justify-center group'>
+                    <div className='w-[85%] sm:w-full relative m-2 h-[21rem] flex items-center justify-center group'>
                         <div class="flex flex-col items-center justify-center max-w-sm bg-white rounded-lg border-2  h-[19rem] border-gray-200 shadow w-[90%] lg:w-[97%] hover:h-[21rem] hover:w-full hover:absolute">
                             <div className='text-center font-medium text-xl m-2 p-2 group-hover:text-2xl'>Riya Verma</div>
                             <div class="flex flex-col items-center pb-10">
@@ -58,7 +58,7 @@ function TopPlacement() {
                     </div>
                 </div>
                 <div className='flex items-center justify-center'>
-                <button className='bg-green-600 text-lg shadow-md w-28 h-14 p-2 m-4 text-white rounded-lg hover:bg-green-800 hover:text-base focus:ring-4 focus:ring-green-300 '>View All</button>
+                <button className='bg-green-600 text-lg shadow-md w-24 h-12 p-2 m-0 mb-2 text-white rounded-lg hover:bg-green-700 hover:text-base focus:ring-4 focus:ring-green-300 '>View All</button>
                 </div>
             </div>
         </>
