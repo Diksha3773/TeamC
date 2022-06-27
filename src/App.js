@@ -6,9 +6,17 @@ import Navbar from './components/Navbar';
 import {Department}from './components/department';
 import Footer from './components/Footer';
 import TopPlacement from './components/TopPlacement';
+import AllPlacement from './components/AllPlacement';
+import Imagesroll from './components/Imagesroll';
+import { useState } from 'react';
 
 
 function App() {
+  const [activate, setActivate] = useState(true);
+  const Handleactivate = ()=>{
+    setActivate(!activate);
+  }
+  
   return (
     // components on homepage of main website
     // <div>
@@ -22,8 +30,10 @@ function App() {
     // components on department website
     <div>
       <Navbar />
-      <Department />
-      <TopPlacement />
+      {activate && <Imagesroll/>}
+      {!activate && <AllPlacement Handleactivate = {Handleactivate}/>}
+      {activate && <Department />}
+      {activate && <TopPlacement Handleactivate = {Handleactivate}/>}
       <Footer />
     </div>
 
