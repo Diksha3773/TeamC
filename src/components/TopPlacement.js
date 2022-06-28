@@ -1,9 +1,12 @@
 import React from 'react'
+import {useNavigate} from 'react-router-dom'
+
 import Rahul from './Img/Rahul.png'
 import top2 from './Img/top2.png'
 import top3 from './Img/top3.png'
 import top4 from './Img/top4.png'
 function TopPlacement({Handleactivate}) {
+    let navigate=useNavigate();
     return (
         <>
             <div className='flex flex-col justify-center rounded items-center w-full sm:w-[98%] mx-auto text-center shadow-md my-8'>
@@ -58,7 +61,7 @@ function TopPlacement({Handleactivate}) {
                     </div>
                 </div>
                 <div className='flex items-center justify-center'>
-                <button className='bg-green-600 text-lg shadow-md w-24 h-12 p-2 m-0 mb-2 text-white rounded-lg hover:bg-green-700 hover:text-base focus:ring-4 focus:ring-green-300' onClick={Handleactivate}>View All</button>
+                <button className='bg-green-600 text-lg shadow-md w-24 h-12 p-2 m-0 mb-2 text-white rounded-lg hover:bg-green-700 hover:text-base focus:ring-4 focus:ring-green-300' onClick={()=>{navigate("/placements")}}>View All</button>
                 </div>
             </div>
         </>
