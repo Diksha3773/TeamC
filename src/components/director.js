@@ -33,3 +33,10 @@ function Director() {
 }
 
 export default Director
+
+// components on homepage of main website
+    // <div>
+    //    <Director/>
+    //    <Count/>
+    //   <Checker/> 
+    // </div>

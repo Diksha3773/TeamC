@@ -5,6 +5,10 @@ import Hambur from './Img/menu.png'
 import Tippy from '@tippyjs/react'
 import 'tippy.js/dist/tippy.css'
 import Clock from './Clock'
+
+
+
+
 function Navbar() {
     const [open, setOpen] = useState(false);
     const [opencheck, setOpencheck] = useState(false)
@@ -72,7 +76,7 @@ function Navbar() {
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right group-hover:block'>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Vision and Missions</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Infrastructure: At a glance</a></div>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>HODs Message</a></div>
+                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' >HODs Message</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</a></div>
                         </div>

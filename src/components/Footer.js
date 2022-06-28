@@ -8,7 +8,7 @@ function Footer() {
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
                     <div>
-                      <img src={logo} className="h-24 w-24"/>
+                      <img src={logo} alt="logo" className="h-24 w-24"/>
                         <h1 className="pt-7 text-3xl">Our Mission</h1>
                         <p className="pt-5 text-xl">To serve the nation and the world by graduating proficient, knowledgeable engineers in the field of Electronics, Communication and related areas through constsnt interaction with research organisations and industries.</p>
                     </div>
