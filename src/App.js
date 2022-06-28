@@ -3,6 +3,7 @@ import './App.css';
 // import Count from './components/Placement';
 // import Checker from './components/Institute';
 import AppRouter from './AppRouter';
+import HodMessage from './pages/HodMessage';
 function App() {
   // const [activate, setActivate] = useState(true);
   // const Handleactivate = ()=>{
@@ -31,6 +32,8 @@ function App() {
 
     // testing routes
     <AppRouter/>
+  
+    
 
   );
 }

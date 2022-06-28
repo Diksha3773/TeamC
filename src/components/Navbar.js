@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import logo from './Img/logo.png'
 import comp from './Vedio/comp.mp4'
 import Hambur from './Img/menu.png'
@@ -10,6 +11,7 @@ import Clock from './Clock'
 
 
 function Navbar() {
+    let navigate=useNavigate();
     const [open, setOpen] = useState(false);
     const [openabout, setOpenabout] = useState(false)
     const [openreasearch, setOpenreasearch] = useState(false)
@@ -32,9 +34,12 @@ function Navbar() {
             setOfftop(false)
         }
     }
+
+   
     useEffect(() => {
         window.addEventListener('scroll', Handlescroll);
         window.addEventListener('resize', getListsize);
+      
         return () => {
             window.removeEventListener('resize', getListsize);
         };
@@ -80,7 +85,7 @@ function Navbar() {
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right md:group-hover:block' style={width < 768 ? openabout ? { display: "block" } : { dispay: "none" } : null}>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Vision and Missions</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Infrastructure: At a glance</a></div>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' >HODs Message</a></div>
+                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/messageofHOD")}}>HOD's Message</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</a></div>
                         </div>
