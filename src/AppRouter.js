@@ -10,7 +10,7 @@ const AppRouter=()=>{
         <Navbar/>
 
         <Routes>
-        <Route path='/TeamC' element={<Homepage/>} />
+        <Route path='/' element={<Homepage/>} />
         <Route path='/placements' element={<AllPlacement/>}/>
         <Route path= '*' element={<Error/>}/>
     
