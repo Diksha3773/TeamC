@@ -5,7 +5,7 @@ import Rahul from './Img/Rahul.png'
 import top2 from './Img/top2.png'
 import top3 from './Img/top3.png'
 import top4 from './Img/top4.png'
-function TopPlacement({Handleactivate}) {
+function TopPlacement() {
     let navigate=useNavigate();
     return (
         <>
