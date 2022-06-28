@@ -45,7 +45,9 @@ function App() {
     //   <Footer />
     // </div>
     // testing routes
+    <>
     <AppRouter/>
+    </>
   );
 }
 

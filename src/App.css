@@ -251,8 +251,8 @@
 .wrapper {
    margin: 0;
    padding: 0;
-   height: 3.5rem;
-   width: 14rem;
+   height: 3.2rem;
+   width: 13.7rem;
    position: relative;
    background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
    border-radius: 10px;
@@ -364,6 +364,7 @@
 .scrollbar::-webkit-scrollbar-thumb:hover {
   background: #c0a0b9;
 }
-.bgl{
-   background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+.bgallplace{
+   background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0), url('./components/Img/Companys.png');
+   
 }

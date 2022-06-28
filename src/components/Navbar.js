@@ -2,16 +2,13 @@ import React, { useEffect, useRef, useState } from 'react'
 import logo from './Img/logo.png'
 import comp from './Vedio/comp.mp4'
 import Hambur from './Img/menu.png'
-import Tippy from '@tippyjs/react'
-import 'tippy.js/dist/tippy.css'
 import Clock from './Clock'
-
+import {Navigate, useNavigate} from 'react-router-dom'
 
 
 
 function Navbar() {
     const [open, setOpen] = useState(false);
-    const [opencheck, setOpencheck] = useState(false)
     const [width, setWidth] = useState(getWindowSize());
     const [offtop, setOfftop] = useState(false)
     const myref = useRef();
@@ -20,7 +17,7 @@ function Navbar() {
     }
     const Handlescroll = () => {
         let offtop1 = myref.current.getBoundingClientRect().top;
-        // console.log(offtop1)
+        console.log(offtop1)
         if(offtop1 <= -94){
             if(!offtop)
             setOfftop(true);
@@ -29,12 +26,14 @@ function Navbar() {
         }
     }
     useEffect(() => {
+        window.scrollTo(0, 0);
         window.addEventListener('scroll', Handlescroll);
         window.addEventListener('resize', getListsize);
         return () => {
             window.removeEventListener('resize', getListsize);
         };
     }, []);
+    let navigate=useNavigate();
     return (
         <>
             <div className='flex flex-col h-auto w-full' ref={myref}>
@@ -51,26 +50,16 @@ function Navbar() {
                             <div>National Institute of Technology Jalandhar</div>
                         </div>
                     </div>
-                    <Tippy content={<span className=' '>Background image scroller(automatic)</span>} placement='bottom'>
-                        <div className='md:flex hidden justify-center items-center p-1 w-6 h-6 bg-blue-600 rounded-full display'>
-                            <input type='checkbox' id='time' onClick={() => { setOpencheck(!opencheck) }} className='h-6 w-6 rounded-full' />
-                        </div>
-                    </Tippy>
                     <div className='hidden md:block'><Clock /></div>
                 </div>
                 <div className='flex justify-between items-center bg-gray-900 bg-opacity-90'>
                     <button className='p-3  flex items-center md:hidden' onClick={() => { setOpen(!open) }} >
-                        <img src={Hambur} alt="..." className='h-8 w-8 m-1 mx-2 p-1 rounded-lg hover:border' />
+                        <img src={Hambur} alt="..." className='h-8 w-8 m-1 mx-2 p-1 rounded-lg' />
                     </button>
-                    <Tippy content={<span className=' '>Background image scroller(automatic)</span>} placement='bottom'>
-                        <div className='flex md:hidden justify-center items-center p-1 w-6 h-6 bg-blue-600 rounded-full display'>
-                            <input type='checkbox' id='time' onClick={() => { setOpencheck(!opencheck) }} className='h-6 w-6 rounded-full' />
-                        </div>
-                    </Tippy>
                     <div className='block md:hidden m-2'><Clock /></div>
                 </div>
                 <div className='flex-col bg-gray-900 text-white bg-opacity-95 md:flex w-full justify-center md:items-center md:flex-row md:h-16' style={open ? {display:"flex"} : (width < 768 ? { display: "none" } : ( offtop ? { dispay: "flex", position: "fixed", height:"4rem", opacity: "1" } : { display: "flex" }))}>
-                    <div className='group   shadow-sm p-2 m-0 md:border-none'><a href='/' className='my-2 mx-4 font-medium hover:text-blue-600'>Home</a></div>
+                    <div className='group   shadow-sm p-2 m-0 md:border-none'><button className='my-2 mx-4 font-medium hover:text-blue-600' onClick={()=>{navigate("/")}}>Home</button></div>
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>About us</span>
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right group-hover:block'>
@@ -166,9 +155,7 @@ function Navbar() {
                             </div>
                         </div>
                     </div>
-
                 </div>
-                {/* <Imagesroll opencheck={opencheck} /> */}
             </div>
         </>
     )
