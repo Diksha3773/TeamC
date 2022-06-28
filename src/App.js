@@ -9,6 +9,7 @@ import TopPlacement from './components/TopPlacement';
 import AllPlacement from './components/AllPlacement';
 import Imagesroll from './components/Imagesroll';
 import { useState } from 'react';
+import Place from './components/Place';
 
 
 function App() {
@@ -30,10 +31,11 @@ function App() {
     // components on department website
     <div>
       <Navbar />
-      {activate && <Imagesroll/>}
+      {/* {activate && <Imagesroll/>}
       {!activate && <AllPlacement Handleactivate = {Handleactivate}/>}
       {activate && <Department />}
-      {activate && <TopPlacement Handleactivate = {Handleactivate}/>}
+      {activate && <TopPlacement Handleactivate = {Handleactivate}/>} */}
+      <Place/>
       <Footer />
     </div>
 
