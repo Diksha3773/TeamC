@@ -6,6 +6,7 @@ import Error from './pages/Errorpage';
 import Homepage from './pages/Homepage';
 import HodMessage from './pages/HodMessage';
 import VisionandMission from './pages/VisionandMission';
+import Infrastructure from './pages/Infrastructure'
 const AppRouter=()=>{
     return (
         <Router>
@@ -17,8 +18,10 @@ const AppRouter=()=>{
         <Route path= '/MessageofHOD' element={<HodMessage/>}/>
         <Route path= '*' element={<Error/>}/>
         <Route path ='/MissionandVision' element={<VisionandMission/>}/>
+        <Route path ='/Infrastructure' element={<Infrastructure/>}/>
+
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
 
 
     
