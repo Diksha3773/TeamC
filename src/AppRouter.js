@@ -21,7 +21,7 @@ const AppRouter=()=>{
         <Route path ='/Infrastructure' element={<Infrastructure/>}/>
 
         </Routes>
-        {/* <Footer/> */}
+        <Footer/>
 
 
     
