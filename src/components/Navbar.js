@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate,Link } from 'react-router-dom'
 import logo from './Img/logo.png'
 import comp from './Vedio/comp.mp4'
 import Hambur from './Img/menu.png'
@@ -67,11 +67,14 @@ function Navbar() {
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>About us</span>
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right group-hover:block'>
-                            <div ><a href='/MissionandVision' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Vision and Mission</a></div>
-                            <div ><a href='/Infrastructure' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Infrastructure: At a glance</a></div>
-                            <div ><a href='/messageofHOD' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>HOD's Message</a></div>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</a></div>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</a></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/MissionandVision")}}>Vision and Mission</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/Infrastructure")}}>Infrastructure: At a glance</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/messageofHOD")}}>HOD's Message</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</button></div>
+                            
+                            
+                        
                         </div>
                     </div>
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
