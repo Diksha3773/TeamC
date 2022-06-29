@@ -1,11 +1,6 @@
 import React from 'react'
-import  { useEffect } from 'react'
 
 function HodMessage() {
-    const handleprevent=(e)=>{
-        e.preventDefault();
-    }
-    useEffect(()=>[handleprevent],[]);
   return (
     <div className='flex flex-col justify-center my-4 mx-2'>
     <h1 className='text-center text-2xl font-bold md:font-extrabold md:text-3xl text-orange-600 font-serif m-2'>Head Of Department</h1>

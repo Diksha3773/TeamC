@@ -5,6 +5,7 @@ import AllPlacement from './components/AllPlacement';
 import Error from './pages/Errorpage';
 import Homepage from './pages/Homepage';
 import HodMessage from './pages/HodMessage';
+import VisionandMission from './pages/VisionandMission';
 const AppRouter=()=>{
     return (
         <Router>
@@ -15,7 +16,7 @@ const AppRouter=()=>{
         <Route path='/placements' element={<AllPlacement/>}/>
         <Route path= '/MessageofHOD' element={<HodMessage/>}/>
         <Route path= '*' element={<Error/>}/>
-    
+        <Route path ='/MissionandVision' element={<VisionandMission/>}/>
         </Routes>
         <Footer/>
 

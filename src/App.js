@@ -47,6 +47,7 @@ function App() {
     // testing routes
     <>
     <AppRouter/>
+    
     </>
   );
 }
