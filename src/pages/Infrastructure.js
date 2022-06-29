@@ -7,13 +7,13 @@ const images=[{src:'https://upload.wikimedia.org/wikipedia/commons/5/55/IT_Build
 
 function Infrastructure() {
   return (
-    images.map((item,i) => {
+    images.map((item) => {
          return(
             <div className='flex flex-col md:flex-row w-[98%] justify-center items-center p-4 place-items-center mx-auto'>
        
-             <div key={i} className='flex flex-col m-2 p-1 sm:m-4 sm:p-2 items-center justify-center w-full sm:w-4/5 md:w-4/5 h-[600px] bg-green-50 shadow-md shadow-green-200 '>
+             <div key={uuid()} className='flex flex-col m-2 p-1 sm:m-4 sm:p-2 items-center justify-center w-full sm:w-4/5 md:w-4/5 h-[600px] bg-green-50 shadow-md shadow-green-200 '>
                <h1 className="text-centre text-2xl text-red-600"><b>{item.title}</b></h1>
-              <img src={item.src} className="overflow-clip rounded-lg  w-full sm:w-4/5 md:w-2/2 h-[500px]"></img>
+              <img src={item.src}  className="overflow-clip rounded-lg  w-full sm:w-4/5 md:w-2/2 h-[500px]"></img>
               </div>
               
              </div>
