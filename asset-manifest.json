@@ -1,28 +1,32 @@
 {
   "files": {
-    "main.css": "/TeamC/static/css/main.9a94026f.css",
-    "main.js": "/TeamC/static/js/main.65dd4546.js",
+    "main.css": "/TeamC/static/css/main.70769a46.css",
+    "main.js": "/TeamC/static/js/main.7ed033f1.js",
     "static/media/comp.mp4": "/TeamC/static/media/comp.1a6acf95afffa2f6acd3.mp4",
     "static/media/homepage.jpg": "/TeamC/static/media/homepage.c7469ae543178d7f98be.jpg",
     "static/media/002.png": "/TeamC/static/media/002.40a4fe221099c0c1f3e2.png",
     "static/media/bgplace.png": "/TeamC/static/media/bgplace.39c58e01206dd0efe777.png",
     "static/media/bgcamp.png": "/TeamC/static/media/bgcamp.5acc694710406f09becf.png",
     "static/media/Companys.png": "/TeamC/static/media/Companys.f83b0f6789aba9606222.png",
+    "static/media/syl-5.jpg": "/TeamC/static/media/syl-5.305a87f5c03ebb34f2bb.jpg",
+    "static/media/pdf_ani.mp4": "/TeamC/static/media/pdf_ani.956b7c9c99e8a8151857.mp4",
     "static/media/002.jpg": "/TeamC/static/media/002.4689ec7edf491d81e18b.jpg",
     "static/media/02.jpeg": "/TeamC/static/media/02.aafac4a1f9432d4405ab.jpeg",
     "static/media/03.jpeg": "/TeamC/static/media/03.51ab253c5e6f4160c52a.jpeg",
     "static/media/003.jpg": "/TeamC/static/media/003.1188ad2d9ef3be4b4f20.jpg",
     "static/media/logo.png": "/TeamC/static/media/logo.871a78921b63fb84ccc5.png",
+    "static/media/download.png": "/TeamC/static/media/download.fdff606a75f2124de48d.png",
+    "static/media/sy.png": "/TeamC/static/media/sy.b34660f47614e1bb8db6.png",
     "static/media/top4.png": "/TeamC/static/media/top4.cecf55c1bf0554996282.png",
     "static/media/top3.png": "/TeamC/static/media/top3.8a63730bc81b95dc829e.png",
     "static/media/top2.png": "/TeamC/static/media/top2.f53a70f236eef8c901bb.png",
     "static/media/Rahul.png": "/TeamC/static/media/Rahul.fc0e58f5a093225f6adb.png",
     "index.html": "/TeamC/index.html",
-    "main.9a94026f.css.map": "/TeamC/static/css/main.9a94026f.css.map",
-    "main.65dd4546.js.map": "/TeamC/static/js/main.65dd4546.js.map"
+    "main.70769a46.css.map": "/TeamC/static/css/main.70769a46.css.map",
+    "main.7ed033f1.js.map": "/TeamC/static/js/main.7ed033f1.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a94026f.css",
-    "static/js/main.65dd4546.js"
+    "static/css/main.70769a46.css",
+    "static/js/main.7ed033f1.js"
   ]
 }
