@@ -61,12 +61,6 @@ function Navbar() {
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>About us</span>
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right group-hover:block'>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Vision and Missions</a></div>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Infrastructure: At a glance</a></div>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' >HODs Message</a></div>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</a></div>
-                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</a></div>
-
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/MissionandVision")}}>Vision and Mission</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/Infrastructure")}}>Infrastructure: At a glance</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/messageofHOD")}}>HOD's Message</button></div>
@@ -77,21 +71,21 @@ function Navbar() {
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>Academics</span>
                         <div className='absolute right-[15%] md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 group-hover:block'>
-                            <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Programmes</a></div>
-                            <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Academic Coordinates</a></div>
-                            <div ><a href='/Syllabus' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Syllabus</a></div>
-                            <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Time-Tables</a></div>
-                            <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Department Activities Calendar</a></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Programmes</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Academic Coordinates</button></div>
+                            <div ><button className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Syllabus")}}>Syllabus</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Time-Tables</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Department Activities Calendar</button></div>
                         </div>
                     </div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>People</span>
                         <div className='absolute right-1/2 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 group-hover:block'>
-                            <div><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Faculty</a></div>
-                            <div><a href='/' className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>PhD Scholars</a></div>
-                            <div><a href='/' className='flex justify-center p-2 w-fullfont-medium hover:bg-neutral-600'>Students</a></div>
-                            <div><a href='/' className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Alumni*</a></div>
-                            <div><a href='/' className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Staff</a></div>
+                            <div> <button  className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Faculty</button></div>
+                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>PhD Scholars</button></div>
+                            <div> <button  className='flex justify-center p-2 w-fullfont-medium hover:bg-neutral-600'>Students</button></div>
+                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Alumni*</button></div>
+                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Staff</button></div>
                         </div>
                     </div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>
@@ -100,60 +94,60 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded hover:text-blue-700'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center '>
-                                        <a href='/'>
+                                         <button >
                                             <span className='card-title rounded-md'>Research Areas</span>
                                             <video src={comp} autoPlay loop muted className='vedio rounded-md' />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center items-center'>
-                                        <a href='/'>
+                                         <button >
                                             <span className='card-title rounded-md'>Department Labs</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                        <a href='/'>
+                                         <button >
                                             <span className='card-title flex-col rounded-md'><div>Publications</div><div>(Year-wise)</div></span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                        <a href='/'>
+                                         <button >
                                             <span className='card-title rounded-md'>Projects</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                        <a href='/'>
+                                         <button >
                                             <span className='card-title rounded-md'>Consultancy</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                        <a href='/'>
+                                         <button >
                                             <span className='card-title rounded-md'>Research Labs</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
-                                        </a>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
