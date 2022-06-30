@@ -5,9 +5,9 @@ import Hambur from './Img/menu.png'
 import Clock from './Clock'
 import {useNavigate} from 'react-router-dom'
 
-
-
 function Navbar() {
+  
+    let navigate=useNavigate();
     const [open, setOpen] = useState(false);
     const [width, setWidth] = useState(getWindowSize());
     const [offtop, setOfftop] = useState(false)
@@ -32,7 +32,6 @@ function Navbar() {
             window.removeEventListener('resize', getListsize);
         };
     }, []);
-    let navigate=useNavigate();
     return (
         <>
             <div className='flex flex-col h-auto w-full' ref={myref}>
@@ -67,6 +66,12 @@ function Navbar() {
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' >HODs Message</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</a></div>
+
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/MissionandVision")}}>Vision and Mission</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/Infrastructure")}}>Infrastructure: At a glance</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/messageofHOD")}}>HOD's Message</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</button></div>
                         </div>
                     </div>
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
