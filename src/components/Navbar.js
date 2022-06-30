@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useNavigate,Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import logo from './Img/logo.png'
 import comp from './Vedio/comp.mp4'
 import Hambur from './Img/menu.png'
@@ -8,7 +8,9 @@ import Clock from './Clock'
 
 
 
+
 function Navbar() {
+  
     let navigate=useNavigate();
     const [open, setOpen] = useState(false);
     const [width, setWidth] = useState(getWindowSize());
@@ -27,13 +29,14 @@ function Navbar() {
             setOfftop(false)
         }
     }
+    
 
-   
+    
+    
     useEffect(() => {
         window.scrollTo(0, 0);
         window.addEventListener('scroll', Handlescroll);
         window.addEventListener('resize', getListsize);
-      
         return () => {
             window.removeEventListener('resize', getListsize);
         };
