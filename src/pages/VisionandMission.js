@@ -12,7 +12,7 @@ function VisionandMission() {
     A mission statement is a short statement of why an organization exists, what its overall goal is, identifying the goal of its operations: what kind of product or service it provides, its primary customers or market, and its geographical region of operation</p>
    </div>
 <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border rounded shadow-lg mx-2 overflow-clip'>
-    <img src="https://joedale.typepad.com/.a/6a00e54ee8552c8833011570aac67f970b-pi"></img>
+    <img src="https://joedale.typepad.com/.a/6a00e54ee8552c8833011570aac67f970b-pi" alt='...'/>
 </div>
 <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border rounded shadow-lg bg-teal-600 overflow-y-scroll scrollbar'>
 <h1 className='text-center text-4xl my-5 animate-pulse text-white'><b>Vision</b></h1>

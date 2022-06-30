@@ -1,15 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import logo from './Img/logo.png'
 import comp from './Vedio/comp.mp4'
 import Hambur from './Img/menu.png'
 import Clock from './Clock'
-
+import {useNavigate} from 'react-router-dom'
 
 
 
 function Navbar() {
-    let navigate=useNavigate();
     const [open, setOpen] = useState(false);
     const [width, setWidth] = useState(getWindowSize());
     const [offtop, setOfftop] = useState(false)
@@ -19,7 +17,6 @@ function Navbar() {
     }
     const Handlescroll = () => {
         let offtop1 = myref.current.getBoundingClientRect().top;
-        console.log(offtop1)
         if(offtop1 <= -94){
             if(!offtop)
             setOfftop(true);
@@ -27,17 +24,15 @@ function Navbar() {
             setOfftop(false)
         }
     }
-
-   
     useEffect(() => {
         window.scrollTo(0, 0);
         window.addEventListener('scroll', Handlescroll);
         window.addEventListener('resize', getListsize);
-      
         return () => {
             window.removeEventListener('resize', getListsize);
         };
     }, []);
+    let navigate=useNavigate();
     return (
         <>
             <div className='flex flex-col h-auto w-full' ref={myref}>
@@ -67,9 +62,9 @@ function Navbar() {
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>About us</span>
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right group-hover:block'>
-                            <div ><a href='/MissionandVision' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Vision and Mission</a></div>
+                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Vision and Missions</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Infrastructure: At a glance</a></div>
-                            <div ><a href='/messageofHOD' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>HOD's Message</a></div>
+                            <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' >HODs Message</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</a></div>
                             <div ><a href='/' className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</a></div>
                         </div>
@@ -79,7 +74,7 @@ function Navbar() {
                         <div className='absolute right-[15%] md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 group-hover:block'>
                             <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Programmes</a></div>
                             <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Academic Coordinates</a></div>
-                            <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Syllabus</a></div>
+                            <div ><a href='/Syllabus' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Syllabus</a></div>
                             <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Time-Tables</a></div>
                             <div ><a href='/' className='flex w-full p-2 font-medium hover:bg-neutral-600'>Department Activities Calendar</a></div>
                         </div>

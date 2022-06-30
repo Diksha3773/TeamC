@@ -6,6 +6,7 @@ import Error from './pages/Errorpage';
 import Homepage from './pages/Homepage';
 import HodMessage from './pages/HodMessage';
 import VisionandMission from './pages/VisionandMission';
+import Syllabus from './pages/Syllabus';
 const AppRouter=()=>{
     return (
         <Router>
@@ -15,6 +16,7 @@ const AppRouter=()=>{
         <Route exact path='/' element={<Homepage/>} />
         <Route path='/placements' element={<AllPlacement/>}/>
         <Route path= '/MessageofHOD' element={<HodMessage/>}/>
+        <Route path= '/Syllabus' element={<Syllabus/>}/>
         <Route path= '*' element={<Error/>}/>
         <Route path ='/MissionandVision' element={<VisionandMission/>}/>
         </Routes>
