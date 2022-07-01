@@ -24,14 +24,15 @@ function Imagesroll() {
     return (
         <>
             <div className='flex flex-col h-auto w-full xl:h-[calc(100vh-10rem)]'>
-                {value ? <div className="group w-full h-[calc(100vw*0.5625)] text-center overflow-hidden shadow-lg">
+                {value ? <div className="group flex items-center justify-center place-items-center w-full h-[calc(100vw*0.5625)] text-center overflow-hidden shadow-lg">
                     <img className="w-full h-full shadow-lg bg-gradient-to-r from-gray-500 to-gray-400" src={image[value]} alt="..." />
-                    <div className='w-full py-auto hidden md:bottom-1/2 inset-x-0 text-center leading-4 md:group-hover:block'>
+                    <div className='w-full absolute py-auto hidden md:bottom-[40%] inset-x-0 text-center leading-4 md:group-hover:block'>
                         <button className='float-left flex h-16 w-16 translate-y-1/2 text-white z-10 transition bg-opacity-50 text-3xl  rounded-full bg-blue-300 items-center justify-center font-bold hover:bg-blue-900 m-2' onClick={() => { setValue(value === 0 ? 5 : value - 1) }}>&larr;</button>
                         <button className='float-right flex h-16 w-16 translate-y-1/2 text-white z-10 transition bg-opacity-50 text-3xl  rounded-full bg-blue-300 items-center justify-center font-bold hover:bg-blue-900 m-2' onClick={() => { setValue(value === 0 ? 5 : value - 1) }}>&rarr;</button>
                     </div>
                 </div>
-                    : <div className='flex flex-col group instcount2 items-center justify-center text-center align-middle border-none h-[calc(100vw*0.7)] sm:h-[calc(100vw*0.5625)] navimg'>
+                    : 
+                    <div className='flex flex-col group instcount2 items-center justify-center text-center align-middle border-none h-[calc(100vw*0.7)] sm:h-[calc(100vw*0.5625)] navimg'>
                         <div className='font-semibold text-xl m-4 lg:text-4xl'>
                             Computer Science and Engineering
                         </div>

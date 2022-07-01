@@ -2,8 +2,9 @@ import React from 'react'
 import { useState } from 'react'
 import sy from '../components/Img/sy.png'
 import sy6 from '../components/Img/syl-5.jpg'
-import download from '../components/Img/download.png'
+import download from '../components/Vedio/download.mp4'
 import pdf from '../components/Vedio/pdf_ani.mp4'
+import syllabuspdf from '../components/Pdf/syllabus.pdf'
 function Syllabus() {
   const List = [
     {
@@ -69,9 +70,11 @@ function Syllabus() {
                           <div key={j} className='flex items-center justify-center'>
                             <video loading="lazy" muted="muted" src={pdf} width="100" height="100" type="video/mp4" autoPlay="autoplay" loop="loop" className='rounded-lg'></video>
                             <div className='flex flex-col justify-center items-center m-2 w-52 h-52'>
-                              <button className='flex items-center justify-center w-44 h-24'><img src={download} alt='...' className='w-44 h-24 hover:w-[10.5rem] hover:h-[5.5rem]' /></button>
                               <div className='block'>
-                                <button className='float-right bg-teal-600  w-40 h-[3.2rem] p-2 m-2 text-white rounded-full hover:bg-teal-800 text-xl hover:text-lg shaow-lg focus:ring-4 focus:ring-blue-300 '>View pdf</button>
+                                <button className='bg-teal-600 h-10 p-2 m-4 text-white rounded-lg hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>Download pdf</button>
+                              </div>
+                              <div className='block'>
+                                <a href={syllabuspdf} target='_blank' className=' bg-teal-600 h-10 p-2 m-4 text-white rounded-lg hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View pdf</a>
                               </div>
                             </div>
                           </div>
@@ -86,9 +89,11 @@ function Syllabus() {
                           <div key={j} className='flex items-center justify-center'>
                             <video loading="lazy" muted="muted" src={pdf} width="100" height="100" type="video/mp4" autoPlay="autoplay" loop="loop" className='rounded-lg'></video>
                             <div className='flex flex-col justify-center items-center m-2 w-52 h-52'>
-                              <button className='flex items-center justify-center w-44 h-24'><img src={download} alt='...' className='w-44 h-24 hover:w-[10.5rem] hover:h-[5.5rem]' /></button>
                               <div className='block'>
-                                <button className='float-right bg-teal-600  w-40 h-[3.2rem] p-2 m-2 text-white rounded-full hover:bg-teal-800 text-xl hover:text-lg shaow-lg focus:ring-4 focus:ring-blue-300 '>View pdf</button>
+                                <button className='bg-teal-600 h-10 p-2 m-4 text-white rounded-lg hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>Download pdf</button>
+                              </div>
+                              <div className='block'>
+                                <a href={syllabuspdf} target='_blank' className=' bg-teal-600 h-10 p-2 m-4 text-white rounded-lg hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View pdf</a>
                               </div>
                             </div>
                           </div>

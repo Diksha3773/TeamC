@@ -83,7 +83,7 @@ function Navbar() {
                         <div className='absolute right-1/2 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 group-hover:block'>
                             <div> <button  className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Faculty</button></div>
                             <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>PhD Scholars</button></div>
-                            <div> <button  className='flex justify-center p-2 w-fullfont-medium hover:bg-neutral-600'>Students</button></div>
+                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Students</button></div>
                             <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Alumni*</button></div>
                             <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Staff</button></div>
                         </div>
@@ -94,7 +94,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded hover:text-blue-700'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center '>
-                                         <button >
+                                         <button className='w-full h-full'>
                                             <span className='card-title rounded-md'>Research Areas</span>
                                             <video src={comp} autoPlay loop muted className='vedio rounded-md' />
                                         </button>
@@ -104,7 +104,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center items-center'>
-                                         <button >
+                                         <button className='w-full h-full'>
                                             <span className='card-title rounded-md'>Department Labs</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
@@ -114,7 +114,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                         <button >
+                                         <button className='w-full h-full'>
                                             <span className='card-title flex-col rounded-md'><div>Publications</div><div>(Year-wise)</div></span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
@@ -124,7 +124,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                         <button >
+                                         <button className='w-full h-full'>
                                             <span className='card-title rounded-md'>Projects</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
@@ -134,7 +134,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                         <button >
+                                         <button className='w-full h-full'>
                                             <span className='card-title rounded-md'>Consultancy</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
@@ -144,7 +144,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                         <button >
+                                         <button className='w-full h-full'>
                                             <span className='card-title rounded-md'>Research Labs</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
