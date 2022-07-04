@@ -74,7 +74,7 @@ function Navbar() {
                             <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Programmes</button></div>
                             <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Academic Coordinates</button></div>
                             <div ><button className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Syllabus")}}>Syllabus</button></div>
-                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Time-Tables</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Timetable")}}>Time-Tables</button></div>
                             <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Department Activities Calendar</button></div>
                         </div>
                     </div>

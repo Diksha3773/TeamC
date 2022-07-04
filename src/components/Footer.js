@@ -30,7 +30,7 @@ function Footer() {
                 </div>
             </div>
         </div>
-        <div className="w-full bg-stone-900 text-neutral-200 px-10 h-24">
+        <div className="w-full bg-stone-900 text-neutral-200 px-10">
             <div className="">
                 <div className="text-center">
                     <div className="pt-2 text-xl text-white">
@@ -39,7 +39,7 @@ function Footer() {
                         <a href="/" className="w-10 h-10 rounded-full bg-neutral-600 hover:bg-yellow-600 mx-1 inline-block pt-1" ><i className="fa fa-twitter"></i></a>
                         <a href="/" className="w-10 h-10 rounded-full bg-neutral-600 hover:bg-yellow-600 mx-1 inline-block pt-1" ><i className="fa fa-linkedin"></i></a>
                     </div>
-                    <div className="pt-2">
+                    <div className="p-2">
                        <p>© Copyright 2016-2022, All Rights Reserved <strong>NIT Jalandhar</strong></p>
                     </div>
                 </div>

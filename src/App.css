@@ -365,6 +365,36 @@
   background: #c0a0b9;
 }
 .bgallplace{
-   background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0), url('./components/Img/Companys.png');
-   
+   background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('./components/Img/homepage.jpg') no-repeat;
+   width: 100%;
+   height: calc(100% - 20rem);
+   background-attachment: fixed;
+   background-position: center center;
+   background-size: cover;
+}
+.bg-all{
+   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./components/Img/homepage.jpg') no-repeat;
+   width: 100%;
+   height: calc(100% - 20rem);
+   background-attachment: fixed;
+   background-position: center center;
+   background-size: cover;
+}
+.bg-linear{
+   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+.card{
+  width: 315px;
+  margin:30px auto;
+  box-shadow: 0 0 100px rgba(0,0,0, .3);
+}
+@media (min-width: 1320px) {
+   .colplace {
+       grid-template-columns: repeat(4, minmax(0, 1fr));
+   }
+}
+@media (min-width: 1650px) {
+   .colplace {
+       grid-template-columns: repeat(5, minmax(0, 1fr));
+   }
 }

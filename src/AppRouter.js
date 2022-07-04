@@ -8,6 +8,7 @@ import HodMessage from './pages/HodMessage';
 import VisionandMission from './pages/VisionandMission';
 import Syllabus from './pages/Syllabus';
 import Infrastructure from './pages/Infrastructure'
+import Timetable from './pages/Timetable';
 const AppRouter = () => {
   return (
     <Router>
@@ -18,6 +19,7 @@ const AppRouter = () => {
         <Route path='/placements' element={<AllPlacement />} />
         <Route path='/MessageofHOD' element={<HodMessage />} />
         <Route path='/Syllabus' element={<Syllabus />} />
+        <Route path='/Timetable' element = {<Timetable/>}/>
         <Route path='*' element={<Error />} />
         <Route path='/MissionandVision' element={<VisionandMission />} />
         <Route path='/Infrastructure' element={<Infrastructure />} />

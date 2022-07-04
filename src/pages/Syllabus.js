@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import sy from '../components/Img/sy.png'
 import sy6 from '../components/Img/syl-5.jpg'
-import download from '../components/Vedio/download.mp4'
 import pdf from '../components/Vedio/pdf_ani.mp4'
 import syllabuspdf from '../components/Pdf/syllabus.pdf'
 function Syllabus() {
@@ -32,8 +31,8 @@ function Syllabus() {
   const [overview, setOverview] = useState(true)
   return (
     <>
-      <div className='flex flex-col items-center justify-center w-full py-3 bg-emerald-200'>
-        <div className='m-2 p-2 shadow-lg'><span className='text-zinc-900 text-opacity-70 font-bold text-4xl italic'>Syllabus</span></div>
+      <div className='flex flex-col items-center justify-center w-full py-3 bg-all'>
+        <div className='m-2 p-2 shadow-lg'><span className='text-white text-opacity-70 font-bold text-4xl italic'>Syllabus</span></div>
         <div className='w-full p-1 flex items-center justify-center'>
           <select defaultValue={program} onChange={(e) => { setProgram(e.target.value) }} className='border text-lg font-medium rounded-md focus:border-gray-200 shadow-md w-1/2 p-2'>
             <option value='Btech' className='p-2'>Btech</option>
@@ -54,12 +53,13 @@ function Syllabus() {
           }
           {/* </select> */}
         </div>
-        <div className='m-3 rounded-lg border shadow-md bg-slate-50'>
-          <div className='flex items-center rounded-t-lg shadow h-14 bg-emerald-300'>
-            <button className={"p-2 h-full text-xl rounded-tl-lg font-medium " + (overview ? 'bg-emerald-500' : '')} onClick={() => { setOverview(true) }} >Overview</button>
-            <button className={"p-2 h-full text-xl font-medium " + (overview ? '' : 'bg-emerald-500')} onClick={() => { setOverview(false) }}>Details</button>
+
+        <div className='m-4 rounded-lg shadow-md'>
+          <div className='block rounded-t-lg shadow h-16 w-[11.7rem] bg-linear text-white'>
+            <button className={"h-full mr-1 p-2 text-xl rounded-tl-lg font-medium " + (overview ? 'bg-gray-500' : '')} onClick={() => { setOverview(true) }} >Overview</button>
+            <button className={"h-full ml-1 p-2 max-w-max text-xl rounded-tr-lg font-medium " + (overview ? '' : 'bg-gray-500')} onClick={() => { setOverview(false) }}>Details</button>
           </div>
-          <div className='flex w-full h-full shadow-lg border bg-emerald-300 rounded-b-md p-4 items-center justify-start'>
+          <div className='flex w-full h-full shadow-lg bg-linear rounded-b-md p-8 items-center justify-start'>
             {
               List.map((item, i) => {
                 return item.Program === program && program === 'Btech' ? (
@@ -70,11 +70,16 @@ function Syllabus() {
                           <div key={j} className='flex items-center justify-center'>
                             <video loading="lazy" muted="muted" src={pdf} width="100" height="100" type="video/mp4" autoPlay="autoplay" loop="loop" className='rounded-lg'></video>
                             <div className='flex flex-col justify-center items-center m-2 w-52 h-52'>
-                              <div className='block'>
-                                <button className='bg-teal-600 h-10 p-2 m-4 text-white rounded-lg hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>Download pdf</button>
+                              <div className='block m-2'>
+                                <button type="button" class="text-gray-900 flex items-center justify-center bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                                  <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
+                                  <span className='text-lg font-medium'>Download Pdf</span>
+                                </button>
                               </div>
                               <div className='block'>
-                                <a href={syllabuspdf} target='_blank' className=' bg-teal-600 h-10 p-2 m-4 text-white rounded-lg hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View pdf</a>
+                                <a href={syllabuspdf} target='_blank' rel='noreferrer' class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                                  <span className='text-lg font-medium'>View Pdf</span>
+                                </a>
                               </div>
                             </div>
                           </div>
@@ -89,11 +94,16 @@ function Syllabus() {
                           <div key={j} className='flex items-center justify-center'>
                             <video loading="lazy" muted="muted" src={pdf} width="100" height="100" type="video/mp4" autoPlay="autoplay" loop="loop" className='rounded-lg'></video>
                             <div className='flex flex-col justify-center items-center m-2 w-52 h-52'>
-                              <div className='block'>
-                                <button className='bg-teal-600 h-10 p-2 m-4 text-white rounded-lg hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>Download pdf</button>
+                              <div className='block m-2'>
+                                <button type="button" class="text-gray-900 flex items-center justify-center bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                                  <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
+                                  <span className='text-lg font-medium'>Download Pdf</span>
+                                </button>
                               </div>
                               <div className='block'>
-                                <a href={syllabuspdf} target='_blank' className=' bg-teal-600 h-10 p-2 m-4 text-white rounded-lg hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 '>View pdf</a>
+                                <a href={syllabuspdf} target='_blank' rel='noreferrer' class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                                  <span className='text-lg font-medium'>View Pdf</span>
+                                </a>
                               </div>
                             </div>
                           </div>
@@ -103,19 +113,7 @@ function Syllabus() {
                 ) : <></>
               })
             }
-            {/* {
-              overview ?
-                <img src={sy6} alt='...' className='aspect-auto' /> :
-                <div className='flex items-center justify-center'>
-                  <video loading="lazy" muted="muted" src={pdf} width="100" height="100" type="video/mp4" autoplay="autoplay" loop="loop" className='rounded-lg'></video>
-                  <div className='flex flex-col justify-center items-center m-2 w-52 h-52'>
-                    <button className='flex items-center justify-center w-44 h-24'><img src={download} alt='...' className='w-44 h-24 hover:w-[10.5rem] hover:h-[5.5rem]' /></button>
-                    <div className='block'>
-                      <button className='float-right bg-teal-600  w-40 h-[3.2rem] p-2 m-2 text-white rounded-full hover:bg-teal-800 text-xl hover:text-lg shaow-lg focus:ring-4 focus:ring-blue-300 '>View pdf</button>
-                    </div>
-                  </div>
-                </div>
-            } */}
+
           </div>
         </div>
       </div>
