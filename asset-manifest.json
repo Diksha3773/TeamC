@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/TeamC/static/css/main.f4f04fe3.css",
-    "main.js": "/TeamC/static/js/main.cd443643.js",
+    "main.css": "/TeamC/static/css/main.7299dd18.css",
+    "main.js": "/TeamC/static/js/main.3f30ea1e.js",
     "static/media/comp.mp4": "/TeamC/static/media/comp.1a6acf95afffa2f6acd3.mp4",
     "static/media/syllabus.pdf": "/TeamC/static/media/syllabus.745df2a473b12c11f27e.pdf",
     "static/media/homepage.jpg": "/TeamC/static/media/homepage.c7469ae543178d7f98be.jpg",
     "static/media/002.png": "/TeamC/static/media/002.40a4fe221099c0c1f3e2.png",
     "static/media/bgplace.png": "/TeamC/static/media/bgplace.39c58e01206dd0efe777.png",
-    "static/media/download.mp4": "/TeamC/static/media/download.fd5bb5f7e2d0b5cfee08.mp4",
     "static/media/bgcamp.png": "/TeamC/static/media/bgcamp.5acc694710406f09becf.png",
-    "static/media/Companys.png": "/TeamC/static/media/Companys.f83b0f6789aba9606222.png",
     "static/media/syl-5.jpg": "/TeamC/static/media/syl-5.305a87f5c03ebb34f2bb.jpg",
     "static/media/pdf_ani.mp4": "/TeamC/static/media/pdf_ani.956b7c9c99e8a8151857.mp4",
     "static/media/002.jpg": "/TeamC/static/media/002.4689ec7edf491d81e18b.jpg",
@@ -23,11 +21,11 @@
     "static/media/top2.png": "/TeamC/static/media/top2.f53a70f236eef8c901bb.png",
     "static/media/Rahul.png": "/TeamC/static/media/Rahul.fc0e58f5a093225f6adb.png",
     "index.html": "/TeamC/index.html",
-    "main.f4f04fe3.css.map": "/TeamC/static/css/main.f4f04fe3.css.map",
-    "main.cd443643.js.map": "/TeamC/static/js/main.cd443643.js.map"
+    "main.7299dd18.css.map": "/TeamC/static/css/main.7299dd18.css.map",
+    "main.3f30ea1e.js.map": "/TeamC/static/js/main.3f30ea1e.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4f04fe3.css",
-    "static/js/main.cd443643.js"
+    "static/css/main.7299dd18.css",
+    "static/js/main.3f30ea1e.js"
   ]
 }
