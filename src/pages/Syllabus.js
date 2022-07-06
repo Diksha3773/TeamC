@@ -55,9 +55,9 @@ function Syllabus() {
         </div>
 
         <div className='m-4 rounded-lg shadow-md'>
-          <div className='block rounded-t-lg shadow h-16 w-[11.7rem] bg-linear text-white'>
-            <button className={"h-full mr-1 p-2 text-xl rounded-tl-lg font-medium " + (overview ? 'bg-gray-500' : '')} onClick={() => { setOverview(true) }} >Overview</button>
-            <button className={"h-full ml-1 p-2 max-w-max text-xl rounded-tr-lg font-medium " + (overview ? '' : 'bg-gray-500')} onClick={() => { setOverview(false) }}>Details</button>
+          <div className='block rounded-t-lg shadow h-12 md:h-16 w-[11.7rem] bg-linear text-white'>
+            <button className={"h-full mr-1 p-2 float-left text-lg md:text-xl rounded-tl-lg font-medium " + (overview ? 'bg-gray-500' : '')} onClick={() => { setOverview(true) }} >Overview</button>
+            <button className={"h-full ml-1 p-2 float-right max-w-max text-lg md:text-xl rounded-tr-lg font-medium " + (overview ? '' : 'bg-gray-500')} onClick={() => { setOverview(false) }}>Details</button>
           </div>
           <div className='flex w-full h-full shadow-lg bg-linear rounded-b-md p-8 items-center justify-start'>
             {
@@ -70,10 +70,10 @@ function Syllabus() {
                           <div key={j} className='flex items-center justify-center'>
                             <video loading="lazy" muted="muted" src={pdf} width="100" height="100" type="video/mp4" autoPlay="autoplay" loop="loop" className='rounded-lg'></video>
                             <div className='flex flex-col justify-center items-center m-2 w-52 h-52'>
-                              <div className='block m-2'>
-                                <button type="button" class="text-gray-900 flex items-center justify-center bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
+                              <div className='block my-2 mx-0 md:m-2'>
+                                <button type="button" class="text-gray-900 flex items-center justify-center bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-1 md:mr-2 mb-2">
                                   <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
-                                  <span className='text-lg font-medium'>Download Pdf</span>
+                                  <span className='text-base md:text-lg  md:font-medium'>Download</span>
                                 </button>
                               </div>
                               <div className='block'>

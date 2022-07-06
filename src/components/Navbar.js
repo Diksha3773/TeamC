@@ -56,36 +56,36 @@ function Navbar() {
                     </button>
                     <div className='block md:hidden m-2'><Clock /></div>
                 </div>
-                <div className='flex-col bg-gray-900 text-white bg-opacity-95 md:flex w-full justify-center md:items-center md:flex-row md:h-16' style={open ? {display:"flex"} : (width < 768 ? { display: "none" } : ( offtop ? { dispay: "flex", position: "fixed", height:"4rem", opacity: "1" } : { display: "flex" }))}>
-                    <div className='group   shadow-sm p-2 m-0 md:border-none'><button className='my-2 mx-4 font-medium hover:text-blue-600' onClick={()=>{navigate("/")}}>Home</button></div>
-                    <div className='group   shadow-sm p-2 m-0 md:border-none'>
+                <div className={'flex-col bg-gray-900 text-white bg-opacity-95 md:flex w-full justify-center md:items-center md:flex-row md:h-16'} style={open ? {display: 'flex',transition: 'height 400ms cubic-bezier(0.23, 1, 0.32, 1) 4s'} : (width < 768 ? { display: "none" } : ( offtop ? { dispay: "flex", position: "fixed", height:"4rem", opacity: "1" } : { display: "flex" }))}>
+                    <div className='flex'><button className="hover:shadow-lg hover:-translate-y-0 hover:shadow-gray-600 bg-transparent mx-2 my-2 font-medium md:border md:hover:border-gray-900 border-gray-400 duration-500 py-2 px-3 rounded" onClick={()=>{navigate("/");setOpen(!open)}}>Home</button></div>
+                    <div className='group  shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>About us</span>
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right group-hover:block'>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/MissionandVision")}}>Vision and Mission</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/Infrastructure")}}>Infrastructure: At a glance</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/MissionandVision"); setOpen(!open)}}>Vision and Mission</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/Infrastructure");setOpen(!open)}}>Infrastructure: At a glance</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/messageofHOD")}}>HOD's Message</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Achievements</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Contact us</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{setOpen(!open)}}>Achievements</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Contact us</button></div>
                         </div>
                     </div>
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>Academics</span>
                         <div className='absolute right-[15%] md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 group-hover:block'>
-                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Programmes</button></div>
-                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Academic Coordinates</button></div>
-                            <div ><button className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Syllabus")}}>Syllabus</button></div>
-                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Timetable")}}>Time-Tables</button></div>
-                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600'>Department Activities Calendar</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Programmes</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Academic Coordinates</button></div>
+                            <div ><button className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Syllabus");setOpen(!open)}}>Syllabus</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Timetable");setOpen(!open)}}>Time-Tables</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Department Activities Calendar</button></div>
                         </div>
                     </div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>People</span>
                         <div className='absolute right-1/2 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900 group-hover:block'>
-                            <div> <button  className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'>Faculty</button></div>
-                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>PhD Scholars</button></div>
-                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Students</button></div>
-                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Alumni*</button></div>
-                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600'>Staff</button></div>
+                            <div> <button  className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Faculty</button></div>
+                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>PhD Scholars</button></div>
+                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Students</button></div>
+                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Alumni*</button></div>
+                            <div> <button  className='flex justify-center p-2 w-full font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Staff</button></div>
                         </div>
                     </div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>
@@ -94,7 +94,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded hover:text-blue-700'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center '>
-                                         <button className='w-full h-full'>
+                                         <button className='w-full h-full' onClick={()=>{setOpen(!open)}}>
                                             <span className='card-title rounded-md'>Research Areas</span>
                                             <video src={comp} autoPlay loop muted className='vedio rounded-md' />
                                         </button>
@@ -104,7 +104,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center items-center'>
-                                         <button className='w-full h-full'>
+                                         <button className='w-full h-full' onClick={()=>{setOpen(!open)}}>
                                             <span className='card-title rounded-md'>Department Labs</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
@@ -114,7 +114,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                         <button className='w-full h-full'>
+                                         <button className='w-full h-full'onClick={()=>{setOpen(!open)}}>
                                             <span className='card-title flex-col rounded-md'><div>Publications</div><div>(Year-wise)</div></span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
@@ -124,7 +124,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                         <button className='w-full h-full'>
+                                         <button className='w-full h-full'onClick={()=>{setOpen(!open)}}>
                                             <span className='card-title rounded-md'>Projects</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
@@ -134,7 +134,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                         <button className='w-full h-full'>
+                                         <button className='w-full h-full'vonClick={()=>{setOpen(!open)}}>
                                             <span className='card-title rounded-md'>Consultancy</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
@@ -144,7 +144,7 @@ function Navbar() {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
-                                         <button className='w-full h-full'>
+                                         <button className='w-full h-full' onClick={()=>{setOpen(!open)}}>
                                             <span className='card-title rounded-md'>Research Labs</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>
