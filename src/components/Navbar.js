@@ -57,7 +57,7 @@ function Navbar({handlescroll}) {
                     <div className='block md:hidden m-2'><Clock /></div>
                 </div>
                 <div className={'flex-col bg-gray-900 text-white bg-opacity-95 md:flex w-full justify-center md:items-center md:flex-row md:h-16'} style={open ? {display: 'flex',transition: 'height 400ms cubic-bezier(0.23, 1, 0.32, 1) 4s'} : (width < 768 ? { display: "none" } : ( offtop ? { dispay: "flex", position: "fixed", height:"4rem", opacity: "1" } : { display: "flex" }))}>
-                    <div className='flex p-2 m-0'><button className="hover:shadow-lg hover:-translate-y-0 hover:shadow-gray-600 bg-transparent mx-4 md:mx-2 md:my-2 font-medium md:border md:hover:border-gray-900 border-gray-400 duration-500  md:py-2 md:px-3 rounded" onClick={()=>{navigate("/");setOpen(!open)}}>Home</button></div>
+                    <div className='flex p-2 m-0'><button className="hover:shadow-lg hover:-translate-y-0 hover:shadow-gray-600 bg-transparent mx-4 md:mx-2 md:my-2 font-medium md:border md:hover:border-gray-900 border-gray-400 duration-500  md:py-2 md:px-3 rounded active:translate-y-2" onClick={()=>{navigate("/");setOpen(!open)}}>Home</button></div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>About us</span>
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right group-hover:block'>
@@ -135,7 +135,7 @@ function Navbar({handlescroll}) {
                             <div className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded active:translate-y-1 shadow-lg'>
                                     <div className='flex-auto text-center'>
-                                         <button className='w-full h-full'vonClick={()=>{setOpen(!open)}}>
+                                         <button className='w-full h-full'onClick={()=>{setOpen(!open)}}>
                                             <span className='card-title rounded-md'>Consultancy</span>
                                             <video src={comp} autoPlay loop muted className='vedio' />
                                         </button>

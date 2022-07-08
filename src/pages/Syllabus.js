@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useState } from 'react'
 import sy from '../components/Img/sy.png'
 import sy6 from '../components/Img/syl-5.jpg'
@@ -36,7 +36,7 @@ function Syllabus() {
       <div className='flex flex-col items-center justify-center w-full py-3 bg-all'>
         <div className='m-2 p-2 shadow-lg'><span className='text-white text-opacity-70 font-bold text-4xl italic'>Syllabus</span></div>
         <div className='w-full p-1 flex items-center justify-center'>
-          <select defaultValue={program} onChange={(e) => { setProgram(e.target.value) }} className='border text-lg font-medium rounded-md focus:border-gray-200 shadow-md w-1/2 p-2'>
+          <select defaultValue={program} onChange={(e) => { setProgram(e.target.value); setBsem('1st') }} className='border text-lg font-medium rounded-md focus:border-gray-200 shadow-md w-1/2 p-2'>
             <option value='Btech' className='p-2'>Btech</option>
             <option value="Mtech" className='p-2'>Mtech</option>
           </select>
