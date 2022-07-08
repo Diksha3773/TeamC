@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import sy from '../components/Img/sy.png'
 import sy6 from '../components/Img/syl-5.jpg'
@@ -28,7 +28,9 @@ function Syllabus() {
   const [program, setProgram] = useState('Btech');
   const [bsem, setBsem] = useState('1st');
   // const [msem, setMsem] = useState('1st');
-  const [overview, setOverview] = useState(true)
+  const [overview, setOverview] = useState(true);
+  
+  
   return (
     <>
       <div className='flex flex-col items-center justify-center w-full py-3 bg-all'>

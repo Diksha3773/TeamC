@@ -31,7 +31,7 @@ const AppRouter = () => {
     
        
       </Routes>
-      <Footer scroll={scroll} />
+      <Footer scroll={scroll} handlescroll={handlescroll}/>
 
 
 

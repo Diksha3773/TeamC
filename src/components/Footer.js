@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react'
 import logo from './Img/logo.png'
 import { useRef } from 'react'
-function Footer({ scroll }) {
+function Footer({ scroll,handlescroll }) {
     const footref = useRef(null);
     const HscrollIntoView = () => {
-        if(scroll && footref.current)
+        if(scroll && footref.current){
          footref.current.scrollIntoView({ behavior: 'smooth' });
+         handlescroll();
+        }
     }
     useEffect(() => {
         HscrollIntoView();
