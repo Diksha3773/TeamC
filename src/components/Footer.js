@@ -2,10 +2,10 @@ import React from 'react'
 import logo from './Img/logo.png'
 import { useRef,useState } from 'react';
 function Footer() {
-    const ref = useRef(null);
-    const handleClick = (scroll) => {
-      scroll? ref.current?scrollIntoView({behavior: 'smooth'}):null:null;
-      };
+    // const ref = useRef(null);
+    // const handleClick = (scroll) => {
+    //   scroll? ref.current?scrollIntoView({behavior: 'smooth'}):null:null;
+    //   };
   return (
     
     <>

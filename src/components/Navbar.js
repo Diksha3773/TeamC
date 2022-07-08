@@ -8,9 +8,6 @@ import {useNavigate} from 'react-router-dom'
 
 function Navbar() {
     const ref = useRef(null);
-    const handleClick = () => {
-        ref.current?.scrollIntoView({behavior: 'smooth'});
-      };
     let navigate=useNavigate();
     const [open, setOpen] = useState(false);
     const [width, setWidth] = useState(getWindowSize());
@@ -69,7 +66,7 @@ function Navbar() {
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/Infrastructure");setOpen(!open)}}>Infrastructure: At a glance</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/messageofHOD");setOpen(!open)}}>HOD's Message</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{setOpen(!open)}}>Achievements</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' onClick={handleClick}>Contact us</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' >Contact us</button></div>
                          
                         </div>
                      
