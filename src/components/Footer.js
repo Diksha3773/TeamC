@@ -1,9 +1,15 @@
 import React from 'react'
 import logo from './Img/logo.png'
+import { useRef,useState } from 'react';
 function Footer() {
+    const ref = useRef(null);
+    const handleClick = (scroll) => {
+      scroll? ref.current?scrollIntoView({behavior: 'smooth'}):null:null;
+      };
   return (
+    
     <>
-    <footer className='bg-gray-200'>
+    <footer  className='bg-gray-200'>
         <div className="p-10 bg-neutral-700 text-gray-200">
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -20,7 +26,7 @@ function Footer() {
                             <li className="pb-1"><a href="/" className="text-xl hover:text-yellow-500">Academic Calendar</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <div >
                         <h4 className="pt-32 text-2xl text-center underline">Contact Us</h4>
                         <ul className="mt-2 text-center">
                             <li className="pb-1 text-xl">Phone : +123456789</li>

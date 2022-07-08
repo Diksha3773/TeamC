@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AllPlacement from './components/AllPlacement';
 import Error from './pages/Errorpage';
@@ -9,11 +10,15 @@ import VisionandMission from './pages/VisionandMission';
 import Syllabus from './pages/Syllabus';
 import Infrastructure from './pages/Infrastructure'
 import Timetable from './pages/Timetable';
+
 const AppRouter = () => {
+  const [scroll, setScroll] = useState(false);
+  const handlescroll = ()=>{
+    setScroll(!scroll);
+  }
   return (
     <Router>
-      <Navbar />
-
+      <Navbar handlescroll={handlescroll}/>
       <Routes>
         <Route exact path='/' element={<Homepage />} />
         <Route path='/placements' element={<AllPlacement />} />
@@ -23,9 +28,10 @@ const AppRouter = () => {
         <Route path='*' element={<Error />} />
         <Route path='/MissionandVision' element={<VisionandMission />} />
         <Route path='/Infrastructure' element={<Infrastructure />} />
-
+    
+       
       </Routes>
-      <Footer />
+      <Footer scroll={scroll} />
 
 
 

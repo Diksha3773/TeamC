@@ -11,10 +11,7 @@ import './App.css';
 // import Place from './components/Place';
 import AppRouter from './AppRouter';
 function App() {
-  // const [activate, setActivate] = useState(true);
-  // const Handleactivate = ()=>{
-  //   setActivate(!activate);
-  // }
+  
   
   return (
     // components on homepage of main website

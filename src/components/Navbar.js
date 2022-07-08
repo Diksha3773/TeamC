@@ -5,8 +5,12 @@ import Hambur from './Img/menu.png'
 import Clock from './Clock'
 import {useNavigate} from 'react-router-dom'
 
+
 function Navbar() {
-  
+    const ref = useRef(null);
+    const handleClick = () => {
+        ref.current?.scrollIntoView({behavior: 'smooth'});
+      };
     let navigate=useNavigate();
     const [open, setOpen] = useState(false);
     const [width, setWidth] = useState(getWindowSize());
@@ -65,8 +69,11 @@ function Navbar() {
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/Infrastructure");setOpen(!open)}}>Infrastructure: At a glance</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{navigate("/messageofHOD");setOpen(!open)}}>HOD's Message</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600'onClick={()=>{setOpen(!open)}}>Achievements</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Contact us</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-neutral-600' onClick={handleClick}>Contact us</button></div>
+                         
                         </div>
+                     
+                        
                     </div>
                     <div className='group   shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>Academics</span>
@@ -75,7 +82,7 @@ function Navbar() {
                             <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Academic Coordinates</button></div>
                             <div ><button className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Syllabus");setOpen(!open)}}>Syllabus</button></div>
                             <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{navigate("/Timetable");setOpen(!open)}}>Time-Tables</button></div>
-                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{setOpen(!open)}}>Department Activities Calendar</button></div>
+                            <div > <button  className='flex w-full p-2 font-medium hover:bg-neutral-600' onClick={()=>{ setOpen(!open)}}>Department Activities Calendar</button></div>
                         </div>
                     </div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>
@@ -141,7 +148,7 @@ function Navbar() {
                                     </div>
                                 </div>
                             </div>
-                            <div className='block w-auto flex-initial m-2 rounded'>
+                            <div  className='block w-auto flex-initial m-2 rounded'>
                                 <div className='w-28 h-28 relative flex flex-col min-w-0 hover:border rounded'>
                                     <div className='flex-auto text-center'>
                                          <button className='w-full h-full' onClick={()=>{setOpen(!open)}}>
@@ -155,6 +162,7 @@ function Navbar() {
                     </div>
                 </div>
             </div>
+      
         </>
     )
 }
