@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TeamC/static/css/main.3eefac5d.css",
-    "main.js": "/TeamC/static/js/main.6c8afee0.js",
+    "main.css": "/TeamC/static/css/main.296903d0.css",
+    "main.js": "/TeamC/static/js/main.1a165f01.js",
     "static/media/comp.mp4": "/TeamC/static/media/comp.1a6acf95afffa2f6acd3.mp4",
     "static/media/syllabus.pdf": "/TeamC/static/media/syllabus.745df2a473b12c11f27e.pdf",
     "static/media/homepage.jpg": "/TeamC/static/media/homepage.c7469ae543178d7f98be.jpg",
@@ -19,14 +19,15 @@
     "static/media/sy.png": "/TeamC/static/media/sy.b34660f47614e1bb8db6.png",
     "static/media/top4.png": "/TeamC/static/media/top4.cecf55c1bf0554996282.png",
     "static/media/top3.png": "/TeamC/static/media/top3.8a63730bc81b95dc829e.png",
+    "static/media/search.gif": "/TeamC/static/media/search.70fdcc94a80f4216b99e.gif",
     "static/media/top2.png": "/TeamC/static/media/top2.f53a70f236eef8c901bb.png",
     "static/media/Rahul.png": "/TeamC/static/media/Rahul.fc0e58f5a093225f6adb.png",
     "index.html": "/TeamC/index.html",
-    "main.3eefac5d.css.map": "/TeamC/static/css/main.3eefac5d.css.map",
-    "main.6c8afee0.js.map": "/TeamC/static/js/main.6c8afee0.js.map"
+    "main.296903d0.css.map": "/TeamC/static/css/main.296903d0.css.map",
+    "main.1a165f01.js.map": "/TeamC/static/js/main.1a165f01.js.map"
   },
   "entrypoints": [
-    "static/css/main.3eefac5d.css",
-    "static/js/main.6c8afee0.js"
+    "static/css/main.296903d0.css",
+    "static/js/main.1a165f01.js"
   ]
 }
