@@ -107,21 +107,26 @@ function AllPlacement() {
     const [search, setSearch] = useState('');
     var count = 0;
     const myref = useRef();
-
+    const handlecount = (val) => {
+        count = val;
+        return 1;
+    }
     const isEqual = (itemE, searchV) => {
         itemE = itemE.toUpperCase();
+        let searchp = searchV;
         searchV = searchV.toUpperCase();
+        if (searchp === searchV && itemE.indexOf('-') === -1) {
+            return parseInt(itemE) >= parseInt(searchV);
+        }
         let value = itemE.indexOf(searchV);
-        if (value !== -1){
-            count = 1;
+        if (value !== -1) {
             return true;
-        } 
-        else{
-            count = 0;
+        }
+        else {
             return false;
         }
     }
-    
+
     useEffect(() => {
         window.scrollTo(0, 0);
     }, [])
@@ -140,8 +145,8 @@ function AllPlacement() {
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 colplace m-2 lg:mx-4 w-full items-center justify-center place-items-center text-white'>
                         {
                             list.map((item, i) => {
-                                return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (
-                                    < div key={i} ref={myref} className='w-[85%] sm:w-full m-2  h-[21rem] flex items-center justify-center group' >
+                                return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
+                                    < div key={i} ref={myref} className='w-[85%] sm:w-full m-2  h-[21rem] flex items-center justify-center group'>
                                         <div className='card border border-white rounded-lg'>
                                             <div className='text-center font-medium text-xl p-2 group-hover:text-2xl'>{item.name}</div>
                                             <div className="flex flex-col items-center pb-10">
@@ -152,20 +157,20 @@ function AllPlacement() {
                                             </div>
                                         </div>
                                     </div>
-                                ) : <></>) :
-                                    (
-                                        <div key={i} ref={myref} className='w-[85%] sm:w-full m-2  h-[21rem] flex items-center justify-center group'>
-                                            <div className='card border border-white rounded-lg'>
-                                                <div className='text-center font-medium text-xl p-2 group-hover:text-2xl'>{item.name}</div>
-                                                <div className="flex flex-col items-center pb-10">
-                                                    <img className="m-2 mb-3 w-28 h-28 rounded-full border-gray-600 shadow-xl group-hover:w-32 group-hover:h-32" src={item.imgurl} alt="..." />
-                                                    <h4 className="m-1 text-xl font-medium text-gray-50 italic group-hover:text-2xl">{item.Companyname}</h4>
-                                                    <h4 className="text-lg text-gray-300   group-hover:text-xl">{item.packages} L.P.A</h4>
-                                                    <h4 className="text-lg text-gray-300   group-hover:text-xl">({item.duration})</h4>
-                                                </div>
+                                ) : <></>) : (handlecount(0)) &&
+                                (
+                                    <div key={i} ref={myref} className='w-[85%] sm:w-full m-2  h-[21rem] flex items-center justify-center group'>
+                                        <div className='card border border-white rounded-lg'>
+                                            <div className='text-center font-medium text-xl p-2 group-hover:text-2xl'>{item.name}</div>
+                                            <div className="flex flex-col items-center pb-10">
+                                                <img className="m-2 mb-3 w-28 h-28 rounded-full border-gray-600 shadow-xl group-hover:w-32 group-hover:h-32" src={item.imgurl} alt="..." />
+                                                <h4 className="m-1 text-xl font-medium text-gray-50 italic group-hover:text-2xl">{item.Companyname}</h4>
+                                                <h4 className="text-lg text-gray-300   group-hover:text-xl">{item.packages} L.P.A</h4>
+                                                <h4 className="text-lg text-gray-300   group-hover:text-xl">({item.duration})</h4>
                                             </div>
                                         </div>
-                                    )
+                                    </div>
+                                )
                             })
                         }
                     </div>
@@ -174,7 +179,7 @@ function AllPlacement() {
                             <div>
                                 <div className='w-[85%] sm:w-full m-2  h-[21rem] flex items-center justify-center'>
                                     <div className='card border h-full border-white text-white rounded-lg flex flex-col items-center text-2xl font-semibold italic justify-center'>
-                                        <img src={searchgif} alt = '...'/>
+                                        <img src={searchgif} alt='...' />
                                         <span className='my-10 italic'>No Pages Found!</span>
                                     </div>
                                 </div>

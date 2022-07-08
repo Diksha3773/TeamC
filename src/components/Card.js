@@ -2,9 +2,9 @@
 import React from 'react'
 const Card = ({ title, image, body }) => {
     return (
-        <div className="container w-full mx-auto flex flex-col">
-            <div v-for="card in cards" className="flex flex-col lg:flex-row overflow-hidden bg-white border rounded-lg shadow-lg  mt-4 w-100 mx-2">
-                <div className="h-40 w-full flex items-center justify-center">
+        <div className="container w-full mx-auto flex flex-col items-center justify-center">
+            <div v-for="card in cards" className="flex flex-col lg:flex-row overflow-hidden bg-white border items-center justify-center rounded-lg shadow-lg  mt-4 w-100 mx-2">
+                <div className="h-full w-full flex items-center justify-center">
                     <img className="inset-0 h-40 w-40 lg:w-full object-cover object-center" src={image} alt='' />
                 </div>
                 <div className="w-full text-justify py-4 px-6 text-gray-800 flex flex-col justify-between">
