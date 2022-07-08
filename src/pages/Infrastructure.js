@@ -13,7 +13,7 @@ function Infrastructure() {
 
           <div key={uuid()} className='flex flex-col m-2 p-1 sm:m-4 sm:p-2 items-center justify-center w-full sm:w-4/5 md:w-4/5 h-[600px] bg-green-50 shadow-md shadow-green-200 '>
             <h1 className="text-centre text-2xl text-red-600"><b>{item.title}</b></h1>
-            <img src={item.src} className="overflow-clip rounded-lg  w-full sm:w-4/5 md:w-2/2 h-[500px]"></img>
+            <img src={item.src} className="overflow-clip rounded-lg  w-full sm:w-4/5 md:w-2/2 h-[500px]"alt="..."/>
           </div>
 
         </div>
