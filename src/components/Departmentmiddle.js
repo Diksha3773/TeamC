@@ -28,9 +28,9 @@ const highlights = ['Applications are Invited for the ', 'Selected Candidates fo
 
 const Departmentmiddle = () => {
     let navigate = useNavigate();
-    const handleactivity = () => (navigate("/activities"))
-    const handlenews = () => (navigate("/news"))
-    const handlehighlights = () => (navigate("/highlights"))
+    const handleactivity = () => (navigate("/Viewall/activities"))
+    const handlenews = () => (navigate("/Viewall/news"))
+    const handlehighlights = () => (navigate("/Viewall/highlights"))
 
 
     return (
