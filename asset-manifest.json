@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TeamC/static/css/main.1df545a1.css",
-    "main.js": "/TeamC/static/js/main.4eb21075.js",
+    "main.css": "/TeamC/static/css/main.4dc16e5b.css",
+    "main.js": "/TeamC/static/js/main.a69db23a.js",
     "static/media/comp.mp4": "/TeamC/static/media/comp.1a6acf95afffa2f6acd3.mp4",
     "static/media/syllabus.pdf": "/TeamC/static/media/syllabus.745df2a473b12c11f27e.pdf",
     "static/media/homepage.jpg": "/TeamC/static/media/homepage.c7469ae543178d7f98be.jpg",
@@ -9,9 +9,9 @@
     "static/media/bgplace.png": "/TeamC/static/media/bgplace.39c58e01206dd0efe777.png",
     "static/media/bgcamp.png": "/TeamC/static/media/bgcamp.5acc694710406f09becf.png",
     "static/media/syl-5.jpg": "/TeamC/static/media/syl-5.305a87f5c03ebb34f2bb.jpg",
-    "static/media/pdf_ani.mp4": "/TeamC/static/media/pdf_ani.956b7c9c99e8a8151857.mp4",
     "static/media/vision.gif": "/TeamC/static/media/vision.68b063da10181a712b01.gif",
     "static/media/002.jpg": "/TeamC/static/media/002.4689ec7edf491d81e18b.jpg",
+    "static/media/pgf.gif": "/TeamC/static/media/pgf.10fc47ac2d5aafe1b05b.gif",
     "static/media/02.jpeg": "/TeamC/static/media/02.aafac4a1f9432d4405ab.jpeg",
     "static/media/03.jpeg": "/TeamC/static/media/03.51ab253c5e6f4160c52a.jpeg",
     "static/media/003.jpg": "/TeamC/static/media/003.1188ad2d9ef3be4b4f20.jpg",
@@ -23,11 +23,11 @@
     "static/media/top2.png": "/TeamC/static/media/top2.f53a70f236eef8c901bb.png",
     "static/media/Rahul.png": "/TeamC/static/media/Rahul.fc0e58f5a093225f6adb.png",
     "index.html": "/TeamC/index.html",
-    "main.1df545a1.css.map": "/TeamC/static/css/main.1df545a1.css.map",
-    "main.4eb21075.js.map": "/TeamC/static/js/main.4eb21075.js.map"
+    "main.4dc16e5b.css.map": "/TeamC/static/css/main.4dc16e5b.css.map",
+    "main.a69db23a.js.map": "/TeamC/static/js/main.a69db23a.js.map"
   },
   "entrypoints": [
-    "static/css/main.1df545a1.css",
-    "static/js/main.4eb21075.js"
+    "static/css/main.4dc16e5b.css",
+    "static/js/main.a69db23a.js"
   ]
 }
