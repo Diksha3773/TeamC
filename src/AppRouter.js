@@ -37,6 +37,21 @@ const AppRouter = () => {
       date: "20-June-2022",
       heading: "Retail inflation above 6% for 6 months in a row, rising food costs a major concern now",
       details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+    },
+    {
+      date: "20-June-2022",
+      heading: "Retail inflation above 6% for 6 months in a row, rising food costs a major concern now",
+      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+    },
+    {
+      date: "20-June-2022",
+      heading: "Retail inflation above 6% for 6 months in a row, rising food costs a major concern now",
+      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+    },
+    {
+      date: "20-June-2022",
+      heading: "Retail inflation above 6% for 6 months in a row, rising food costs a major concern now",
+      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
     }
   ];
   const news = [
@@ -96,7 +111,7 @@ const AppRouter = () => {
         <Route path='/MissionandVision' element={<VisionandMission />} />
         <Route path='/Infrastructure' element={<Infrastructure />} />
         <Route path='/Viewall/:activities' element={<Viewall latest={activity} />} />
-        <Route path='/Viewall/:news' element={<Viewall latest={{ news }} />} />
+        <Route  path='/Viewall/:news' element={<Viewall latest={{ news }} />} />
         <Route path='/Viewall/:highlights' element={<Viewall latest={highlights} />} />
 
 
