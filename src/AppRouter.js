@@ -87,7 +87,7 @@ const AppRouter = () => {
     <Router>
       <Navbar handlescroll={handlescroll} />
       <Routes>
-        <Route exact path='/' element={<Homepage />} />
+        <Route exact path='/' element={<Homepage />}  />
         <Route path='/placements' element={<AllPlacement />} />
         <Route path='/MessageofHOD' element={<HodMessage />} />
         <Route path='/Syllabus' element={<Syllabus />} />
