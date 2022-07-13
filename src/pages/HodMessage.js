@@ -1,8 +1,9 @@
 import React from 'react'
 import { useEffect } from 'react'
 function HodMessage() {
-  useEffect(() => (
-    window.scrollTo(0, 0)))
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
 <div className='flex flex-col  my-4 mx-2'>
 <h1 className='text-center text-2xl font-bold md:font-extrabold md:text-3xl text-orange-600 font-serif m-2'>Head Of Department</h1>

@@ -2,8 +2,9 @@ import React from 'react'
 import uuid from 'react-uuid';
 import { useEffect } from 'react';
 function Viewall(props) {
-  useEffect(() => (
-    window.scrollTo(0, 0)))
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   let data = Array.from(props.latest);
   return (
     <div>
@@ -18,7 +19,7 @@ function Viewall(props) {
                       <span className="mt-2 text-gray-600 text-sm">{n.date}</span>
                     </div>
                     <div className="md:flex-grow border-b-[1.5px] border-red-700">
-                   
+
                       <h2 className="text-2xl font-medium text-blue-600 title-font mb-2 ">{n.heading}</h2>
                       <p className="leading-relaxed">~{n.details}</p>
 

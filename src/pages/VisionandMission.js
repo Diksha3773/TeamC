@@ -2,8 +2,9 @@ import React from 'react'
 import vision from './../components/Img/vision.gif'
 import { useEffect } from 'react'
 function VisionandMission() {
-  useEffect(() => (
-    window.scrollTo(0, 0)))
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className='flex flex-col sm:mx-5
     md:flex-row justify-between lg:mx-12 '>

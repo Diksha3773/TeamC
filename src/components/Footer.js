@@ -48,9 +48,9 @@ function Footer({ scroll, handlescroll }) {
                             </div>
                             <div className="mb-5">
                                 <h4 ref={footref} className="text-yellow-500 text-xl pb-4">Contact Us</h4>
-                                <strong className='pr-1'>Phone:</strong>+1 234 567 890 <br />
+                                <strong className='pr-1'>Phone:</strong>+1 234 567 890 <br/>
                                 <strong className='pr-1'>Email:</strong>abc@nitj.ac.in
-                                <h4 className="pb-2 pt-3 text-xl text-yellow-500">Subscribe Our Newsletter</h4>
+                                <br/><h4 className="pb-2 pt-3 text-xl text-yellow-500">Subscribe Our Newsletter</h4>
                                 <form className="flex flex-row flex-wrap">
                                     <input type="text" className="text-gray-500 w-2/3 p-2 focus:border-yellow-500" placeholder="email@gmail.com" />
                                     <button className="p-2 w-1/3 bg-yellow-500 text-white hover:bg-yellow-600">Join</button>
