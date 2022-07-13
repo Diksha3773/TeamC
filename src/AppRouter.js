@@ -97,6 +97,14 @@ const AppRouter = () => {
       details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
     }
   ];
+  // const highlights= apiCalls.getHighlights();
+
+  // var getHighlights=()=>{
+  //     Request.get('https://www.example.com/highlights',(data)=>{
+  //       data=JSON.parse(data);
+  //       return data;
+  //     })
+  // }
   return (
     <Router>
       <Navbar handlescroll={handlescroll} />
@@ -109,9 +117,9 @@ const AppRouter = () => {
         <Route path='*' element={<Error />} />
         <Route path='/MissionandVision' element={<VisionandMission />} />
         <Route path='/Infrastructure' element={<Infrastructure />} />
-        <Route  exact path='/Viewall/news' element={<Viewall latest={news} heading = 'Latest News'/>} />
-        <Route exact path='/Viewall/:activities' element={<Viewall latest={activity} heading = 'Activities' />} />
-        <Route exact path='/Viewall/highlights' element={<Viewall latest={highlights} heading = 'Highlights' />} />
+        <Route  exact path='/news' element={<Viewall latest={news} title = 'Latest News'/>} />
+        <Route exact path='/activities' element={<Viewall latest={activity} title = 'Activities' />} />
+        <Route exact path='/highlights' element={<Viewall latest={highlights} title = 'HIGHLIGHTS' />} />
       </Routes>
       <Footer scroll={scroll} handlescroll={handlescroll} />
 
