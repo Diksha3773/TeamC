@@ -16,7 +16,6 @@ function Footer({ scroll, handlescroll }) {
     return (
 
         <>
-
             <footer className="bg-gray-200">
                 <div className="p-10 bg-gray-800 text-gray-200">
                     <div className="max-w-7xl mx-auto ">

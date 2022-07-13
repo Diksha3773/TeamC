@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import sy from '../components/Img/sy.png'
 import sy6 from '../components/Img/syl-5.jpg'
-import pdf from '../components/Vedio/pdf_ani.mp4'
+import pdf from '../components/Vedio/pgf.gif'
 import syllabuspdf from '../components/Pdf/syllabus.pdf'
 function Syllabus() {
   const List = [
@@ -29,8 +29,8 @@ function Syllabus() {
   const [bsem, setBsem] = useState('1st');
   // const [msem, setMsem] = useState('1st');
   const [overview, setOverview] = useState(true);
-  
-  
+
+
   return (
     <>
       <div className='flex flex-col items-center justify-center w-full py-3 bg-all'>
@@ -70,17 +70,17 @@ function Syllabus() {
                       return item1 === bsem ?
                         overview ? <img src={Btech[j]} alt='...' className='aspect-auto' /> :
                           <div key={j} className='flex items-center justify-center'>
-                            <video loading="lazy" muted="muted" src={pdf} width="100" height="100" type="video/mp4" autoPlay="autoplay" loop="loop" className='rounded-lg'></video>
+                            <div className='w-28 h-28 overflow-hidden rounded-lg flex items-center justify-center'>
+                              <img src={pdf} alt='...' className='w-40' />
+                            </div>
+
                             <div className='flex flex-col justify-center items-center m-2 w-52 h-52'>
-                              <div className='block my-2 mx-0 md:m-2'>
-                                <button type="button" class="text-gray-900 flex items-center justify-center bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-1 md:mr-2 mb-2">
-                                  <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
-                                  <span className='text-base md:text-lg  md:font-medium'>Download</span>
-                                </button>
+                              <div className='block m-2'>
+                                <button className="flex hover:shadow-lg hover:-translate-y-1 hover:shadow-cyan-500/50 mx-2 my-2 font-bold text-lg py-3 duration-500 bg-[#2d2546] text-white px-4 rounded items-center justify-center active:translate-y-[2px] italic">Download <svg class="fill-current w-4 h-4 mx-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg></button>
                               </div>
                               <div className='block'>
-                                <a href={syllabuspdf} target='_blank' rel='noreferrer' class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                                  <span className='text-lg font-medium'>View Pdf</span>
+                                <a href={syllabuspdf} target='_blank' rel='noreferrer'>
+                                  <button className="flex hover:shadow-lg hover:-translate-y-1 hover:shadow-cyan-500/50 mx-2 my-2 font-bold text-lg py-3 duration-500 bg-[#2d2546] text-white px-4 rounded items-center justify-center active:translate-y-[2px] italic">View Pdf</button>
                                 </a>
                               </div>
                             </div>
@@ -94,17 +94,16 @@ function Syllabus() {
                       return item1 === bsem ?
                         overview ? <img src={Mtech[j]} alt='...' className='aspect-auto' /> :
                           <div key={j} className='flex items-center justify-center'>
-                            <video loading="lazy" muted="muted" src={pdf} width="100" height="100" type="video/mp4" autoPlay="autoplay" loop="loop" className='rounded-lg'></video>
+                            <div className='w-28 h-28 overflow-hidden rounded-lg flex items-center justify-center'>
+                              <img src={pdf} alt='...' />
+                            </div>
                             <div className='flex flex-col justify-center items-center m-2 w-52 h-52'>
                               <div className='block m-2'>
-                                <button type="button" class="text-gray-900 flex items-center justify-center bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                                  <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg>
-                                  <span className='text-lg font-medium'>Download Pdf</span>
-                                </button>
+                                <button className="flex hover:shadow-lg hover:-translate-y-1 hover:shadow-cyan-500/50 mx-2 my-2 font-bold text-lg py-3 duration-500 bg-[#2d2546] text-white px-4 rounded items-center justify-center active:translate-y-[2px] italic">Download <svg class="fill-current w-4 h-4 mx-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" /></svg></button>
                               </div>
                               <div className='block'>
-                                <a href={syllabuspdf} target='_blank' rel='noreferrer' class="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2">
-                                  <span className='text-lg font-medium'>View Pdf</span>
+                                <a href={syllabuspdf} target='_blank' rel='noreferrer'>
+                                  <button className="flex hover:shadow-lg hover:-translate-y-1 hover:shadow-cyan-500/50 mx-2 my-2 font-bold text-lg py-3 duration-500 bg-[#2d2546] text-white px-4 rounded items-center justify-center active:translate-y-[2px] italic">View Pdf</button>
                                 </a>
                               </div>
                             </div>

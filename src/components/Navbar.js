@@ -17,7 +17,7 @@ function Navbar({handlescroll}) {
     }
     const Handlescroll = () => {
         let offtop1 = myref.current.getBoundingClientRect().top;
-        if(offtop1 <= -94){
+        if(offtop1 <= -105){
             if(!offtop)
             setOfftop(true);
         }else{
@@ -35,7 +35,7 @@ function Navbar({handlescroll}) {
     return (
         <>
             <div className='flex flex-col h-auto w-full' ref={myref}>
-                <div className='h-24 p-2 py-4 flex bg-gray-900 text-white w-full items-center justify-between navsize bg-opacity-90'>
+                <div className='h-28 p-2 py-4 flex bg-gray-800 text-white w-full items-center justify-between navsize'>
                     <div className='flex items-center my-2  logocon'>
                         <div className='block xsw-full'>
                             <img src={logo} className='h-20 float-left' alt='' />
@@ -50,13 +50,13 @@ function Navbar({handlescroll}) {
                     </div>
                     <div className='hidden md:block'><Clock /></div>
                 </div>
-                <div className='flex justify-between items-center bg-gray-900 bg-opacity-90'>
+                <div className='flex justify-between items-center bg-gray-900'>
                     <button className='p-3  flex items-center md:hidden' onClick={() => { setOpen(!open) }} >
                         <img src={Hambur} alt="..." className='h-8 w-8 m-1 mx-2 p-1 rounded-lg' />
                     </button>
                     <div className='block md:hidden m-2'><Clock /></div>
                 </div>
-                <div className={'flex-col bg-gray-900 text-white bg-opacity-95 md:flex w-full justify-center md:items-center md:flex-row md:h-16'} style={open ? {display: 'flex',transition: 'height 400ms cubic-bezier(0.23, 1, 0.32, 1) 4s'} : (width < 768 ? { display: "none" } : ( offtop ? { dispay: "flex", position: "fixed", height:"4rem", opacity: "1" } : { display: "flex" }))}>
+                <div className={'flex-col bg-gray-900 text-white md:flex w-full justify-center md:items-center md:flex-row md:h-16'} style={open ? {display: 'flex',transition: 'height 400ms cubic-bezier(0.23, 1, 0.32, 1) 4s'} : (width < 768 ? { display: "none" } : ( offtop ? { dispay: "flex", position: "fixed", height:"4rem", opacity: "1" } : { display: "flex" }))}>
                     <div className='flex p-2 m-0'><button className="hover:shadow-lg hover:-translate-y-0 hover:shadow-gray-600 bg-transparent mx-4 md:mx-2 md:my-2 font-medium md:border md:hover:border-gray-900 border-gray-400 duration-500  md:py-2 md:px-3 rounded active:translate-y-2" onClick={()=>{navigate("/");setOpen(!open)}}>Home</button></div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>
                         <span className='my-2 mx-4 font-medium hover:text-blue-600 cursor-pointer'>About us</span>
