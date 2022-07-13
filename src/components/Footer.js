@@ -56,7 +56,7 @@ function Footer({ scroll,handlescroll }) {
                                 <p>© Copyright 2016-2022, All Rights Reserved <strong>NIT Jalandhar</strong></p>
                             </div>
                         </div>
-                        {/* <hr className=""/> */}
+                      
 
                     </div>
                 </div>

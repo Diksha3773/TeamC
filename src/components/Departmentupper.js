@@ -3,7 +3,7 @@ import Card from './Card'
 const Departmentupper = (props) => {
     return (
 
-        <div className='m-3 mt-10 flex flex-col md:flex-row justify-center items-center md:justify-evenly overflow-y-hidden'>
+        <div className='m-3 mt-2 flex flex-col md:flex-row justify-center items-center md:justify-evenly overflow-y-hidden'>
             {/* // department intro */}
             <div className="bg-white rounded-lg border border-gray-200 shadow-md md:w-1/2 ">
 
@@ -24,7 +24,7 @@ const Departmentupper = (props) => {
                 </div>
             </div>
 
-            <div className='flex flex-col mt-1 justify-center items-center w-full md:w-1/2 md:mx-3 aspect-video'>
+            <div className='flex flex-col mb-10 justify-center items-center w-full md:w-1/2 md:mx-3 aspect-video'>
                 {/* club */}
                 <div className='w-full my-2 md:my-1 flex justify-center items-center'><Card title="Coding Club" image='https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq'
                     body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita Lorem ipsum dolor sit amet consectetur adipisicing elit." />
