@@ -57,8 +57,8 @@ const AppRouter = () => {
   const news = [
     {
       date: "20-July-2022",
-      heading: "Sri Lanka President Gotabaya Rajapaksa flees to Maldives as protests escalate | Top Points",
-      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+      heading: "'Lion will of course show its teeth...': Anupam Kher on National Emblem row",
+      details: "Actor Anupam Kher said this is the lion of independent India which will also bite if need be. “If the lion has got teeth, it will, of course, show them,” the actor tweeted amid the row over the National Emblem atop the new Parliament building. "
     },
     {
       date: "10-July-2022",
@@ -68,6 +68,21 @@ const AppRouter = () => {
     {
       date: "2-July-2022",
       heading: "Not just economy, democratic values have also been collapsing in Sri Lanka  ",
+      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+    },
+    {
+      date: "20-June-2022",
+      heading: "Retail inflation above 6% for 6 months in a row, rising food costs a major concern now",
+      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+    },
+    {
+      date: "20-June-2022",
+      heading: "Retail inflation above 6% for 6 months in a row, rising food costs a major concern now",
+      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+    },
+    {
+      date: "20-June-2022",
+      heading: "Retail inflation above 6% for 6 months in a row, rising food costs a major concern now",
       details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
     },
     {
@@ -78,31 +93,31 @@ const AppRouter = () => {
   ];
   const highlights = [
     {
-      date: "20-July-2022",
-      heading: "Sri Lanka President Gotabaya Rajapaksa flees to Maldives as protests escalate | Top Points",
-      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
-    },
-    {
-      date: "10-July-2022",
-      heading: "UK Home Secretary Priti Patel rules herself out of bid to replace Boris Johnson",
-      details: "Priti Patel - widely expected to become another Indian-origin candidate in the race for the post of Conservative Party leader and the next British prime minister - on Tuesday ruled out a bid, saying she was  for the encouragement but her focus remains on her current job as Home Secretary.."
-    },
-    {
-      date: "2-July-2022",
-      heading: "Not just economy, democratic values have also been collapsing in Sri Lanka  ",
-      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+      date: "20-June-2022",
+      heading: "Pune Schools To Remain Closed Tomorrow as Rains Pound City,",
+      details: "One person has died while many are feared trap after a landslide struck Vasai area of Maharashtra’s Palghar district on Wednesday morning. Rescue operations are currently underway."
     },
     {
       date: "20-June-2022",
-      heading: "Retail inflation above 6% for 6 months in a row, rising food costs a major concern now",
-      details: "Sri Lankan President Gotabaya Rajapaksa on Wednesday flew out of the country and landed in the Maldives. Gotabaya Rajapaksa had earlier hinted he would not resign till his family got a safe exit from the country."
+      heading: "Pune Schools To Remain Closed Tomorrow as Rains Pound City,",
+      details: "One person has died while many are feared trap after a landslide struck Vasai area of Maharashtra’s Palghar district on Wednesday morning. Rescue operations are currently underway."
+    },
+    {
+      date: "20-June-2022",
+      heading: "Pune Schools To Remain Closed Tomorrow as Rains Pound City,",
+      details: "One person has died while many are feared trap after a landslide struck Vasai area of Maharashtra’s Palghar district on Wednesday morning. Rescue operations are currently underway."
+    },
+    {
+      date: "20-June-2022",
+      heading: "Pune Schools To Remain Closed Tomorrow as Rains Pound City,",
+      details: "One person has died while many are feared trap after a landslide struck Vasai area of Maharashtra’s Palghar district on Wednesday morning. Rescue operations are currently underway."
     }
   ];
   return (
     <Router>
       <Navbar handlescroll={handlescroll} />
       <Routes>
-        <Route exact path='/' element={<Homepage />}  />
+        <Route exact path='/' element={<Homepage />} />
         <Route path='/placements' element={<AllPlacement />} />
         <Route path='/MessageofHOD' element={<HodMessage />} />
         <Route path='/Syllabus' element={<Syllabus />} />
@@ -110,9 +125,9 @@ const AppRouter = () => {
         <Route path='*' element={<Error />} />
         <Route path='/MissionandVision' element={<VisionandMission />} />
         <Route path='/Infrastructure' element={<Infrastructure />} />
-        <Route path='/Viewall/:activities' element={<Viewall latest={activity} />} />
-        <Route  path='/Viewall/:news' element={<Viewall latest={{ news }} />} />
-        <Route path='/Viewall/:highlights' element={<Viewall latest={highlights} />} />
+        <Route path='/activities' element={<Viewall latest={activity} />} />
+        <Route exact path='/news' element={<Viewall latest={news} />} />
+        <Route exact path='/highlights' element={<Viewall latest={highlights} />} />
 
 
 
