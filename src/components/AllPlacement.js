@@ -176,7 +176,7 @@ function AllPlacement() {
                     </div>
                     {
                         count === 0 && search ?
-                            <div>
+                            <div className='mb-4 flex w-full items-center justify-center'>
                                 <div className='w-[85%] sm:w-full m-2  h-[21rem] flex items-center justify-center'>
                                     <div className='card border h-full border-white text-white rounded-lg flex flex-col items-center text-2xl font-semibold italic justify-center'>
                                         <img src={searchgif} alt='...' />
