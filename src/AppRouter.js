@@ -112,8 +112,6 @@ const AppRouter = () => {
         <Route  exact path='/Viewall/news' element={<Viewall latest={news} heading = 'Latest News'/>} />
         <Route exact path='/Viewall/:activities' element={<Viewall latest={activity} heading = 'Activities' />} />
         <Route exact path='/Viewall/highlights' element={<Viewall latest={highlights} heading = 'Highlights' />} />
-
-
       </Routes>
       <Footer scroll={scroll} handlescroll={handlescroll} />
 
