@@ -21,27 +21,6 @@ function App() {
     //   <Checker/> 
     // </div>
 
-     // components on department website
-    // <div>
-    //   <Navbar />
-    //   {activate && <Imagesroll/>}
-    //   {!activate && <AllPlacement Handleactivate = {Handleactivate}/>}
-    //   {activate && <Department />}
-    //   {activate && <TopPlacement Handleactivate = {Handleactivate}/>}
-    //   <Footer />
-      
-    //   </div>
-  // components on department website
-    // <div>
-    //   <Navbar />
-    //   {activate && <Imagesroll/>}
-    //   {!activate && <AllPlacement Handleactivate = {Handleactivate}/>}
-    //   {activate && <Department />}
-    //   {activate && <TopPlacement Handleactivate = {Handleactivate}/>}
-    //   <Place/>
-    //   <Footer />
-    // </div>
-    // testing routes
     <>
     <AppRouter/>
     

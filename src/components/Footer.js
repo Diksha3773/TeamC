@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import logo from './Img/logo.png'
 import { useRef } from 'react'
 function Footer({ scroll, handlescroll }) {
@@ -25,15 +26,12 @@ function Footer({ scroll, handlescroll }) {
                                 <p>Grand Trunk Road, Barnala<br />
                                     Amritsar Bypass Rd<br />
                                     Jalandhar, Punjab-144011, India<br /><br />
-                                    <h4 ref={footref} className="text-yellow-500 text-xl pb-4">Contact Us</h4>
-                                    <strong className='pr-1'>Phone:</strong>+1 234 567 890 <br />
-                                    <strong className='pr-1'>Email:</strong>abc@nitj.ac.in
                                 </p>
                             </div>
                             <div className="mb-5">
                                 <h4 className="text-yellow-500 text-xl pb-4">Useful Links</h4>
                                 <ul>
-                                    <li className="pb-4"><a href='/' className="text-decoration: none hover:text-yellow-700">Home</a></li>
+                                    <li className="pb-4"><Link to='/' className="text-decoration: none hover:text-yellow-700">Home</Link></li>
                                     <li className="pb-4"><a href='/' className="text-decoration: none hover:text-yellow-700">About Us</a></li>
                                     <li className="pb-4"><a href='/' className="text-decoration: none hover:text-yellow-700">Program's Regulations</a></li>
                                     <li className="pb-4"><a href='/' className="text-decoration: none hover:text-yellow-700">Academic Calendar</a></li>
@@ -43,13 +41,16 @@ function Footer({ scroll, handlescroll }) {
                                 <h4 className="text-yellow-500 text-xl pb-4">Student Corner</h4>
                                 <ul>
                                     <li className="pb-4"><a href='/' className="text-decoration: none hover:text-yellow-700">Courses</a></li>
-                                    <li className="pb-4"><a href='/' className="text-decoration: none hover:text-yellow-700">Time Tables</a></li>
+                                    <li className="pb-4"><Link to='/TimeTable' className="text-decoration: none hover:text-yellow-700">Time Tables</Link></li>
                                     <li className="pb-4"><a href='/' className="text-decoration: none hover:text-yellow-700">Placement Centre</a></li>
                                     <li className="pb-4"><a href='/' className="text-decoration: none hover:text-yellow-700">Clubs</a></li>
                                 </ul>
                             </div>
                             <div className="mb-5">
-                                <h4 className="pb-2 text-xl">Subscribe Our Newsletter</h4>
+                                <h4 ref={footref} className="text-yellow-500 text-xl pb-4">Contact Us</h4>
+                                <strong className='pr-1'>Phone:</strong>+1 234 567 890 <br />
+                                <strong className='pr-1'>Email:</strong>abc@nitj.ac.in
+                                <h4 className="pb-2 pt-3 text-xl text-yellow-500">Subscribe Our Newsletter</h4>
                                 <form className="flex flex-row flex-wrap">
                                     <input type="text" className="text-gray-500 w-2/3 p-2 focus:border-yellow-500" placeholder="email@gmail.com" />
                                     <button className="p-2 w-1/3 bg-yellow-500 text-white hover:bg-yellow-600">Join</button>
