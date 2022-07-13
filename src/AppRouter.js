@@ -11,7 +11,6 @@ import Syllabus from './pages/Syllabus';
 import Infrastructure from './pages/Infrastructure'
 import Timetable from './pages/Timetable';
 import Viewall from './components/Viewall';
-
 const AppRouter = () => {
   const [scroll, setScroll] = useState(false);
   const handlescroll = () => {
@@ -103,18 +102,16 @@ const AppRouter = () => {
       <Navbar handlescroll={handlescroll} />
       <Routes>
         <Route exact path='/' element={<Homepage />}  />
-        <Route path='/placements' element={<AllPlacement />} />
+        <Route path='/placements' element={<AllPlacement/>} />
         <Route path='/MessageofHOD' element={<HodMessage />} />
         <Route path='/Syllabus' element={<Syllabus />} />
         <Route path='/Timetable' element={<Timetable />} />
         <Route path='*' element={<Error />} />
         <Route path='/MissionandVision' element={<VisionandMission />} />
         <Route path='/Infrastructure' element={<Infrastructure />} />
-        <Route path='/Viewall/:activities' element={<Viewall latest={activity} />} />
-        <Route  path='/Viewall/:news' element={<Viewall latest={{ news }} />} />
-        <Route path='/Viewall/:highlights' element={<Viewall latest={highlights} />} />
-
-
+        <Route  exact path='/Viewall/news' element={<Viewall latest={news} heading = 'Latest News'/>} />
+        <Route exact path='/Viewall/:activities' element={<Viewall latest={activity} heading = 'Activities' />} />
+        <Route exact path='/Viewall/highlights' element={<Viewall latest={highlights} heading = 'Highlights' />} />
 
 
       </Routes>

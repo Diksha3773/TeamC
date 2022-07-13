@@ -1,15 +1,16 @@
 import React from 'react'
 import uuid from 'react-uuid';
 import { useEffect } from 'react';
-function Viewall(props) {
+function Viewall({ latest, heading }) {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-  let data = Array.from(props.latest);
+  let data = Array.from(latest);
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-10 mx-auto bg-lime-100">
+          <h1 className='max-w-max text-3xl font-semibold text-lime-800 flex items-center justify-center shadow p-2 my-2 mx-auto'>{heading}</h1>
           <div >
             <ol>
               {
