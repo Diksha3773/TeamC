@@ -384,10 +384,10 @@
    }
 }
 .bg-all{
-   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('./components/Img/homepage.jpg') no-repeat;
+   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://upload.wikimedia.org/wikipedia/commons/5/55/IT_Building%2C_NIT_Jalandhar_05.JPG") no-repeat;
    width: 100%;
-   height: calc(100% - 20rem);
-   background-attachment: fixed;
+   height: calc(100vh + 4rem);
+   /* background-attachment: fixed; */
    background-position: center center;
    background-size: cover;
 }
