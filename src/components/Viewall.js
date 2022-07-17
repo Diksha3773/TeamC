@@ -1,7 +1,7 @@
 import React from 'react'
 import uuid from 'react-uuid';
 import { useEffect } from 'react';
-function Viewall({ latest, title }) {
+function Viewall({ latest, heading }) {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -10,7 +10,7 @@ function Viewall({ latest, title }) {
     <div>
       <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-10 mx-auto bg-lime-100 ">
-          <h1 className='max-w-max text-3xl font-semibold text-yellow-700 bg-yellow-50 uppercase flex items-center justify-center shadow-md shadow-yellow-500 p-2 my-2 mx-auto rounded-xl'>{title}</h1>
+          <h1 className='max-w-max text-3xl font-semibold text-yellow-700 bg-yellow-50 uppercase flex items-center justify-center shadow-md shadow-yellow-500 p-2 my-2 mx-auto rounded-xl'>{heading}</h1>
           <div >
             <ol>
               {
