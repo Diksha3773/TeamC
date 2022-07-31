@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TeamC/static/css/main.b1ae7ffb.css",
-    "main.js": "/TeamC/static/js/main.9b074236.js",
+    "main.css": "/TeamC/static/css/main.af0d5155.css",
+    "main.js": "/TeamC/static/js/main.3110e259.js",
     "static/media/comp.mp4": "/TeamC/static/media/comp.1a6acf95afffa2f6acd3.mp4",
     "static/media/syllabus.pdf": "/TeamC/static/media/syllabus.745df2a473b12c11f27e.pdf",
     "static/media/homepage.jpg": "/TeamC/static/media/homepage.c7469ae543178d7f98be.jpg",
@@ -16,6 +16,7 @@
     "static/media/03.jpeg": "/TeamC/static/media/03.51ab253c5e6f4160c52a.jpeg",
     "static/media/003.jpg": "/TeamC/static/media/003.1188ad2d9ef3be4b4f20.jpg",
     "static/media/logo.png": "/TeamC/static/media/logo.871a78921b63fb84ccc5.png",
+    "static/media/404error.mp4": "/TeamC/static/media/404error.2b4abdd48f4ff05f75a9.mp4",
     "static/media/sy.png": "/TeamC/static/media/sy.b34660f47614e1bb8db6.png",
     "static/media/top4.png": "/TeamC/static/media/top4.cecf55c1bf0554996282.png",
     "static/media/top3.png": "/TeamC/static/media/top3.8a63730bc81b95dc829e.png",
@@ -23,11 +24,11 @@
     "static/media/top2.png": "/TeamC/static/media/top2.f53a70f236eef8c901bb.png",
     "static/media/Rahul.png": "/TeamC/static/media/Rahul.fc0e58f5a093225f6adb.png",
     "index.html": "/TeamC/index.html",
-    "main.b1ae7ffb.css.map": "/TeamC/static/css/main.b1ae7ffb.css.map",
-    "main.9b074236.js.map": "/TeamC/static/js/main.9b074236.js.map"
+    "main.af0d5155.css.map": "/TeamC/static/css/main.af0d5155.css.map",
+    "main.3110e259.js.map": "/TeamC/static/js/main.3110e259.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1ae7ffb.css",
-    "static/js/main.9b074236.js"
+    "static/css/main.af0d5155.css",
+    "static/js/main.3110e259.js"
   ]
 }
