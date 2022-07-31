@@ -12,6 +12,7 @@ import Infrastructure from './pages/Infrastructure'
 import Timetable from './pages/Timetable';
 import Viewall from './components/Viewall';
 import AcadCordinator from './pages/AcadCordinator';
+import NewNavbar from './components/NewNavbar';
 const AppRouter = () => {
   const [scroll, setScroll] = useState(false);
   const handlescroll = () => {
@@ -101,6 +102,7 @@ const AppRouter = () => {
   return (
     <Router>
       <Navbar handlescroll={handlescroll} />
+      {/* <NewNavbar handlescroll={handlescroll}/> */}
       <Routes>
         <Route exact path='/' element={<Homepage />}  />
         <Route path='/placements' element={<AllPlacement/>} />

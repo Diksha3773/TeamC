@@ -148,12 +148,12 @@ function AllPlacement() {
                                 return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
                                     < div key={i} ref={myref} className='w-[85%] sm:w-full m-2  h-[21rem] flex items-center justify-center group'>
                                         <div className='card border border-white rounded-lg'>
-                                            <div className='text-center font-medium text-xl p-2 group-hover:text-2xl'>{item.name}</div>
+                                            <div className='text-center font-medium text-xl p-2 group-hover:text-2xl duration-500'>{item.name}</div>
                                             <div className="flex flex-col items-center pb-10">
-                                                <img className="m-2 mb-3 w-28 h-28 rounded-full border-gray-600 shadow-xl group-hover:w-32 group-hover:h-32" src={item.imgurl} alt="..." />
-                                                <h4 className="m-1 text-xl font-medium text-gray-50 italic group-hover:text-2xl">{item.Companyname}</h4>
-                                                <h4 className="text-lg text-gray-300   group-hover:text-xl">{item.packages} L.P.A</h4>
-                                                <h4 className="text-lg text-gray-300 group-hover:text-xl">({item.duration})</h4>
+                                                <img className="m-2 mb-3 w-28 h-28 rounded-full border-gray-600 shadow-xl group-hover:w-32 group-hover:h-32 duration-500" src={item.imgurl} alt="..." />
+                                                <h4 className="m-1 text-xl font-medium text-gray-50 italic group-hover:text-2xl duration-500">{item.Companyname}</h4>
+                                                <h4 className="text-lg text-gray-300   group-hover:text-xl duration-500">{item.packages} L.P.A</h4>
+                                                <h4 className="text-lg text-gray-300 group-hover:text-xl duration-500">({item.duration})</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -161,12 +161,12 @@ function AllPlacement() {
                                 (
                                     <div key={i} ref={myref} className='w-[85%] sm:w-full m-2  h-[21rem] flex items-center justify-center group'>
                                         <div className='card border border-white rounded-lg'>
-                                            <div className='text-center font-medium text-xl p-2 group-hover:text-2xl'>{item.name}</div>
+                                            <div className='text-center font-medium text-xl p-2 group-hover:text-2xl duration-200'>{item.name}</div>
                                             <div className="flex flex-col items-center pb-10">
-                                                <img className="m-2 mb-3 w-28 h-28 rounded-full border-gray-600 shadow-xl group-hover:w-32 group-hover:h-32" src={item.imgurl} alt="..." />
-                                                <h4 className="m-1 text-xl font-medium text-gray-50 italic group-hover:text-2xl">{item.Companyname}</h4>
-                                                <h4 className="text-lg text-gray-300   group-hover:text-xl">{item.packages} L.P.A</h4>
-                                                <h4 className="text-lg text-gray-300   group-hover:text-xl">({item.duration})</h4>
+                                                <img className="m-2 mb-3 w-28 h-28 rounded-full border-gray-600 shadow-xl group-hover:w-32 group-hover:h-32 duration-200" src={item.imgurl} alt="..." />
+                                                <h4 className="m-1 text-xl font-medium text-gray-50 italic group-hover:text-2xl duration-200">{item.Companyname}</h4>
+                                                <h4 className="text-lg text-gray-300   group-hover:text-xl duration-200">{item.packages} L.P.A</h4>
+                                                <h4 className="text-lg text-gray-300   group-hover:text-xl duration-200">({item.duration})</h4>
                                             </div>
                                         </div>
                                     </div>
