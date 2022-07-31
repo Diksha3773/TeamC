@@ -111,9 +111,9 @@ const AppRouter = () => {
         <Route path='/MessageofHOD' element={<HodMessage />} />
         <Route path='/MissionandVision' element={<VisionandMission />} />
         <Route path='/Infrastructure' element={<Infrastructure />} />
-        <Route  exact path='/Viewall/news' element={<Viewall latest={news} heading = 'Latest News'/>} />
-        <Route exact path='/Viewall/:activities' element={<Viewall latest={activity} heading = 'Activities' />} />
-        <Route exact path='/Viewall/highlights' element={<Viewall latest={highlights} heading = 'Highlights' />} />
+        <Route  exact path='/news' element={<Viewall latest={news} heading = 'Latest News'/>} />
+        <Route exact path='/activities' element={<Viewall latest={activity} heading = 'Activities' />} />
+        <Route exact path='/highlights' element={<Viewall latest={highlights} heading = 'Highlights' />} />
         {/* Academic */}
         <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus = {true}/>} />
         <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus = {false} />} />
