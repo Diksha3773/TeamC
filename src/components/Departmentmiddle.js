@@ -34,8 +34,7 @@ const Departmentmiddle = () => {
 
 
     return (
-        <div className='flex flex-col sm:mx-5
-    md:flex-row justify-around lg:mx-12 '>
+        <div className='flex flex-col sm:mx-5 md:flex-row justify-around lg:mx-4 '>
 
             {/*  Activity  */}
             <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 rounded border shadow-lg'>

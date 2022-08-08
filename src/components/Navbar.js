@@ -6,18 +6,17 @@ import Clock from './Clock'
 import {useNavigate} from 'react-router-dom'
 
 
-function Navbar({handlescroll}) {
+function Navbar({handlescroll,offtop,setOfftop}) {
     let navigate=useNavigate();
     const [open, setOpen] = useState(false);
     const [width, setWidth] = useState(getWindowSize());
-    const [offtop, setOfftop] = useState(false)
     const myref = useRef();
     const getListsize = () => {
         setWidth(getWindowSize);
     }
     const Handlescroll = () => {
         let offtop1 = myref.current.getBoundingClientRect().top;
-        if(offtop1 <= -105){
+        if(offtop1 <= -100){
             if(!offtop)
             setOfftop(true);
         }else{
@@ -34,7 +33,7 @@ function Navbar({handlescroll}) {
     }, []);
     return (
         <>
-            <div className='flex flex-col h-auto w-full' ref={myref}>
+            <div className='flex flex-col relative h-auto w-full' ref={myref}>
                 <div className='h-28 p-2 py-4 flex bg-gray-800 text-white w-full items-center justify-between navsize'>
                     <div className='flex items-center my-2  logocon'>
                         <div className='block xsw-full'>
@@ -65,8 +64,7 @@ function Navbar({handlescroll}) {
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/Infrastructure");setOpen(!open)}}>Infrastructure: At a glance</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/messageofHOD");setOpen(!open)}}>HOD's Message</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{setOpen(!open)}}>Achievements</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg rounded-b-md' onClick={()=>{handlescroll();setOpen(!open)}} >Contact us</button></div>
-                         
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg rounded-b-md' onClick={()=>{handlescroll();setOpen(!open)}} >Contact us</button></div>                      
                         </div>                  
                     </div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>

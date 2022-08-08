@@ -13,11 +13,13 @@ import Timetable from './pages/Timetable';
 import Viewall from './components/Viewall';
 import AcadCordinator from './pages/AcadCordinator';
 import NewNavbar from './components/NewNavbar';
+import Menu from './components/Menu';
 const AppRouter = () => {
   const [scroll, setScroll] = useState(false);
   const handlescroll = () => {
     setScroll(!scroll);
   }
+  const [offtop, setOfftop] = useState(false)
   const activity = [
     {
       date: "20-July-2022",
@@ -100,31 +102,42 @@ const AppRouter = () => {
     }
   ];
   return (
-    <Router>
-      <Navbar handlescroll={handlescroll} />
-      {/* <NewNavbar handlescroll={handlescroll}/> */}
-      <Routes>
-        <Route exact path='/' element={<Homepage />}  />
-        <Route path='/placements' element={<AllPlacement/>} />
-        <Route path='*' element={<Error />} />
-        {/* About us */}
-        <Route path='/MessageofHOD' element={<HodMessage />} />
-        <Route path='/MissionandVision' element={<VisionandMission />} />
-        <Route path='/Infrastructure' element={<Infrastructure />} />
-        <Route  exact path='/news' element={<Viewall latest={news} heading = 'Latest News'/>} />
-        <Route exact path='/activities' element={<Viewall latest={activity} heading = 'Activities' />} />
-        <Route exact path='/highlights' element={<Viewall latest={highlights} heading = 'Highlights' />} />
-        {/* Academic */}
-        <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus = {true}/>} />
-        <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus = {false} />} />
-        <Route path='/Acadcord' element={<AcadCordinator/>} />
-      </Routes>
-
-      <Footer scroll={scroll} handlescroll={handlescroll} />
-
-
-
-    </Router>
+    <>
+      <div className='m-0 p-0 w-full h-full scrollbar'>
+        <Router>
+          <div className='w-full max-h-64 mb-2'>
+            {/* <Navbar handlescroll={handlescroll} offtop={offtop} setOfftop={setOfftop} /> */}
+            <NewNavbar handlescroll={handlescroll}/>
+          </div>
+          <div className='container max-h-full sm:max-h-screen  flex flex-col sm:flex-row mx-auto'>
+            <div className='basis-full flex sm:basis-1/4 h-screen  mx-auto'>
+              <Menu handlescroll={handlescroll}/>
+            </div>
+            <div className='basis-full sm:basis-3/4 shadow-lg max-h-full overflow-y-scroll scrollbar'>
+              <Routes>
+                <Route exact path='/' element={<Homepage offtop={offtop}/>} />
+                <Route path='/placements' element={<AllPlacement />} />
+                <Route path='*' element={<Error />} />
+                {/* About us */}
+                <Route path='/MessageofHOD' element={<HodMessage />} />
+                <Route path='/MissionandVision' element={<VisionandMission />} />
+                <Route path='/Infrastructure' element={<Infrastructure />} />
+                <Route exact path='/news' element={<Viewall latest={news} heading='Latest News' />} />
+                <Route exact path='/activities' element={<Viewall latest={activity} heading='Activities' />} />
+                <Route exact path='/highlights' element={<Viewall latest={highlights} heading='Highlights' />} />
+                {/* Academic */}
+                <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
+                <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
+                <Route path='/Acadcord' element={<AcadCordinator />} />
+              </Routes>
+            </div>
+          </div>
+          <div className='w-full max-h-[28rem]'>
+            <Footer scroll={scroll} handlescroll={handlescroll} />
+          </div>
+        </Router>
+      </div>
+    </>
   )
 };
 
