@@ -12,7 +12,7 @@ function TopPlacement() {
         <>
             <div className='flex flex-col justify-center rounded items-center w-full sm:w-[98%] mx-auto text-center shadow-md my-8'>
                 <div className='flex flex-col p-2 m-2 text-center'>
-                    <span className='text-3xl font-sans font-bold animate-bounce '>Top Placements </span>
+                    <span className='text-3xl font-sans font-bold'>Top Placements </span>
                     <span className='text-lg font-mono font-semibold '> (Computer Science and Engineering)</span>
                 </div>
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 m-2 lg:mx-4 w-full items-center justify-center place-items-center text-gray-700 over'>

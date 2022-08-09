@@ -26,7 +26,7 @@ const Departmentupper = (props) => {
 
             <div className='flex flex-col mb-10 justify-center items-center w-full md:w-1/2 md:mx-3 aspect-video'>
                 {/* club */}
-                <div className='w-full my-2 md:my-1 flex h-auto justify-center items-center'><Card title="Coding Club" image='https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq'
+                <div className='w-full my-2 md:my-1 flex h-auto justify-center items-center'><Card title="Coding Club"
                     body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita Lorem ipsum dolor sit amet consectetur adipisicing elit." />
                 </div>
                 {/* video */}

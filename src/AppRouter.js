@@ -109,7 +109,7 @@ const AppRouter = () => {
             {/* <Navbar handlescroll={handlescroll} offtop={offtop} setOfftop={setOfftop} /> */}
             <NewNavbar handlescroll={handlescroll}/>
           </div>
-          <div className='container max-h-full sm:max-h-screen  flex flex-col sm:flex-row mx-auto'>
+          <div className='container h-screen flex flex-col sm:flex-row mx-auto'>
             <div className='basis-full flex sm:basis-1/4 h-screen  mx-auto'>
               <Menu handlescroll={handlescroll}/>
             </div>

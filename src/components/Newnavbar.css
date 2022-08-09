@@ -72,6 +72,9 @@ body {
     opacity: 1;
 }
 
+.mySlides {
+    display: none;
+}
 
 .main-nav-hover:hover {
     cursor: pointer;
@@ -79,7 +82,7 @@ body {
     transition: 0.1s all ease;
 }
 
-.containern {
+.container {
     display: flex;
     width: 100%;
     box-sizing: border-box;
