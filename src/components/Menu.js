@@ -43,8 +43,8 @@ function Menu({ handlescroll }) {
                 <div className={"border-2 max-w-full w-72 flex flex-col m-2 mt-14 shadow rounded "}>
                     <div className='text-xl font-medium p-2 w-full border-2 bg-blue-500 text-white rounded-t shadow'>Department of Computer Science and Engineering</div>
                     <div className='p-3'>
-                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded' onClick={() => { navigate("/"); handlehome(); }}><i className='fa fa-home w-10 px-auto'></i>Home</div>
-                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded'>
+                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded cursor-pointer' onClick={() => { navigate("/"); handlehome(); }}><i className='fa fa-home w-10 px-auto'></i>Home</div>
+                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded cursor-pointer'>
                             <div onClick={handleabout}><i className='fa fa-info w-10 px-auto'></i>About Us</div>
                             <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow bg-white duration-700 " + (openabout ? '' : 'hidden')}>
                                 <div ><button className='flex justify-start w-full p-2 font-medium hover:bg-blue-300 active:translate-y-1 shadow-sm' onClick={() => { navigate("/MissionandVision") }}>Vision and Mission</button></div>
@@ -54,7 +54,7 @@ function Menu({ handlescroll }) {
                                 <div ><button className='flex justify-start w-full p-2 font-medium hover:bg-blue-300 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { handlescroll() }} >Contact us</button></div>
                             </div>
                         </div>
-                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded'>
+                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded cursor-pointer'>
                             <div onClick={handlecad}><i className='fa fa-university w-10 px-auto'></i>Academics</div>
                             <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow bg-white duration-500 " + (openacad ? '' : 'hidden')}>
                                 <div> <button className='flex w-full p-2 font-medium hover:bg-blue-300 active:translate-y-1 shadow-sm' onClick={() => { }}>Programmes</button></div>
@@ -64,7 +64,7 @@ function Menu({ handlescroll }) {
                                 <div > <button className='flex w-full p-2 font-medium hover:bg-blue-300 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { }}>Department Activities Calendar</button></div>
                             </div>
                         </div>
-                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded'>
+                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded cursor-pointer'>
                             <div onClick={handlepupil}><i className='fa fa-person w-10 px-auto'></i>People</div>
                             <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow bg-white duration-500 " + (openpupil ? '' : 'hidden')}>
                                 <div> <button className='flex justify-start w-full p-2 font-medium hover:bg-blue-300 active:translate-y-1 shadow-sm' onClick={() => { }}>Faculty</button></div>
@@ -74,7 +74,7 @@ function Menu({ handlescroll }) {
                                 <div> <button className='flex justify-start p-2 w-full font-medium hover:bg-blue-300 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { }}>Staff</button></div>
                             </div>
                         </div>
-                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded'>
+                        <div className='p-2 my-1 shadow hover:bg-blue-100 rounded cursor-pointer'>
                             <div onClick={handlelab}><i className='fa fa-flask w-10 px-auto'></i>Research and Labs</div>
                             <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow bg-white duration-500 " + (openresearch ? '' : 'hidden')}>
                                 <div> <button className='flex justify-start w-full p-2 font-medium hover:bg-blue-300 active:translate-y-1 shadow-sm' onClick={() => { }}>Research Areas</button></div>
