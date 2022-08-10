@@ -2,21 +2,21 @@
 import React from 'react'
 const Card = ({ title, body }) => {
     return (
-        <div id="club-card" class="overflow-hidden rounded-xl bg-white shadow-lg">
-            <div class="flex w-full flex-col items-stretch justify-start sm:flex-row">
-                <div class={"w-2/5 bg-[url('https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq')] bg-cover bg-center bg-no-repeat"}>
+        <div id="club-card" className="overflow-hidden rounded-xl bg-white shadow-lg">
+            <div className="flex w-full flex-col items-stretch justify-start sm:flex-row">
+                <div className={"w-2/5 bg-[url('https://qph.cf2.quoracdn.net/main-qimg-d0139b5cabcff7d5adad435605016120-lq')] bg-cover bg-center bg-no-repeat"}>
                 </div>
-                <div class="flex flex-col p-6 w-3/5">
-                    <div class="flex flex-col items-start justify-start space-y-3">
-                        <h4 class="text-2xl font-bold uppercase">{title}</h4>
-                        <div class="flex items-start justify-start rounded-full border-2 border-lime-500 bg-lime-100 px-2 py-0.5 mt-2">
-                            <p class="text-xs font-bold uppercase text-lime-500">{title}</p>
+                <div className="flex flex-col p-6 w-3/5">
+                    <div className="flex flex-col items-start justify-start space-y-3">
+                        <h4 className="text-2xl font-bold uppercase">{title}</h4>
+                        <div className="flex items-start justify-start rounded-full border-2 border-lime-500 bg-lime-100 px-2 py-0.5 mt-2">
+                            <p className="text-xs font-bold uppercase text-lime-500">{title}</p>
                         </div>
-                        <p class="line-clamp-3 leading-5">{body}
+                        <p className="line-clamp-3 leading-5">{body}
                         </p>
                     </div>
-                    <div class="mt-5 flex items-center justify-start space-x-3">
-                        <a class="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
+                    <div className="mt-5 flex items-center justify-start space-x-3">
+                        <a className="uppercase cursor-pointer font-semibold text-sm text-sky-500">Learn more
                             <span>→</span></a>
                     </div>
                 </div>

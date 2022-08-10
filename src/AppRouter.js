@@ -106,18 +106,19 @@ const AppRouter = () => {
     <>
       <div className='m-0 p-0 w-full h-full'>
         <Router>
-          <div className='w-full max-h-64 mb-2'>
+          <div className='w-full max-h-96 mb-2'>
             {/* <Navbar handlescroll={handlescroll} offtop={offtop} setOfftop={setOfftop} /> */}
             <NewNavbar handlescroll={handlescroll}/>
+            {/* <Test/> */}
           </div>
-          <div className="container flex-col sm:flex-row mx-auto" style={{height:"100vh"}}>
+          <div className="mt-36 flex flex-col sm:flex-row mx-auto" style={{height:"100vh"}}>
             <div className='basis-full flex sm:basis-1/4 h-screen  mx-auto'>
               <Menu handlescroll={handlescroll}/>
             </div>
             <div className='basis-full sm:basis-3/4 shadow-lg max-h-full overflow-y-scroll scrollbar'>
               <Routes>
                 <Route exact path='/' element={<Homepage offtop={offtop}/>} />
-                {/* <Route exact path='/' element={<Test/>} /> */}
+                {/* <Route exact path='/placements' element={<Test/>} /> */}
                 <Route path='/placements' element={<AllPlacement />} />
                 <Route path='*' element={<Error />} />
                 {/* About us */}

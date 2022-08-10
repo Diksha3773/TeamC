@@ -1,978 +1,611 @@
 import React from 'react'
-import './Newnavbar.css'
-import './NewNav.js'
+import top2 from './Img/top2.png'
+import top3 from './Img/top3.png'
+import top4 from './Img/top4.png'
 import logo from './Img/logo.png'
 import Rect from './Img/rect.png'
+import './Newnavbar.css'
 function NewNavbar() {
-    const handle=()=>{
-        console.log("Hello World");
-    }
-  return (
-    <>
-    <header className="sticky top-0">
-        {/* <!-- TOP NAV BAR --> */}
-        <div id="top_bar" className="flex flex-row py-0.5 bg-color-1 text-white font-bold px-12 text-xs h-7">
-            <div className="basis-1/2">
-                <div className="flex flex-row justify-center">
-                    <div className="items-center flex pr-8" href="">
-                        <span className="material-symbols-outlined"> engineering </span>
-                        <a href="" className="pl-1.5 text-sm">Jobs</a>
-                    </div>
-                    <div className="items-center flex pr-8" href="">
-                        <span className="material-symbols-outlined"> add_business </span>
-                        <a href="" className="pl-1.5 text-sm">Tenders</a>
-                    </div>
-                    <div className="items-center flex pr-8" href="">
-                        <span className="material-symbols-outlined"> badge </span>
-                        <a href="" className="pl-1.5 text-sm">Placements</a>
-                    </div>
-                    <div className="items-center flex pr-8" href="">
-                        <span className="material-symbols-outlined"> event_note </span>
-                        <a href="" className="pl-1.5 text-sm">Resources</a>
-                    </div>
-                    <div className="items-center flex" href="">
-                        <span className="material-symbols-outlined"> psychology_alt </span>
-                        <a href="" className="pl-1.5 text-sm">Help</a>
-                    </div>
-                </div>
-            </div>
-            <div className="basis-1/2 pl-8">
-                <div className="flex flex-row justify-center">
-                    <div className="basis-1/3 items-center">
-                        <span className="material-symbols-outlined"> public </span>
-                        <span className="material-symbols-outlined"> public </span>
-                        <span className="material-symbols-outlined"> public </span>
-                    </div>
-                    <div className="basis-1/3 flex items-center">
-                        <span className="material-symbols-outlined"> g_translate </span>
-                        <a href="" className="pl-1">हिन्दी / <span className="text-lg">A</span>+A-</a>
-                    </div>
-                    <div className="basis-1/3 flex items-center">
-                        <span className="material-symbols-outlined"> contacts </span>
-                        <a href="" className="pl-1.5 text-sm">ERP</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        {/* <!-- INSTITUTE LOGO & NAME --> */}
-        <div className="block">
-            <div className="flex flex-row bg-color justify-between align-center py-2.5 px-16">
-                <div
-                    className="institute_name basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-lg">
-                    <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
-                </div>
-                <div
-                    className="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-16">
-                    <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-                </div>
-            </div>
-        </div>
-        <div className="mySlides">
-            <div className="flex flex-row bg-color justify-between align-center py-2.5 px-16">
-                <div
-                    className="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-16">
-                    <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-                </div>
-                <div
-                    className="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-8">
-                    <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
-                </div>
-            </div>
-        </div>
-        <div className="mySlides">
-            <div className="flex flex-row bg-color justify-between align-center py-2.5 px-16">
-                <div
-                    className="institute_name basis-1/2 flex justify-center uppercase font-bold text-xl text-center max-w-lg px-8">
-                    <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
-                </div>
-                <div
-                    className="institute_name basis-1/2 flex justify-center uppercase font-bold text-lg text-center max-w-lg">
-                    <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
-                </div>
-            </div>
-        </div>
-        {/* <!-- IMAGE CONTAINER --> */}
-        <div className="mx-auto absolute -translate-x-1/2 z-10 left-1/2" style={{width: "230px"}}>
-            <img src={Rect} alt="" />
-        </div>
-        <div id="logo_250" className="absolute -translate-x-1/2 z-10 left-1/2 top-8" style={{width: "120px", height: "120px"}}>
-            <img src={logo} alt="" />
-        </div>
-
-        {/* <!-- NAV BAR --> */}
-        <div
-            className="flex flex-row max-w-full bg-color-1 z-20 text-white font-bold text-xl justify-between h-10 drop-shadow-lg">
-            <div className="basis-2/5">
-                <div className="flex flex-row justify-between w-full px-10">
-                    <div className="group cursor-default">
-                        <div className="main-nav-hover p-1">Administration</div>
-                        <div id="drop-down"
-                            className="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm">
-                            <div id="col"
-                                className="flex flex-col gap-5 hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        ABOUT US
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Vision, Mission & Quality Policy
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Virtual tour
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Institute History
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Explore NITJ
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            NITJ Rankings & Awards
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Institute Prospectus Location
-                                        </li>
-                                    </ul>
-                                </div>
+    return (
+        <>
+            <header className="fixed bg-white top-0 right-0 left-0 z-50">
+                {/* <!-- TOP NAV BAR stats --> */}
+                <div id="top_bar"
+                    className="absolute top-0 right-0 left-0 transition-transform delay-200 z-50 flex h-7 flex-row bg-blue-700 py-0.5 px-12 text-sm font-bold text-white">
+                    <div className="basis-1/2">
+                        <div className="flex flex-row justify-center">
+                            <div className="flex items-center pr-8" href="">
+                                <span className="material-symbols-outlined"> engineering </span>
+                                <a href="" className="pl-1.5 text-sm">Jobs</a>
                             </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        LEADERSHIP
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Organisational Chart
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Chariperson
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Director
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Registrar
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Academic administration
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Student Welfare
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Faculty Welfare
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Planning and Development
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Research and Consultancy
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            International Affairs
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Hostel administration
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div className="flex items-center pr-8" href="">
+                                <span className="material-symbols-outlined"> add_business </span>
+                                <a href="" className="pl-1.5 text-sm">Tenders</a>
                             </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        GOVERNING BODIES
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            NIT council
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Board of Governors
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Senate
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Standing committee of the senate
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Finance committee
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Building and works committee
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div className="flex items-center pr-8" href="">
+                                <span className="material-symbols-outlined"> badge </span>
+                                <a href="" className="pl-1.5 text-sm">Placements</a>
                             </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        CELLS
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            E-Cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Equal opportunities and
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            SC/ST/OBC/PWD cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Rajbhasha cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            RTI Cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Student grievences cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Faculty grievences cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Staff grievences cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Public grievences
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Women cell
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        COMMITTEES
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Institute Development Committee
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Internal complaint committee
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Print, Digital Media and Newsletter
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Social Media
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Website Development and Management
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div className="flex items-center pr-8" href="">
+                                <span className="material-symbols-outlined"> event_note </span>
+                                <a href="" className="pl-1.5 text-sm">Resources</a>
+                            </div>
+                            <div className="flex items-center" href="">
+                                <span className="material-symbols-outlined"> psychology_alt </span>
+                                <a href="" className="pl-1.5 text-sm">Help</a>
                             </div>
                         </div>
                     </div>
-                    <div className="group cursor-default relative">
-                        <div className="main-nav-hover p-1">Academics</div>
-                        <div id="drop-down"
-                            className="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/4">
-                            <div id="col"
-                                className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        DEPARTMENTS
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Biotechnology
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Chemistry
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Chemical Engineering
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Civil Engineering
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Computer Science and Engineering
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Electronics and Communication Engineering
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Electrical Engineering
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Humanities and Management
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Industrial and Production Engineering
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Information Technology
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Instrumentation and Control Engineering
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Mathematics
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Mechanical Engineering
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Physics
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Textile Technology
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        CENTERS
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Center for Energy and Environment
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Center for Artificial Intelligence
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Center for Continuing Education
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        ACADEMIC SYSTEM
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Academic circulars & Notices
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Academic calender
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Academic regulations
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Curriculum
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Fee structure
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            System of Evaluation and Grant of divsion
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Standard Operationg Procedures (SOP)
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            UMC rules
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            General FAQs
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        ACADEMIC SERVICES
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Student Portal LOGIN
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Grade sheets
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Timetable
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Upcoming examination schedules
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Results
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Online application for Transcripts and certificates
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Online application for Verification of Degree
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            CGPA Criteria and Medium of Education
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Other Proformas
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Contact details
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        ACADEMIC FACILITIES
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Central Library
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Computer Center
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Central Workshop
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Institute Instrumentation center
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        PROGRAMMERS OF STUDY
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Bachelor of Technology
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Master of Technology
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Master of Business Administration
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Master of Science
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Post Graduate Diploma
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Doctor of Philosophy
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        CONVOCATION
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Convocation 2022
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Past convocations
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        OTHER LINKS
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            UGC Act- Rules and Regulations
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            NIT Act and Statutes
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Ministry of Education Notifications
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            National Education Policy 2020
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="group cursor-default relative">
-                        <div className="main-nav-hover p-1">Life at NITJ</div>
-                        <div id="drop-down"
-                            className="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/3">
-                            <div id="col"
-                                className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        CLUB & SOCITITES
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Vision, Mission & Quality Policy
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Heartfulness Mediation club
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Prayaas - A campaign for smile
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            R-Tist Robotics Club
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            SPIC MACAY
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            “We Can” Club
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Yoga club
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold flex justify-between">
-                                            Zeal Society
-                                            <div>View all</div>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        SCHOLARSHIPS
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Dr. Pratap Singh Memorial Scholarhsip
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            MCM Scholarship
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Post Matric Scholarship
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Siemens India Scholarship
-                                        </li>
-                                        <br />
-                                        <li className="hover:text-orange-500 hover:font-bold font-semibold">
-                                            View all
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        LEADERSHIP
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Organisational Chart
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Chariperson
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Director
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Registrar
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Academic administration
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Student Welfare
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Faculty Welfare
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Planning and Development
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Research and Consultancy
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            International Affairs
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Hostel administration
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        GOVERNING BODIES
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            NIT council
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Board of Governors
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Senate
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Standing committee of the senate
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Finance committee
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Building and works committee
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div id="col"
-                                className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        CELLS
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            E-Cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Equal opportunities and
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            SC/ST/OBC/PWD cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Rajbhasha cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            RTI Cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Student grievences cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Faculty grievences cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Staff grievences cell
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Public grievences
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Women cell
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div id="block">
-                                    <div id="head"
-                                        className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                        COMMITTEES
-                                    </div>
-                                    <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Institute Development Committee
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Internal complaint committee
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Print, Digital Media and Newsletter
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Social Media
-                                        </li>
-                                        <li className="hover:text-orange-500 hover:font-semibold">
-                                            Website Development and Management
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="basis-2/5">
-                <div className="flex flex-row justify-between w-full">
-                    <div className="basis-4/5">
+                    <div className="basis-1/2 pl-8">
                         <div className="flex flex-row justify-between">
-                            <div className="group cursor-default relative">
-                                <div className="main-nav-hover p-1">Research</div>
+                            <div className="flex basis-1/6 flex-row items-center">
+                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} />
+                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} />
+                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} />
+                            </div>
+                            <div className="flex basis-1/3 items-center">
+                                <span className="material-symbols-outlined"> g_translate </span>
+                                <a href="" className="pl-1">हिन्दी / <span className="text-lg">A</span>+A-</a>
+                            </div>
+                            <div className="flex basis-1/3 items-center">
+                                <span className="material-symbols-outlined"> contacts </span>
+                                <a href="" className="pl-1.5 text-sm">ERP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/* <!-- top nav bar ends --> */}
+                {/* <!-- INSTITUTE LOGO & NAME starts --> */}
+                <div className="block mt-7 z-50">
+                    <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
+                        <div className="institute_name flex max-w-lg basis-1/2 justify-center text-center text-lg font-bold uppercase">
+                            <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
+                        </div>
+                        <div
+                            className="institute_name flex max-w-lg basis-1/2 justify-center px-16 text-center text-xl font-bold uppercase">
+                            <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="mySlides mt-7 z-50">
+                    <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
+                        <div
+                            className="institute_name flex max-w-lg basis-1/2 justify-center px-16 text-center text-xl font-bold uppercase">
+                            <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+                        </div>
+                        <div className="institute_name flex max-w-lg basis-1/2 justify-center px-8 text-center text-xl font-bold uppercase">
+                            <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="mySlides mt-7 z-50">
+                    <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
+                        <div className="institute_name flex max-w-lg basis-1/2 justify-center px-8 text-center text-xl font-bold uppercase">
+                            <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+                        </div>
+                        <div className="institute_name flex max-w-lg basis-1/2 justify-center text-center text-lg font-bold uppercase">
+                            <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
+                        </div>
+                    </div>
+                </div>
+                {/* <!-- INSTITUTE LOGO & NAME ends --> */}
+                {/* <!-- Logo CONTAINER starts --> */}
+                <div className="absolute left-1/2 z-50 mx-auto -translate-x-1/2" style={{ width: "230px" }}>
+                    <img src={Rect} alt="" />
+                </div>
+                <div id="logo_250" className="absolute h-[120px] aspect-square left-1/2 top-8 z-50 -translate-x-1/2">
+                    <img src={logo} alt="" />
+                </div>
+                {/* <!-- Logo CONTAINER ends --> */}
+                {/* <!-- NAV BAR starts--> */}
+                <div
+                    className="z-50 flex h-10 max-w-full flex-row justify-between bg-blue-700 text-xl font-bold text-white drop-shadow-lg">
+                    <div className="basis-2/5">
+                        <div className="flex w-full flex-row justify-between px-10">
+                            <div className="group cursor-default hover:bg-blue-800">
+                                <div className="p-1.5">Administration</div>
                                 <div id="drop-down"
-                                    className="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2">
+                                    className="absolute mt-0.5 hidden gap-5 rounded-b-xl bg-white p-5 text-sm shadow-sm group-hover:flex">
                                     <div id="col"
-                                        className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                        <div id="block">
-                                            <div id="head"
-                                                className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                                RESEARCH @ NITJ
+                                        className="flex flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500 hover:bg-orange-500">
+                                        <div id="block" className="h-full">
+                                            <div id="head" className="h-full overflow-clip rounded-b-2xl bg-blue-700 capitalize hover:bg-orange-500">
+                                                <div className="p-2 text-center">ABOUT US</div>
+                                                <div className="h-full bg-white">
+                                                    <ul className="flex flex-col gap-1 rounded-b-xl px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Vision, Mission & Quality Policy
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Virtual tour
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Institute History
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Explore NITJ
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            NITJ Rankings & Awards
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Institute Prospectus Location
+                                                        </li>
+                                                    </ul>
+                                                </div>
                                             </div>
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    VIDWAN (IRINS Instance)
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Research Publications
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Research Jobs
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Internships
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Sponsored Research Projects
-                                                </li>
-                                            </ul>
                                         </div>
+                                    </div>
+                                    <div id="col" className="flex flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
                                         <div id="block">
-                                            <div id="head"
-                                                className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                                INCUBATION @ NITJ
+                                            <div id="head" className="rounded-b-2xl bg-blue-700 capitalize hover:bg-orange-500">
+                                                <div className="p-2 text-center">LEADERSHIP</div>
+                                                <ul className="flex flex-col gap-1 rounded-b-xl bg-white px-2 font-normal text-black">
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Organisational Chart
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Chariperson
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Director
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Registrar
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Academic administration
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Student Welfare
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Faculty Welfare
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Planning and Development
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Research and Consultancy
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        International Affairs
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Hostel administration
+                                                    </li>
+                                                </ul>
                                             </div>
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    STI Hub
+                                        </div>
+                                    </div>
+                                    <div id="col" className="flex flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                        <div id="block">
+                                            <div id="head" className="rounded-b-2xl bg-blue-700 capitalize hover:bg-orange-500">
+                                                <div className="p-2 text-center">GOVERNING BODIES</div>
+                                                <ul className="flex flex-col gap-1 rounded-b-xl bg-white px-2 font-normal text-black">
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        NIT council
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Board of Governors
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Senate
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Standing committee of the senate
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Finance committee
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Building and works committee
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="col" className="flex flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                        <div id="block">
+                                            <div id="head" className="rounded-b-2xl bg-blue-700 capitalize hover:bg-orange-500">
+                                                <div className="p-2 text-center">CELLS</div>
+                                                <ul className="flex flex-col gap-1 rounded-b-xl bg-white px-2 font-normal text-black">
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        E-Cell
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Equal opportunities and
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        SC/ST/OBC/PWD cell
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Rajbhasha cell
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        RTI Cell
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Student grievences cell
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Faculty grievences cell
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Staff grievences cell
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Public grievences
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Women cell
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="col" className="flex flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                        <div id="block">
+                                            <div id="head" className="rounded-b-2xl bg-blue-700 capitalize hover:bg-orange-500">
+                                                <div className="p-2 text-center">COMMITTEES</div>
+                                                <ul className="flex flex-col gap-1 rounded-b-xl bg-white px-2 font-normal text-black">
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Institute Development Committee
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Internal complaint committee
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Print, Digital Media and Newsletter
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Social Media
+                                                    </li>
+                                                    <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                        Website Development and Management
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="group relative cursor-default hover:bg-blue-800">
+                                <div className="p-1.5">Academics</div>
+                                <div id="drop-down"
+                                    className="absolute left-1/4 mt-0.5 hidden -translate-x-60 gap-5 rounded-b-xl bg-white p-5 text-sm shadow-sm group-hover:flex">
+                                    <div id="col"
+                                        className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                        <div id="block">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 capitalize hover:bg-orange-500">
+                                                <div className="p-2 text-center">DEPARTMENTS</div>
+                                            </div>
+                                            <ul className="flex flex-col gap-1 rounded-b-xl bg-white px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Biotechnology
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    E-Cell
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Chemistry
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Innovation club
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Chemical Engineering
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Institute Innovation council
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Civil Engineering
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Technology Business Incubator
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Computer Science and Engineering
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Electronics and Communication Engineering
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Electrical Engineering
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Humanities and Management
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Industrial and Production Engineering
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Information Technology
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Instrumentation and Control Engineering
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Mathematics
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Mechanical Engineering
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Physics
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Textile Technology
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div id="col"
-                                        className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
+                                        className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
                                         <div id="block">
-                                            <div id="head"
-                                                className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                                CONSULTANCY @ NITJ
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                CENTERS
                                             </div>
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Consultancy works
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Center for Energy and Environment
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    MoUs
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Center for Artificial Intelligence
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    IPRs
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Find an expert
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Central Research facilities
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Center for Continuing Education
                                                 </li>
                                             </ul>
                                         </div>
                                         <div id="block">
-                                            <div id="head"
-                                                className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                                UPCOMING EVENTS
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                ACADEMIC SYSTEM
                                             </div>
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Conferences
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Academic circulars & Notices
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Seminars
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Academic calender
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    STC/ FDP
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Academic regulations
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Workshops
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Curriculum
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Fee structure
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    System of Evaluation and Grant of divsion
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Standard Operationg Procedures (SOP)
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    UMC rules
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    General FAQs
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div id="col"
+                                        className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                        <div id="block">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                ACADEMIC SERVICES
+                                            </div>
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Student Portal LOGIN
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Grade sheets
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Timetable
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Upcoming examination schedules
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Results
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Online application for Transcripts and certificates
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Online application for Verification of Degree
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    CGPA Criteria and Medium of Education
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Other Proformas
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Contact details
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="block">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                ACADEMIC FACILITIES
+                                            </div>
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Central Library
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Computer Center
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Central Workshop
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Institute Instrumentation center
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div id="col"
+                                        className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                        <div id="block">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                PROGRAMMERS OF STUDY
+                                            </div>
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Bachelor of Technology
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Master of Technology
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Master of Business Administration
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Master of Science
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Post Graduate Diploma
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Doctor of Philosophy
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="block">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                CONVOCATION
+                                            </div>
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Convocation 2022
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Past convocations
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div id="block">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                OTHER LINKS
+                                            </div>
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    UGC Act- Rules and Regulations
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    NIT Act and Statutes
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    Ministry of Education Notifications
+                                                </li>
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                    National Education Policy 2020
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="group cursor-default relative">
-                                <div className="main-nav-hover p-1">Alumni</div>
+                            <div className="group relative cursor-default rounded-b-xl hover:bg-blue-800">
+                                <div className="p-2">Admissions</div>
                                 <div id="drop-down"
-                                    className="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm left-1/2 -translate-x-1/2">
+                                    className="absolute left-1/2 mt-0.5 hidden -translate-x-1/3 gap-5 rounded-b-xl bg-white p-5 text-sm shadow-sm group-hover:flex">
                                     <div id="col"
-                                        className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
+                                        className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
                                         <div id="block">
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2 py-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Alumni portal
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Alumni Registration
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Chapters
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Donation statistics and reports
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    GIve back
-                                                </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Impact
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div id="block">
-                                            <ul className="font-normal flex gap-1 flex-col md:font-bold text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
-                                                    Alumni affairs contact details
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="group cursor-default relative">
-                                <div className="main-nav-hover p-1">Admissions</div>
-                                <div id="drop-down"
-                                    className="absolute gap-5 bg-white hidden mt-0.5 p-5 shadow-sm group-hover:flex text-sm right-0">
-                                    <div id="col"
-                                        className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
-                                        <div id="block">
-                                            <div id="head"
-                                                className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
                                                 PROSPECTIVE STUDENTS
                                             </div>
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Why NITJ?
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Explore NITJ
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Discover Student Life
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Courses Offered
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     How to Apply
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Admissions Process
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Virtual tour
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     International Students
                                                 </li>
                                             </ul>
                                         </div>
                                         <div id="block">
-                                            <ul className="font-normal flex gap-1 flex-col md:font-bold text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black md:font-bold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Contact details for admission
                                                 </li>
                                             </ul>
                                         </div>
                                         <div id="block">
-                                            <div id="head"
-                                                className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
                                                 ANTI RAGGING
                                             </div>
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Anti ragging act
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Anti ragging affadvit
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Institute Anti-ragging rules
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div id="col"
-                                        className="flex flex-col gap-5 min-w-max hover:border-orange-500 hover:border-2 hover:rounded-b-xl">
+                                        className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
                                         <div id="block">
-                                            <div id="head"
-                                                className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
+                                            <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
                                                 JOIN NITJ
                                             </div>
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     B.Tech Admission
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     M.Tech Admission
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Msc Admission
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     MBA Admission
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Ph.D Admission
                                                 </li>
                                             </ul>
                                         </div>
                                         <div id="block">
-                                            <div id="head"
-                                                className="bg-color-1 hover:bg-orange-500 py-2 mb-3 capitalize text-center">
-                                                &ThinSpace; INSTITUTE PROSPECTUS &ThinSpace;
+                                            <div id="head" className="mb-3 bg-blue-700 p-2 text-center capitalize hover:bg-orange-500">
+                                                 INSTITUTE PROSPECTUS 
                                             </div>
-                                            <ul className="font-normal flex gap-1 flex-col text-black px-2">
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                            <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     B.Tech
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     M.Tech
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Msc
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     MBA
                                                 </li>
-                                                <li className="hover:text-orange-500 hover:font-semibold">
+                                                <li className="hover:font-semibold hover:text-[#FF6600]">
                                                     Ph.D
                                                 </li>
                                             </ul>
@@ -982,21 +615,359 @@ function NewNavbar() {
                             </div>
                         </div>
                     </div>
-                    <div className="basis-1/5 flex flex-row justify-center">
-                        <button type="button"
-                            className="material-symbols-outlined hover:rounded-full hover:w-10 hover:h-10 hover:box-border hover:border-2 hover:border-white cursor-pointer text-center transition duration-50 ease-in-out"
-                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search"
-                            onClick={handle}>
-                            search
-                        </button>
+                    <div className="basis-2/5">
+                        <div className="flex w-full flex-row justify-between">
+                            <div className="basis-4/5">
+                                <div className="flex flex-row justify-between">
+                                    <div className="group relative cursor-default rounded-b-xl hover:bg-blue-800">
+                                        <div className="p-2">Research</div>
+                                        <div id="drop-down"
+                                            className="absolute left-1/2 mt-0.5 hidden -translate-x-1/2 gap-5 rounded-b-xl bg-white p-5 text-sm shadow-sm group-hover:flex">
+                                            <div id="col"
+                                                className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        RESEARCH @ NITJ
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            VIDWAN (IRINS Instance)
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Research Publications
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Research Jobs
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Internships
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Sponsored Research Projects
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        INCUBATION @ NITJ
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            STI Hub
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            E-Cell
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Innovation club
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Institute Innovation council
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Technology Business Incubator
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div id="col"
+                                                className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        CONSULTANCY @ NITJ
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Consultancy works
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            MoUs
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            IPRs
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Find an expert
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Central Research facilities
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        UPCOMING EVENTS
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Conferences
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Seminars
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            STC/ FDP
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Workshops
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="group relative cursor-default rounded-b-xl hover:bg-blue-800">
+                                        <div className="p-2">Alumni</div>
+                                        <div id="drop-down"
+                                            className="absolute left-1/2 mt-0.5 hidden -translate-x-1/2 gap-5 rounded-b-xl bg-white p-5 text-sm shadow-sm group-hover:flex">
+                                            <div id="col"
+                                                className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                                <div id="block">
+                                                    <ul className="flex flex-col gap-1 px-2 py-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Alumni portal
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Alumni Registration
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Chapters
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Donation statistics and reports
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            GIve back
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Impact
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="block">
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black md:font-bold">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Alumni affairs contact details
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="group relative cursor-default rounded-b-xl hover:bg-blue-800">
+                                        <div className="p-2">Life at NITJ</div>
+                                        <div id="drop-down"
+                                            className="absolute right-0 mt-0.5 hidden gap-5 rounded-b-xl bg-white p-5 text-sm shadow-sm group-hover:flex">
+                                            <div id="col"
+                                                className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        CLUB & SOCITITES
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Vision, Mission & Quality Policy
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Heartfulness Mediation club
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Prayaas - A campaign for smile
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            R-Tist Robotics Club
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            SPIC MACAY
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            “We Can” Club
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Yoga club
+                                                        </li>
+                                                        <li className="flex justify-between hover:font-semibold hover:text-[#FF6600]">
+                                                            Zeal Society
+                                                            <div>View all</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        SCHOLARSHIPS
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Dr. Pratap Singh Memorial Scholarhsip
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            MCM Scholarship
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Post Matric Scholarship
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Siemens India Scholarship
+                                                        </li>
+                                                        <br />
+                                                        <li className="font-semibold hover:font-bold hover:text-[#FF6600]">
+                                                            View all
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div id="col"
+                                                className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        LEADERSHIP
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Organisational Chart
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Chariperson
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Director
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Registrar
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Academic administration
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Student Welfare
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Faculty Welfare
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Planning and Development
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Research and Consultancy
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            International Affairs
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Hostel administration
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div id="col"
+                                                className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        GOVERNING BODIES
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            NIT council
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Board of Governors
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Senate
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Standing committee of the senate
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Finance committee
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Building and works committee
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div id="col"
+                                                className="flex min-w-max flex-col gap-5 hover:rounded-b-xl hover:border-2 hover:border-orange-500">
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        CELLS
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            E-Cell
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Equal opportunities and
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            SC/ST/OBC/PWD cell
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Rajbhasha cell
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            RTI Cell
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Student grievences cell
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Faculty grievences cell
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Staff grievences cell
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Public grievences
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Women cell
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="block">
+                                                    <div id="head" className="mb-3 bg-blue-700 py-2 text-center capitalize hover:bg-orange-500">
+                                                        COMMITTEES
+                                                    </div>
+                                                    <ul className="flex flex-col gap-1 px-2 font-normal text-black">
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Institute Development Committee
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Internal complaint committee
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Print, Digital Media and Newsletter
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Social Media
+                                                        </li>
+                                                        <li className="hover:font-semibold hover:text-[#FF6600]">
+                                                            Website Development and Management
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="flex basis-1/5 flex-row justify-center">
+                                <button type="button"
+                                    className="material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border hover:h-10 hover:w-10 hover:rounded-full hover:border-2 hover:border-white"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search" onclick="showSearchPage(event)">
+                                    search
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </header>
+                {/* <!-- NAV BAR ends--> */}
+            </header>
 
-    </>
-  )
+        </>
+    )
 }
 
 export default NewNavbar
