@@ -31,7 +31,7 @@ function TopPlacement() {
                     <span className='text-3xl font-sans font-bold'>Top Placements </span>
                     <span className='text-lg font-mono font-semibold '> (Computer Science and Engineering)</span>
                 </div>
-                <div className="flex flex-row items-center justify-center relative lg:max-w-[42rem] xl:max-w-[60rem] 2xl:max-w-[80rem] max-h-full mx-auto">
+                <div className="flex flex-row items-center justify-center relative lg:max-w-[42rem] xl:max-w-[60rem] max-h-full mx-auto">
                     <i className="absolute top-1/2 -left-6 active:translate-y-1 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer" onClick={()=>slideCards('left')}></i>
                     <div id="cards" className="scrollbar flex space-x-6 overflow-x-scroll pl-1 pt-2">
                         <Placement/>
