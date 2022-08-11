@@ -956,7 +956,7 @@ function NewNavbar() {
                             <div className="flex basis-1/5 flex-row justify-center">
                                 <button type="button"
                                     className="material-symbols-outlined duration-50 cursor-pointer text-center transition ease-in-out hover:box-border hover:h-10 hover:w-10 hover:rounded-full hover:border-2 hover:border-white"
-                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search" onclick="showSearchPage(event)">
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tap to search">
                                     search
                                 </button>
                             </div>

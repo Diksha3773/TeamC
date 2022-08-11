@@ -32,35 +32,13 @@ const Departmentmiddle = () => {
     const handleactivity = () => (navigate("/activities"))
     const handlenews = () => (navigate("/news"))
     const handlehighlights = () => (navigate("/highlights"))
-    const [activite, setActivite] = useState(true);
-    const [news, setNews] = useState(false);
-    const [Highlight, setHighlight] = useState(false);
-    const Handleactivity = () => {
-        setActivite(true);
-        setNews(false);
-        setHighlight(false);
-    }
-    const HandleNews = () => {
-        setActivite(false);
-        setNews(true);
-        setHighlight(false);
-    }
-    const Handlehighlight = () => {
-        setActivite(false);
-        setNews(false);
-        setHighlight(true);
-    }
     return (
-        <div className='flex flex-col p-4 m-2 shadow rounded border h-96 bg-blue-100'>
+        <div className='flex flex-col w-full h-96 overflow-hidden sm:flex-row p-4 m-2 shadow rounded border bg-blue-100'>
 
-            {/*  Activity  */}
-            <div className='flex'>
-                <span className={"p-2 text-xl text-blue-500 font-medium rounded-t italic cursor-pointer " + (activite ? 'bg-white' : '')} onClick={Handleactivity}>Activities</span>
-                <span className={"p-2 text-xl text-red-500 font-medium rounded-t italic cursor-pointer " + (news ? 'bg-white' : '')} onClick={HandleNews}>Latest News</span>
-                <span className={"p-2 text-gray-500 text-xl font-medium rounded-t italic cursor-pointer " + (Highlight ? 'bg-white' : '')} onClick={Handlehighlight}>Highlights</span>
-            </div>
-            {activite ?
-                <div className='w-full h-full overflow-y-auto overflow-x-hidden scrollbar bg-white rounded-b '>
+            {/* Activity  */}
+            <div className='flex flex-col w-1/2'>
+                <span className='text-2xl font-medium mx-auto p-1'>Activities</span>
+                <div className='w-full h-full overflow-y-auto overflow-x-hidden scrollbar shadow-inner bg-white rounded-b '>
                     <div className=''>
                         {
                             Activity.map((n, i) =>
@@ -72,10 +50,10 @@ const Departmentmiddle = () => {
                         }
                     </div>
                 </div>
-                : <></>
-            }
-            {news ?
-                <div className='w-full h-full overflow-y-auto overflow-x-hidden scrollbar bg-white'>
+            </div>
+            <div className='flex flex-col w-1/2'>
+                <span className='text-2xl font-medium mx-auto p-1'>News & Highlights</span>
+                <div className='w-full h-full overflow-y-auto overflow-x-hidden scrollbar shadow-inner bg-white'>
                     <ol>
                         {
                             News.map((n, i) =>
@@ -87,76 +65,7 @@ const Departmentmiddle = () => {
                         }
                     </ol>
                 </div>
-                : <></>
-            }
-            {Highlight ?
-                <div className='w-full h-full overflow-y-auto overflow-x-hidden scrollbar bg-white'>
-                    <ol>
-                        {
-                            highlights.map((n, i) =>
-                                <div key={i} className='flex p-2 m-2'>
-                                    <li className='list-[circle] list-inside'></li>
-                                    <span className={"mx-1 border-b pb-2 text-justify text-gray-600 font-sans "}>{n}</span>
-                                </div>
-                            )
-                        }
-                    </ol>
-                </div>
-                : <></>
-            }
-
-
-            {/* <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 rounded'>
-                <i className='text-2xl font-serif text-center animate-pulse p-1'><b>Activities</b></i>
-                <div className='overflow-y-scroll scrollbar rounded-lg  border-t-2 border-green-500'>
-                    <ol>
-                        {
-                            activity.map((n) => <li key={uuid()} className='list-[square] text-base shadow-md p-2 m-1 list-inside rounded bg-blue-100 hover:bg-orange-300 text-justify '>{n}</li>)
-                        }
-                    </ol>
-                </div>
-                <div className='block'>
-                    <button className='float-right bg-teal-600  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                       hover:bg-teal-800 hover:text-sm focus:ring-4 focus:ring-blue-300 ' onClick={handleactivity}>View All</button>
-                </div>
-
             </div>
-            news
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border rounded mx-2'>
-                <i className='text-2xl font-serif text-center animate-pulse '><b>What's New ?</b></i>
-                <div className='overflow-y-scroll scrollbar  rounded-lg shadow-lg  border-t-2 border-red-500'>
-
-                    <ol>
-                        {
-                            news.map((n) => <li key={uuid()} className='list-disc text-base p-3 list-inside bg-red-100 hover:bg-yellow-400  '>{n}</li>)
-                        }
-                    </ol>
-                </div>
-                <div className='block'>
-                    <button className='float-right bg-red-500  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                       hover:bg-red-700 hover:text-sm focus:ring-4 focus:ring-blue-300 'onClick={handlenews}>View All</button>
-                </div>
-                highlights
-            </div>
-            highlights
-            <div className='flex flex-col md:w-[45%] lg:w-1/2 h-[500px] my-4 p-2 border rounded shadow-lg'>
-                <i className='text-2xl font-serif text-center animate-pulse'><b>Highlights</b></i>
-                <div className='overflow-y-scroll scrollbar rounded-lg shadow-md  border-t-2 border-blue-500'>
-
-                    <ol>
-                        {
-                            highlights.map((n) => <li key={uuid()} className='list-[square] text-base p-3 list-inside bg-blue-100 hover:bg-yellow-400  '>{n}</li>)
-                        }
-                    </ol>
-                </div>
-                <div className='block'>
-                    <button className='float-right bg-blue-600  w-20 h-10 p-2 m-4 text-white rounded-lg 
-                       hover:bg-blue-800  hover:text-sm focus:ring-4 focus:ring-blue-300'onClick={handlehighlights}>View All</button>
-                </div>
-
-            </div> */}
-
-
         </div>
     )
 }

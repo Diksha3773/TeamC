@@ -4,10 +4,10 @@ import Imagesroll from '../components/Imagesroll'
 import TopPlacement from '../components/TopPlacement'
 
 
-function Homepage({offtop}) {
+function Homepage() {
   return (
-    <div>
-        <Imagesroll offtop = {offtop}/>
+    <div className='w-full'>
+        <Imagesroll/>
         <Department/>
         <TopPlacement/>
         

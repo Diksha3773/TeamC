@@ -7,7 +7,7 @@ function AcadCordinator() {
         <>
             <div className='w-full h-full flex items-center justify-center flex-col'>
                 <h1 className='p-4 m-2 text-gray-700 shadow-lg text-2xl font-bold'>Academic Coordinator</h1>
-                <div className='bg-[#171326] rounded-[5px] shadow-sm pt-[30px] w-[315px] max-w-full text-center flex flex-col items-center justify-center m-4 p-2'>
+                <div className='bg-[#171326] rounded-[5px] shadow-sm pt-[30px] w-[270px] max-w-full text-center flex flex-col items-center justify-center m-4 p-2'>
                     {/* <div className=' overflow-hidden flex items-center justify-center rounded-full m-4'> */}
                     <img src='https://www.nitj.ac.in/images/faculty/20071962443.jpg' alt="..." className='border-[#03BFCB] rounded-full p-2 w-36 h-36' />
                     {/* </div> */}

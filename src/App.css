@@ -248,89 +248,6 @@
    opacity: 30% !important;
 }
 
-.wrapper {
-   margin: 0;
-   padding: 0;
-   height: 3.2rem;
-   width: 13.7rem;
-   position: relative;
-   background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
-   border-radius: 10px;
-   cursor: default;
-   animation: animate 1.5s linear infinite;
-}
-
-.wrapper:hover {
-   cursor: pointer;
-   font-size: 2.2rem;
-}
-
-.wrapper .display,
-.wrapper span {
-   position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-}
-
-.wrapper .display {
-   z-index: 999;
-   height: 2.5rem;
-   width: 13rem;
-   background: #1b1b1b;
-   border-radius: 6px;
-   text-align: center;
-}
-
-.display #time {
-   line-height: 40px;
-   color: #fff;
-   font-size: 2rem;
-   font-weight: 500;
-   letter-spacing: 1px;
-   background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
-   -webkit-background-clip: text;
-   -webkit-text-fill-color: transparent;
-   animation: animate 1.5s linear infinite;
-}
-
-@keyframes animate {
-   100% {
-      filter: hue-rotate(360deg);
-   }
-}
-
-.wrapper span {
-   border-radius: 10px;
-   background: inherit;
-}
-
-.wrapper span:first-child {
-   filter: blur(7px);
-}
-
-.wrapper span:last-child {
-   filter: blur(20px);
-}
-@media screen and (width <768px) {
-   .wrapper {
-      height: 2.5rem;
-      width: 7rem;
-   }
-
-   .wrapper .display {
-      z-index: 999;
-      height: 2rem;
-      width: 6.5rem;
-   }
-
-   .display #time {
-      line-height: 40px;
-      color: #fff;
-      font-size: 1rem;
-      font-weight: 450;
-   }
-}
 @media screen and (width < 475px) {
    .navsize{
       height:12rem;
@@ -346,7 +263,7 @@
    }
 }
 .scrollbar::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
   height: 10px;
 }
 
@@ -438,4 +355,16 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
+}
+/* homepage divide into grid */
+.item1 {
+  grid-area: myArea;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'myArea';
+  grid-template-columns: 2fr 6fr;
+  grid-gap: 10px;
+  padding: 10px;
 }

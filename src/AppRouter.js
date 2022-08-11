@@ -1,6 +1,6 @@
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AllPlacement from './components/AllPlacement';
 import Error from './pages/Errorpage';
@@ -15,12 +15,23 @@ import AcadCordinator from './pages/AcadCordinator';
 import NewNavbar from './components/NewNavbar';
 import Menu from './components/Menu';
 import Test from './components/Test';
+import { useRef } from 'react';
+// import ScrollIntoView from 'react-scroll-into-view'
 const AppRouter = () => {
-  const [scroll, setScroll] = useState(false);
-  const handlescroll = () => {
-    setScroll(!scroll);
-  }
-  const [offtop, setOfftop] = useState(false)
+  const footref = useRef();
+  const [fixedmenu, setFixedmenu] = useState(true);
+  useEffect(() => {
+    const isInViewport = () => {
+      const rect = footref.current.getBoundingClientRect();
+      // console.log(fixedmenu);
+      setFixedmenu(
+        (rect.top >= 700 &&
+          rect.bottom >=1128
+        )
+      );
+    }
+    window.addEventListener('scroll', isInViewport);
+  }, [fixedmenu]);
   const activity = [
     {
       date: "20-July-2022",
@@ -106,18 +117,21 @@ const AppRouter = () => {
     <>
       <div className='m-0 p-0 w-full h-full'>
         <Router>
-          <div className='w-full max-h-96 mb-2'>
+          <div className='w-full mb-2'>
             {/* <Navbar handlescroll={handlescroll} offtop={offtop} setOfftop={setOfftop} /> */}
-            <NewNavbar handlescroll={handlescroll}/>
+            <NewNavbar />
             {/* <Test/> */}
           </div>
-          <div className="mt-36 flex flex-col sm:flex-row mx-auto" style={{height:"100vh"}}>
-            <div className='basis-full flex sm:basis-1/4 h-screen  mx-auto'>
-              <Menu handlescroll={handlescroll}/>
+
+          <div className="grid-container mt-[6.5rem]">
+            <div className="item1 relative right-2">
+              <div className={"-bottom-1 block h-[82.8vh] overflow-y-auto overflow-x-hidden scrollbar " + (fixedmenu ? 'fixed' : 'absolute')}>
+                <Menu />
+              </div>
             </div>
-            <div className='basis-full sm:basis-3/4 shadow-lg max-h-full overflow-y-scroll scrollbar'>
+            <div className="item2 border mt-2">
               <Routes>
-                <Route exact path='/' element={<Homepage offtop={offtop}/>} />
+                <Route exact path='/' element={<Homepage />} />
                 {/* <Route exact path='/placements' element={<Test/>} /> */}
                 <Route path='/placements' element={<AllPlacement />} />
                 <Route path='*' element={<Error />} />
@@ -135,8 +149,8 @@ const AppRouter = () => {
               </Routes>
             </div>
           </div>
-          <div className='w-full max-h-[28rem]'>
-            <Footer scroll={scroll} handlescroll={handlescroll} />
+          <div ref={footref} className='w-full'>
+            <Footer />
           </div>
         </Router>
       </div>
