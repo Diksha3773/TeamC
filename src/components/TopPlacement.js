@@ -1,18 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import AllPlacement from './AllPlacement'
-
-import Rahul from './Img/Rahul.png'
-import top2 from './Img/top2.png'
-import top3 from './Img/top3.png'
-import top4 from './Img/top4.png'
 import Placement from './Placement'
 function TopPlacement() {
     const slideCards=(direction)=> {
         var container = document.getElementById('cards')
         let scrollCompleted = 0
         var slideVar = setInterval(() =>{
-          if (direction == 'left') {
+          if (direction === 'left') {
             container.scrollLeft -= 30
           } else {
             container.scrollLeft += 30
@@ -31,7 +25,7 @@ function TopPlacement() {
                     <span className='text-3xl font-sans font-bold'>Top Placements </span>
                     <span className='text-lg font-mono font-semibold '> (Computer Science and Engineering)</span>
                 </div>
-                <div className="flex flex-row relative lg:max-w-[42rem] xl:max-w-[58rem] 2xl:max-w-[77rem] max-h-full px-auto">
+                <div className="flex flex-row relative max-w-[20rem] md:max-w-[39rem] xl:max-w-[58rem] max-h-full px-auto">
                     <i className="absolute top-1/2 -left-6 active:translate-y-1 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer" onClick={()=>slideCards('left')}></i>
                     <div id="cards" className="scrollbar flex space-x-6 overflow-x-scroll pl-1 pt-2 mx-auto">
                         <Placement/>

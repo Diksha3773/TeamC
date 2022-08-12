@@ -368,3 +368,14 @@
   grid-gap: 20px;
   padding: 10px;
 }
+@media (max-width: 1024px) {
+   .grid-container {
+      grid-template-columns: 0fr 6fr;
+      grid-gap: 20px;
+    }
+}
+.from-accent {
+  --tw-gradient-from: hsla(201, 96%, 32%);
+  --tw-gradient-to: hsl(201 96% 32% / 0.3);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}

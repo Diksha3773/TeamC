@@ -15,6 +15,10 @@ function Imagesroll() {
         six
     ]
     const [value, setValue] = useState(0);
+    var divStyle = {
+        backgroundImage: 'url(' + image[value] + ')'
+    };
+
     useEffect(() => {
         const interval = setInterval(() => {
             setValue(() => ((value === 5 ? 0 : value + 1)));
@@ -23,32 +27,22 @@ function Imagesroll() {
     }, [value])
     return (
         <>
-            <div className='flex mx-0 flex-col w-[90%] h-[calc(55vw*0.7)] sm:h-[calc(55vw*0.5625)] mt-4'>
-                {value ? <div className={"group flex items-center justify-center place-items-center w-full h-[calc(100vw*0.5625)] text-center overflow-hidden shadow-lg relative"}>
-                    <img className="w-full h-full shadow-lg bg-gradient-to-r from-gray-500 to-gray-400 aspect-video" src={image[value]} alt="..." />
-                    <div className={"absolute py-auto hidden md:bottom-[40%] inset-x-0 text-center leading-4 justify-between md:group-hover:flex"}>
-                        <button className='flex h-12 w-12 translate-y-1/2 text-white z-10 transition bg-opacity-50 text-xl  rounded-full bg-blue-300 items-center justify-center font-extrabold hover:bg-blue-900 m-2' onClick={() => { setValue(value === 0 ? 5 : value - 1) }}>&larr;</button>
-                        <button className='flex h-12 w-12 translate-y-1/2 text-white z-10 transition bg-opacity-50 text-xl  rounded-full bg-blue-300 items-center justify-center font-extrabold hover:bg-blue-900 m-2' onClick={() => { setValue(value === 0 ? 5 : value - 1) }}>&rarr;</button>
+            <div id="main-image" className="mt-4 h-[78vh] w-full max-h-[1000px] transition-all duration-1000 bg-cover bg-center" style={divStyle}>
+                <div className="bg-gradient-to-b from-accent to-transparent h-full w-full">
+                    <div className="flex flex-col items-center justify-center container" style={{ height: "100%" }}>
+                        <div className="flex flex-col gap-10">
+                            <h2 className="text-white text-5xl text-center">
+                                <span className="font-bold">NITJ</span> Welcomes you
+                            </h2>
+                            <div className="main-slider-text transition-all font-bold text-white max-w-lg text-4xl text-center">
+                                <h6>Computer Science and Engineering</h6>
+                                {/* <h2>78<sup>th</sup> IN OVERALL NIRF RANKING </h2>
+                                <h2>49<sup>th</sup> IN ENGINEERING NIRF</h2> */}
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                    : 
-                    <div className={"flex flex-col group w-full instcount2 items-center justify-center text-center align-middle border-none h-[calc(100vw*0.7)] sm:h-[calc(100vw*0.5625)] navimg relative"}>
-                        <div className='font-semibold text-xl m-4 lg:text-4xl'>
-                            Computer Science and Engineering
-                        </div>
-                        <div className='text-base m-2'><i>Dr. B.R. Ambedkar National Institute of Technology, Jalandhar</i></div>
-                        <div className='flex text-2xl font-semibold m-2 md:m-8 md:w-2/3 text-center justify-center lg:text-4xl'>
-                            <p>
-                                Department that imparts knowledge to enable the students to solve challenging real world problems
-                            </p>
-                        </div>
-                        <div className={"absolute hidden py-auto md:bottom-[40%] inset-x-0 text-center leading-4 group-hover:justify-between md:group-hover:flex"}>
-                            <button className='flex h-12 w-12 translate-y-1/2 text-white z-10 transition bg-opacity-50 text-xl  rounded-full bg-blue-300 items-center justify-center font-extrabold hover:bg-blue-900 m-2' onClick={() => { setValue(value === 0 ? 5 : value - 1) }}>&larr;</button>
-                            <button className='flex h-12 w-12 translate-y-1/2 text-white z-10 transition bg-opacity-50 text-2xl  rounded-full bg-blue-300 items-center justify-center font-extrabold hover:bg-blue-900 m-2' onClick={() => { setValue(value === 0 ? 5 : value - 1) }}>&rarr;</button>
-                        </div>
-                    </div>
-
-                }
             </div>
         </>
     )

@@ -45,7 +45,7 @@ function Menu() {
     }
     return (
         <>
-            <div className='w-full max-h-max m-2 overflow-y-auto scrollbar'>
+            <div className='w-full hidden lg:flex max-h-max m-2 overflow-y-auto scrollbar'>
                 <div className={"border-2 max-w-full w-72 xl:w-[20rem] 2xl:w-[22rem] flex flex-col m-2 mt-10 shadow rounded "}>
                     <div className='text-xl p-2 w-full border-2 bg-blue-500 text-white rounded-t shadow'>Department of Computer Science and Engineering</div>
                     <div className='p-3'>
