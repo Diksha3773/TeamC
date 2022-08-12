@@ -365,6 +365,6 @@
   display: grid;
   grid-template-areas: 'myArea';
   grid-template-columns: 2fr 6fr;
-  grid-gap: 10px;
+  grid-gap: 20px;
   padding: 10px;
 }

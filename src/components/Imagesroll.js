@@ -23,7 +23,7 @@ function Imagesroll() {
     }, [value])
     return (
         <>
-            <div className='flex mx-auto flex-col h-auto w-[90%] xl:max-h-[calc(100vh-15rem)] mt-4'>
+            <div className='flex mx-0 flex-col w-[90%] h-[calc(55vw*0.7)] sm:h-[calc(55vw*0.5625)] mt-4'>
                 {value ? <div className={"group flex items-center justify-center place-items-center w-full h-[calc(100vw*0.5625)] text-center overflow-hidden shadow-lg relative"}>
                     <img className="w-full h-full shadow-lg bg-gradient-to-r from-gray-500 to-gray-400 aspect-video" src={image[value]} alt="..." />
                     <div className={"absolute py-auto hidden md:bottom-[40%] inset-x-0 text-center leading-4 justify-between md:group-hover:flex"}>

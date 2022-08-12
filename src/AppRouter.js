@@ -26,7 +26,7 @@ const AppRouter = () => {
       // console.log(fixedmenu);
       setFixedmenu(
         (rect.top >= 700 &&
-          rect.bottom >=1128
+          rect.bottom >= 1128
         )
       );
     }
@@ -115,12 +115,12 @@ const AppRouter = () => {
   ];
   return (
     <>
-      <div className='m-0 p-0 w-full h-full'>
+      <div className='top-0 p-0 my-0 mx-auto max-w-[1800px] h-full'>
         <Router>
           <div className='w-full mb-2'>
             {/* <Navbar handlescroll={handlescroll} offtop={offtop} setOfftop={setOfftop} /> */}
             <NewNavbar />
-            {/* <Test/> */}
+            {/* <Test /> */}
           </div>
 
           <div className="grid-container mt-[6.5rem]">
@@ -132,7 +132,7 @@ const AppRouter = () => {
             <div className="item2 border mt-2">
               <Routes>
                 <Route exact path='/' element={<Homepage />} />
-                {/* <Route exact path='/placements' element={<Test/>} /> */}
+                <Route exact path='/placements' element={<Test />} />
                 <Route path='/placements' element={<AllPlacement />} />
                 <Route path='*' element={<Error />} />
                 {/* About us */}

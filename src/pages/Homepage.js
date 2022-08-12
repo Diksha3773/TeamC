@@ -6,11 +6,10 @@ import TopPlacement from '../components/TopPlacement'
 
 function Homepage() {
   return (
-    <div className='w-full'>
+    <div className='flex items-center flex-col w-full px-auto'>
         <Imagesroll/>
         <Department/>
         <TopPlacement/>
-        
     </div>
   )
 }

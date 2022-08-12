@@ -26,17 +26,17 @@ function TopPlacement() {
     let navigate = useNavigate();
     return (
         <>
-            <div className='flex flex-col justify-center rounded items-center w-full sm:w-[98%] mx-auto text-center shadow-md my-8'>
+            <div className='flex flex-col justify-center rounded items-center w-full sm:w-[98%] px-auto text-center my-8'>
                 <div className='flex flex-col p-2 m-2 mb-8 text-center'>
                     <span className='text-3xl font-sans font-bold'>Top Placements </span>
                     <span className='text-lg font-mono font-semibold '> (Computer Science and Engineering)</span>
                 </div>
-                <div className="flex flex-row items-center justify-center relative lg:max-w-[42rem] xl:max-w-[60rem] max-h-full mx-auto">
+                <div className="flex flex-row relative lg:max-w-[42rem] xl:max-w-[58rem] 2xl:max-w-[77rem] max-h-full px-auto">
                     <i className="absolute top-1/2 -left-6 active:translate-y-1 fa-solid fa-angle-left self-center pl-4 text-2xl cursor-pointer" onClick={()=>slideCards('left')}></i>
-                    <div id="cards" className="scrollbar flex space-x-6 overflow-x-scroll pl-1 pt-2">
+                    <div id="cards" className="scrollbar flex space-x-6 overflow-x-scroll pl-1 pt-2 mx-auto">
                         <Placement/>
                     </div>
-                    <i className="fa-solid fa-angle-right self-center active:translate-y-1 p-4 text-2xl cursor-pointer" onClick={()=>slideCards('right')}></i>
+                    <i className="absolute top-1/2 -right-6 active:translate-y-1 fa-solid fa-angle-right self-center pr-4 text-2xl cursor-pointer" onClick={()=>slideCards('right')}></i>
 
                 </div>
                 <div className='flex items-center justify-center'>
