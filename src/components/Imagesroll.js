@@ -5,6 +5,7 @@ import third from './Img/02.jpeg'
 import four from './Img/002.jpg'
 import five from './Img/002.png'
 import six from './Img/03.jpeg'
+// import Script from '@gumgum/react-script-tag';
 function Imagesroll() {
     const image = [
         first,
@@ -18,7 +19,6 @@ function Imagesroll() {
     var divStyle = {
         backgroundImage: 'url(' + image[value] + ')'
     };
-
     useEffect(() => {
         const interval = setInterval(() => {
             setValue(() => ((value === 5 ? 0 : value + 1)));
@@ -27,7 +27,7 @@ function Imagesroll() {
     }, [value])
     return (
         <>
-            <div id="main-image" className="mt-4 h-[78vh] w-full max-h-[1000px] transition-all duration-1000 bg-cover bg-center" style={divStyle}>
+            <div id="main-image" className="mt-0 md:mt-4 h-[30vw] md:h-[78vh] w-full max-h-[1000px] transition-all duration-1000 bg-cover bg-center" style={divStyle}>
                 <div className="bg-gradient-to-b from-accent to-transparent h-full w-full">
                     <div className="flex flex-col items-center justify-center container" style={{ height: "100%" }}>
                         <div className="flex flex-col gap-10">
@@ -44,6 +44,11 @@ function Imagesroll() {
                     </div>
                 </div>
             </div>
+            {/* <Script
+                src="./NewNav.js"
+                type="text/javascript"
+                async
+            /> */}
         </>
     )
 }

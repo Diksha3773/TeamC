@@ -368,10 +368,11 @@
   grid-gap: 20px;
   padding: 10px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
    .grid-container {
       grid-template-columns: 0fr 6fr;
-      grid-gap: 20px;
+      grid-gap: 0px;
+      padding: 0px;
     }
 }
 .from-accent {

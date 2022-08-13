@@ -113,18 +113,17 @@ const AppRouter = () => {
     <>
       <div className='top-0 p-0 my-0 mx-auto max-w-[1800px] h-full'>
         <Router>
-          <div className='w-full mb-2'>
+          <div className='w-full md:mb-2'>
             <NewNavbar />
-            {/* <Test /> */}
           </div>
 
-          <div className="grid-container mt-[6.5rem]">
+          <div className="grid-container md:mt-[6.5rem]">
             <div className="item1 relative right-2">
               <div className={"-bottom-1 block h-[82.8vh] overflow-y-auto overflow-x-hidden scrollbar " + (fixedmenu ? 'fixed' : 'absolute')}>
                 <Menu />
               </div>
             </div>
-            <div className="item2 border mt-2">
+            <div className="item2 border md:mt-2">
               <Routes>
                 <Route exact path='/' element={<Homepage />} />
                 <Route path='/placements' element={<AllPlacement />} />

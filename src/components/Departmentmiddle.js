@@ -30,7 +30,7 @@ const Departmentmiddle = () => {
         <div className='flex flex-col lg:h-96 overflow-hidden lg:flex-row p-4 m-2 shadow rounded border bg-blue-100'>
 
             {/* Activity  */}
-            <div className='flex flex-col w-full lg:w-1/2 h-96'>
+            <div className='flex flex-col w-full lg:w-1/2 h-[22rem]'>
                 <span className='text-2xl font-medium mx-auto p-1'>Activities</span>
                 <div className='w-full h-full overflow-y-auto overflow-x-hidden scrollbar shadow-inner bg-white rounded-b '>
                     <div className=''>
@@ -45,7 +45,7 @@ const Departmentmiddle = () => {
                     </div>
                 </div>
             </div>
-            <div className='flex flex-col w-full lg:w-1/2 h-96'>
+            <div className='flex flex-col w-full lg:w-1/2 h-[22rem]'>
                 <span className='text-2xl font-medium mx-auto p-2 lg:p-1'>News & Highlights</span>
                 <div className='w-full h-full overflow-y-auto overflow-x-hidden scrollbar shadow-inner bg-white'>
                     <ol>

@@ -2,12 +2,14 @@ window.onscroll = function() {
   var institute_name = document.getElementsByClassName("institute_name");
   var full_navbar = document.getElementsByTagName("header");
   var logo = document.getElementById("logo_250");
+  var mySlide = document.getElementById("mySlides");
   var topbar = document.getElementById("top_bar");
   if(window.scrollY > 100) {
     topbar.style.display = "none";
   for(var i=0;i<institute_name.length;i++){
     logo.style.width="90px";
     logo.style.height="90px";
+    mySlide.style.marginTop="0px";
     logo.classList.remove("top-8");
     logo.classList.add("top-0");
     if(institute_name[i].classList.contains("text-xl")){
@@ -24,6 +26,7 @@ window.onscroll = function() {
 else{
   logo.style.width="120px";
   logo.style.height="120px";
+  mySlide.style.marginTop="28px";
   topbar.style.display = "flex";
   logo.classList.remove("top-0");
   logo.classList.add("top-8");

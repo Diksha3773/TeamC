@@ -1,26 +1,27 @@
 import React from 'react'
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import Card from './Card';
 
 const Departmentlower = (props) => {
-  let navigate=useNavigate();
+  let navigate = useNavigate();
 
   return (
-    <div className='flex flex-col md:flex-row w-[98%] justify-center items-center p-4 place-items-center mx-auto'>
-      {/* mission and vision */}
-      <div className='flex flex-col m-2 p-1 sm:m-4 sm:p-2 items-center justify-center w-full sm:w-4/5 md:w-1/2 h-[500px] bg-teal-50 shadow-md shadow-green-200 'onClick={()=>{navigate("/MissionandVision")}}>
-        <h1 className='text-2xl text-center  lg:text-4xl text-[#045F5F]  '><b>Mission and Vision</b></h1>
-        <p className='text-justify m-4 p-1 md:text-lg md:p-2 overflow-y-scroll scrollbar'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita.Lorem ipsum dolor
-          sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita</p>
-      </div>
+    <div className='flex flex-col md:flex-row w-[98%] justify-between items-center p-4 place-items-center mx-auto'>
+      {/* Club */}
+      <Card title="Coding Club"
+        body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!" />
       {/* HOD */}
-      <div className='flex border rounded flex-col m-2 p-1 sm:m-4 sm:p-2 items-center justify-center w-full sm:w-4/5 md:w-1/2 h-[500px]  shadow-md shadow-green-200 '>
-        <div className='flex flex-col items-center justify-center'>
-          <h1 className='text-2xl text-center md:text-xl lg:text-3xl text-[#045F5F] m-2'><b>Head Of Department</b></h1>
-          <img className='border rounded-4 shadow-lg rounded-teal-900 rounded-md m-4 h-72 w-56 md:h-52 md:w-40 'onClick={()=>{navigate("/messageofHOD")}} src={props.hod} alt='' />
+      <div className="max-w-md py-4 px-7 mx-1 border bg-white shadow-lg rounded-lg mt-20 mb-6" onClick={() => { navigate("/messageofHOD") }}>
+        <div className="flex justify-center rounded-full md:justify-end -mt-16">
+          <img className="w-24 h-24 object-cover rounded-full shadow-md border border-blue-200 shadow-blue-400" src={props.hod} alt='...'/>
         </div>
-        <h1 className='text-teal-900 text-lg md:text-xl font-medium '>{props.nameofhod}</h1>
-        <p className='text-justify p-1 md:text-lg md:p-2 sm:p-4'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto exercitationem optio nam consectetur expedita.</p>
+        <div>
+          <h2 className="text-gray-800 text-2xl font-semibold">Head Of Department</h2>
+          <p className="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!</p>
+        </div>
+        <div className="flex justify-end mt-4">
+          <a href="/" className="text-xl font-medium text-indigo-500">{props.nameofhod}</a>
+        </div>
       </div>
     </div>
   )

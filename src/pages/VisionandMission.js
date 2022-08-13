@@ -1,5 +1,5 @@
 import React from 'react'
-import vision from './../components/Img/vision.gif'
+// import vision from './../components/Img/vision.gif'
 import { useEffect } from 'react'
 function VisionandMission() {
   useEffect(() => {

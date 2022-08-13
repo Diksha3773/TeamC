@@ -1,100 +1,145 @@
-import React from 'react'
-import top2 from './Img/top2.png'
-import top3 from './Img/top3.png'
-import top4 from './Img/top4.png'
+import React, { useEffect } from 'react'
 import logo from './Img/logo.png'
 import Rect from './Img/rect.png'
 import './Newnavbar.css'
 function NewNavbar() {
+    const handlescroll = () => {
+        var institute_name = document.getElementsByClassName("institute_name");
+        // var full_navbar = document.getElementsByTagName("header");
+        var logo = document.getElementById("logo_250");
+        var mySlide = document.getElementById("mySlides");
+        var topbar = document.getElementById("top_bar");
+        if (window.scrollY > 100) {
+            topbar.style.display = "none";
+            for (let i = 0; i < institute_name.length; i++) {
+                logo.style.width = "90px";
+                logo.style.height = "90px";
+                mySlide.style.marginTop="0px";
+                logo.classList.remove("top-8");
+                logo.classList.add("top-0");
+                if (institute_name[i].classList.contains("text-xl")) {
+                    institute_name[i].classList.remove("text-xl");
+                    institute_name[i].classList.add("text-lg");
+                }
+                else if (institute_name[i].classList.contains("text-lg")) {
+                    institute_name[i].classList.remove("text-lg");
+                    institute_name[i].classList.add("text-sm");
+                }
+            }
+        }
+        else {
+            logo.style.width = "120px";
+            logo.style.height = "120px";
+            mySlide.style.marginTop="28px";
+            topbar.style.display = "flex";
+            logo.classList.remove("top-0");
+            logo.classList.add("top-8");
+            for (let i = 0; i < institute_name.length; i++) {
+                if (institute_name[i].classList.contains("text-lg")) {
+                    institute_name[i].classList.remove("text-lg");
+                    institute_name[i].classList.add("text-xl");
+                }
+                else if (institute_name[i].classList.contains("text-sm")) {
+                    institute_name[i].classList.remove("text-sm");
+                    institute_name[i].classList.add("text-lg");
+                }
+            }
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('scroll', handlescroll);
+    }, [])
     return (
         <>
-            <header className="fixed bg-white top-0 right-0 left-0 z-50">
+            <header className="block md:fixed bg-white top-0 right-0 left-0 z-50">
                 {/* <!-- TOP NAV BAR stats --> */}
                 <div id="top_bar"
                     className="absolute top-0 right-0 left-0 transition-transform delay-200 z-50 flex h-7 flex-row bg-blue-700 py-0.5 px-12 text-sm font-bold text-white">
                     <div className="basis-1/2">
                         <div className="flex flex-row justify-center">
-                            <div className="flex items-center pr-8" href="">
+                            <div className="flex items-center pr-8" >
                                 <span className="material-symbols-outlined"> engineering </span>
-                                <a href="" className="pl-1.5 text-sm">Jobs</a>
+                                <a href="/" className="pl-1.5 text-sm">Jobs</a>
                             </div>
-                            <div className="flex items-center pr-8" href="">
+                            <div className="flex items-center pr-8" >
                                 <span className="material-symbols-outlined"> add_business </span>
-                                <a href="" className="pl-1.5 text-sm">Tenders</a>
+                                <a href="/" className="pl-1.5 text-sm">Tenders</a>
                             </div>
-                            <div className="flex items-center pr-8" href="">
+                            <div className="flex items-center pr-8" >
                                 <span className="material-symbols-outlined"> badge </span>
-                                <a href="" className="pl-1.5 text-sm">Placements</a>
+                                <a href="/" className="pl-1.5 text-sm">Placements</a>
                             </div>
-                            <div className="flex items-center pr-8" href="">
+                            <div className="flex items-center pr-8" >
                                 <span className="material-symbols-outlined"> event_note </span>
-                                <a href="" className="pl-1.5 text-sm">Resources</a>
+                                <a href="/" className="pl-1.5 text-sm">Resources</a>
                             </div>
-                            <div className="flex items-center" href="">
+                            <div className="flex items-center" >
                                 <span className="material-symbols-outlined"> psychology_alt </span>
-                                <a href="" className="pl-1.5 text-sm">Help</a>
+                                <a href="/" className="pl-1.5 text-sm">Help</a>
                             </div>
                         </div>
                     </div>
                     <div className="basis-1/2 pl-8">
                         <div className="flex flex-row justify-between">
                             <div className="flex basis-1/6 flex-row items-center">
-                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} />
-                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} />
-                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} />
+                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} alt='...'/>
+                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} alt='...'/>
+                                <img src="img\facebook-icon.svg" className="h-5 px-1" style={{ height: "20px" }} alt='...'/>
                             </div>
                             <div className="flex basis-1/3 items-center">
                                 <span className="material-symbols-outlined"> g_translate </span>
-                                <a href="" className="pl-1">हिन्दी / <span className="text-lg">A</span>+A-</a>
+                                <a href="/" className="pl-1">हिन्दी / <span className="text-lg">A</span>+A-</a>
                             </div>
                             <div className="flex basis-1/3 items-center">
                                 <span className="material-symbols-outlined"> contacts </span>
-                                <a href="" className="pl-1.5 text-sm">ERP</a>
+                                <a href="/" className="pl-1.5 text-sm">ERP</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* <!-- top nav bar ends --> */}
                 {/* <!-- INSTITUTE LOGO & NAME starts --> */}
-                <div className="block mt-7 z-50">
-                    <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
-                        <div className="institute_name flex max-w-lg basis-1/2 justify-center text-center text-lg font-bold uppercase">
-                            <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
-                        </div>
-                        <div
-                            className="institute_name flex max-w-lg basis-1/2 justify-center px-16 text-center text-xl font-bold uppercase">
-                            <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-                        </div>
-                    </div>
-                </div>
-                <div className="mySlides mt-7 z-50">
-                    <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
-                        <div
-                            className="institute_name flex max-w-lg basis-1/2 justify-center px-16 text-center text-xl font-bold uppercase">
-                            <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
-                        </div>
-                        <div className="institute_name flex max-w-lg basis-1/2 justify-center px-8 text-center text-xl font-bold uppercase">
-                            <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+                <div id='mySlides' style={{marginTop:"28px"}}>
+                    <div className="block">
+                        <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
+                            <div className="institute_name flex max-w-lg basis-1/2 justify-center text-center text-lg font-bold uppercase">
+                                <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
+                            </div>
+                            <div
+                                className="institute_name flex max-w-lg basis-1/2 justify-center px-16 text-center text-xl font-bold uppercase">
+                                <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div className="mySlides mt-7 z-50">
-                    <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
-                        <div className="institute_name flex max-w-lg basis-1/2 justify-center px-8 text-center text-xl font-bold uppercase">
-                            <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+                    <div className="mySlides">
+                        <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
+                            <div
+                                className="institute_name flex max-w-lg basis-1/2 justify-center px-16 text-center text-xl font-bold uppercase">
+                                <p>डॉ बी आर अंबेडकर राष्ट्रीय प्रौद्योगिकी संस्थान जालंधर</p>
+                            </div>
+                            <div className="institute_name flex max-w-lg basis-1/2 justify-center px-8 text-center text-xl font-bold uppercase">
+                                <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+                            </div>
                         </div>
-                        <div className="institute_name flex max-w-lg basis-1/2 justify-center text-center text-lg font-bold uppercase">
-                            <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
+                    </div>
+                    <div className="mySlides">
+                        <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
+                            <div className="institute_name flex max-w-lg basis-1/2 justify-center px-8 text-center text-xl font-bold uppercase">
+                                <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>
+                            </div>
+                            <div className="institute_name flex max-w-lg basis-1/2 justify-center text-center text-lg font-bold uppercase">
+                                <p>Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR</p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 {/* <!-- INSTITUTE LOGO & NAME ends --> */}
                 {/* <!-- Logo CONTAINER starts --> */}
                 <div className="absolute left-1/2 z-50 mx-auto -translate-x-1/2" style={{ width: "230px" }}>
-                    <img src={Rect} alt="" />
+                    <img src={Rect} alt="..." />
                 </div>
-                <div id="logo_250" className="absolute h-[120px] aspect-square left-1/2 top-8 z-50 -translate-x-1/2">
-                    <img src={logo} alt="" />
+                <div id="logo_250" className="absolute aspect-square left-1/2 top-8 z-50 -translate-x-1/2" style={{ width: "120px", height: "120px" }}>
+                    <img src={logo} alt="..." />
                 </div>
                 {/* <!-- Logo CONTAINER ends --> */}
                 {/* <!-- NAV BAR starts--> */}
@@ -590,7 +635,7 @@ function NewNavbar() {
                                         </div>
                                         <div id="block">
                                             <div id="head" className="mb-3 bg-blue-700 p-2 text-center capitalize hover:bg-orange-500">
-                                                 INSTITUTE PROSPECTUS 
+                                                INSTITUTE PROSPECTUS
                                             </div>
                                             <ul className="flex flex-col gap-1 px-2 font-normal text-black">
                                                 <li className="hover:font-semibold hover:text-[#FF6600]">
