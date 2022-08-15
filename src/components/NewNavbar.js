@@ -10,7 +10,7 @@ function NewNavbar() {
         var mySlide = document.getElementById("mySlides");
         var topbar = document.getElementById("top_bar");
         if (window.scrollY > 100) {
-            topbar.style.display = "none";
+            topbar.style.transform="translateY(-50px)";
             for (let i = 0; i < institute_name.length; i++) {
                 logo.style.width = "90px";
                 logo.style.height = "90px";
@@ -31,7 +31,7 @@ function NewNavbar() {
             logo.style.width = "120px";
             logo.style.height = "120px";
             mySlide.style.marginTop="28px";
-            topbar.style.display = "flex";
+            topbar.style.transform="translateY(0px)";
             logo.classList.remove("top-0");
             logo.classList.add("top-8");
             for (let i = 0; i < institute_name.length; i++) {
@@ -53,8 +53,7 @@ function NewNavbar() {
         <>
             <header className="block md:fixed bg-white top-0 right-0 left-0 z-50">
                 {/* <!-- TOP NAV BAR stats --> */}
-                <div id="top_bar"
-                    className="absolute top-0 right-0 left-0 transition-transform delay-200 z-50 flex h-7 flex-row bg-blue-700 py-0.5 px-12 text-sm font-bold text-white">
+                <div id="top_bar" className="absolute top-0 right-0 left-0 transition-transform delay-200 z-50 flex h-7 flex-row bg-blue-700 py-0.5 px-12 text-sm font-bold text-white">
                     <div className="basis-1/2">
                         <div className="flex flex-row justify-center">
                             <div className="flex items-center pr-8" >

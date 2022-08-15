@@ -63,7 +63,7 @@ function Menu() {
                         <div className={"p-2 my-1 shadow rounded cursor-pointer " + (openacad ? 'bg-blue-200' : '')}>
                             <div onClick={handlecad} className = "font-medium"><i className='fa fa-university w-6 px-auto'></i>Academics</div>
                             <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow-inner bg-white duration-500 " + (openacad ? '' : 'hidden')}>
-                                <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Programmes</button></div>
+                                <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Programme"); }}>Programmes</button></div>
                                 <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Acadcord"); }}>Academic Coordinates</button></div>
                                 <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Syllabus"); }}>Syllabus</button></div>
                                 <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Timetable"); }}>Time-Tables</button></div>

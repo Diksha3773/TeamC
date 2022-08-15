@@ -14,6 +14,7 @@ import NewNavbar from './components/NewNavbar';
 import Menu from './components/Menu';
 // import Test from './components/Test';
 import { useRef } from 'react';
+import Programme from './pages/Programme';
 const AppRouter = () => {
   const footref = useRef();
   const [fixedmenu, setFixedmenu] = useState(true);
@@ -117,7 +118,7 @@ const AppRouter = () => {
             <NewNavbar />
           </div>
 
-          <div className="grid-container md:mt-[6.5rem]">
+          <div className="grid-container md:mt-[6.5rem] md:min-h-screen">
             <div className="item1 relative right-2">
               <div className={"-bottom-1 block h-[82.8vh] overflow-y-auto overflow-x-hidden scrollbar " + (fixedmenu ? 'fixed' : 'absolute')}>
                 <Menu />
@@ -139,6 +140,7 @@ const AppRouter = () => {
                 <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
                 <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
                 <Route path='/Acadcord' element={<AcadCordinator />} />
+                <Route path='/Programme' element={<Programme/>} />
               </Routes>
             </div>
           </div>
