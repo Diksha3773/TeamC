@@ -64,7 +64,7 @@ function Navbar({handlescroll,offtop,setOfftop}) {
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/Infrastructure");setOpen(!open)}}>Infrastructure: At a glance</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/messageofHOD");setOpen(!open)}}>HOD's Message</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{setOpen(!open)}}>Achievements</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg rounded-b-md' onClick={()=>{handlescroll();setOpen(!open)}} >Contact us</button></div>                      
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg rounded-b-md' onClick={()=>{navigate("/contactus");setOpen(!open)}} >Contact us</button></div>                      
                         </div>                  
                     </div>
                     <div className='group shadow-sm p-2 m-0 md:border-none'>

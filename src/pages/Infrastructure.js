@@ -15,11 +15,15 @@ function Infrastructure() {
             <h1 className="text-centre text-2xl text-red-600"><b>{item.title}</b></h1>
             <img src={item.src} className="overflow-clip rounded-lg  w-full sm:w-4/5 md:w-2/2 h-[500px]"alt="..."/>
           </div>
-
+      
         </div>
       )
 
     }
+    
+    
+ 
+  
     )
   )
 }
