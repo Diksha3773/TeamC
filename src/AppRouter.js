@@ -12,6 +12,8 @@ import Viewall from './components/Viewall';
 import AcadCordinator from './pages/AcadCordinator';
 import NewNavbar from './components/NewNavbar';
 import Menu from './components/Menu';
+import ContactUs from './pages/ContactUs';
+import Achievements from './pages/Achievements';
 // import Test from './components/Test';
 import { useRef } from 'react';
 import Programme from './pages/Programme';
@@ -126,7 +128,8 @@ const AppRouter = () => {
             </div>
             <div className="item2 border md:mt-2">
               <Routes>
-                <Route exact path='/' element={<Homepage />} />
+                <Route  path='/TeamC' element={<Homepage />} />
+                <Route  path='/' element={<Homepage />} />
                 <Route path='/placements' element={<AllPlacement />} />
                 <Route path='*' element={<Error />} />
                 {/* About us */}
@@ -141,6 +144,9 @@ const AppRouter = () => {
                 <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
                 <Route path='/Acadcord' element={<AcadCordinator />} />
                 <Route path='/Programme' element={<Programme/>} />
+                <Route path='/contactus' element={<ContactUs />} />
+                <Route path='/achievements' element={<Achievements/>} />
+                {/* <Route path='/achievements' element={<Test/>} /> */}
               </Routes>
             </div>
           </div>

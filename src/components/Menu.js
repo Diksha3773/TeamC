@@ -46,7 +46,7 @@ function Menu() {
     return (
         <>
             <div className='w-full hidden lg:flex max-h-max m-2 overflow-y-auto scrollbar'>
-                <div className={"border-2 max-w-full w-72 xl:w-[20rem] 2xl:w-[22rem] flex flex-col m-2 mt-10 shadow rounded "}>
+                <div className={"border-2 max-w-full w-64 xl:w-[20rem] 2xl:w-[22rem] flex flex-col m-2 mt-10 shadow rounded "}>
                     <div className='text-xl p-2 w-full border-2 bg-blue-500 text-white rounded-t shadow'>Department of Computer Science and Engineering</div>
                     <div className='p-3'>
                         <div className={"p-2 my-1 shadow rounded cursor-pointer font-medium " + (openhome?'bg-blue-200':'')} onClick={() => { navigate("/"); handlehome(); }}><i className='fa fa-home w-6 px-auto'></i>Home</div>
@@ -56,8 +56,8 @@ function Menu() {
                                 <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/MissionandVision") }}>Vision and Mission</button></div>
                                 <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Infrastructure") }}>Infrastructure: At a glance</button></div>
                                 <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/messageofHOD") }}>HOD's Message</button></div>
-                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Achievements</button></div>
-                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm rounded-b-md' >Contact us</button></div>
+                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => {navigate("/achievements")  }}>Achievements</button></div>
+                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { navigate("/contactus") }}>Contact us</button></div>
                             </div>
                         </div>
                         <div className={"p-2 my-1 shadow rounded cursor-pointer " + (openacad ? 'bg-blue-200' : '')}>

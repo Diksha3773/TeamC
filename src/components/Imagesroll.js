@@ -5,8 +5,7 @@ import third from './Img/02.jpeg'
 import four from './Img/002.jpg'
 import five from './Img/002.png'
 import six from './Img/03.jpeg'
-// import Script from '@gumgum/react-script-tag';
-function Imagesroll() {
+function Test() {
     const image = [
         first,
         sec,
@@ -16,9 +15,6 @@ function Imagesroll() {
         six
     ]
     const [value, setValue] = useState(0);
-    var divStyle = {
-        backgroundImage: 'url(' + image[value] + ')'
-    };
     useEffect(() => {
         const interval = setInterval(() => {
             setValue(() => ((value === 5 ? 0 : value + 1)));
@@ -27,30 +23,27 @@ function Imagesroll() {
     }, [value])
     return (
         <>
-            <div id="main-image" className="mt-0 md:mt-4 h-[30vw] md:h-[78vh] w-full max-h-[1000px] transition-all duration-1000 bg-cover bg-center" style={divStyle}>
-                <div className="bg-gradient-to-b from-accent to-transparent h-full w-full">
-                    <div className="flex flex-col items-center justify-center container" style={{ height: "100%" }}>
-                        <div className="flex flex-col gap-10">
-                            <h2 className="text-white text-5xl text-center">
-                                <span className="font-bold">NITJ</span> Welcomes you
+            <div className="mt-0 md:mt-5 relative">
+                <div className="relative w-full overflow-hidden">
+                    <div className='relative bg-gradient-to-b from-accent to-transparent bg-cover bg-center w-full items-center transition-all justify-center'>
+                        <img src={image[value]} className='w-screen sm:h-[450px] block align-middle' alt="" />
+                        <div className='absolute bg-gradient-to-b from-accent to-transparent bg-cover bg-center flex flex-col w-full h-full top-0 items-center justify-center '>
+                            <h2 className="text-2xl sm:text-5xl m-2 font-bold text-white">
+                                NITJ<span className="mx-2 p-1 font-normal">Welcomes you</span> 
                             </h2>
-                            <div className="main-slider-text transition-all font-bold text-white max-w-lg text-4xl text-center">
+                            <div className="sm:text-3xl m-2  text-white">
                                 <h6>Computer Science and Engineering</h6>
-                                {/* <h2>78<sup>th</sup> IN OVERALL NIRF RANKING </h2>
-                                <h2>49<sup>th</sup> IN ENGINEERING NIRF</h2> */}
                             </div>
                         </div>
-
+                        <div className='top-0 absolute w-full h-full flex items-center justify-between p-2'>
+                            <button className='w-5 h-5 active:translate-y-1' onClick={()=>setValue(() => ((value === 0 ? 5 : value - 1)))}><svg xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 8 8'><path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/></svg></button>
+                            <button className='w-5 h-5 active:translate-y-1' onClick={()=>setValue(() => ((value === 5 ? 0 : value + 1)))}><svg xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z' /></svg></button>
+                        </div>
                     </div>
                 </div>
             </div>
-            {/* <Script
-                src="./NewNav.js"
-                type="text/javascript"
-                async
-            /> */}
         </>
     )
 }
 
-export default Imagesroll
+export default Test
