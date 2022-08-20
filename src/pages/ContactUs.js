@@ -2,7 +2,7 @@ import React from 'react'
 
 function ContactUs() {
   return (
-    <div className='flex flex-col mb-4 mt-20 m-16'>
+    <div className='flex flex-col m-16'>
       <h1 className=' top-2 text-center text-2xl font-bold md:font-extrabold md:text-4xl text-orange-600 font-serif m-2'>ContactUs</h1>
       <div className='flex1 bg-green-50 shadow-lg shadow-blue-500/50 p-8 rounded-md'>
         <div className=' w-11/12 mx-9'>

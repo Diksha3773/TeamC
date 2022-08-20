@@ -12,9 +12,9 @@ function Achievements() {
         {
           Achievement.map((item,i) => {
             return (
-              <div key={i} className="relative min-w-0 max-w-md break-words bg-white m-2 mb-6 shadow-lg rounded-xl mt-16 border">
+              <div key={i} className="relative min-w-0 max-w-md break-words bg-white m-2 mb-6 shadow-lg rounded-xl mt-16 border-2 hover:shadow-2xl">
                 <div className="flex flex-col break-words bg-white rounded-xl bg-clip-border transition-all flex-auto">
-                  <div className="transition-all mx-4 -mt-10 border-2 rounded-lg shadow-2xl overflow-hidden bg-black">
+                  <div className="transition-all mx-4 -mt-10 border-2 border-gray-500 rounded-lg shadow-2xl overflow-hidden shadow-gray-400">
                     <img
                       className="w-full h-full"
                       src={item.src}

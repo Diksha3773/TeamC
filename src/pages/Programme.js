@@ -42,7 +42,7 @@ function Programme() {
     ]
     return (
         <>
-            <div className='w-full h-full flex flex-col flex-auto items-center p-2 my-4'>
+            <div className='w-full h-full flex flex-col flex-auto items-center p-2 my-4 mt-12'>
                 <div className='text-2xl underline underline-offset-8 font-medium p-2 m-2 mb-4 text-center'>Programs of Study</div>
                 {
                     Programs.map((item, i) => {

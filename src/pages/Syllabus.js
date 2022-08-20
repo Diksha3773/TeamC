@@ -33,8 +33,8 @@ function Syllabus({heading,syllabus}) {
 
   return (
     <>
-      <div className='flex flex-col items-center justify-center w-full py-4 bg-gray-800 border'>
-        <div className='mb-4 p-2 shadow-lg'><span className='text-white text-opacity-70 font-bold text-4xl italic'>{heading}</span></div>
+      <div className='flex flex-col items-center justify-center w-full py-4 mt-12'>
+        <div className='mb-4 p-2 shadow-lg'><span className='text-opacity-70 font-bold text-4xl italic'>{heading}</span></div>
         <div className='w-full p-1 flex items-center justify-center'>
           <select defaultValue={program} onChange={(e) => { setProgram(e.target.value); setBsem('1st') }} className='border text-lg font-medium rounded-md focus:border-gray-200 shadow-md w-1/2 p-2'>
             <option value='Btech' className='p-2'>Btech</option>
@@ -57,11 +57,11 @@ function Syllabus({heading,syllabus}) {
         </div>
 
         <div className='m-4 rounded-lg shadow-md'>
-          <div className='block rounded-t-lg shadow h-12 md:h-16 w-[11.7rem] bg-gray-900 text-white'>
+          <div className='block rounded-t-lg shadow h-12 md:h-16 w-[11.7rem] bg-gray-400 text-white'>
             <button className={"h-full mr-1 p-2 float-left text-lg md:text-xl rounded-tl-lg font-medium " + (overview ? 'bg-gray-700' : '')} onClick={() => { setOverview(true) }} >Overview</button>
             <button className={"h-full ml-1 p-2 float-right max-w-max text-lg md:text-xl rounded-tr-lg font-medium " + (overview ? '' : 'bg-gray-700')} onClick={() => { setOverview(false) }}>Details</button>
           </div>
-          <div className='flex w-full h-full shadow-lg bg-gray-900 rounded-b-md p-8 items-center justify-start'>
+          <div className='flex w-full h-full shadow-lg bg-gray-400 rounded-b-md p-8 items-center justify-start'>
             {
               List.map((item, i) => {
                 return item.Program === program && program === 'Btech' ? (

@@ -5,7 +5,7 @@ import React from 'react'
 function AcadCordinator() {
     return (
         <>
-            <div className='w-full h-full flex items-center justify-center flex-col'>
+            <div className='w-full h-full flex items-center justify-center flex-col mt-20'>
                 <h1 className='p-4 m-2 text-gray-700 shadow-lg text-2xl font-bold'>Academic Coordinator</h1>
                 <div className='bg-[#171326] rounded-[5px] shadow-sm pt-[30px] w-[270px] max-w-full text-center flex flex-col items-center justify-center m-4 p-2'>
                     {/* <div className=' overflow-hidden flex items-center justify-center rounded-full m-4'> */}

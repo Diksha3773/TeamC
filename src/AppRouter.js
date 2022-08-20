@@ -1,5 +1,5 @@
 import Footer from './components/Footer';
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useMemo } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import AllPlacement from './components/AllPlacement';
 import Error from './pages/Errorpage';
@@ -11,26 +11,20 @@ import Infrastructure from './pages/Infrastructure'
 import Viewall from './components/Viewall';
 import AcadCordinator from './pages/AcadCordinator';
 import NewNavbar from './components/NewNavbar';
-import Menu from './components/Menu';
+// import Menu from './components/Menu';
 import ContactUs from './pages/ContactUs';
 import Achievements from './pages/Achievements';
-// import Test from './components/Test';
+import Test from './components/Test';
 import { useRef } from 'react';
 import Programme from './pages/Programme';
 const AppRouter = () => {
   const footref = useRef();
-  const [fixedmenu, setFixedmenu] = useState(true);
+  const isInViewport1 = useIsInViewport(footref);
+  console.log('isInViewport1: ', isInViewport1);
+  const [fixedmenu, setFixedmenu] = useState(isInViewport1);
   useEffect(() => {
-    const isInViewport = () => {
-      const rect = footref.current.getBoundingClientRect();
-      setFixedmenu(
-        (rect.top >= 655.984375 &&
-          rect.bottom >= 1083.984375
-        )
-      );
-    }
-    window.addEventListener('scroll', isInViewport);
-  }, [fixedmenu]);
+    setFixedmenu(isInViewport1);
+  }, [isInViewport1]);
   const activity = [
     {
       date: "20-July-2022",
@@ -114,22 +108,22 @@ const AppRouter = () => {
   ];
   return (
     <>
-      <div className='top-0 p-0 my-0 mx-auto max-w-[1800px] h-full'>
+      <div className='top-0 p-0 my-0 mx-auto max-w-[1600px] h-full'>
         <Router>
-          <div className='w-full md:mb-2'>
+          <div className='md:mb-2'>
             <NewNavbar />
           </div>
 
-          <div className="grid-container md:mt-[6.5rem] md:min-h-screen">
-            <div className="item1 relative right-2">
-              <div className={"-bottom-1 block h-[82.8vh] overflow-y-auto overflow-x-hidden scrollbar " + (fixedmenu ? 'fixed' : 'absolute')}>
-                <Menu />
+          <div className="flex w-full md:mt-[6.5rem] md:min-h-screen overflow-y-auto overflow-x-hidden">
+            <div className="lg:w-72 absolute lg:relative p-2">
+              <div className='relative hidden lg:block pt-8 h-full'>
+                {/* <Menu /> */}
+                <Test fixedmenu={fixedmenu} />
               </div>
             </div>
-            <div className="item2 border md:mt-2">
+            <div className="w-full flex items-center justify-center lg:w-[calc(100%-18rem)] md:mt-2 md:pt-4 h-full">
               <Routes>
-                <Route  path='/TeamC' element={<Homepage />} />
-                <Route  path='/' element={<Homepage />} />
+                <Route path='/' element={<Homepage />} />
                 <Route path='/placements' element={<AllPlacement />} />
                 <Route path='*' element={<Error />} />
                 {/* About us */}
@@ -143,14 +137,14 @@ const AppRouter = () => {
                 <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
                 <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
                 <Route path='/Acadcord' element={<AcadCordinator />} />
-                <Route path='/Programme' element={<Programme/>} />
+                <Route path='/Programme' element={<Programme />} />
                 <Route path='/contactus' element={<ContactUs />} />
-                <Route path='/achievements' element={<Achievements/>} />
+                <Route path='/achievements' element={<Achievements />} />
                 {/* <Route path='/achievements' element={<Test/>} /> */}
               </Routes>
             </div>
           </div>
-          <div ref={footref} className='w-full'>
+          <div ref={footref} className='w-full h-full'>
             <Footer />
           </div>
         </Router>
@@ -161,3 +155,25 @@ const AppRouter = () => {
 
 
 export default AppRouter;
+
+function useIsInViewport(ref) {
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  const observer = useMemo(
+    () =>
+      new IntersectionObserver(([entry]) =>
+        setIsIntersecting(entry.isIntersecting),
+      ),
+    [],
+  );
+
+  useEffect(() => {
+    observer.observe(ref.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref, observer]);
+
+  return isIntersecting;
+}

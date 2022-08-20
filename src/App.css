@@ -364,9 +364,16 @@
 .grid-container {
   display: grid;
   grid-template-areas: 'myArea';
-  grid-template-columns: 2fr 6fr;
+  grid-template-columns: 1fr 5fr;
   grid-gap: 20px;
   padding: 10px;
+}
+@media (max-width: 1240px) and(min-width:1024px) {
+   .grid-container {
+      grid-template-columns: 2fr 6fr;
+      grid-gap: 0px;
+      padding: 0px;
+    }
 }
 @media (max-width: 1023px) {
    .grid-container {
