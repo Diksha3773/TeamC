@@ -121,7 +121,7 @@ const AppRouter = () => {
                 <Test fixedmenu={fixedmenu} />
               </div>
             </div>
-            <div className="w-full flex items-center justify-center lg:w-[calc(100%-18rem)] md:mt-2 md:pt-4 h-full">
+            <div className="w-full flex items-center justify-center lg:w-[calc(100%-18rem)] md:mt-2 h-full">
               <Routes>
                 <Route path='/' element={<Homepage />} />
                 <Route path='/placements' element={<AllPlacement />} />

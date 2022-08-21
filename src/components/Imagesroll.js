@@ -29,7 +29,7 @@ function Test() {
                         <img src={image[value]} className='w-screen sm:h-[450px] block align-middle' alt="" />
                         <div className='absolute bg-gradient-to-b from-accent to-transparent bg-cover bg-center flex flex-col w-full h-full top-0 items-center justify-center '>
                             <h2 className="text-2xl sm:text-5xl m-2 font-bold text-white">
-                                NITJ<span className="mx-2 p-1 font-normal">Welcomes you</span> 
+                                NITJ<span className="mx-2 p-1 font-normal uppercase">Welcomes you</span> 
                             </h2>
                             <div className="sm:text-3xl m-2  text-white">
                                 <h6>Computer Science and Engineering</h6>
