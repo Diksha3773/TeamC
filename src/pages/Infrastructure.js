@@ -6,44 +6,38 @@ const images = [{ src: 'https://upload.wikimedia.org/wikipedia/commons/5/55/IT_B
 
 function Infrastructure() {
   return (
-   
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="mt-10 text-4xl font-bold   text-orange-600">Infrastructure</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-2 mx-auto" >
-          {
-            images.map((item,i) => {
-              return (
-                <div key={i} className="relative min-w-0 max-w-md break-words bg-white  shadow-md rounded-xl mt-5 mx-2 my-2  hover:shadow-2xl">
-                   <div className="flex-auto p-3 text-center">
-                      <p className="text-lg text-blue-700 mb-4"><b>
-                        {item.title}</b>
-                      </p>
-                    </div>
-                  <div className="flex flex-col break-words  rounded-xl bg-clip-border transition-all flex-auto p-3">
-                    <div className="transition-all mx-2 -mt-10 border-2 border-gray-200 rounded-lg shadow-2xl overflow-hidden shadow-gray-400">
-                      <img
-                        className="w-full h-full "
-                        src={item.src}
-                        alt="image"
-                      />
-                    </div>
-                   
+    <div className="flex flex-col w-full">
+      <div className="w-full flex items-center justify-center p-4 mt-4">
+        <h1 class="mt-10 text-4xl font-bold   text-orange-600">Infrastructure</h1>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 m-4 p-2 place-items-center gap-4 antialiased text-gray-900">
+        {
+          images.map((item, i) => {
+            return (
+              <div key={i} className='m-4 p-2'>
+                <img src={item.src} alt=" random imgee" class="w-full border-2 object-cover object-center rounded-lg shadow-md" />
+
+                <div class="relative px-4 -mt-12  ">
+                  <div class="bg-white flex items-center justify-center p-6 rounded-lg shadow-lg">
+                    <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">{item.title}</h4>
                   </div>
                 </div>
-              )
-            })
-          }
-        </div>
+
+              </div>
+            )
+          })
+        }
       </div>
-    )
+    </div>
+  )
 
-      
 
-    }
-    
-    
- 
-  
-  
+
+}
+
+
+
+
+
 export default Infrastructure
 

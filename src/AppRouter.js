@@ -116,7 +116,7 @@ const AppRouter = () => {
 
           <div className="flex w-full md:mt-[6.5rem] md:min-h-screen overflow-y-auto overflow-x-hidden">
             <div className="lg:w-72 absolute lg:relative p-2">
-              <div className='relative hidden lg:block pt-8 h-full'>
+              <div className='relative hidden shadow-lg lg:block pt-8 h-full'>
                 {/* <Menu /> */}
                 <Test fixedmenu={fixedmenu} />
               </div>
