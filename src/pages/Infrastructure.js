@@ -6,26 +6,44 @@ const images = [{ src: 'https://upload.wikimedia.org/wikipedia/commons/5/55/IT_B
 
 function Infrastructure() {
   return (
-    images.map((item,i) => {
-      return (
-        <div className='flex flex-col md:flex-row w-[98%] justify-center items-center p-4 place-items-center mx-auto'>
-
-          <div key={i} className='flex flex-col m-2 p-1 sm:m-4 sm:p-2 items-center justify-center w-full sm:w-4/5 md:w-4/5 h-[600px] bg-green-50 shadow-md shadow-green-200 '>
-            <h1 className="text-centre text-2xl text-red-600"><b>{item.title}</b></h1>
-            <img src={item.src} className="overflow-clip rounded-lg  w-full sm:w-4/5 md:w-2/2 h-[500px]"alt="..."/>
-          </div>
-      
+   
+      <div className="flex flex-col items-center justify-center">
+        <h1 className="mt-10 text-4xl font-bold   text-orange-600">Infrastructure</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-2 mx-auto" >
+          {
+            images.map((item,i) => {
+              return (
+                <div key={i} className="relative min-w-0 max-w-md break-words bg-white  shadow-md rounded-xl mt-5 mx-2 my-2  hover:shadow-2xl">
+                   <div className="flex-auto p-3 text-center">
+                      <p className="text-lg text-blue-700 mb-4"><b>
+                        {item.title}</b>
+                      </p>
+                    </div>
+                  <div className="flex flex-col break-words  rounded-xl bg-clip-border transition-all flex-auto p-3">
+                    <div className="transition-all mx-2 -mt-10 border-2 border-gray-200 rounded-lg shadow-2xl overflow-hidden shadow-gray-400">
+                      <img
+                        className="w-full h-full "
+                        src={item.src}
+                        alt="image"
+                      />
+                    </div>
+                   
+                  </div>
+                </div>
+              )
+            })
+          }
         </div>
-      )
+      </div>
+    )
+
+      
 
     }
     
     
  
   
-    )
-  )
-}
-
+  
 export default Infrastructure
 
