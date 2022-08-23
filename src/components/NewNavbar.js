@@ -51,7 +51,7 @@ function NewNavbar() {
     }, [])
     return (
         <>
-            <header className="block md:fixed bg-white top-0 right-0 left-0 z-50">
+            <header className="block lg:fixed bg-white top-0 right-0 left-0 z-50">
                 {/* <!-- TOP NAV BAR stats --> */}
                 <div id="top_bar" className="absolute top-0 right-0 left-0 transition-transform delay-200 z-50 flex h-7 flex-row bg-blue-700 py-0.5 px-12 text-sm font-bold text-white">
                     <div className="basis-1/2">

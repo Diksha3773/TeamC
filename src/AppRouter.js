@@ -114,9 +114,9 @@ const AppRouter = () => {
             <NewNavbar />
           </div>
 
-          <div className="flex w-full md:mt-[6.5rem] md:min-h-screen overflow-y-auto overflow-x-hidden">
-            <div className="lg:w-72 absolute lg:relative p-2">
-              <div className='relative hidden shadow-lg lg:block pt-8 h-full'>
+          <div className="flex flex-col lg:flex-row w-full lg:mt-[6.5rem] lg:min-h-screen overflow-y-auto overflow-x-hidden">
+            <div className=" w-full lg:w-72 absolute lg:relative bg-white z-10 p-2">
+              <div className='w-full my-auto lg:shadow-lg lg:block lg:pt-8 h-full'>
                 {/* <Menu /> */}
                 <Test fixedmenu={fixedmenu} />
               </div>

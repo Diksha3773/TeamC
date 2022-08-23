@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 // import first from './Img/homepage.jpg'
 // import sec from './Img/003.jpg'
@@ -105,18 +105,19 @@ function Test({ fixedmenu }) {
             link: ''
         },
     ]
+    const [menu, setMenu] = useState(false);
     console.log("Fixedmenu: ",fixedmenu);
     return (
         <>
-            <div className={"flex flex-col items-center ml-2 h-[78vh] overflow-hidden text-gray-700 rounded " + (fixedmenu ? 'absolute bottom-1' : 'fixed')}>
-                <span className="flex items-center w-full px-3 mt-2 active:translate-y-[2px]" onClick={() => { navigate('/') }}>
+            <div className={"flex flex-col bg-white z-10 items-center ml-2 h-[78vh] max-w-full overflow-hidden text-gray-700 rounded lg:" + (fixedmenu ? 'absolute bottom-1' : 'fixed')}>
+                <span className="flex items-center w-full px-3 mt-2 active:translate-y-[2px]" onClick={() => {setMenu(!menu) }}>
                     <svg className="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
                     </svg>
-                    <span className="ml-2 text-xl font-bold">Menu</span>
+                    <span className="ml-2 text-xl font-bold p-2">Menu</span>
                 </span>
 
-                <div className="flex flex-col items-center w-full h-full overflow-y-auto scrollbar mt-2 py-1 border-t border-gray-300">
+                <div className={"lg:flex flex-col items-center w-full h-full overflow-y-auto scrollbar mt-2 py-1 border-t border-gray-300 "+(menu?'flex':'hidden')}>
                     <div className='w-full'>
                         <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate('/') }}>
                             <i className="pl-1 w-6 h-6 stroke-current fa fa-home"></i>
@@ -137,7 +138,7 @@ function Test({ fixedmenu }) {
                                             item.List.map((iteml, j) => {
                                                 return (
                                                     <li key={j}>
-                                                        <span className="inline-block p-1 text-sm font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 ml-10 cursor-pointer active:translate-y-[2px] active:bg-green-500" onClick={() => { navigate(iteml.link); }}>{iteml.l}</span>
+                                                        <span className="inline-block p-1 text-sm font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 ml-10 cursor-pointer active:translate-y-[2px] active:bg-green-500" onClick={() => { navigate(iteml.link); setMenu(!menu) }}>{iteml.l}</span>
                                                     </li>
                                                 )
                                             })
