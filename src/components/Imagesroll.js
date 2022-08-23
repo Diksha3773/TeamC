@@ -26,7 +26,7 @@ function Test() {
             <div className="mt-0 md:mt-5 relative">
                 <div className="relative w-full overflow-hidden">
                     <div className='relative bg-gradient-to-b from-accent to-transparent bg-cover bg-center w-full items-center transition-all justify-center'>
-                        <img src={image[value]} className='w-screen sm:h-[450px] block align-middle' alt="" />
+                        <img src={image[value]} className='w-screen aspect-video sm:h-[450px] block align-middle' alt="" />
                         <div className='absolute bg-gradient-to-b from-accent to-transparent bg-cover bg-center flex flex-col w-full h-full top-0 items-center justify-center '>
                             <h2 className="text-2xl sm:text-5xl m-2 font-bold text-white">
                                 NITJ<span className="mx-2 p-1 font-normal uppercase">Welcomes you</span> 
