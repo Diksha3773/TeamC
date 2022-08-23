@@ -38,7 +38,7 @@ const Departmentmiddle = () => {
                             Activity.map((n, i) =>
                                 <div key={i} className='flex p-2 m-2'>
                                     <li className='list-[circle] list-inside'></li>
-                                    <span className={"mx-1 border-b pb-2 text-justify text-gray-600 font-sans "}>{n}</span>
+                                    <span className={"mx-1 border-b pb-2 text-justify text-sm sm:text-base text-gray-600 font-sans "}>{n}</span>
                                 </div>
                             )
                         }
@@ -53,7 +53,7 @@ const Departmentmiddle = () => {
                             News.map((n, i) =>
                                 <div key={i} className='flex p-2 m-2'>
                                     <li className='list-[circle] list-inside'></li>
-                                    <span className={"mx-1 border-b pb-2 text-justify text-gray-600 font-sans "}>{n}</span>
+                                    <span className={"mx-1 border-b pb-2 text-justify text-sm sm:text-base text-gray-600 font-sans "}>{n}</span>
                                 </div>
                             )
                         }
