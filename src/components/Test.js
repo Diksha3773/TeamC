@@ -137,7 +137,7 @@ function Test({ fixedmenu }) {
                                             item.List.map((iteml, j) => {
                                                 return (
                                                     <li key={j}>
-                                                        <span className="inline-block p-1 text-sm font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 ml-10 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate(iteml.link); }}>{iteml.l}</span>
+                                                        <span className="inline-block p-1 text-sm font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 ml-10 cursor-pointer active:translate-y-[2px] active:bg-green-500" onClick={() => { navigate(iteml.link); }}>{iteml.l}</span>
                                                     </li>
                                                 )
                                             })
