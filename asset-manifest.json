@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/TeamC/static/css/main.63b7166d.css",
-    "main.js": "/TeamC/static/js/main.3cbdc492.js",
+    "main.css": "/TeamC/static/css/main.7806dc18.css",
+    "main.js": "/TeamC/static/js/main.596fa926.js",
     "static/media/syllabus.pdf": "/TeamC/static/media/syllabus.745df2a473b12c11f27e.pdf",
     "static/media/homepage.jpg": "/TeamC/static/media/homepage.c7469ae543178d7f98be.jpg",
     "static/media/002.png": "/TeamC/static/media/002.40a4fe221099c0c1f3e2.png",
@@ -22,11 +22,11 @@
     "static/media/top2.png": "/TeamC/static/media/top2.f53a70f236eef8c901bb.png",
     "static/media/Rahul.png": "/TeamC/static/media/Rahul.fc0e58f5a093225f6adb.png",
     "index.html": "/TeamC/index.html",
-    "main.63b7166d.css.map": "/TeamC/static/css/main.63b7166d.css.map",
-    "main.3cbdc492.js.map": "/TeamC/static/js/main.3cbdc492.js.map"
+    "main.7806dc18.css.map": "/TeamC/static/css/main.7806dc18.css.map",
+    "main.596fa926.js.map": "/TeamC/static/js/main.596fa926.js.map"
   },
   "entrypoints": [
-    "static/css/main.63b7166d.css",
-    "static/js/main.3cbdc492.js"
+    "static/css/main.7806dc18.css",
+    "static/js/main.596fa926.js"
   ]
 }
