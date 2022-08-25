@@ -44,8 +44,9 @@ function Programme() {
         <>
             <div className="flex flex-col w-full h-full mb-3">
                 <div className="w-full flex items-center justify-center p-4 mt-4">
-                    <h1 className="mt-10 text-4xl font-bold   text-orange-600">Programs</h1>
+                    <h1 class="mt-10 text-4xl italic font-semibold">Programme of Study</h1>
                 </div>
+                <hr className='mb-1' />
                 <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-3 p-2 gap-2 antialiased text-gray-900">
                     {
                         Programs.map((item, i) => {
@@ -71,8 +72,8 @@ function Programme() {
                                     <div className="group-hover:flex flex-col justify-end h-full p-6 bg-gray-900 sm:p-8 rounded-b-xl -mt-2 w-[98%] hidden delay-200">
                                         <ul className='grid grid-cols-2 gap-2'>
                                             {
-                                                item.Syallbus.map((item1,j)=>{
-                                                    return(
+                                                item.Syallbus.map((item1, j) => {
+                                                    return (
                                                         <a key={j} href={item1.link}><li className='p-1 mx-1 underline text-white'>Sem {item1.sem}</li></a>
                                                     )
                                                 })

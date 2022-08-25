@@ -3,8 +3,11 @@ import React from 'react'
 function ContactUs() {
   return (
     <div className='flex flex-col m-16'>
-      <h1 className=' top-2 text-center text-2xl font-bold md:font-extrabold md:text-4xl text-orange-600 font-serif m-2'>ContactUs</h1>
-      <div className='flex1 bg-green-50 shadow-lg shadow-blue-500/50 p-8 rounded-md'>
+      <div className="w-full flex items-center justify-center p-4">
+        <h1 class="text-4xl italic font-semibold">Contact Us</h1>
+      </div>
+      <hr className='mb-1' />
+      <div className='flex-1 shadow-lg p-8 rounded-md'>
         <div className=' w-11/12 mx-9'>
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6 ">

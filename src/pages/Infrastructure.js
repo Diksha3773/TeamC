@@ -8,8 +8,9 @@ function Infrastructure() {
   return (
     <div className="flex flex-col w-full">
       <div className="w-full flex items-center justify-center p-4 mt-4">
-        <h1 class="mt-10 text-4xl font-bold   text-orange-600">Infrastructure</h1>
+        <h1 class="mt-10 text-4xl italic font-semibold">Infrastructure</h1>
       </div>
+      <hr />
       <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 m-4 p-2 place-items-center gap-4 antialiased text-gray-900">
         {
           images.map((item, i) => {

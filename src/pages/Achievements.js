@@ -7,9 +7,10 @@ const Achievement = [{ src: 'https://www.nitj.ac.in//images/photo_gallery/Republ
 function Achievements() {
   return (
     <div className="w-full flex flex-col items-center justify-center">
-      {/* <h1 className="my-16 text-5xl underline underline-offset-8 font-bold italic shadow-xl py-4 px-8 rounded">Achievements</h1> */}
-      <h1 className="mt-9 rounded-sm w-full text-2xl font-medium bg-blue-300 text-white p-2">Achievements</h1>
-
+      <div className="w-full flex items-center justify-center p-4 mt-4">
+        <h1 class="mt-10 text-4xl italic font-semibold">Achievements</h1>
+      </div>
+      <hr className='w-full' />
       <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-2 mx-auto" >
         {
           Achievement.map((item, i) => {
