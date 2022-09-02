@@ -327,11 +327,7 @@
        grid-template-columns: repeat(4, minmax(0, 1fr));
    }
 }
-@media (min-width: 1950px) {
-   .colplace {
-       grid-template-columns: repeat(5, minmax(0, 1fr));
-   }
-}
+
 .indicator li::after {
     position: absolute;
     bottom: -10px;

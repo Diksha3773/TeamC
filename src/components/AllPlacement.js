@@ -16,7 +16,7 @@ function AllPlacement() {
                         <span className='text-xl font-mono font-semibold '> (Computer Science and Engineering)</span>
                     </div>
                     <div className='m-3 block w-full mb-16'>
-                        <input placeholder='Search by (Company Name, Packages or year)' defaultValue={search} onChange={(e) => { setSearch(e.target.value) }} className='w-4/5 md:w-2/3 lg:w-1/3 m-4 p-2 text-lg rounded border-2 shadow-lg border-gray-300 focus:border-gray-400 focus:outline-none' />
+                        <input placeholder='Search by (Company Name, Packages or year)' defaultValue={search} onChange={(e) => { setSearch(e.target.value) }} className='w-4/5 m-4 p-2 text-lg rounded border-2 shadow-lg border-gray-300 focus:border-gray-400 focus:outline-none' />
                     </div>
                     <div className='grid grid-cols-1 lg:grid-cols-2 colplace m-2 lg:mx-4 w-full items-center justify-center place-items-center text-gray-700 over'>
                         <Placement search={search}/>
