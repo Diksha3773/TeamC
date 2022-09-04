@@ -17,10 +17,11 @@ import Achievements from './pages/Achievements';
 import Test from './components/Test';
 import { useRef } from 'react';
 import Programme from './pages/Programme';
+import Test1 from './pages/Test1';
 const AppRouter = () => {
   const footref = useRef();
   const isInViewport1 = useIsInViewport(footref);
-  console.log('isInViewport1: ', isInViewport1);
+  // console.log('isInViewport1: ', isInViewport1);
   const [fixedmenu, setFixedmenu] = useState(isInViewport1);
   useEffect(() => {
     setFixedmenu(isInViewport1);
@@ -108,14 +109,14 @@ const AppRouter = () => {
   ];
   return (
     <>
-      <div className='top-0 p-0 my-0 mx-auto max-w-[1600px] h-full'>
+      <div className='top-0 p-0 my-0 mx-auto max-w-[1600px] h-full shadow-lg'>
         <Router>
           <div className='md:mb-2'>
             <NewNavbar />
           </div>
 
           <div className="flex flex-col lg:flex-row w-full lg:mt-[6.5rem] lg:min-h-screen overflow-y-auto overflow-x-hidden">
-            <div className=" w-full lg:w-72 absolute lg:relative bg-white z-10 p-2">
+            <div className=" w-full lg:w-72 absolute lg:relative bg-white z-10 p-2 pl-0">
               <div className='w-full my-auto lg:shadow-lg lg:block lg:pt-8 h-full'>
                 {/* <Menu /> */}
                 <Test fixedmenu={fixedmenu} />
@@ -137,6 +138,7 @@ const AppRouter = () => {
                 <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
                 <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
                 <Route path='/Acadcord' element={<AcadCordinator />} />
+                {/* <Route path='/Acadcord' element={<Test1 />} /> */}
                 <Route path='/Programme' element={<Programme />} />
                 <Route path='/contactus' element={<ContactUs />} />
                 <Route path='/achievements' element={<Achievements />} />

@@ -23,7 +23,7 @@ function Programme() {
                 { sem: 'IV', link: '' },
             ]
         }, {
-            Name: 'Phd',
+            Name: 'PhD',
             Syallbus: [
                 { sem: 'I', link: '' },
                 { sem: 'II', link: '' },
@@ -42,51 +42,44 @@ function Programme() {
     ]
     return (
         <>
-            <div className="flex flex-col w-full h-full mb-3">
-                <div className="w-full flex items-center justify-center p-4 mt-4">
-                    <h1 class="mt-10 text-4xl italic font-semibold">Programme of Study</h1>
-                </div>
-                <hr className='mb-1' />
-                <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-3 p-2 gap-2 antialiased text-gray-900">
-                    {
-                        Programs.map((item, i) => {
-                            return (
-                                <div key={i} className="flex flex-col items-center justify-center p-1 shadow-xl mt-4 rounded-2xl bg-gradient-to-r from-red-400 to-red-600 group h-[177px] hover:h-full">
-                                    <div className="flex flex-col justify-end h-full p-6 bg-gray-900 sm:p-8 rounded-xl w-full">
-                                        <div className="mt-4">
-                                            <h5 className="mt-2 text-xl font-bold text-white">
-                                                {item.Name}
-                                            </h5>
-                                            <div className="flex items-center justify-between mt-6">
-                                                <p className="text-lg font-medium text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-red-600">
-                                                    Curriculum
-                                                </p>
-                                                <span className="flex space-x-1 ml-2">
-                                                    <span className="inline-block rounded-full p-1 text-white text-xs font-medium px-3 py-1.5 bg-gray-800">
-                                                        Just Hover Card
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="group-hover:flex flex-col justify-end h-full p-6 bg-gray-900 sm:p-8 rounded-b-xl -mt-2 w-[98%] hidden delay-200">
-                                        <ul className='grid grid-cols-2 gap-2'>
-                                            {
-                                                item.Syallbus.map((item1, j) => {
-                                                    return (
-                                                        <a key={j} href={item1.link}><li className='p-1 mx-1 underline text-white'>Sem {item1.sem}</li></a>
-                                                    )
-                                                })
-                                            }
-                                        </ul>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
+            <div className="text-gray-600 body-font w-full h-full">
+                <div className="container flex flex-col px-5 py-24 mx-auto"style={{height:"100%"}}>
+                    <div className="flex flex-col text-center w-full mb-20">
+                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Programmes of Study</h1>
+                        <p className="lg:w-2/3 mx-auto leading-relaxed text-base">The Institute offers following Undergraduate, Postgraduate and Research Programmes in <b>Computer Science and Engineering</b></p>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 -m-4 place-items-center text-center">
+                        <div className="p-4 min-w-[250px] max-w-[300px] w-full">
+                            <div className="border-2 border-gray-200 px-4 py-6 rounded-lg hover:shadow-lg active:translate-y-[2px] cursor-pointer">
+                                <i className="fa fa-graduation-cap text-blue-400 text-5xl m-3"></i>
+                                <h2 className="title-font font-medium text-2xl text-gray-900">BTech</h2>
+                                <p className="text-sm p-1 leading-relaxed">(Bachelor of Technology)</p>
+                            </div>
+                        </div>
+                        <div className="p-4 min-w-[250px] max-w-[300px] w-full">
+                            <div className="border-2 border-gray-200 px-4 py-6 rounded-lg hover:shadow-lg active:translate-y-[2px] cursor-pointer">
+                                <i className="fa fa-graduation-cap text-blue-400 text-5xl m-3"></i>
+                                <h2 className="title-font font-medium text-2xl text-gray-900">MTech</h2>
+                                <p className="text-sm p-1 leading-relaxed">(Master of Technology)</p>
+                            </div>
+                        </div>
+                        <div className="p-4 min-w-[250px] max-w-[300px] w-full">
+                            <div className="border-2 border-gray-200 px-4 py-6 rounded-lg hover:shadow-lg active:translate-y-[2px] cursor-pointer">
+                                <i className="fa fa-graduation-cap text-blue-400 text-5xl m-3"></i>
+                                <h2 className="title-font font-medium text-2xl text-gray-900">PhD</h2>
+                                <p className="text-sm p-1 leading-relaxed">(Doctor of Philosophy)</p>
+                            </div>
+                        </div>
+                        <div className="p-4 min-w-[250px] max-w-[300px] w-full">
+                            <div className="border-2 border-gray-200 px-4 py-6 rounded-lg hover:shadow-lg active:translate-y-[2px] cursor-pointer">
+                                <i className="fa fa-graduation-cap text-blue-400 text-5xl m-3"></i>
+                                <h2 className="title-font font-medium text-2xl text-gray-900">PG Diploma</h2>
+                                <p className="text-sm p-1 leading-relaxed">(Postgraduate Diploma)</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
         </>
     )
 }
