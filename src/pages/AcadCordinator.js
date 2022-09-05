@@ -82,24 +82,24 @@ function AcadCordinator() {
                         <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Academic Coordinator</h1>
                     </div>
                     <hr />
-                    <div className='relative flex items-center w-full my-16 z-40'>
+                    <div className='relative flex items-center w-full my-16'>
                         <input placeholder='Search by Assistant Professor Name' defaultValue={search} onChange={(e) => { setSearch(e.target.value) }} className='w-11/12 md:w-4/5 mx-auto p-2 text-lg rounded border-2 shadow-lg border-gray-300 focus:border-gray-400 focus:outline-none' />
                     </div>
                     <div className='mt-48'>
                         <div className='top-4 w-full flex items-center justify-center relative'>
-                            <div className='absolute left-[5%] max-w-[14rem] max-h-[17rem] overflow-hidden rounded-3xl'>
+                            <div className='absolute hidden sm:flex md:left-[5%] lg:left-[8%] xl:left-[5%] max-w-[14rem] max-h-[17rem] overflow-hidden rounded-3xl'>
                                 <AcadCard Name={CoordinatorList[((val - 2)%6+6)%6].Name} Photo={CoordinatorList[((val - 2)%6+6)%6].Photo} />
                             </div>
-                            <div className='absolute left-[19%] overflow-hidden max-w-[18rem] max-h-[20rem] rounded-3xl'>
+                            <div className='absolute hidden sm:flex sm:left-[14%] md:left-[19%] lg:left-[14%] xl:left-[19%] overflow-hidden max-w-[18rem] max-h-[20rem] rounded-3xl'>
                                 <AcadCard Name={CoordinatorList[((val - 1)%6+6)%6].Name} Photo={CoordinatorList[((val - 1)%6+6)%6].Photo} />
                             </div>
                             <div className='absolute z-20 max-w-[22rem] max-h-[25rem] rounded-3xl overflow-hidden'>
                                 <AcadCard Name={CoordinatorList[((val)%6+6)%6].Name} Photo={CoordinatorList[((val)%6+6)%6].Photo} />
                             </div>
-                            <div className='absolute overflow-hidden right-[19%] max-w-[18rem] max-h-[20rem] rounded-3xl z-10'>
+                            <div className='absolute overflow-hidden hidden sm:flex sm:right-[14%] md:right-[19%] lg:right-[14%] xl:right-[19%] max-w-[18rem] max-h-[20rem] rounded-3xl z-10'>
                                 <AcadCard Name={CoordinatorList[((val + 1)%6+6)%6].Name} Photo={CoordinatorList[((val + 1)%6+6)%6].Photo} />
                             </div>
-                            <div className='absolute overflow-hidden right-[5%] max-w-[14rem] max-h-[17rem] rounded-3xl'>
+                            <div className='absolute overflow-hidden hidden sm:flex md:right-[8%] xl:right-[5%] max-w-[14rem] max-h-[17rem] rounded-3xl'>
                                 <AcadCard Name={CoordinatorList[((val + 2)%6+6)%6].Name} Photo={CoordinatorList[((val + 2)%6+6)%6].Photo} />
                             </div>
                         </div>

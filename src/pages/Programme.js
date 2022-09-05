@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function Programme() {
     const Programs = [
@@ -40,6 +40,10 @@ function Programme() {
             ]
         }
     ]
+    useEffect(() => {
+      window.scroll(0,0);
+    }, [])
+    
     return (
         <>
             <div className="text-gray-600 body-font w-full h-full">
