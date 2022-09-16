@@ -11,10 +11,10 @@ import Infrastructure from './pages/Infrastructure'
 import Viewall from './components/Viewall';
 import AcadCordinator from './pages/AcadCordinator';
 import NewNavbar from './components/NewNavbar';
-// import Menu from './components/Menu';
+import Menu from './components/Menu';
 import ContactUs from './pages/ContactUs';
 import Achievements from './pages/Achievements';
-import Test from './components/Test';
+// import Test from './components/Test';
 import { useRef } from 'react';
 import Programme from './pages/Programme';
 import Test1 from './pages/Test1';
@@ -118,8 +118,7 @@ const AppRouter = () => {
           <div className="flex flex-col lg:flex-row w-full lg:mt-[6.5rem] lg:min-h-screen overflow-y-auto overflow-x-hidden">
             <div className=" w-full lg:w-72 absolute lg:relative bg-white z-10 p-2 pl-0">
               <div className='w-full my-auto lg:shadow-lg lg:block lg:pt-8 h-full'>
-                {/* <Menu /> */}
-                <Test fixedmenu={fixedmenu} />
+                <Menu fixedmenu={fixedmenu}/>
               </div>
             </div>
             <div className="w-full flex items-center justify-center lg:w-[calc(100%-18rem)] mt-8 md:mt-2 h-full">
@@ -137,8 +136,8 @@ const AppRouter = () => {
                 {/* Academic */}
                 <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
                 <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
-                <Route path='/Acadcord' element={<AcadCordinator />} />
-                {/* <Route path='/Acadcord' element={<Test1 />} /> */}
+                {/* <Route path='/Acadcord' element={<AcadCordinator />} /> */}
+                <Route path='/Acadcord' element={<Test1 />} />
                 <Route path='/Programme' element={<Programme />} />
                 <Route path='/contactus' element={<ContactUs />} />
                 <Route path='/achievements' element={<Achievements />} />

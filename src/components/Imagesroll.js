@@ -27,13 +27,13 @@ function Test() {
                 <div className="relative w-full overflow-hidden">
                     <div className='relative bg-gradient-to-b from-accent to-transparent bg-cover bg-center w-full items-center transition-all justify-center'>
                         <img src={image[value]} className='w-screen aspect-video sm:h-[450px] block align-middle' alt="" />
-                        <div className='absolute bg-gradient-to-b from-accent to-transparent bg-cover bg-center flex flex-col w-full h-full top-0 items-center justify-center '>
-                            <h2 className="text-2xl sm:text-5xl m-2 font-bold text-white">
-                                NITJ<span className="mx-2 p-1 font-normal uppercase">Welcomes you</span> 
-                            </h2>
-                            <div className="sm:text-3xl m-2  text-white">
+                        <div className='bg-gradient-to-b from-accent to-transparent bg-cover bg-center flex flex-col w-full h-full top-0 items-center justify-center '>
+                            <div className="sm:text-4xl m-2 font-bold text-white">
                                 <h6>Computer Science and Engineering</h6>
                             </div>
+                            <h2 className="text-2xl sm:text-3xl m-2 font-bold text-white">
+                                NITJ<span className="mx-2 p-1 font-medium uppercase">Welcomes you</span> 
+                            </h2>
                         </div>
                         <div className='top-0 absolute w-full h-full flex items-center justify-between p-2'>
                             <button className='w-5 h-5 active:translate-y-1' onClick={()=>setValue(() => ((value === 0 ? 5 : value - 1)))}><svg xmlns='http://www.w3.org/2000/svg' fill='#fff' viewBox='0 0 8 8'><path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/></svg></button>

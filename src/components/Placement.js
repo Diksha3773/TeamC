@@ -4,7 +4,7 @@ import top2 from './Img/top2.png'
 import top3 from './Img/top3.png'
 import top4 from './Img/top4.png'
 import searchgif from './Vedio/search.gif'
-function Placement({search}) {
+function Placement({ search }) {
     const list = [
         {
             name: 'Rahul Thapliyal',
@@ -135,86 +135,34 @@ function Placement({search}) {
             {
                 list.map((item, i) => {
                     return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
-                        <div ref={myref} key={i} role="listitem" className="min-w-[260px] max-w-[400px] relative mt-32 mx-2">
-                            <div className="rounded border-2 overflow-hidden shadow-md bg-white">
-                                <div className="absolute -mt-20 w-full flex justify-center">
-                                    <div className="h-32 w-32 border-2 shadow-md shadow-blue-500 rounded-full">
-                                        <img src={item.imgurl} alt="..." className="rounded-full object-cover h-full w-full shadow-md" />
-                                    </div>
+                        <a key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md" href="#" id="1RK1995NTS06">
+
+                            <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
+                                <div class="w-36 h-36 flex-grow-0 flex-shrink-0">
+                                    <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" />
                                 </div>
-                                <div className="px-6 mt-16 flex flex-col items-center justify-center">
-                                    <h1 className="font-semibold text-2xl text-center mb-1">{item.name}</h1>
-                                    <p className="text-gray-800 font-medium text-lg text-center">{item.Companyname}</p>
-                                    <p className="text-center text-gray-600 text-base pt-3 font-normal">A UX designer is the voice of the customer. Our job is to look beyond the business goals. We don't just experience user interface but also questions it.</p>
-                                    <div className="w-full flex justify-center pt-5 pb-5">
-                                        <a href="/" className="mx-5">
-                                            <div aria-label="Github" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
-                                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="/" className="mx-5">
-                                            <div aria-label="Twitter" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-twitter">
-                                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="/" className="mx-5">
-                                            <div aria-label="Instagram" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-instagram">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                                <div class="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 md:ml-9 md:mb-0 w-52">
+                                    <div class="text-[22.5px]">{item.name}</div>
+                                    <div class="font-semibold text-[rgba(0,0,0,0.7)] tracking-wide text-lg">{item.Companyname}</div>
+                                    <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">{item.packages}  ({item.duration})</div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     ) : <></>) : (handlecount(0)) &&
                     (
-                        <div ref={myref} key={i} role="listitem" className="min-w-[280px] max-w-[400px] relative mt-24 mx-2">
-                            <div className="rounded border-2 overflow-hidden shadow-md bg-white">
-                                <div className="absolute -mt-20 w-full flex justify-center">
-                                    <div className="h-32 w-32 border-2 shadow-md shadow-blue-500 rounded-full">
-                                        <img src={item.imgurl} alt="Display Picture of Charles Keith" role="img" className="rounded-full object-cover h-full w-full shadow-md" />
-                                    </div>
+                        <a key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md" href="#" id="1RK1995NTS06">
+
+                            <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
+                                <div class="w-36 h-36 flex-grow-0 flex-shrink-0">
+                                    <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0 border-2" />
                                 </div>
-                                <div className="px-6 mt-16 flex flex-col items-center justify-center">
-                                    <h1 className="font-semibold text-2xl text-center mb-1">{item.name}</h1>
-                                    <p className="text-gray-800 font-medium text-lg text-center">{item.Companyname}</p>
-                                    <p className="text-center text-gray-600 text-base pt-3 font-normal">A UX designer is the voice of the customer. Our job is to look beyond the business goals. We don't just experience user interface but also questions it.</p>
-                                    <div className="w-full flex justify-center pt-5 pb-5">
-                                        <a href="/" className="mx-5">
-                                            <div aria-label="Github" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-github">
-                                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="/" className="mx-5">
-                                            <div aria-label="Twitter" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-twitter">
-                                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                        <a href="/" className="mx-5">
-                                            <div aria-label="Instagram" role="img">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#718096" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-instagram">
-                                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                                                </svg>
-                                            </div>
-                                        </a>
-                                    </div>
+                                <div class="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 md:ml-9 md:mb-0 w-52">
+                                    <div class="text-[22.5px]">{item.name}</div>
+                                    <div class="font-semibold text-[rgba(0,0,0,0.7)] text-lg tracking-wide">{item.Companyname}</div>
+                                    <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">{item.packages} L.P.A  ({item.duration})</div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     )
                 })
             }

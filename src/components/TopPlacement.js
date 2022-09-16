@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Placement from './Placement'
 function TopPlacement() {
@@ -13,10 +13,20 @@ function TopPlacement() {
           }
           scrollCompleted += 100
           if (scrollCompleted >= 1000) {
+            if(container.scrollLeft >=3934) container.scrollLeft = 0;
+            console.log(container.scrollLeft,scrollCompleted);
             window.clearInterval(slideVar)
           }
         }, 50)
       }
+    useEffect(() => {
+      const timeinterval = setInterval(()=>{
+        slideCards("right");
+      },3000)
+    
+      return () => clearInterval(timeinterval);
+    }, [slideCards])
+    
     let navigate = useNavigate();
     return (
         <>

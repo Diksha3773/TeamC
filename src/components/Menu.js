@@ -1,97 +1,152 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-function Menu() {
+// import first from './Img/homepage.jpg'
+// import sec from './Img/003.jpg'
+// import third from './Img/02.jpeg'
+// import four from './Img/002.jpg'
+// import five from './Img/002.png'
+// import six from './Img/03.jpeg'
+function Menu({ fixedmenu }) {
     let navigate = useNavigate();
-    const [openhome, setOpenhome] = useState(true);
-    const [openabout, setOpenabout] = useState(false);
-    const [openacad, setOpenacad] = useState(false);
-    const [openpupil, setOpenpupil] = useState(false);
-    const [openresearch, setOpenresearch] = useState(false);
-    const handleabout = () => {
-        setOpenhome(false);
-        setOpenabout(!openabout);
-        setOpenacad(false);
-        setOpenpupil(false);
-        setOpenresearch(false);
-    }
-    const handlecad = () => {
-        setOpenhome(false);
-        setOpenabout(false);
-        setOpenacad(!openacad);
-        setOpenpupil(false);
-        setOpenresearch(false);
-    }
-    const handlehome = () => {
-        setOpenhome(!openhome);
-        setOpenabout(false);
-        setOpenacad(false);
-        setOpenpupil(false);
-        setOpenresearch(false);
-    }
-    const handlepupil = () => {
-        setOpenhome(false);
-        setOpenabout(false);
-        setOpenacad(false);
-        setOpenpupil(!openpupil);
-        setOpenresearch(false);
-    }
-    const handlelab = () => {
-        setOpenhome(false);
-        setOpenabout(false);
-        setOpenacad(false);
-        setOpenpupil(false);
-        setOpenresearch(!openresearch);
-    }
+    const Menu = [
+        {
+            Title: 'About',
+            Logo: 'fa fa-info',
+            List: [
+                {
+                    l: 'Vision and Mission',
+                    link: '/MissionandVision'
+                }, {
+                    l: 'Infrastructure: At a glance',
+                    link: '/Infrastructure'
+                }, {
+                    l: "HOD's Message",
+                    link: '/messageofHOD'
+                }, {
+                    l: 'Achievements',
+                    link: '/achievements'
+                }, {
+                    l: 'Contact Us',
+                    link: '/contactus'
+                }
+            ],
+        }, {
+            Title: 'Academic',
+            Logo: 'fa fa-university',
+            List: [
+                {
+                    l: 'Programmes',
+                    link: '/Programme'
+                }, {
+                    l: 'Academic Coordinates',
+                    link: '/Acadcord'
+                }, {
+                    l: 'Syllabus',
+                    link: '/Syllabus'
+                }, {
+                    l: 'Time-Tables',
+                    link: '/Timetable'
+                }, {
+                    l: 'Department Activities Calendar',
+                    link: ''
+                }
+            ]
+        }, {
+            Title: 'People',
+            Logo: 'fa fa-person',
+            List: [
+                {
+                    l: 'Faculty',
+                    link: ''
+                }, {
+                    l: 'PhD Scholars',
+                    link: ''
+                }, {
+                    l: 'Students',
+                    link: ''
+                }, {
+                    l: 'Alumni*',
+                    link: ''
+                }, {
+                    l: 'Staff',
+                    link: ''
+                }
+            ]
+        }, {
+            Title: 'Research and Labs',
+            Logo: 'fa fa-flask',
+            List: [
+                {
+                    l: 'Research Areas',
+                    link: ''
+                }, {
+                    l: 'Department Labs',
+                    link: ''
+                }, {
+                    l: 'Publications(Year-Wise)',
+                    link: ''
+                }, {
+                    l: 'Projects',
+                    link: ''
+                }, {
+                    l: 'Consultancy',
+                    link: ''
+                }, {
+                    l: 'Research Labs',
+                    link: ''
+                }
+            ]
+        }, {
+            Title: 'Join Us',
+            Logo: 'fa fa-flask',
+            List: [
+
+            ],
+            link: ''
+        },
+    ]
+    const [menu, setMenu] = useState(false);
     return (
         <>
-            <div className='w-full hidden lg:flex max-h-max m-2 overflow-y-auto scrollbar'>
-                <div className={"border-2 max-w-full w-64 xl:w-[20rem] 2xl:w-[22rem] flex flex-col m-2 mt-10 shadow rounded "}>
-                    <div className='text-xl p-2 w-full border-2 bg-blue-500 text-white rounded-t shadow'>Department of Computer Science and Engineering</div>
-                    <div className='p-3'>
-                        <div className={"p-2 my-1 shadow rounded cursor-pointer font-medium " + (openhome?'bg-blue-200':'')} onClick={() => { navigate("/"); handlehome(); }}><i className='fa fa-home w-6 px-auto'></i>Home</div>
-                        <div className={"p-2 my-1 shadow rounded cursor-pointer " + (openabout ? 'bg-blue-200' : '')}>
-                            <div onClick={handleabout} className = "font-medium"><i className='fa fa-info w-6 px-auto'></i>About Us</div>
-                            <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow-inner bg-white duration-700 " + (openabout ? '' : 'hidden')}>
-                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/MissionandVision") }}>Vision and Mission</button></div>
-                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Infrastructure") }}>Infrastructure: At a glance</button></div>
-                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/messageofHOD") }}>HOD's Message</button></div>
-                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => {navigate("/achievements")  }}>Achievements</button></div>
-                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { navigate("/contactus") }}>Contact us</button></div>
-                            </div>
-                        </div>
-                        <div className={"p-2 my-1 shadow rounded cursor-pointer " + (openacad ? 'bg-blue-200' : '')}>
-                            <div onClick={handlecad} className = "font-medium"><i className='fa fa-university w-6 px-auto'></i>Academics</div>
-                            <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow-inner bg-white duration-500 " + (openacad ? '' : 'hidden')}>
-                                <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Programme"); }}>Programmes</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Acadcord"); }}>Academic Coordinates</button></div>
-                                <div ><button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Syllabus"); }}>Syllabus</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { navigate("/Timetable"); }}>Time-Tables</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { }}>Department Activities Calendar</button></div>
-                            </div>
-                        </div>
-                        <div className={"p-2 my-1 shadow rounded cursor-pointer " + (openpupil ? 'bg-blue-200' : '')}>
-                            <div onClick={handlepupil} className = "font-medium"><i className='fa fa-person w-6 px-auto'></i>People</div>
-                            <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow-inner bg-white duration-500 " + (openpupil ? '' : 'hidden h-0')}>
-                                <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Faculty</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>PhD Scholars</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Students</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Alumni*</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { }}>Staff</button></div>
-                            </div>
-                        </div>
-                        <div className={"p-2 my-1 shadow rounded cursor-pointer " + (openresearch ? 'bg-blue-200' : '')}>
-                            <div onClick={handlelab} className = "font-medium"><i className='fa fa-flask w-6 px-auto'></i>Research and Labs</div>
-                            <div className={"z-10 my-2 border rounded-b-md max-h-max group-hover:block shadow-inner bg-white duration-500 " + (openresearch ? '' : 'hidden')}>
-                                <div > <button className='flex border-[0.05px] justify-start w-full p-2 hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Research Areas</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Department Labs</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Publications(Year-Wise)</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm' onClick={() => { }}>Projects</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { }}>Consultancy</button></div>
-                                <div > <button className='flex border-[0.05px] justify-start p-2 w-full   hover:bg-blue-100 active:translate-y-1 shadow-sm rounded-b-md' onClick={() => { }}>Research Labs</button></div>
-                            </div>
-                        </div>
+            <div className={"flex flex-col bg-white z-50 lg:z-10 items-center ml-2 h-[78vh] max-w-full overflow-hidden text-gray-700 rounded lg:" + (fixedmenu ? 'absolute bottom-1' : 'fixed')}>
+                <span className="flex items-center border-b border-gray-300 w-full px-3 mt-2 active:translate-y-[2px]" onClick={() => { setMenu(!menu) }}>
+                    <svg className="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
+                    </svg>
+                    <span className="ml-2 text-xl font-bold p-2">Menu</span>
+                </span>
+
+                <div className={"lg:flex flex-col items-center w-full h-full overflow-y-auto scrollbar mt-1 py-1 " + (menu ? 'flex' : 'hidden')}>
+                    <div className='w-full'>
+                        <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate('/'); setMenu(!menu); }}>
+                            <i className="pl-1 w-6 h-6 stroke-current fa fa-home"></i>
+                            <span className="ml-1 font-medium">Home</span>
+                        </span>
                     </div>
+                    {
+                        Menu.map((item, i) => {
+
+                            return (
+                                <div key={i} className='w-full group'>
+                                    <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer">
+                                        <i className={"pl-1 w-6 h-6 stroke-current " + item.Logo}></i>
+                                        <span className="ml-1 font-medium">{item.Title}</span>
+                                    </span>
+                                    <ul id="dropdown-example" className={"group-hover:py-2 space-y-2 h-0 overflow-hidden group-hover:h-auto transition-all"}>
+                                        {
+                                            item.List.map((iteml, j) => {
+                                                return (
+                                                    <li key={j} className="target:bg-red-200">
+                                                        <span className="inline-block p-1 text-sm font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 ml-10 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate(iteml.link); setMenu(!menu) }}>{iteml.l}</span>
+                                                    </li>
+                                                )
+                                            })
+                                        }
+                                    </ul>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </>
