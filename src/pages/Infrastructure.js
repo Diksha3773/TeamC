@@ -19,7 +19,7 @@ function Infrastructure() {
                 <img src={item.src} alt=" random imgee" class="w-full border-2 object-cover object-center rounded-lg shadow-md" />
 
                 <div class="relative px-4 -mt-12  ">
-                  <div class="bg-white flex items-center justify-center p-6 rounded-lg shadow-lg">
+                  <div class="max-w-fit mx-auto bg-white flex items-center justify-center p-6 rounded-lg shadow-lg">
                     <h4 class="mt-1 text-xl font-semibold uppercase leading-tight truncate">{item.title}</h4>
                   </div>
                 </div>
