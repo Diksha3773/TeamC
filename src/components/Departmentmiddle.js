@@ -32,7 +32,7 @@ const Departmentmiddle = () => {
             <div className='flex flex-col overflow-hidden md:flex-row'>
 
                 {/* Activity  */}
-                <div className='w-full h-96 rounded-[9px] border border-[rgba(0,105,140,0.1] py-3 px-0 mx-3 my-[72px] pt-[54px]'>
+                <div className='max-w-full h-96 rounded-[9px] border border-[rgba(0,105,140,0.2)] py-3 px-0 mx-3 my-[72px] pt-[54px]'>
                     <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] font-[410] tracking-wide leading-8 text-[#fff] shadow-lg rounded-3xl text-2xl mx-3'>Activities</div>
                     <div className='scrollbar max-w-full block h-80 overflow-y-auto px-3'>
                         {
@@ -45,7 +45,7 @@ const Departmentmiddle = () => {
                         }
                     </div>
                 </div>
-                <div className='w-full h-96 rounded-[9px] border border-[rgba(0,105,140,0.1] py-3 mx-3 my-[72px] pt-[54px]'>
+                <div className='max-w-full h-96 rounded-[9px] border border-[rgba(0,105,140,0.2)] py-3 mx-3 my-[72px] pt-[54px]'>
                     <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] font-[410] tracking-wide leading-8 text-[#fff] shadow-lg rounded-3xl text-2xl mx-3'>News & Highlights</div>
                     <div className='scrollbar max-w-full block h-80 overflow-y-auto px-3'>
                         {

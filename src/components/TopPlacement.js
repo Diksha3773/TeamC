@@ -5,7 +5,7 @@ function TopPlacement() {
   let navigate = useNavigate();
   return (
     <>
-      <div className='w-[98%] rounded-[9px] border border-[rgba(0,105,140,0.1] p-3 mx-3 my-[72px] pt-[54px]'>
+      <div className='w-[98%] rounded-[9px] border border-[rgba(0,105,140,0.2)] p-3 mx-3 my-[72px] pt-[54px]'>
         <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] font-[410] tracking-wide leading-8 text-[#fff] shadow-lg rounded-3xl text-2xl'>Top Placements</div>
         <div className='hidden md:grid md:grid-cols-2 m-2 lg:mx-4 w-full items-center justify-center place-items-center text-gray-700'>
           <Placement search={""} cnt={4} />
