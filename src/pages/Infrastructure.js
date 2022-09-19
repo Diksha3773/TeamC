@@ -6,11 +6,9 @@ const images = [{ src: 'https://upload.wikimedia.org/wikipedia/commons/5/55/IT_B
 
 function Infrastructure() {
   return (
-    <div className="flex flex-col w-full">
-      <div className="w-full flex items-center justify-center p-4 mt-4">
-        <h1 class="mt-10 text-4xl italic font-semibold">Infrastructure</h1>
-      </div>
-      <hr />
+    <div className='w-full rounded-[9px] border border-[rgba(0,105,140,0.2)] p-4 mx-1 xl:mx-3 my-[90px] pt-[54px] place-items-center'>
+      <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] font-[400] text-[#fff] shadow-lg rounded-3xl text-2xl'>Infrastructure</div>
+
       <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 m-4 p-2 place-items-center gap-4 antialiased text-gray-900">
         {
           images.map((item, i) => {

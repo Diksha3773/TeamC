@@ -17,7 +17,7 @@ import Achievements from './pages/Achievements';
 // import Test from './components/Test';
 import { useRef } from 'react';
 import Programme from './pages/Programme';
-import Test1 from './pages/Test1';
+// import Test1 from './pages/Test1';
 const AppRouter = () => {
   const footref = useRef();
   const isInViewport1 = useIsInViewport(footref);
@@ -136,8 +136,8 @@ const AppRouter = () => {
                 {/* Academic */}
                 <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
                 <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
-                {/* <Route path='/Acadcord' element={<AcadCordinator />} /> */}
-                <Route path='/Acadcord' element={<Test1 />} />
+                <Route path='/Acadcord' element={<AcadCordinator />} />
+                {/* <Route path='/Acadcord' element={<Test1 />} /> */}
                 <Route path='/Programme' element={<Programme />} />
                 <Route path='/contactus' element={<ContactUs />} />
                 <Route path='/achievements' element={<Achievements />} />

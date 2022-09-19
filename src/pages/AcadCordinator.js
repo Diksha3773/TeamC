@@ -1,7 +1,4 @@
-import React, { useEffect, useState } from 'react'
-// import top2 from '../components/Img/top2.png'
-// import top3 from '../components/Img/top3.png'
-import AcadCard from './AcadCard'
+import React from 'react'
 function AcadCordinator() {
     const CoordinatorList = [
         {
@@ -48,68 +45,35 @@ function AcadCordinator() {
             Linkdein: ""
         },
     ]
-    const [search, setSearch] = useState('');
-    const [val, setVal] = useState(2)
-    const isEqual = (itemE, searchV) => {
-        itemE = itemE.toUpperCase();
-        searchV = searchV.toUpperCase();
-        console.log(searchV, itemE);
-        if (!isNaN(searchV) && itemE.indexOf('-') === -1) {
-            return parseInt(itemE) >= parseInt(searchV);
-        }
-        let value = itemE.indexOf(searchV);
-        if (value !== -1) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        for(let i=0;i<CoordinatorList.length;i++){
-            if(isEqual(CoordinatorList[i].Name,search)){
-                setVal(i);
-                break;
-            }
-        }
-    }, [search])
     return (
         <>
-            <div className="text-gray-600 w-full h-full mb-32">
-                <div className="flex flex-col px-5 py-24 mx-auto w-full h-full">
-                    <div className="flex flex-col text-center w-full mb-2">
-                        <h1 className="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Academic Coordinator</h1>
-                    </div>
-                    <hr />
-                    <div className='relative flex items-center w-full my-16'>
-                        <input placeholder='Search by Assistant Professor Name' defaultValue={search} onChange={(e) => { setSearch(e.target.value) }} className='w-11/12 md:w-4/5 mx-auto p-2 text-lg rounded border-2 shadow-lg border-gray-300 focus:border-gray-400 focus:outline-none' />
-                    </div>
-                    <div className='mt-48'>
-                        <div className='top-4 w-full flex items-center justify-center relative'>
-                            <div className='absolute hidden sm:flex md:left-[5%] lg:left-[8%] xl:left-[5%] max-w-[14rem] max-h-[17rem] overflow-hidden rounded-3xl'>
-                                <AcadCard Name={CoordinatorList[((val - 2)%6+6)%6].Name} Photo={CoordinatorList[((val - 2)%6+6)%6].Photo} />
-                            </div>
-                            <div className='absolute hidden sm:flex sm:left-[14%] md:left-[19%] lg:left-[14%] xl:left-[19%] overflow-hidden max-w-[18rem] max-h-[20rem] rounded-3xl'>
-                                <AcadCard Name={CoordinatorList[((val - 1)%6+6)%6].Name} Photo={CoordinatorList[((val - 1)%6+6)%6].Photo} />
-                            </div>
-                            <div className='absolute z-20 max-w-[22rem] max-h-[25rem] rounded-3xl overflow-hidden'>
-                                <AcadCard Name={CoordinatorList[((val)%6+6)%6].Name} Photo={CoordinatorList[((val)%6+6)%6].Photo} />
-                            </div>
-                            <div className='absolute overflow-hidden hidden sm:flex sm:right-[14%] md:right-[19%] lg:right-[14%] xl:right-[19%] max-w-[18rem] max-h-[20rem] rounded-3xl z-10'>
-                                <AcadCard Name={CoordinatorList[((val + 1)%6+6)%6].Name} Photo={CoordinatorList[((val + 1)%6+6)%6].Photo} />
-                            </div>
-                            <div className='absolute overflow-hidden hidden sm:flex md:right-[8%] xl:right-[5%] max-w-[14rem] max-h-[17rem] rounded-3xl'>
-                                <AcadCard Name={CoordinatorList[((val + 2)%6+6)%6].Name} Photo={CoordinatorList[((val + 2)%6+6)%6].Photo} />
-                            </div>
-                        </div>
-
-                        <div className='w-full flex items-center justify-between p-2'>
-                            <button className='w-5 h-5 active:translate-y-1' onClick={()=>setVal(() => ((val-1)))}><svg xmlns='http://www.w3.org/2000/svg' fill='#4a70a3' viewBox='0 0 8 8'><path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z' /></svg></button>
-                            <button className='w-5 h-5 active:translate-y-1'onClick={()=>setVal(() => ((val+1)))}><svg xmlns='http://www.w3.org/2000/svg' fill='#4a70a3' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z' /></svg></button>
-                        </div>
-                    </div>
+            <div className='w-full rounded-[9px] border border-[rgba(0,105,140,0.2)] p-4 mx-1 xl:mx-3 my-[90px] pt-[54px] place-items-center'>
+                <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] font-[400] text-[#fff] shadow-lg rounded-3xl text-2xl'>Academic Coordinators</div>
+                <div className='flex items-center justify-center w-full my-3 mx-auto mb-16'>
+                    <input placeholder='Search results' defaultValue={""} onChange={(e) => {  }} className='w-11/12 md:w-3/4 p-2 text-lg rounded border-2 shadow-lg border-gray-300 focus:border-gray-400 focus:outline-none' />
                 </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 w-full place-items-center mx-auto'>
+                    {
+                        CoordinatorList.map((item, i) => {
+                            return (
+                                <a key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md" href="#" id="1RK1995NTS06">
+
+                                    <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[14px] xl:px-[18px]">
+                                        <div class="w-32 h-32 xl:w-36 xl:h-36 flex-grow-0 flex-shrink-0">
+                                            <img src={item.Photo} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" />
+                                        </div>
+                                        <div class="flex flex-col flex-grow leading-8 mr-5 md:mr-2 xl:mr-5 md:justify-start md:mt-0 ml-7 md:ml-2 xl:ml-9 md:mb-0 w-52">
+                                            <div class="text-[22.5px]">{item.Name}</div>
+                                            <div class="font-semibold text-[rgba(0,0,0,0.7)] tracking-wide">Assistant Professor</div>
+                                            <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">rkkashap@nitj.ac.in</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            )
+                        })
+                    }
+                </div>
+
             </div>
         </>
     )
