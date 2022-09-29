@@ -1,6 +1,7 @@
 import React from 'react'
 import People from './People'
-function AcadCordinator() {
+
+function Alumni() {
     const CoordinatorList = [
         {
             Name: "Dr. Geeta Sikha",
@@ -47,10 +48,8 @@ function AcadCordinator() {
         },
     ]
     return (
-        <>
-            <People Title="Academic Cordinator" Data={CoordinatorList}/>
-        </>
+        <People Title="Alumni" Data={CoordinatorList}/>
     )
 }
 
-export default AcadCordinator
+export default Alumni

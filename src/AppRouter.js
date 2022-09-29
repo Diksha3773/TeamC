@@ -17,6 +17,11 @@ import Achievements from './pages/Achievements';
 // import Test from './components/Test';
 import { useRef } from 'react';
 import Programme from './pages/Programme';
+import Faculty from './pages/Faculty';
+import Staff from './pages/Staff';
+import Students from './pages/Students';
+import Alumni from './pages/Alumni';
+import PhdScholar from './pages/PhdScholar';
 // import Test1 from './pages/Test1';
 const AppRouter = () => {
   const footref = useRef();
@@ -137,11 +142,15 @@ const AppRouter = () => {
                 <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
                 <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
                 <Route path='/Acadcord' element={<AcadCordinator />} />
-                {/* <Route path='/Acadcord' element={<Test1 />} /> */}
                 <Route path='/Programme' element={<Programme />} />
                 <Route path='/contactus' element={<ContactUs />} />
                 <Route path='/achievements' element={<Achievements />} />
-                {/* <Route path='/achievements' element={<Test/>} /> */}
+                {/* Faculty */}
+                <Route path='/Faculty' element={<Faculty/>} />
+                <Route path='/Staff' element={<Staff/>} />
+                <Route path='/Students' element={<Students/>} />
+                <Route path='/Alumni' element={<Alumni/>} />
+                <Route path='/PhdScholar' element={<PhdScholar/>} />
               </Routes>
             </div>
           </div>

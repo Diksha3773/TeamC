@@ -57,19 +57,19 @@ function Menu({ fixedmenu }) {
             List: [
                 {
                     l: 'Faculty',
-                    link: ''
+                    link: '/Faculty'
                 }, {
                     l: 'PhD Scholars',
-                    link: ''
+                    link: 'PhdScholar'
                 }, {
                     l: 'Students',
-                    link: ''
+                    link: '/Students'
                 }, {
                     l: 'Alumni*',
-                    link: ''
+                    link: '/Alumni'
                 }, {
                     l: 'Staff',
-                    link: ''
+                    link: '/Staff'
                 }
             ]
         }, {
