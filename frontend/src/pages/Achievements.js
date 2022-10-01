@@ -1,7 +1,4 @@
 import React, {useEffect, useState} from 'react';
-
-
-
 function Achievements() {
   useEffect( () => {
     fetchItems();
