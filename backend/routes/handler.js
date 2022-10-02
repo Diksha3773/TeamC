@@ -9,6 +9,7 @@ const Student = require('../models/Student.js');
 const Faculty=require('../models/Faculty');
 const PhdScholar=require('../models/PhdScholar');
 const Staff=require('../models/Staff');
+const Infrastructure = require('../models/Infrastructure.js');
 router.get('/get_achievements', async (req, res) => {
     const achievements = await achievement.find({}).exec((err, achievementData) => {
         if (err) throw err;
@@ -93,4 +94,15 @@ router.get('/Staff',async(req,res)=>{
     } 
 })
 /* Staff Ends*/
+/*Infrastructure Starts*/
+router.get('/Infrastructure',async(req,res)=>{
+    try {
+        const infrastructures=await Infrastructure.find();
+        res.status(200).json(infrastructures);
+    } catch (error) {
+        console.log(error);
+        res.end();
+    } 
+})
+/* Infrastructure Ends*/
 module.exports = router;
