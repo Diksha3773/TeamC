@@ -6,7 +6,7 @@ const achievement = require('../models/achievements.js');
 const Alumni=require('../models/Alumni.js');
 const acadmicCordinator=require('../models/AcadmicCordinator.js');
 const Student = require('../models/Student.js');
-
+const Faculty=require('../models/Faculty');
 
 router.get('/get_achievements', async (req, res) => {
     const achievements = await achievement.find({}).exec((err, achievementData) => {
@@ -45,15 +45,25 @@ router.get('/Alumni',async(req,res)=>{
 })
 /* Alumini ends */
 
-/*Faculty Starts*/
+
+/* Student Starts */
 router.get('/Students',async(req,res)=>{
     try {
-        const Student=await Student.find();
-        res.status(200).json(Student);
+        const student=await Student.find();
+        res.status(200).json(student);
     } catch (error) {
-     console.log(error);
+        console.log(error);
     } 
 })
-
+/* Student ends */
+/*Faculty Starts*/
+router.get('/Faculty',async(req,res)=>{
+    try {
+        const faculty=await Faculty.find();
+        res.status(200).json(faculty);
+    } catch (error) {
+        console.log(error);
+    } 
+})
 /* Faculty Ends*/
 module.exports = router;

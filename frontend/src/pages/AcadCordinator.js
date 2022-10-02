@@ -1,14 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import People from './People'
 import useFetch from '../hooks/useFetch'
 import { useLocation } from 'react-router-dom'
 import axios from 'axios';
 function AcadCordinator() {
-
-    const location=useLocation();
-    console.log(location);
-    const {data,loading,error,reFetch}=useFetch(location.pathname);
-    let CoordinatorList=data;
+    const [url,setUrl]=useState(useLocation());
+    const {data,loading,error,reFetch}=useFetch(url.pathname);
     
     // const CoordinatorList = [
     //     {
@@ -57,7 +54,7 @@ function AcadCordinator() {
     // ]
     return (
         <>
-            <People Title="Academic Cordinator" Data={CoordinatorList}/>
+            <People Title="Academic Cordinator" Data={data}/>
         </>
     )
 }

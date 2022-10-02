@@ -2,7 +2,7 @@ import React from 'react'
 import { useLocation } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 import People from './People'
-
+import { useState } from 'react';
 function Alumni() {
     // const CoordinatorList = [
     //     {
@@ -49,8 +49,9 @@ function Alumni() {
     //         Linkdein: ""
     //     },
     // ]
-    const {data,error,reFetch,loading}=useFetch(useLocation().pathname);
-    console.log(data);
+    const [url,setUrl]=useState(useLocation());
+    const {data,loading,error,reFetch}=useFetch(url.pathname);
+    
     return (
         <People Title="Alumni" Data={data}/>
     )
