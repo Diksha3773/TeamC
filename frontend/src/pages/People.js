@@ -15,12 +15,12 @@ function People({Title,Data}) {
 
                                     <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[14px] xl:px-[18px]">
                                         <div class="w-32 h-32 xl:w-36 xl:h-36 flex-grow-0 flex-shrink-0">
-                                            <img src={item.Photo} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" alt='...'/>
+                                            <img src={item.photo} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" alt='...'/>
                                         </div>
                                         <div class="flex flex-col flex-grow leading-8 mr-5 md:mr-2 xl:mr-5 md:justify-start md:mt-0 ml-7 md:ml-2 xl:ml-9 md:mb-0 w-52">
-                                            <div class="text-[22.5px]">{item.Name}</div>
-                                            <div class="font-semibold text-[rgba(0,0,0,0.7)] tracking-wide">Assistant Professor</div>
-                                            <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">rkkashap@nitj.ac.in</div>
+                                            <div class="text-[22.5px]">{item.name}</div>
+                                            <div class="font-semibold text-[rgba(0,0,0,0.7)] tracking-wide">{item.position}</div>
+                                            <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">{item.name}</div>
                                         </div>
                                     </div>
                                 </a>
