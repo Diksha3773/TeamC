@@ -5,6 +5,7 @@ const router = express.Router();
 const achievement = require('../models/achievements.js');
 const Alumni=require('../models/Alumni.js');
 const acadmicCordinator=require('../models/AcadmicCordinator.js');
+const Student = require('../models/Student.js');
 
 
 router.get('/get_achievements', async (req, res) => {
@@ -43,4 +44,16 @@ router.get('/Alumni',async(req,res)=>{
     } 
 })
 /* Alumini ends */
+
+/*Faculty Starts*/
+router.get('/Students',async(req,res)=>{
+    try {
+        const Student=await Student.find();
+        res.status(200).json(Student);
+    } catch (error) {
+     console.log(error);
+    } 
+})
+
+/* Faculty Ends*/
 module.exports = router;

@@ -21,8 +21,23 @@ const [error,setError]=React.useState(false);
     }
     fetchData(url)
   },[url])
+   
+  const reFetch=async()=>{
 
-  return {data,loading,error};
+    setLoading(true);
+   try {
+    
+    const res=await axios.get(url);
+
+    setData(res.data);
+   } catch (error) {
+    setError(error);
+   }
+   setLoading(false);
+   
+  }
+
+  return {data,loading,error,reFetch};
 }
 
 export default useFetch;

@@ -7,9 +7,9 @@ function AcadCordinator() {
 
     const location=useLocation();
     console.log(location);
-    const {data,loading,error}=useFetch(location.pathname);
+    const {data,loading,error,reFetch}=useFetch(location.pathname);
     let CoordinatorList=data;
-    console.log(data);
+    
     // const CoordinatorList = [
     //     {
     //         Name: "Dr. Geeta Sikha",
