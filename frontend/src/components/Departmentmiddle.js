@@ -46,7 +46,7 @@ const Departmentmiddle = () => {
                             Activity.map((n, i) =>
                                 <div key={i} className='flex p-2 m-2'>
                                     <li className='list-[circle] list-inside w-4 h-4'></li>
-                                    <a href='#' className={"flex items-end mx-1 border-b pb-2 text-justify sm:text-[16px] leading-tight tracking-wide text-gray-900 font-sans hover:font-serif hover:text-[rgba(0,105,140,1)] text-opacity-100 "}>{n.feed} <img src={gif} alt='...' className='border-0 align-middle' /></a>
+                                    <a href='#' className={"flex items-end mx-1 border-b pb-2 text-justify sm:text-[16px] leading-tight tracking-wide text-gray-900 font-sans hover:font-serif hover:text-[rgba(0,105,140,1)] text-opacity-100 "}>{n.title} <img src={gif} alt='...' className='border-0 align-middle' /></a>
                                 </div>
                             )
                         }
@@ -59,7 +59,7 @@ const Departmentmiddle = () => {
                             News.map((n, i) =>
                                 <div key={i} className='flex p-2 m-2'>
                                     <li className='list-[circle] list-inside w-4 h-4'></li>
-                                    <a href='#' className={"flex items-end mx-1 border-b pb-2 text-justify sm:text-[16px] leading-tight tracking-wide text-gray-900 font-sans hover:font-serif hover:text-[rgba(0,105,140,1)] text-opacity-100 "}>{n.feed} <img src={gif} alt='...' className='border-0 align-middle' /></a>
+                                    <a href='#' className={"flex items-end mx-1 border-b pb-2 text-justify sm:text-[16px] leading-tight tracking-wide text-gray-900 font-sans hover:font-serif hover:text-[rgba(0,105,140,1)] text-opacity-100 "}>{n.title} <img src={gif} alt='...' className='border-0 align-middle' /></a>
                                 </div>
                             )
                         }
