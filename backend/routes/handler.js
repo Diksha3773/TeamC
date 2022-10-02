@@ -7,7 +7,8 @@ const Alumni=require('../models/Alumni.js');
 const acadmicCordinator=require('../models/AcadmicCordinator.js');
 const Student = require('../models/Student.js');
 const Faculty=require('../models/Faculty');
-
+const PhdScholar=require('../models/PhdScholar');
+const Staff=require('../models/Staff');
 router.get('/get_achievements', async (req, res) => {
     const achievements = await achievement.find({}).exec((err, achievementData) => {
         if (err) throw err;
@@ -31,6 +32,7 @@ router.get('/Acadcord',async (req,res)=>{
        res.status(200).json(cordinators);
    } catch (error) {
     console.log(error);
+    res.end();
    } 
 })
 /* acadmic ccordinator ends */
@@ -41,6 +43,7 @@ router.get('/Alumni',async(req,res)=>{
         res.status(200).json(alumnis);
     } catch (error) {
      console.log(error);
+     res.end();
     } 
 })
 /* Alumini ends */
@@ -53,6 +56,7 @@ router.get('/Students',async(req,res)=>{
         res.status(200).json(student);
     } catch (error) {
         console.log(error);
+        res.end();
     } 
 })
 /* Student ends */
@@ -63,7 +67,30 @@ router.get('/Faculty',async(req,res)=>{
         res.status(200).json(faculty);
     } catch (error) {
         console.log(error);
+        res.end();
     } 
 })
 /* Faculty Ends*/
+/*PhdScholar Starts*/
+router.get('/PhdScholar',async(req,res)=>{
+    try {
+        const phdScholars=await PhdScholar.find();
+        res.status(200).json(phdScholars);
+    } catch (error) {
+        console.log(error);
+        res.end();
+    } 
+})
+/* PhdScholar Ends*/
+/*Staff Starts*/
+router.get('/Staff',async(req,res)=>{
+    try {
+        const staff=await Staff.find();
+        res.status(200).json(staff);
+    } catch (error) {
+        console.log(error);
+        res.end();
+    } 
+})
+/* Staff Ends*/
 module.exports = router;
