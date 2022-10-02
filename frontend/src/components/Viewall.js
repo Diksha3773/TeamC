@@ -6,6 +6,7 @@ function Viewall({ latest, heading }) {
     window.scrollTo(0, 0)
   }, [])
   let data = Array.from(latest);
+  
   return (
     <div>
       <section className="text-gray-600 body-font overflow-hidden">

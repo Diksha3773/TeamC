@@ -33,7 +33,7 @@ const Departmentmiddle = () => {
     const [url,setUrl]=useState(useLocation());
     const Activity=useFetch(`${url.pathname}Activity`).data;
     const News=useFetch(`${url.pathname}News`).data;
-    console.log(Activity);
+
     return (
         <>
             <div className='flex flex-col overflow-hidden md:flex-row'>

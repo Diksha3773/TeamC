@@ -1,109 +1,114 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+import useFetch from '../hooks/useFetch'
 import Rahul from './Img/Rahul.png'
 import top2 from './Img/top2.png'
 import top3 from './Img/top3.png'
 import top4 from './Img/top4.png'
 import searchgif from './Vedio/search.gif'
 function Placement({ search,cnt = Infinity }) {
-    const list = [
-        {
-            name: 'Rahul Thapliyal',
-            imgurl: Rahul,
-            Companyname: 'MicroSoft',
-            packages: '43.3',
-            duration: '2016-20'
-        }, {
-            name: 'Taranjeet Kaur',
-            imgurl: top2,
-            Companyname: 'Adobe',
-            packages: '43.17',
-            duration: '2016-20'
-        }, {
-            name: 'Riya Verma',
-            imgurl: top3,
-            Companyname: 'Adobe',
-            packages: '40',
-            duration: '2015-19'
-        }, {
-            name: 'Himakshi Salhotra',
-            imgurl: top4,
-            Companyname: 'Adobe',
-            packages: '40',
-            duration: '2015-19'
-        }, {
-            name: 'Rahul Thapliyal',
-            imgurl: Rahul,
-            Companyname: 'MicroSoft',
-            packages: '43.3',
-            duration: '2016-20'
-        }, {
-            name: 'Taranjeet Kaur',
-            imgurl: top2,
-            Companyname: 'Adobe',
-            packages: '43.17',
-            duration: '2016-20'
-        }, {
-            name: 'Riya Verma',
-            imgurl: top3,
-            Companyname: 'Adobe',
-            packages: '40',
-            duration: '2015-19'
-        }, {
-            name: 'Himakshi Salhotra',
-            imgurl: top4,
-            Companyname: 'Adobe',
-            packages: '40',
-            duration: '2015-19'
-        }, {
-            name: 'Rahul Thapliyal',
-            imgurl: Rahul,
-            Companyname: 'MicroSoft',
-            packages: '43.3',
-            duration: '2016-20'
-        }, {
-            name: 'Taranjeet Kaur',
-            imgurl: top2,
-            Companyname: 'Adobe',
-            packages: '43.17',
-            duration: '2016-20'
-        }, {
-            name: 'Riya Verma',
-            imgurl: top3,
-            Companyname: 'Adobe',
-            packages: '40',
-            duration: '2015-19'
-        }, {
-            name: 'Himakshi Salhotra',
-            imgurl: top4,
-            Companyname: 'Adobe',
-            packages: '40',
-            duration: '2015-19'
-        }, {
-            name: 'Rahul Thapliyal',
-            imgurl: Rahul,
-            Companyname: 'MicroSoft',
-            packages: '43.3',
-            duration: '2016-20'
-        }, {
-            name: 'Taranjeet Kaur',
-            imgurl: top2,
-            Companyname: 'Adobe',
-            packages: '43.17',
-            duration: '2016-20'
-        }, {
-            name: 'Riya Verma',
-            imgurl: top3,
-            Companyname: 'Adobe',
-            packages: '40',
-            duration: '2015-19'
-        }, {
-            name: 'Himakshi Salhotra',
-            imgurl: top4,
-            Companyname: 'Adobe',
-            packages: '40',
-            duration: '2015-19'
-        }
-    ]
+    // const list = [
+    //     {
+    //         name: 'Rahul Thapliyal',
+    //         imgurl: Rahul,
+    //         Companyname: 'MicroSoft',
+    //         packages: '43.3',
+    //         duration: '2016-20'
+    //     }, {
+    //         name: 'Taranjeet Kaur',
+    //         imgurl: top2,
+    //         Companyname: 'Adobe',
+    //         packages: '43.17',
+    //         duration: '2016-20'
+    //     }, {
+    //         name: 'Riya Verma',
+    //         imgurl: top3,
+    //         Companyname: 'Adobe',
+    //         packages: '40',
+    //         duration: '2015-19'
+    //     }, {
+    //         name: 'Himakshi Salhotra',
+    //         imgurl: top4,
+    //         Companyname: 'Adobe',
+    //         packages: '40',
+    //         duration: '2015-19'
+    //     }, {
+    //         name: 'Rahul Thapliyal',
+    //         imgurl: Rahul,
+    //         Companyname: 'MicroSoft',
+    //         packages: '43.3',
+    //         duration: '2016-20'
+    //     }, {
+    //         name: 'Taranjeet Kaur',
+    //         imgurl: top2,
+    //         Companyname: 'Adobe',
+    //         packages: '43.17',
+    //         duration: '2016-20'
+    //     }, {
+    //         name: 'Riya Verma',
+    //         imgurl: top3,
+    //         Companyname: 'Adobe',
+    //         packages: '40',
+    //         duration: '2015-19'
+    //     }, {
+    //         name: 'Himakshi Salhotra',
+    //         imgurl: top4,
+    //         Companyname: 'Adobe',
+    //         packages: '40',
+    //         duration: '2015-19'
+    //     }, {
+    //         name: 'Rahul Thapliyal',
+    //         imgurl: Rahul,
+    //         Companyname: 'MicroSoft',
+    //         packages: '43.3',
+    //         duration: '2016-20'
+    //     }, {
+    //         name: 'Taranjeet Kaur',
+    //         imgurl: top2,
+    //         Companyname: 'Adobe',
+    //         packages: '43.17',
+    //         duration: '2016-20'
+    //     }, {
+    //         name: 'Riya Verma',
+    //         imgurl: top3,
+    //         Companyname: 'Adobe',
+    //         packages: '40',
+    //         duration: '2015-19'
+    //     }, {
+    //         name: 'Himakshi Salhotra',
+    //         imgurl: top4,
+    //         Companyname: 'Adobe',
+    //         packages: '40',
+    //         duration: '2015-19'
+    //     }, {
+    //         name: 'Rahul Thapliyal',
+    //         imgurl: Rahul,
+    //         Companyname: 'MicroSoft',
+    //         packages: '43.3',
+    //         duration: '2016-20'
+    //     }, {
+    //         name: 'Taranjeet Kaur',
+    //         imgurl: top2,
+    //         Companyname: 'Adobe',
+    //         packages: '43.17',
+    //         duration: '2016-20'
+    //     }, {
+    //         name: 'Riya Verma',
+    //         imgurl: top3,
+    //         Companyname: 'Adobe',
+    //         packages: '40',
+    //         duration: '2015-19'
+    //     }, {
+    //         name: 'Himakshi Salhotra',
+    //         imgurl: top4,
+    //         Companyname: 'Adobe',
+    //         packages: '40',
+    //         duration: '2015-19'
+    //     }
+    // ]
+    const [url,setUrl]=useState(useLocation());
+    const {data,error,loading,reFetch}=useFetch(`/placements?limit=${cnt || 100}`);
+    
     var count = 0;
     const myref = useRef();
     const handlecount = (val) => {
@@ -133,7 +138,7 @@ function Placement({ search,cnt = Infinity }) {
     return (
         <>
             {
-                list.map((item, i) => {
+                data.map((item, i) => {
                     return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
                         <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
 
