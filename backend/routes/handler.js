@@ -1,5 +1,3 @@
-
-
 const express = require('express');
 const router = express.Router();
 const achievement = require('../models/achievements.js');
@@ -10,6 +8,9 @@ const Faculty=require('../models/Faculty');
 const PhdScholar=require('../models/PhdScholar');
 const Staff=require('../models/Staff');
 const Infrastructure = require('../models/Infrastructure.js');
+const Activity = require('../models/Activity.js');
+const NewsHighlight = require('../models/NewsHighlight.js');
+const Placement = require('../models/Placement.js');
 router.get('/get_achievements', async (req, res) => {
     const achievements = await achievement.find({}).exec((err, achievementData) => {
         if (err) throw err;
@@ -105,4 +106,37 @@ router.get('/Infrastructure',async(req,res)=>{
     } 
 })
 /* Infrastructure Ends*/
+/*Activity Starts*/
+router.get('/Activity',async(req,res)=>{
+    try {
+        const activies=await Activity.find();
+        res.status(200).json(activies);
+    } catch (error) {
+        console.log(error);
+        res.end();
+    } 
+})
+/* Activity Ends*/
+/*News Highlights Starts*/
+router.get('/News',async(req,res)=>{
+    try {
+        const newsHigh=await NewsHighlight.find();
+        res.status(200).json(newsHigh);
+    } catch (error) {
+        console.log(error);
+        res.end();
+    } 
+})
+/* News Highlights Ends*/
+/*Placements Starts*/
+router.get('/placements',async(req,res)=>{
+    try {
+        const placement=await Placement.find().limit(req.query.limit);
+        res.status(200).json(placement);
+    } catch (error) {
+        console.log(error);
+        res.end();
+    } 
+})
+/* Placements Ends*/
 module.exports = router;
