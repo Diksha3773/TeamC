@@ -7,7 +7,7 @@ function HodMessage() {
   return (
     <div className='flex flex-col mb-4 mt-20 mx-2'>
       <h1 className=' top-2 text-center text-2xl font-bold md:font-extrabold md:text-3xl text-orange-600 font-serif m-2'>Head Of Department</h1>
-      <div className='flex1 bg-green-50 shadow-lg shadow-blue-500/50 p-8 rounded-md'>
+      <div className='flex flex1 bg-green-50 shadow-lg shadow-blue-500/50 p-8 rounded-md'>
         <div className='rounded-lg overflow-clip' style={{ height: "300px", width: "262px" }}>
           <img src='https://www.nitj.ac.in/images/faculty/20071962443.jpg' alt='HOD' className='shadow-md    ' />
         </div>

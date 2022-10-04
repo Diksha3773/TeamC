@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function People({Title,Data}) {
+  let navigate = useNavigate();
   return (
     <div className='w-full rounded-[9px] border border-[rgba(0,105,140,0.2)] p-4 mx-1 xl:mx-3 my-[90px] pt-[54px] place-items-center'>
                 <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] font-[400] text-[#fff] shadow-lg rounded-3xl text-2xl'>{Title}</div>
@@ -11,7 +13,7 @@ function People({Title,Data}) {
                     {
                         Data.map((item, i) => {
                             return (
-                                <a key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md" href="/" id="1RK1995NTS06">
+                                <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md" onClick={()=> navigate('/Profile')}>
 
                                     <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[14px] xl:px-[18px]">
                                         <div class="w-32 h-32 xl:w-36 xl:h-36 flex-grow-0 flex-shrink-0">
@@ -23,7 +25,7 @@ function People({Title,Data}) {
                                             <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">rkkashap@nitj.ac.in</div>
                                         </div>
                                     </div>
-                                </a>
+                                </div>
                             )
                         })
                     }

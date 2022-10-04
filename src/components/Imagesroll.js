@@ -23,10 +23,10 @@ function Test() {
     }, [value])
     return (
         <>
-            <div className="mt-0 md:mt-5 relative">
+            <div className="mt-0 md:mt-8 relative">
                 <div className="relative w-full overflow-hidden">
-                    <div className='relative bg-gradient-to-b from-accent to-transparent bg-cover bg-center w-full items-center transition-all justify-center'>
-                        <img src={image[value]} className='w-screen aspect-video sm:h-[450px] block align-middle' alt="" />
+                    <div className='flex flex-grow relative bg-gradient-to-b from-accent to-transparent bg-cover bg-center w-full items-center transition-all justify-center'>
+                        <img src={image[value]} className='w-screen object-cover object-top sm:h-[450px] shadow-xl flex-grow-0 flex-shrink-0' alt="" />
                         <div className='absolute bg-gradient-to-b from-accent to-transparent bg-cover bg-center flex flex-col w-full h-fit bottom-0 items-center justify-center '>
                             <div className="sm:text-4xl m-2 font-bold text-white">
                                 <h6>Computer Science and Engineering</h6>

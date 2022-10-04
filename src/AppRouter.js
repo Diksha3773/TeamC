@@ -22,6 +22,7 @@ import Staff from './pages/Staff';
 import Students from './pages/Students';
 import Alumni from './pages/Alumni';
 import PhdScholar from './pages/PhdScholar';
+import Profile from './components/Profile';
 // import Test1 from './pages/Test1';
 const AppRouter = () => {
   const footref = useRef();
@@ -121,12 +122,12 @@ const AppRouter = () => {
           </div>
 
           <div className="flex flex-col lg:flex-row w-full lg:mt-[6.5rem] lg:min-h-screen overflow-y-auto overflow-x-hidden">
-            <div className=" w-full lg:w-72 absolute lg:relative bg-white z-10 p-2 pl-0">
+            <div className=" w-full lg:w-[260px] absolute lg:relative bg-white z-10 py-2 px-0">
               <div className='w-full my-auto lg:shadow-lg lg:block lg:pt-8 h-full'>
                 <Menu fixedmenu={fixedmenu}/>
               </div>
             </div>
-            <div className="w-full flex items-center justify-center lg:w-[calc(100%-18rem)] mt-8 md:mt-2 h-full">
+            <div className="w-full flex items-center justify-center lg:w-[calc(100%-260px)] mt-8 md:mt-2 h-full">
               <Routes>
                 <Route path='/' element={<Homepage />} />
                 <Route path='/placements' element={<AllPlacement />} />
@@ -147,6 +148,7 @@ const AppRouter = () => {
                 <Route path='/achievements' element={<Achievements />} />
                 {/* Faculty */}
                 <Route path='/Faculty' element={<Faculty/>} />
+                <Route path='/Profile' element={<Profile/>} />
                 <Route path='/Staff' element={<Staff/>} />
                 <Route path='/Students' element={<Students/>} />
                 <Route path='/Alumni' element={<Alumni/>} />

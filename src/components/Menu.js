@@ -1,11 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-// import first from './Img/homepage.jpg'
-// import sec from './Img/003.jpg'
-// import third from './Img/02.jpeg'
-// import four from './Img/002.jpg'
-// import five from './Img/002.png'
-// import six from './Img/03.jpeg'
+
 function Menu({ fixedmenu }) {
     let navigate = useNavigate();
     const Menu = [
@@ -137,7 +132,7 @@ function Menu({ fixedmenu }) {
                                             item.List.map((iteml, j) => {
                                                 return (
                                                     <li key={j} className="target:bg-red-200">
-                                                        <span className="inline-block p-1 text-sm font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 ml-10 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate(iteml.link); setMenu(!menu) }}>{iteml.l}</span>
+                                                        <span className="block p-1 text-sm font-normal text-gray-900 transition duration-75 group hover:font-medium hover:text-blue-900 hover:scale-[1.02] ml-10 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate(iteml.link); setMenu(!menu) }}>{iteml.l}</span>
                                                     </li>
                                                 )
                                             })
