@@ -113,7 +113,7 @@ function Menu({ fixedmenu }) {
 
                 <div className={"lg:flex flex-col items-center w-full h-full overflow-y-auto scrollbar mt-1 py-1 " + (menu ? 'flex' : 'hidden')}>
                     <div className='w-full'>
-                        <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate('/'); setMenu(!menu); }}>
+                        <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate('/Home'); setMenu(!menu); }}>
                             <i className="pl-1 w-6 h-6 stroke-current fa fa-home"></i>
                             <span className="ml-1 font-medium">Home</span>
                         </span>

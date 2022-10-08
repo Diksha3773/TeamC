@@ -14,6 +14,14 @@ function Placement({ search,cnt = Infinity }) {
         count = val;
         return 1;
     }
+    const Data = [
+        {imgurl: 'https://www.nitj.ac.in/images/faculty/20071962443.jpg'},
+        {imgurl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzHZLXZPU5uSX9ksysBf4MCuFp-WupEsWqwvvvT7QwFg&s'},
+        {imgurl: 'https://thumbs.dreamstime.com/b/bee-flower-27533578.jpg'},
+        {imgurl: 'https://thumbs.dreamstime.com/b/waterfalls-nature-landscape-blue-ridge-14800361.jpg'},
+        {imgurl: 'https://www.nitj.ac.in/images/faculty/20071962443.jpg'},
+        {imgurl: 'https://thumbs.dreamstime.com/b/amazing-beauty-asian-nature-tropical-waterfall-flows-dense-jungle-forest-falls-wild-pond-58996305.jpg'},
+    ]
     const isEqual = (itemE, searchV) => {
         itemE = itemE.toUpperCase();
         searchV = searchV.toUpperCase();
@@ -37,13 +45,13 @@ function Placement({ search,cnt = Infinity }) {
     return (
         <>
             {
-                data.map((item, i) => {
+                Data.map((item, i) => {
                     return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
                         <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
 
                             <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
                                 <div class="w-32 h-32 md:w-36 md:h-36 flex-grow-0 flex-shrink-0">
-                                    <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" />
+                                    <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" alt='...'/>
                                 </div>
                                 <div class="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 ml-7 md:ml-9 md:mb-0 w-52">
                                     <div class="text-[22.5px]">{item.name}</div>
@@ -54,16 +62,16 @@ function Placement({ search,cnt = Infinity }) {
                         </div>
                     ) : <></>) : (handlecount(0)) && (i<cnt)&&
                     (
-                        <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
+                        <div key={i} class="flex flex-col snap-start shrink-0 flex-grow items-center content-center mt-0 text-inherit max-w-md">
 
                             <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
                                 <div class="w-32 h-32 md:w-36 md:h-36 flex-grow-0 flex-shrink-0">
                                     <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0 border-2" />
                                 </div>
                                 <div class="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 ml-7 md:ml-9 md:mb-0 w-52">
-                                    <div class="text-[22.5px]">{item.name}</div>
-                                    <div class="font-semibold text-[rgba(0,0,0,0.7)] text-lg tracking-wide">{item.Companyname}</div>
-                                    <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">{item.packages} L.P.A  ({item.duration})</div>
+                                    <div class="text-[22.5px]">Riya sharma</div>
+                                    <div class="font-semibold text-[rgba(0,0,0,0.7)] text-lg tracking-wide">MicroSoft</div>
+                                    <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">40 L.P.A  (2019-2020)</div>
                                 </div>
                             </div>
                         </div>
