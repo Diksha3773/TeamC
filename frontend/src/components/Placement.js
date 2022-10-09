@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
 
@@ -9,7 +9,6 @@ function Placement({ search,cnt = Infinity }) {
     const {data,error,loading,reFetch}=useFetch(`/placements?limit=${cnt || 100}`);
     
     var count = 0;
-    const myref = useRef();
     const handlecount = (val) => {
         count = val;
         return 1;

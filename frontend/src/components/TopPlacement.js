@@ -26,7 +26,7 @@ function TopPlacement() {
       <div className='w-[98%] rounded-[9px] border border-[rgba(0,105,140,0.2)] p-3 mx-3 my-[72px] pt-[54px]'>
         <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] font-[410] tracking-wide leading-8 text-[#fff] shadow-lg rounded-3xl text-2xl'>Top Placements</div>
         <div id='scrollcontrol' className='relative'>
-          <div className='cards flex snap-x overflow-x-auto scrollhide'>
+          <div className='cards flex snap-x overflow-x-auto scrollhide delay-200 scroll-smooth'>
             <Placement search={""} />
           </div>
           <button className='absolute top-[45%] left-0 w-8 h-8 flex flex-0 items-center justify-center object-cover border-2 font-extrabold rounded-full active:translate-y-[2px] rotate-180' onClick={scrollPrevPage}>
