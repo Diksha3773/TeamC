@@ -2,17 +2,17 @@ import React from 'react'
 
 function BaseTable({ show, search, thead, Data }) {
     return (
-        <div>
-            <div className="overflow-x-auto relative shadow-md sm:rounded-lg my-2">
-                <div className="flex justify-between items-center pb-4">
-                    {show ? <div>
+        <div className=''>
+            <div className="overflow-x-auto relative shadow-md sm:rounded-lg my-2 scrollbar">
+                <div className="flex w-full justify-between items-center pb-4">
+                    {show ? <div className='group min-w-[170px]'>
                         <button id="dropdownRadioButton" data-dropdown-toggle="dropdownRadio" className="m-2 inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5" type="button">
                             <svg className="mr-2 w-4 h-4 text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path></svg>
                             Last 30 days
                             <svg className="ml-2 w-3 h-3" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
-                        <div id="dropdownRadio" className="hidden hover:block z-10 w-48 bg-white rounded divide-y divide-gray-100 shadow" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style={{ position: "absolute", inset: "0px auto auto 0px", margin: "0px", transform: "translate(0px, 10px)" }}>
-                            <ul className="p-3 space-y-1 text-sm text-gray-700" aria-labelledby="dropdownRadioButton">
+                        <div id="dropdownRadio" className="hidden top-10 group-hover:block z-40 w-48 bg-white rounded divide-y divide-gray-100 shadow" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style={{ position: "absolute", inset: "0px auto auto 0px", marginTop: "40px", transform: "translate(0px, 10px)" }}>
+                            <ul className="p-3 space-y-1 text-start text-sm text-gray-700" aria-labelledby="dropdownRadioButton">
                                 <li>
                                     <div className="flex items-center p-2 rounded hover:bg-gray-100 ">
                                         <input type="radio" value="" name="filter-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  " />
@@ -21,7 +21,7 @@ function BaseTable({ show, search, thead, Data }) {
                                 </li>
                                 <li>
                                     <div className="flex items-center p-2 rounded hover:bg-gray-100 ">
-                                        <input checked="" id="filter-radio-example-2" type="radio" value="" name="filter-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  " />
+                                        <input id="filter-radio-example-2" type="radio" value="" name="filter-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500  " />
                                         <label htmlFor="filter-radio-example-2" className="ml-2 w-full text-sm font-medium text-gray-900 rounded">Last 7 days</label>
                                     </div>
                                 </li>
