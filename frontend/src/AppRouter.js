@@ -21,6 +21,7 @@ import Students from './pages/Students';
 import Alumni from './pages/Alumni';
 import PhdScholar from './pages/PhdScholar';
 import Profile from './components/Profile';
+import Navbar from './components/Navbar';
 const AppRouter = () => {
   const footref = useRef();
   const isInViewport1 = useIsInViewport(footref);
@@ -35,7 +36,8 @@ const AppRouter = () => {
       <div className='top-0 p-0 my-0 mx-auto max-w-[1600px] h-full shadow-lg'>
         <Router>
           <div className='md:mb-2'>
-            <NewNavbar />
+            <Navbar/>
+            {/* <NewNavbar /> */}
           </div>
 
           <div className="flex flex-col lg:flex-row w-full lg:mt-[6.5rem] lg:min-h-screen overflow-y-auto overflow-x-hidden">

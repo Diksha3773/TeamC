@@ -110,7 +110,7 @@ function NewNavbar() {
                             </div>
                         </div>
                     </div>
-                    <div className="mySlides">
+                    <div className="mySlides hidden">
                         <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
                             <div
                                 className="institute_name flex max-w-lg basis-1/2 justify-center px-16 text-center text-xl font-bold uppercase">
@@ -121,7 +121,7 @@ function NewNavbar() {
                             </div>
                         </div>
                     </div>
-                    <div className="mySlides">
+                    <div className="mySlides hidden">
                         <div className="align-center flex flex-row justify-between bg-white py-2.5 px-16">
                             <div className="institute_name flex max-w-lg basis-1/2 justify-center px-8 text-center text-xl font-bold uppercase">
                                 <p>ਡਾ ਬੀ ਆਰ ਅੰਬੇਡਕਰ ਨੈਸ਼ਨਲ ਇੰਸਟੀਚਿਊਟ ਟੈਕਨਾਲੋਜੀ ਜਲੰਧਰ</p>

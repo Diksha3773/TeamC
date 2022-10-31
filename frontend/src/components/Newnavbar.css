@@ -1,121 +1,42 @@
-body {
-    font-family: "Roboto", sans-serif;
-    scrollbar-color: #fff #fff;
+html {
+    line-height: 1.5;
+    /* 1 */
+    -webkit-text-size-adjust: 100%;
+    /* 2 */
+    -moz-tab-size: 4;
+    /* 3 */
+    -o-tab-size: 4;
+    tab-size: 4;
+    /* 3 */
+    font-family: Barlow, ui-sans-serif, system-ui;
+    /* 4 */
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(30, 58, 138, 1);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: gray;
-}
-
-::-webkit-resizer {
-    background-color: #ffffff;
+.font-body {
+    font-family: Barlow;
 }
 
 .material-symbols-outlined {
-    font-variation-settings: "FILL" 0, "wght" 300, "GRAD" 0, "opsz" 20;
+    font-variation-settings: "FILL" 0, "wght" 400, "grad" 0, "opzs" 48;
 }
 
-.bg-color {
-    background-color: white;
+#menu .menu-content ul li.selected a {
+    color: hsla(201, 96%, 26%);
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
-.bg-color-1 {
-    background-color: rgb(42, 120, 193);
+.bg-accent {
+    --tw-bg-opacity: 1;
+    background-color: hsl(201 96% 32% / var(--tw-bg-opacity));
 }
 
-.logo-img {
-    height: 156px;
+.border-accent {
+    --tw-border-opacity: 1;
+    border-color: hsl(201 96% 32% / var(--tw-border-opacity));
 }
 
-.logo-container-1 {
-    position: absolute;
-    left: 50%;
-    top: 348px;
-    transform: translateX(-50%);
-    z-index: 9;
-}
-
-.logo-container-logo-1 {
-    position: absolute;
-    left: 50%;
-    top: 309px;
-    transform: translateX(-50%);
-    z-index: 9;
-}
-
-.logo-img-1 {
-    height: 130px;
-}
-
-.header2 {
-    margin-top: 150px;
-}
-
-.reveal {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-    transition: 1s all ease;
-}
-
-.reveal.active {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-.mySlides {
-    display: none;
-}
-
-.main-nav-hover:hover {
-    cursor: pointer;
-    border-bottom: 3px solid white;
-    transition: 0.1s all ease;
-}
-
-.container1 {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    height: 20vh;
-}
-
-.box {
-    flex: 1;
-    overflow: hidden;
-    transition: 0.5s;
-    line-height: 0;
-}
-
-.box>img {
-    width: 150%;
-    height: 100%;
-    border: 0.22rem solid white;
-    border-radius: 3px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    transition: ease 0.75s;
-}
-
-.box:hover {
-    flex: 1 1 30%;
-    height: 150%;
-    box-shadow: 8px 8px 8px rgba(73, 73, 73, 0.65);
-    z-index: 1;
-    cursor: pointer;
-}
-
-.box:hover>img {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
+#menu .menu-content .extra-links a.extra-selected {
+    font-weight: 600;
+    color: var(--dark);
 }

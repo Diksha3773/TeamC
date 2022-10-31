@@ -63,28 +63,28 @@ function Programme() {
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 -m-4 place-items-center text-center">
                         <div className="p-4 min-w-[250px] max-w-[300px] w-full">
-                            <div className={"border-2 border-gray-200 px-4 py-6 rounded-lg active:translate-y-[2px] cursor-pointer " + (program === 'BTech' ? 'shadow-lg bg-blue-100 shadow-blue-400' : '')} onClick={() => handlescroll('BTech')}>
+                            <div className={"border-2 border-gray-200 px-4 py-6 rounded-lg active:translate-y-[2px] hover:shadow-lg cursor-pointer " + (program === 'BTech' ? 'shadow-lg bg-blue-100 shadow-blue-400' : '')} onClick={() => handlescroll('BTech')}>
                                 <i className="fa fa-graduation-cap text-blue-400 text-5xl m-3"></i>
                                 <h2 className="title-font font-medium text-2xl text-gray-900">BTech</h2>
                                 <p className="text-sm p-1 leading-relaxed">(Bachelor of Technology)</p>
                             </div>
                         </div>
                         <div className="p-4 min-w-[250px] max-w-[300px] w-full">
-                            <div className={"border-2 border-gray-200 px-4 py-6 rounded-lg active:translate-y-[2px] cursor-pointer " + (program === 'MTech' ? 'shadow-lg bg-blue-100 shadow-blue-400' : '')} onClick={() => handlescroll('MTech')}>
+                            <div className={"border-2 border-gray-200 px-4 py-6 rounded-lg active:translate-y-[2px] hover:shadow-lg cursor-pointer " + (program === 'MTech' ? 'shadow-lg bg-blue-100 shadow-blue-400' : '')} onClick={() => handlescroll('MTech')}>
                                 <i className="fa fa-graduation-cap text-blue-400 text-5xl m-3"></i>
                                 <h2 className="title-font font-medium text-2xl text-gray-900">MTech</h2>
                                 <p className="text-sm p-1 leading-relaxed">(Master of Technology)</p>
                             </div>
                         </div>
                         <div className="p-4 min-w-[250px] max-w-[300px] w-full">
-                            <div className={"border-2 border-gray-200 px-4 py-6 rounded-lg active:translate-y-[2px] cursor-pointer " + (program === 'PhD' ? 'shadow-lg bg-blue-100 shadow-blue-400' : '')} onClick={() => handlescroll('PhD')}>
+                            <div className={"border-2 border-gray-200 px-4 py-6 rounded-lg active:translate-y-[2px] hover:shadow-lg cursor-pointer " + (program === 'PhD' ? 'shadow-lg bg-blue-100 shadow-blue-400' : '')} onClick={() => handlescroll('PhD')}>
                                 <i className="fa fa-graduation-cap text-blue-400 text-5xl m-3"></i>
                                 <h2 className="title-font font-medium text-2xl text-gray-900">PhD</h2>
                                 <p className="text-sm p-1 leading-relaxed">(Doctor of Philosophy)</p>
                             </div>
                         </div>
                         <div className="p-4 min-w-[250px] max-w-[300px] w-full">
-                            <div className={"border-2 border-gray-200 px-4 py-6 rounded-lg active:translate-y-[2px] cursor-pointer " + (program === 'PDip' ? 'shadow-lg bg-blue-100 shadow-blue-400' : '')} onClick={() => handlescroll('PDip')}>
+                            <div className={"border-2 border-gray-200 px-4 py-6 rounded-lg active:translate-y-[2px] hover:shadow-lg cursor-pointer " + (program === 'PDip' ? 'shadow-lg bg-blue-100 shadow-blue-400' : '')} onClick={() => handlescroll('PDip')}>
                                 <i className="fa fa-graduation-cap text-blue-400 text-5xl m-3"></i>
                                 <h2 className="title-font font-medium text-2xl text-gray-900">PG Diploma</h2>
                                 <p className="text-sm p-1 leading-relaxed">(Postgraduate Diploma)</p>
