@@ -1,6 +1,12 @@
 const mongoose = require('mongoose');
 const acadmicCordinator= new mongoose.Schema({
-    name:{
+    department:{
+        type:String,
+        required:true
+    },
+    data:
+    {
+    type:[{name:{
         type:String,
         required:true
     },
@@ -22,6 +28,7 @@ const acadmicCordinator= new mongoose.Schema({
     },
     linkedin:{
         type:String
+    }}]
     }
 })
 

@@ -1,7 +1,12 @@
 const mongoose=require('mongoose');
 
 const Activity=new mongoose.Schema({
-    title:{
+    department:{
+        type:String,
+        required:true
+    },
+    data:{
+    type: [{title:{
         type:String,
         required:true
     },
@@ -21,7 +26,7 @@ const Activity=new mongoose.Schema({
     is_active:{
         type:Boolean,
         default:false
-    }
+    }}]}
 });
 
 module.exports=mongoose.model('Activity',Activity,'Activity');
