@@ -1,120 +1,26 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import useFetch from '../hooks/useFetch'
-import Rahul from './Img/Rahul.png'
-import top2 from './Img/top2.png'
-import top3 from './Img/top3.png'
-import top4 from './Img/top4.png'
+
 import searchgif from './Vedio/search.gif'
 function Placement({ search,cnt = Infinity }) {
-    // const list = [
-    //     {
-    //         name: 'Rahul Thapliyal',
-    //         imgurl: Rahul,
-    //         Companyname: 'MicroSoft',
-    //         packages: '43.3',
-    //         duration: '2016-20'
-    //     }, {
-    //         name: 'Taranjeet Kaur',
-    //         imgurl: top2,
-    //         Companyname: 'Adobe',
-    //         packages: '43.17',
-    //         duration: '2016-20'
-    //     }, {
-    //         name: 'Riya Verma',
-    //         imgurl: top3,
-    //         Companyname: 'Adobe',
-    //         packages: '40',
-    //         duration: '2015-19'
-    //     }, {
-    //         name: 'Himakshi Salhotra',
-    //         imgurl: top4,
-    //         Companyname: 'Adobe',
-    //         packages: '40',
-    //         duration: '2015-19'
-    //     }, {
-    //         name: 'Rahul Thapliyal',
-    //         imgurl: Rahul,
-    //         Companyname: 'MicroSoft',
-    //         packages: '43.3',
-    //         duration: '2016-20'
-    //     }, {
-    //         name: 'Taranjeet Kaur',
-    //         imgurl: top2,
-    //         Companyname: 'Adobe',
-    //         packages: '43.17',
-    //         duration: '2016-20'
-    //     }, {
-    //         name: 'Riya Verma',
-    //         imgurl: top3,
-    //         Companyname: 'Adobe',
-    //         packages: '40',
-    //         duration: '2015-19'
-    //     }, {
-    //         name: 'Himakshi Salhotra',
-    //         imgurl: top4,
-    //         Companyname: 'Adobe',
-    //         packages: '40',
-    //         duration: '2015-19'
-    //     }, {
-    //         name: 'Rahul Thapliyal',
-    //         imgurl: Rahul,
-    //         Companyname: 'MicroSoft',
-    //         packages: '43.3',
-    //         duration: '2016-20'
-    //     }, {
-    //         name: 'Taranjeet Kaur',
-    //         imgurl: top2,
-    //         Companyname: 'Adobe',
-    //         packages: '43.17',
-    //         duration: '2016-20'
-    //     }, {
-    //         name: 'Riya Verma',
-    //         imgurl: top3,
-    //         Companyname: 'Adobe',
-    //         packages: '40',
-    //         duration: '2015-19'
-    //     }, {
-    //         name: 'Himakshi Salhotra',
-    //         imgurl: top4,
-    //         Companyname: 'Adobe',
-    //         packages: '40',
-    //         duration: '2015-19'
-    //     }, {
-    //         name: 'Rahul Thapliyal',
-    //         imgurl: Rahul,
-    //         Companyname: 'MicroSoft',
-    //         packages: '43.3',
-    //         duration: '2016-20'
-    //     }, {
-    //         name: 'Taranjeet Kaur',
-    //         imgurl: top2,
-    //         Companyname: 'Adobe',
-    //         packages: '43.17',
-    //         duration: '2016-20'
-    //     }, {
-    //         name: 'Riya Verma',
-    //         imgurl: top3,
-    //         Companyname: 'Adobe',
-    //         packages: '40',
-    //         duration: '2015-19'
-    //     }, {
-    //         name: 'Himakshi Salhotra',
-    //         imgurl: top4,
-    //         Companyname: 'Adobe',
-    //         packages: '40',
-    //         duration: '2015-19'
-    //     }
-    // ]
+    
     const [url,setUrl]=useState(useLocation());
     const {data,error,loading,reFetch}=useFetch(`/placements?limit=${cnt || 100}`);
     
     var count = 0;
-    const myref = useRef();
     const handlecount = (val) => {
         count = val;
         return 1;
     }
+    const Data = [
+        {imgurl: 'https://www.nitj.ac.in/images/faculty/20071962443.jpg'},
+        {imgurl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzHZLXZPU5uSX9ksysBf4MCuFp-WupEsWqwvvvT7QwFg&s'},
+        {imgurl: 'https://thumbs.dreamstime.com/b/bee-flower-27533578.jpg'},
+        {imgurl: 'https://thumbs.dreamstime.com/b/waterfalls-nature-landscape-blue-ridge-14800361.jpg'},
+        {imgurl: 'https://www.nitj.ac.in/images/faculty/20071962443.jpg'},
+        {imgurl: 'https://thumbs.dreamstime.com/b/amazing-beauty-asian-nature-tropical-waterfall-flows-dense-jungle-forest-falls-wild-pond-58996305.jpg'},
+    ]
     const isEqual = (itemE, searchV) => {
         itemE = itemE.toUpperCase();
         searchV = searchV.toUpperCase();
@@ -138,13 +44,13 @@ function Placement({ search,cnt = Infinity }) {
     return (
         <>
             {
-                data.map((item, i) => {
+                Data.map((item, i) => {
                     return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
                         <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
 
                             <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
                                 <div class="w-32 h-32 md:w-36 md:h-36 flex-grow-0 flex-shrink-0">
-                                    <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" />
+                                    <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" alt='...'/>
                                 </div>
                                 <div class="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 ml-7 md:ml-9 md:mb-0 w-52">
                                     <div class="text-[22.5px]">{item.name}</div>
@@ -155,16 +61,16 @@ function Placement({ search,cnt = Infinity }) {
                         </div>
                     ) : <></>) : (handlecount(0)) && (i<cnt)&&
                     (
-                        <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
+                        <div key={i} class="flex flex-col snap-start shrink-0 flex-grow items-center content-center mt-0 text-inherit max-w-md">
 
                             <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
                                 <div class="w-32 h-32 md:w-36 md:h-36 flex-grow-0 flex-shrink-0">
                                     <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0 border-2" />
                                 </div>
                                 <div class="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 ml-7 md:ml-9 md:mb-0 w-52">
-                                    <div class="text-[22.5px]">{item.name}</div>
-                                    <div class="font-semibold text-[rgba(0,0,0,0.7)] text-lg tracking-wide">{item.Companyname}</div>
-                                    <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">{item.packages} L.P.A  ({item.duration})</div>
+                                    <div class="text-[22.5px]">Riya sharma</div>
+                                    <div class="font-semibold text-[rgba(0,0,0,0.7)] text-lg tracking-wide">MicroSoft</div>
+                                    <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">40 L.P.A  (2019-2020)</div>
                                 </div>
                             </div>
                         </div>

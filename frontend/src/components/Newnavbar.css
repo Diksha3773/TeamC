@@ -82,7 +82,7 @@ body {
     transition: 0.1s all ease;
 }
 
-.container {
+.container1 {
     display: flex;
     width: 100%;
     box-sizing: border-box;

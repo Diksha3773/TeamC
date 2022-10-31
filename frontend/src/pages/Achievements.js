@@ -27,7 +27,7 @@ const fetchItems = async () => {
                     <img
                       className="w-full h-full"
                       src={item.photo}
-                      alt="tailwind-card-image"
+                      alt="..."
                     />
                   </div>
                   <div className="flex-auto p-6">

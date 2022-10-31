@@ -75,6 +75,17 @@ router.get('/Faculty',async(req,res)=>{
     } 
 })
 /* Faculty Ends*/
+/*Faculty Starts*/
+router.get('/Profile/:id',async(req,res)=>{
+    try {
+        const faculty=await Faculty.find();
+        res.status(200).json(faculty);
+    } catch (error) {
+        console.log(error);
+        res.end();
+    } 
+})
+/* Faculty Ends*/
 /*PhdScholar Starts*/
 router.get('/PhdScholar',async(req,res)=>{
     try {
