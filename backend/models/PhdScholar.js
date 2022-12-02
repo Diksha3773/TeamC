@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
 const PhdScholar= new mongoose.Schema({
-    name:{
+    department:{
+        type:String,
+        required:true
+    }
+    ,data:{
+        type:[{name:{
         type:String,
         required:true
     },
@@ -22,7 +27,7 @@ const PhdScholar= new mongoose.Schema({
     },
     linkedin:{
         type:String
-    }
+    }}]}
 })
  
 module.exports= mongoose.model('PhdScholar',PhdScholar,'PhdScholar');
