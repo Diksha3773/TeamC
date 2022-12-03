@@ -23,7 +23,7 @@ function Test() {
     }, [value])
     return (
         <>
-            <div className="mt-[50px] sm:mt-[33px] relative">
+            <div className="mt-[40px] sm:mt-[33px] relative">
                 <div className="relative w-full overflow-hidden">
                     <div className='relative bg-gradient-to-b from-accent to-transparent bg-cover bg-center w-full items-center transition-all justify-center'>
                         <img src={image[value]} className='w-screen aspect-video sm:h-[450px] block align-middle' alt="" />

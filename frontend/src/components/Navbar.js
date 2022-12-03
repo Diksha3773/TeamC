@@ -30,7 +30,6 @@ function Navbar() {
                     institute_name[i].classList.remove('sm:text-xl')
                     institute_name[i].classList.add('sm:text-lg')
                     institute_name[i].classList.add('tracking-widest')
-                    console.log(institute_name)
                 } else if (institute_name[i].classList.contains('sm:text-lg')) {
                     institute_name[i].classList.remove('sm:text-lg')
                     institute_name[i].classList.add('sm:text-sm')
@@ -74,7 +73,7 @@ function Navbar() {
         slideIndex = 1;
       }
       x[slideIndex - 1].style.display = "block";
-      setTimeout(carousel, 3500);
+      setTimeout(carousel, 5000);
     }
     useEffect(() => {
         window.addEventListener('scroll', handlescroll);
