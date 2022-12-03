@@ -1,13 +1,19 @@
 const mongoose=require('mongoose');
 
 const Infrastructure=new mongoose.Schema({
-    src:{
+    department:{
         type:String,
         required:true
     },
-    title:{
-        type:String,
-        required:true
+    data:{
+        type:[{src:{
+            type:String,
+            required:true
+        },
+        title:{
+            type:String,
+            required:true
+        }}]
     }
 })
 

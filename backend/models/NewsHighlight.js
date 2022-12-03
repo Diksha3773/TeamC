@@ -1,7 +1,13 @@
 const mongoose=require('mongoose');
 
 const NewsHighlight=new mongoose.Schema({
-    title:{
+    department:{
+        type:String,
+        required:true
+    },
+    data:
+    {
+    type:[{title:{
         type:String,
         required:true
     },
@@ -21,7 +27,7 @@ const NewsHighlight=new mongoose.Schema({
     is_active:{
         type:Boolean,
         default:false
-    }
+    }}]}
 });
 
 module.exports=mongoose.model('NewsHighlight',NewsHighlight,'NewsHighlight');

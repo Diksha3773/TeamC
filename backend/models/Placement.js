@@ -1,7 +1,11 @@
 const mongoose=require('mongoose');
 
 const Placement=new mongoose.Schema({
-    name:{
+    department:{
+        type:String,
+        required:true
+    },
+    data:{type:[{name:{
         type:String,
         required:true
     },
@@ -18,7 +22,7 @@ const Placement=new mongoose.Schema({
     duration:{
         type:String,
         required:true
-    }
+    }}]}
 },{timestamps:true});
 
 module.exports=mongoose.model('Placement',Placement,'Placement')
