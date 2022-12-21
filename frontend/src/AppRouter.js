@@ -46,27 +46,27 @@ const AppRouter = () => {
             </div>
             <div className="w-full flex items-center justify-center lg:w-[calc(100%-260px)] mt-8 md:mt-2 h-full">
               <Routes>
-                <Route path='/Home' element={<Homepage />} />
-                <Route path='/placements' element={<AllPlacement />} />
+                <Route path='/:dept/Home' element={<Homepage />} />
+                <Route path='/:dept/placements' element={<AllPlacement />} />
                 <Route path='*' element={<Error />} />
                 {/* About us */}
-                <Route path='/MessageofHOD' element={<HodMessage />} />
-                <Route path='/MissionandVision' element={<VisionandMission />} />
-                <Route path='/Infrastructure' element={<Infrastructure />} />
+                <Route path='/:dept/MessageofHOD' element={<HodMessage />} />
+                <Route path='/:dept/MissionandVision' element={<VisionandMission />} />
+                <Route path='/:dept/Infrastructure' element={<Infrastructure />} />
                 {/* Academic */}
-                <Route path='/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
-                <Route path='/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
-                <Route path='/Acadcord' element={<AcadCordinator />} />
-                <Route path='/Programme' element={<Programme />} />
-                <Route path='/contactus' element={<ContactUs />} />
-                <Route path='/achievements' element={<Achievements />} />
+                <Route path='/:dept/Syllabus' element={<Syllabus heading='Syallbus' syllabus={true} />} />
+                <Route path='/:dept/Timetable' element={<Syllabus heading='Time Table' syllabus={false} />} />
+                <Route path='/:dept/Acadcord' element={<AcadCordinator />} />
+                <Route path='/:dept/Programme' element={<Programme />} />
+                <Route path='/:dept/contactus' element={<ContactUs />} />
+                <Route path='/:dept/Achievements' element={<Achievements />} />
                 {/* Faculty */}
-                <Route path='/Faculty' element={<Faculty/>} />
-                <Route path='/Profile/:id' element={<Profile/>} />
-                <Route path='/Staff' element={<Staff/>} />
-                <Route path='/Students' element={<Students/>} />
-                <Route path='/Alumni' element={<Alumni/>} />
-                <Route path='/PhdScholar' element={<PhdScholar/>} />
+                <Route path='/:dept/Faculty' element={<Faculty/>} />
+                <Route path='/:dept/Profile/:id' element={<Profile/>} />
+                <Route path='/:dept/Staff' element={<Staff/>} />
+                <Route path='/:dept/Students' element={<Students/>} />
+                <Route path='/:dept/Alumni' element={<Alumni/>} />
+                <Route path='/:dept/PhdScholar' element={<PhdScholar/>} />
               </Routes>
             </div>
           </div>

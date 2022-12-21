@@ -11,7 +11,7 @@ const Departmentlower = (props) => {
       <Card title="Coding Club"
         body="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a veritatis pariatur minus consequuntur!" />
       {/* HOD */}
-      <div className="max-w-md py-4 px-7 mx-1 border bg-white shadow-lg rounded-lg mt-16 mb-6" onClick={() => { navigate("/messageofHOD") }}>
+      <div className="max-w-md py-4 px-7 mx-1 border bg-white shadow-lg rounded-lg mt-16 mb-6" onClick={() => navigate("/MessageofHOD") }>
         <div class="w-32 h-32 flex-grow-0 flex-shrink-0 flex justify-center md:justify-end -mt-20 mb-1 ml-auto mr-0">
           <img src={props.hod} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" alt=''/>
         </div>

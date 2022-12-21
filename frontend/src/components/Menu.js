@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 function Menu({ fixedmenu }) {
     let navigate = useNavigate();
+    const dept= useLocation().pathname.split('/')[1];
+    console.log(dept);
     const Menu = [
         {
             Title: 'About',
@@ -10,19 +12,19 @@ function Menu({ fixedmenu }) {
             List: [
                 {
                     l: 'Vision and Mission',
-                    link: '/MissionandVision'
+                    link: `/${dept}/MissionandVision`
                 }, {
                     l: 'Infrastructure: At a glance',
-                    link: '/Infrastructure'
+                    link: `/${dept}/Infrastructure`
                 }, {
                     l: "HOD's Message",
-                    link: '/messageofHOD'
+                    link: `/${dept}/messageofHOD`
                 }, {
                     l: 'Achievements',
-                    link: '/achievements'
+                    link: `/${dept}/Achievements`
                 }, {
                     l: 'Contact Us',
-                    link: '/contactus'
+                    link: `/${dept}/contactus`
                 }
             ],
         }, {
@@ -31,16 +33,16 @@ function Menu({ fixedmenu }) {
             List: [
                 {
                     l: 'Programmes',
-                    link: '/Programme'
+                    link: `/${dept}/Programme`
                 }, {
                     l: 'Academic Coordinates',
-                    link: '/Acadcord'
+                    link: `/${dept}/Acadcord`
                 }, {
                     l: 'Syllabus',
-                    link: '/Syllabus'
+                    link: `/${dept}/Syllabus`
                 }, {
                     l: 'Time-Tables',
-                    link: '/Timetable'
+                    link: `/${dept}/Timetable`
                 }, {
                     l: 'Department Activities Calendar',
                     link: ''
@@ -52,19 +54,19 @@ function Menu({ fixedmenu }) {
             List: [
                 {
                     l: 'Faculty',
-                    link: '/Faculty'
+                    link: `/${dept}/Faculty`
                 }, {
                     l: 'PhD Scholars',
-                    link: 'PhdScholar'
+                    link: `${dept}/PhdScholar`
                 }, {
                     l: 'Students',
-                    link: '/Students'
+                    link: `/${dept}/Students`
                 }, {
                     l: 'Alumni*',
-                    link: '/Alumni'
+                    link: `/${dept}/Alumni`
                 }, {
                     l: 'Staff',
-                    link: '/Staff'
+                    link: `/${dept}/Staff`
                 }
             ]
         }, {
@@ -113,7 +115,7 @@ function Menu({ fixedmenu }) {
 
                 <div className={"lg:flex flex-col items-center w-full h-full overflow-y-auto scrollbar mt-1 py-1 " + (menu ? 'flex' : 'hidden')}>
                     <div className='w-full'>
-                        <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate('/Home'); setMenu(!menu); }}>
+                        <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate(`/${dept}/Home`); setMenu(!menu); }}>
                             <i className="pl-1 w-6 h-6 stroke-current fa fa-home"></i>
                             <span className="ml-1 font-medium">Home</span>
                         </span>

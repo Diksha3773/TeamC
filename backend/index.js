@@ -8,8 +8,8 @@ require('dotenv/config');
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-app.use(checkDepartment);
-app.use('/', routesHandler);
+app.use('/:dept',checkDepartment);
+app.use('/:dept', routesHandler);
 
 
 mongoose.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true})

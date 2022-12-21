@@ -6,7 +6,8 @@ import searchgif from './Vedio/search.gif'
 function Placement({ search,cnt = Infinity }) {
     
     const [url,setUrl]=useState(useLocation());
-    const {data,error,loading,reFetch}=useFetch(`/placements?limit=${cnt || 100}`);
+    const dept=url.pathname.split('/')[1];
+    const {data,error,loading,reFetch}=useFetch(`/${dept}/placements?limit=${cnt || 100}`);
     
     var count = 0;
     const handlecount = (val) => {
@@ -44,7 +45,7 @@ function Placement({ search,cnt = Infinity }) {
     return (
         <>
             {
-                Data.map((item, i) => {
+                data.map((item, i) => {
                     return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
                         <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
 

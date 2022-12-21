@@ -62,8 +62,8 @@ function Navbar({handlescroll,offtop,setOfftop}) {
                         <div className='absolute right-1/4 md:right-auto z-10 mx-2 hidden border rounded-b-md bg-neutral-900   float-right group-hover:block'>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/MissionandVision"); setOpen(!open)}}>Vision and Mission</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/Infrastructure");setOpen(!open)}}>Infrastructure: At a glance</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/messageofHOD");setOpen(!open)}}>HOD's Message</button></div>
-                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{setOpen(!open)}}>Achievements</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/MessageofHOD");setOpen(!open)}}>HOD's Message</button></div>
+                            <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg'onClick={()=>{navigate("/Achievements");setOpen(!open)}}>Achievements</button></div>
                             <div ><button className='flex justify-center w-full p-2 font-medium hover:bg-blue-600 active:translate-y-1 shadow-lg rounded-b-md' onClick={()=>{navigate("/contactus");setOpen(!open)}} >Contact us</button></div>                      
                         </div>                  
                     </div>
