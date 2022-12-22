@@ -6,7 +6,8 @@ import searchgif from './Vedio/search.gif'
 function Placement({ search,cnt = Infinity }) {
     
     const [url,setUrl]=useState(useLocation());
-    const {data,error,loading,reFetch}=useFetch(`/placements?limit=${cnt || 100}`);
+    const dept=url.pathname.split('/')[1];
+    const {data,error,loading,reFetch}=useFetch(`/${dept}/placements?limit=${cnt || 100}`);
     
     var count = 0;
     const handlecount = (val) => {
@@ -44,33 +45,33 @@ function Placement({ search,cnt = Infinity }) {
     return (
         <>
             {
-                Data.map((item, i) => {
+                data.map((item, i) => {
                     return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
-                        <div key={i} className="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
+                        <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
 
-                            <div className="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
-                                <div className="w-32 h-32 md:w-36 md:h-36 flex-grow-0 flex-shrink-0">
-                                    <img src={item.imgurl} className="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" alt='...'/>
+                            <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
+                                <div class="w-32 h-32 md:w-36 md:h-36 flex-grow-0 flex-shrink-0">
+                                    <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0" alt='...'/>
                                 </div>
-                                <div className="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 ml-7 md:ml-9 md:mb-0 w-52">
-                                    <div className="text-[22.5px]">{item.name}</div>
-                                    <div className="font-semibold text-[rgba(0,0,0,0.7)] tracking-wide text-lg">{item.Companyname}</div>
-                                    <div className="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">{item.packages}  ({item.duration})</div>
+                                <div class="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 ml-7 md:ml-9 md:mb-0 w-52">
+                                    <div class="text-[22.5px]">{item.name}</div>
+                                    <div class="font-semibold text-[rgba(0,0,0,0.7)] tracking-wide text-lg">{item.Companyname}</div>
+                                    <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">{item.packages}  ({item.duration})</div>
                                 </div>
                             </div>
                         </div>
                     ) : <></>) : (handlecount(0)) && (i<cnt)&&
                     (
-                        <div key={i} className="flex flex-col snap-start shrink-0 flex-grow items-center content-center mt-0 text-inherit max-w-md">
+                        <div key={i} class="flex flex-col snap-start shrink-0 flex-grow items-center content-center mt-0 text-inherit max-w-md">
 
-                            <div className="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
-                                <div className="w-32 h-32 md:w-36 md:h-36 flex-grow-0 flex-shrink-0">
-                                    <img src={item.imgurl} className="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0 border-2" />
+                            <div class="flex md:flex-row border-t-0 text-[rgba(0,105,140,1)] max-w-min py-8 text-left text-base items-center content-center px-[18px]">
+                                <div class="w-32 h-32 md:w-36 md:h-36 flex-grow-0 flex-shrink-0">
+                                    <img src={item.imgurl} class="w-full h-full object-cover object-left-top rounded-full shadow-xl flex-grow-0 flex-shrink-0 border-2" />
                                 </div>
-                                <div className="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 ml-7 md:ml-9 md:mb-0 w-52">
-                                    <div className="text-[22.5px]">Riya sharma</div>
-                                    <div className="font-semibold text-[rgba(0,0,0,0.7)] text-lg tracking-wide">MicroSoft</div>
-                                    <div className="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">40 L.P.A  (2019-2020)</div>
+                                <div class="flex flex-col flex-grow leading-8 mr-5 md:justify-start md:mt-0 ml-7 md:ml-9 md:mb-0 w-52">
+                                    <div class="text-[22.5px]">Riya sharma</div>
+                                    <div class="font-semibold text-[rgba(0,0,0,0.7)] text-lg tracking-wide">MicroSoft</div>
+                                    <div class="font-normal text-[rgba(0,0,0,0.7)] tracking-wide">40 L.P.A  (2019-2020)</div>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,5 @@
  const checkDepartment=(req,res,next)=>{
-    // req.department=req.get('host').split('.')[0];
-    req.department='IT'
+    req.department= req.params.dept;
     next();
 }
 module.exports=checkDepartment;

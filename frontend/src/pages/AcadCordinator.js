@@ -6,7 +6,7 @@ import axios from 'axios';
 function AcadCordinator() {
     const [url,setUrl]=useState(useLocation());
     const {data,loading,error,reFetch}=useFetch(url.pathname);
-    
+    console.log(data)
     // const CoordinatorList = [
     //     {
     //         Name: "Dr. Geeta Sikha",

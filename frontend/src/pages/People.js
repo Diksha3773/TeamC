@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 function People({ Title, Data }) {
     return (
-        <div className='relative w-full rounded-[9px] border border-[rgba(0,105,140,0.2)] p-4 mx-1 xl:mx-3 my-[90px] pt-[54px] place-items-center'>
-            <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] text-[#fff] shadow-lg rounded-3xl font-medium text-lg sm:text-xl'>{Title}</div>
+        <div className='w-full rounded-[9px] border border-[rgba(0,105,140,0.2)] p-4 mx-1 xl:mx-3 my-[90px] pt-[54px] place-items-center'>
+            <div className='absolute -mt-[78px] p-2 px-4 bg-[rgba(0,105,140,1)] font-[400] text-[#fff] shadow-lg rounded-3xl text-2xl'>{Title}</div>
             <div className='flex items-center justify-center w-full my-3 mx-auto mb-16'>
                 <input placeholder='Search results' defaultValue={""} onChange={(e) => { }} className='w-11/12 md:w-3/4 p-2 text-lg rounded border-2 shadow-lg border-gray-300 focus:border-gray-400 focus:outline-none' />
             </div>
