@@ -9,15 +9,14 @@ require('dotenv/config');
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
-app.use(express.static(`${__dirname}`+`../frontend/public`))
 const _dirname = path.resolve();
 
 app.use('/:dept',checkDepartment);
 app.use('/:dept', routesHandler);
 
-app.use(express.static(path.join(_dirname, '/frontend/build')));
+app.use(express.static(path.join('/opt/render/project/src/', '/frontend/build')));
 app.get('*', (req, res) =>
-  res.sendFile(path.join(_dirname, '/frontend/build/index.html'))
+  res.sendFile(path.join('/opt/render/project/src/', '/frontend/build/index.html'))
 );
 mongoose.connect(process.env.DB_URI, {useNewUrlParser:true, useUnifiedTopology:true})
 .then( () => {
