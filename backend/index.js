@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path=require('path');
 const routesHandler = require('./routes/handler.js');
 const checkDepartment=require('./routes/checkDepart.js');
 const mongoose = require('mongoose');
@@ -8,6 +9,10 @@ require('dotenv/config');
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+app.use(express.static(path.join('/opt/render/project/src', '/frontend/build')));
+app.use('*', (req, res) =>
+  res.sendFile(path.join('/opt/render/project/src', '/frontend/build/index.html'))
+);
 app.use('/:dept',checkDepartment);
 app.use('/:dept', routesHandler);
 

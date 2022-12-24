@@ -10,7 +10,7 @@ function People({ Title, Data }) {
             </div>
             <div className='flex flex-col w-full'>
                 {
-                    Data.map((item, i) => {
+                    Data?Data.map((item, i) => {
                         return (
                             <Link to={{pathname:`/profile/${i}`,state:i}}>
                                 <div key={i} className="flex flex-col flex-grow content-center mt-0 text-inherit">
@@ -27,7 +27,7 @@ function People({ Title, Data }) {
                                 </div>
                             </Link>
                         )
-                    })
+                    }):<h1>Data not Available</h1>
                 }
             </div>
         </div>

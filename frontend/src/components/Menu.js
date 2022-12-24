@@ -45,7 +45,7 @@ function Menu({ fixedmenu }) {
                     link: `/${dept}/Timetable`
                 }, {
                     l: 'Department Activities Calendar',
-                    link: ''
+                    link: `/${dept}/Home`
                 }
             ]
         }, {
@@ -75,22 +75,22 @@ function Menu({ fixedmenu }) {
             List: [
                 {
                     l: 'Research Areas',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Department Labs',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Publications(Year-Wise)',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Projects',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Consultancy',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Research Labs',
-                    link: ''
+                    link: `/${dept}/Home`
                 }
             ]
         }, {
@@ -99,7 +99,7 @@ function Menu({ fixedmenu }) {
             List: [
 
             ],
-            link: ''
+            link: `/${dept}/Home`
         },
     ]
     const [menu, setMenu] = useState(false);

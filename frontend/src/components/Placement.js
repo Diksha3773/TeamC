@@ -14,14 +14,7 @@ function Placement({ search,cnt = Infinity }) {
         count = val;
         return 1;
     }
-    const Data = [
-        {imgurl: 'https://www.nitj.ac.in/images/faculty/20071962443.jpg'},
-        {imgurl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzHZLXZPU5uSX9ksysBf4MCuFp-WupEsWqwvvvT7QwFg&s'},
-        {imgurl: 'https://thumbs.dreamstime.com/b/bee-flower-27533578.jpg'},
-        {imgurl: 'https://thumbs.dreamstime.com/b/waterfalls-nature-landscape-blue-ridge-14800361.jpg'},
-        {imgurl: 'https://www.nitj.ac.in/images/faculty/20071962443.jpg'},
-        {imgurl: 'https://thumbs.dreamstime.com/b/amazing-beauty-asian-nature-tropical-waterfall-flows-dense-jungle-forest-falls-wild-pond-58996305.jpg'},
-    ]
+    
     const isEqual = (itemE, searchV) => {
         itemE = itemE.toUpperCase();
         searchV = searchV.toUpperCase();
@@ -45,7 +38,7 @@ function Placement({ search,cnt = Infinity }) {
     return (
         <>
             {
-                data.map((item, i) => {
+              data? data.map((item, i) => {
                     return search ? ((isEqual(item.packages, search) || isEqual(item.duration, search) || isEqual(item.Companyname, search)) ? (handlecount(1)) && (
                         <div key={i} class="flex flex-col flex-grow items-center content-center mt-0 text-inherit max-w-md">
 
@@ -76,7 +69,7 @@ function Placement({ search,cnt = Infinity }) {
                             </div>
                         </div>
                     )
-                })
+                }):<h1>data not available</h1>
             }
             {
                 count === 0 && search ?

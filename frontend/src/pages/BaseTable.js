@@ -78,7 +78,7 @@ function BaseTable({ show, search, thead, Data }) {
                     </thead>:<></>}
                     <tbody>
                         {
-                            Data.map((item, i) => (
+                            Data?Data.map((item, i) => (
                                 <tr key={i} className="bg-white border-b hover:bg-gray-50 ">
                                     <th scope="row" className="w-fit py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
                                         Apple MacBook Pro 17"
@@ -96,7 +96,7 @@ function BaseTable({ show, search, thead, Data }) {
                                         <a href="/" className="font-medium text-blue-600 hover:underline">Edit</a>
                                     </td>
                                 </tr>
-                            ))
+                            )):<h1>Data not Available</h1>
                         }
                     </tbody>
                 </table>
