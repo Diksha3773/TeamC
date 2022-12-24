@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path=require('path');
 const routesHandler = require('./routes/handler.js');
 const checkDepartment=require('./routes/checkDepart.js');
 const mongoose = require('mongoose');
@@ -9,7 +10,11 @@ const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 app.use(express.static(`${__dirname}`+`../frontend/public`))
-// console.log(`${__dirname}`+`..\frontend\public`)
+const _dirname = path.resolve();
+app.use(express.static(path.join(_dirname, '/frontend/public')));
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/frontend/public/index.html'))
+);
 app.use('/:dept',checkDepartment);
 app.use('/:dept', routesHandler);
 
