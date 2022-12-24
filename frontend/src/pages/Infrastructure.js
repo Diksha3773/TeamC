@@ -13,7 +13,7 @@ function Infrastructure() {
 
       <div class="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 m-4 p-2 place-items-center gap-4 antialiased text-gray-900">
         {
-          data.map((item, i) => {
+         data? data.map((item, i) => {
             return (
               <div key={i} className='m-4 p-2'>
                 <img src={item.src} alt=" random imgee" class="w-full border-2 object-cover object-center rounded-lg shadow-md" />
@@ -26,7 +26,7 @@ function Infrastructure() {
 
               </div>
             )
-          })
+          }):<h1>Data not Available</h1>
         }
       </div>
     </div>

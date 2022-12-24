@@ -14,7 +14,7 @@ function Profile() {
     id = parseInt(str);
     const [url, setUrl] = useState(useLocation());
     const { data, loading, error, reFetch } = useFetch(url.pathname);
-    console.log(data);
+
     const Link = [
         { Title: 'About', show: false, search: false, thead: false, data: [{}, {}, {}, {}, {}] },
         { Title: 'Other profile links', show: false, search: false, thead: false, data: [{}, {}, {}, {}, {}] },
@@ -58,7 +58,7 @@ function Profile() {
                 </div>
             </div>
             {
-                data.map((item, i) => {
+               data? data.map((item, i) => {
                     return (
                         i===id&&<div key={i} className="flex flex-col relative py-16 bg-blue-200 h-full">
                             <div className="container mx-auto px-4 h-full">
@@ -118,7 +118,7 @@ function Profile() {
                             </div>
                         </div>
                     )
-                })
+                }):<h1>Data not available</h1>
             }
         </div>
     )
