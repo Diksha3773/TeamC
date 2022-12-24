@@ -8,6 +8,8 @@ require('dotenv/config');
 const app = express();
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
+app.use(express.static(`${__dirname}`+`../frontend/public`))
+// console.log(`${__dirname}`+`..\frontend\public`)
 app.use('/:dept',checkDepartment);
 app.use('/:dept', routesHandler);
 
