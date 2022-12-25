@@ -2,8 +2,13 @@ import React from 'react'
 
 function BaseTable({ show, search, thead, Data }) {
     return (
+<<<<<<< HEAD
         <div className='shadow-md sm:rounded-md my-2'>
             <div className="overflow-x-auto relative sm:rounded-lg scrollbar">
+=======
+        <div className=''>
+            <div className="overflow-x-auto relative shadow-md sm:rounded-lg my-2 scrollbar">
+>>>>>>> 24d742d45cd277f1e500f25d3705d96fd89f8449
                 <div className="flex w-full justify-between items-center pb-4">
                     {show ? <div className='group min-w-[170px]'>
                         <button id="dropdownRadioButton" data-dropdown-toggle="dropdownRadio" className="m-2 inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-3 py-1.5" type="button">
@@ -57,46 +62,46 @@ function BaseTable({ show, search, thead, Data }) {
                     </div>:<></>}
                 </div>
                 <table className="w-full text-sm text-left text-gray-500">
-                    {thead?<thead className="text-xs text-gray-700 uppercase bg-gray-50 shadow-md">
+                    {thead?<thead className="text-xs text-gray-700 uppercase bg-gray-50">
                         <tr>
-                            <th scope="col" className="py-3 px-6 border">
+                            <th scope="col" className="py-3 px-6">
                                 Product name
                             </th>
-                            <th scope="col" className="py-3 px-6 border">
+                            <th scope="col" className="py-3 px-6">
                                 Color
                             </th>
-                            <th scope="col" className="py-3 px-6 border">
+                            <th scope="col" className="py-3 px-6">
                                 Category
                             </th>
-                            <th scope="col" className="py-3 px-6 border">
+                            <th scope="col" className="py-3 px-6">
                                 Price
                             </th>
-                            <th scope="col" className="py-3 px-6 border">
+                            <th scope="col" className="py-3 px-6">
                                 Action
                             </th>
                         </tr>
                     </thead>:<></>}
                     <tbody>
                         {
-                            Data.map((item, i) => (
+                            Data?Data.map((item, i) => (
                                 <tr key={i} className="bg-white border-b hover:bg-gray-50 ">
-                                    <th scope="row" className="w-fit py-4 px-6 font-medium text-gray-900 whitespace-nowrap border">
+                                    <th scope="row" className="w-fit py-4 px-6 font-medium text-gray-900 whitespace-nowrap">
                                         Apple MacBook Pro 17"
                                     </th>
-                                    <td className="py-4 px-6 border">
-                                    Kumar, D., Bansal, U., Alroobaea, R., Baqasah, A. M., & Hedabou, M. An Artificial Intelligence approach for expurgating Edible & Non-Edible Items
+                                    <td className="py-4 px-6">
+                                        Sliver
                                     </td>
-                                    <td className="py-4 px-6 border">
-                                    Kumar, D., Bansal, U., Alroobaea, R., Baqasah, A. M., & Hedabou, M. An Artificial Intelligence approach for expurgating Edible & Non-Edible Items
+                                    <td className="py-4 px-6">
+                                        Laptop
                                     </td>
-                                    <td className="py-4 px-6 border">
+                                    <td className="py-4 px-6">
                                         $2999
                                     </td>
-                                    <td className="py-4 px-6 border">
+                                    <td className="py-4 px-6">
                                         <a href="/" className="font-medium text-blue-600 hover:underline">Edit</a>
                                     </td>
                                 </tr>
-                            ))
+                            )):<h1>Data not Available</h1>
                         }
                     </tbody>
                 </table>

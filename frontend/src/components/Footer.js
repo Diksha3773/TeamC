@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import logo from './Img/logo.png'
-function Footer() {
-    
+import { useRef } from 'react'
+function Footer({ scroll, handlescroll }) {
+    const footref = useRef(null);
+    const HscrollIntoView = () => {
+        if (scroll && footref.current) {
+            footref.current.scrollIntoView({ behavior: 'smooth' });
+            handlescroll();
+        }
+    }
+    useEffect(() => {
+        HscrollIntoView();
+    }, [HscrollIntoView])
+
     return (
 
         <>
-            <footer className="bg-gray-200 z-50">
+            <footer className="bg-gray-200">
                 <div className="p-10 bg-gray-800 text-gray-200">
                     <div className="max-w-7xl mx-auto ">
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
@@ -36,7 +47,7 @@ function Footer() {
                                 </ul>
                             </div>
                             <div className="mb-5">
-                                <h4 className="text-yellow-500 text-xl pb-4">Contact Us</h4>
+                                <h4 ref={footref} className="text-yellow-500 text-xl pb-4">Contact Us</h4>
                                 <strong className='pr-1'>Phone:</strong>+1 234 567 890 <br/>
                                 <strong className='pr-1'>Email:</strong>abc@nitj.ac.in
                                 <br/><h4 className="pb-2 pt-3 text-xl text-yellow-500">Subscribe Our Newsletter</h4>

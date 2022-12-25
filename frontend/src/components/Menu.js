@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import React, { useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 
-function Menu() {
+function Menu({ fixedmenu }) {
     let navigate = useNavigate();
+    const dept= useLocation().pathname.split('/')[1];
+    console.log(dept);
     const Menu = [
         {
             Title: 'About',
@@ -10,19 +12,19 @@ function Menu() {
             List: [
                 {
                     l: 'Vision and Mission',
-                    link: '/MissionandVision'
+                    link: `/${dept}/MissionandVision`
                 }, {
                     l: 'Infrastructure: At a glance',
-                    link: '/Infrastructure'
+                    link: `/${dept}/Infrastructure`
                 }, {
                     l: "HOD's Message",
-                    link: '/messageofHOD'
+                    link: `/${dept}/messageofHOD`
                 }, {
                     l: 'Achievements',
-                    link: '/achievements'
+                    link: `/${dept}/Achievements`
                 }, {
                     l: 'Contact Us',
-                    link: '/contactus'
+                    link: `/${dept}/contactus`
                 }
             ],
         }, {
@@ -31,19 +33,19 @@ function Menu() {
             List: [
                 {
                     l: 'Programmes',
-                    link: '/Programme'
+                    link: `/${dept}/Programme`
                 }, {
                     l: 'Academic Coordinates',
-                    link: '/Acadcord'
+                    link: `/${dept}/Acadcord`
                 }, {
                     l: 'Syllabus',
-                    link: '/Syllabus'
+                    link: `/${dept}/Syllabus`
                 }, {
                     l: 'Time-Tables',
-                    link: '/Timetable'
+                    link: `/${dept}/Timetable`
                 }, {
                     l: 'Department Activities Calendar',
-                    link: ''
+                    link: `/${dept}/Home`
                 }
             ]
         }, {
@@ -52,19 +54,19 @@ function Menu() {
             List: [
                 {
                     l: 'Faculty',
-                    link: '/Faculty'
+                    link: `/${dept}/Faculty`
                 }, {
                     l: 'PhD Scholars',
-                    link: 'PhdScholar'
+                    link: `${dept}/PhdScholar`
                 }, {
                     l: 'Students',
-                    link: '/Students'
+                    link: `/${dept}/Students`
                 }, {
                     l: 'Alumni*',
-                    link: '/Alumni'
+                    link: `/${dept}/Alumni`
                 }, {
                     l: 'Staff',
-                    link: '/Staff'
+                    link: `/${dept}/Staff`
                 }
             ]
         }, {
@@ -73,22 +75,22 @@ function Menu() {
             List: [
                 {
                     l: 'Research Areas',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Department Labs',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Publications(Year-Wise)',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Projects',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Consultancy',
-                    link: ''
+                    link: `/${dept}/Home`
                 }, {
                     l: 'Research Labs',
-                    link: ''
+                    link: `/${dept}/Home`
                 }
             ]
         }, {
@@ -97,25 +99,13 @@ function Menu() {
             List: [
 
             ],
-            link: ''
+            link: `/${dept}/Home`
         },
     ]
     const [menu, setMenu] = useState(false);
-    const [scroll, setScroll] = useState(false)
-    const handletop=()=>{
-        if(window.scrollY > 100){
-            setScroll(true)
-        }else{
-            setScroll(false)
-        }
-    }
-    useEffect(() => {
-        window.addEventListener('scroll', handletop);
-    }, [])
-    
     return (
         <>
-            <div className={"flex flex-col bg-white z-40 lg:z-10 items-center ml-2 max-h-screen lg:h-[calc(100vh-150px)] max-w-full overflow-hidden text-gray-700 rounded lg:" + (scroll?'fixed top-[90px]':'fixed')}>
+            <div className={"flex flex-col bg-white z-50 lg:z-10 items-center ml-2 max-h-[78vh] lg:h-[78vh] max-w-full overflow-hidden text-gray-700 rounded lg:" + (fixedmenu ? 'absolute bottom-1' : 'fixed')}>
                 <span className="flex items-center border-b border-gray-300 w-full px-3 mt-2 active:translate-y-[2px]" onClick={() => { setMenu(!menu) }}>
                     <svg className="w-8 h-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z" />
@@ -125,7 +115,7 @@ function Menu() {
 
                 <div className={"lg:flex flex-col items-center w-full h-full overflow-y-auto scrollbar mt-1 py-1 " + (menu ? 'flex' : 'hidden')}>
                     <div className='w-full'>
-                        <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate('/Home'); setMenu(!menu); }}>
+                        <span className="flex items-center w-full h-10 px-3 mt-2 rounded hover:bg-gray-200 cursor-pointer active:translate-y-[2px]" onClick={() => { navigate(`/${dept}/Home`); setMenu(!menu); }}>
                             <i className="pl-1 w-6 h-6 stroke-current fa fa-home"></i>
                             <span className="ml-1 font-medium">Home</span>
                         </span>

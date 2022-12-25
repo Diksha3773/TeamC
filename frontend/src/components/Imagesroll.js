@@ -23,15 +23,15 @@ function Test() {
     }, [value])
     return (
         <>
-            <div className="mt-[40px] sm:mt-[33px] relative">
+            <div className="mt-0 md:mt-5 relative">
                 <div className="relative w-full overflow-hidden">
                     <div className='relative bg-gradient-to-b from-accent to-transparent bg-cover bg-center w-full items-center transition-all justify-center'>
                         <img src={image[value]} className='w-screen aspect-video sm:h-[450px] block align-middle' alt="" />
                         <div className='absolute bg-gradient-to-b from-accent to-transparent bg-cover bg-center flex flex-col w-full h-fit bottom-0 items-center justify-center '>
-                            <div className="text-xl sm:text-4xl mb-1 sm:m-2 font-bold text-white">
+                            <div className="sm:text-4xl m-2 font-bold text-white">
                                 <h6>Computer Science and Engineering</h6>
                             </div>
-                            <h2 className="sm:text-3xl sm:m-2 font-bold text-white">
+                            <h2 className="text-2xl sm:text-3xl m-2 font-bold text-white">
                                 NITJ<span className="mx-2 p-1 font-medium uppercase">Welcomes you</span> 
                             </h2>
                         </div>

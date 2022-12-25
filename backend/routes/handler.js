@@ -11,8 +11,13 @@ const Infrastructure = require('../models/Infrastructure.js');
 const Activity = require('../models/Activity.js');
 const NewsHighlight = require('../models/NewsHighlight.js');
 const Placement = require('../models/Placement.js');
+<<<<<<< HEAD
 router.get('/achievements', async (req, res) => {
     const achievements = await achievement.find(req.department).exec((err, achievementData) => {
+=======
+router.get('/get_achievements', async (req, res) => {
+    const achievements = await achievement.findOne({department:req.department}).exec((err, achievementData) => {
+>>>>>>> 24d742d45cd277f1e500f25d3705d96fd89f8449
         if (err) throw err;
         if (achievementData) {
             res.end(JSON.stringify(achievementData.data));
@@ -30,7 +35,7 @@ router.post('/addTweet', (req, res) => {
 
 router.get('/Acadcord',async (req,res)=>{
    try {
-       const cordinators=await acadmicCordinator.find(req.department);
+       const cordinators=await acadmicCordinator.findOne({department:req.department});
        res.status(200).json(cordinators.data);
    } catch (error) {
     console.log(error);
@@ -41,7 +46,7 @@ router.get('/Acadcord',async (req,res)=>{
 /* Alumini starts*/
 router.get('/Alumni',async(req,res)=>{
     try {
-        const alumnis=await Alumni.find(req.department);
+        const alumnis=await Alumni.findOne({department:req.department});
         res.status(200).json(alumnis.data);
     } catch (error) {
      console.log(error);
@@ -54,7 +59,7 @@ router.get('/Alumni',async(req,res)=>{
 /* Student Starts */
 router.get('/Students',async(req,res)=>{
     try {
-        const student=await Student.find(req.department);
+        const student=await Student.findOne({department:req.department});
         res.status(200).json(student.data);
     } catch (error) {
         console.log(error);
@@ -65,9 +70,8 @@ router.get('/Students',async(req,res)=>{
 /*Faculty Starts*/
 router.get('/Faculty',async(req,res)=>{
     try {
-        console.log(req.department);
         const faculty=await Faculty.findOne({department:req.department});
-       console.log(faculty.data) 
+        console.log(faculty.data) 
         res.status(200).json(faculty.data);
     } catch (error) {
         console.log(error);
@@ -89,7 +93,7 @@ router.get('/Profile/:id',async(req,res)=>{
 /*PhdScholar Starts*/
 router.get('/PhdScholar',async(req,res)=>{
     try {
-        const phdScholars=await PhdScholar.find(req.department);
+        const phdScholars=await PhdScholar.findOne({department:req.department});
         res.status(200).json(phdScholars.data);
     } catch (error) {
         console.log(error);
@@ -100,7 +104,7 @@ router.get('/PhdScholar',async(req,res)=>{
 /*Staff Starts*/
 router.get('/Staff',async(req,res)=>{
     try {
-        const staff=await Staff.find(req.department);
+        const staff=await Staff.findOne({department:req.department});
         res.status(200).json(staff.data);
     } catch (error) {
         console.log(error);
@@ -111,7 +115,7 @@ router.get('/Staff',async(req,res)=>{
 /*Infrastructure Starts*/
 router.get('/Infrastructure',async(req,res)=>{
     try {
-        const infrastructures=await Infrastructure.find(req.department);
+        const infrastructures=await Infrastructure.findOne({department:req.department});
         res.status(200).json(infrastructures.data);
     } catch (error) {
         console.log(error);
@@ -122,7 +126,8 @@ router.get('/Infrastructure',async(req,res)=>{
 /*Activity Starts*/
 router.get('/Activity',async(req,res)=>{
     try {
-        const activies=await Activity.find(req.department);
+        const activies=await Activity.findOne({department:req.department});
+        console.log(activies)
         res.status(200).json(activies.data);
     } catch (error) {
         console.log(error);
@@ -133,7 +138,7 @@ router.get('/Activity',async(req,res)=>{
 /*News Highlights Starts*/
 router.get('/News',async(req,res)=>{
     try {
-        const newsHigh=await NewsHighlight.find(req.department);
+        const newsHigh=await NewsHighlight.findOne({department:req.department});
         res.status(200).json(newsHigh.data);
     } catch (error) {
         console.log(error);
@@ -144,7 +149,7 @@ router.get('/News',async(req,res)=>{
 /*Placements Starts*/
 router.get('/placements',async(req,res)=>{
     try {
-        const placement=await Placement.find(req.department).limit(req.query.limit);
+        const placement=await Placement.findOne({department:req.department}).limit(req.query.limit);
         
         res.status(200).json(placement.data);
     } catch (error) {
