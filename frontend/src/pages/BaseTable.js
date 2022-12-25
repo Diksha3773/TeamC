@@ -2,7 +2,7 @@ import React from 'react'
 
 function BaseTable({ show, search, thead, Data }) {
     return (
-        <div className='shadow-md sm:rounded-md border-2 my-2'>
+        <div className='shadow-md sm:rounded-md my-2'>
             <div className="overflow-x-auto relative sm:rounded-lg scrollbar">
                 <div className="flex w-full justify-between items-center pb-4">
                     {show ? <div className='group min-w-[170px]'>

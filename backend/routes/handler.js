@@ -11,7 +11,7 @@ const Infrastructure = require('../models/Infrastructure.js');
 const Activity = require('../models/Activity.js');
 const NewsHighlight = require('../models/NewsHighlight.js');
 const Placement = require('../models/Placement.js');
-router.get('/get_achievements', async (req, res) => {
+router.get('/achievements', async (req, res) => {
     const achievements = await achievement.find(req.department).exec((err, achievementData) => {
         if (err) throw err;
         if (achievementData) {

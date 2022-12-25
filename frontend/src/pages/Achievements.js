@@ -7,7 +7,7 @@ function Achievements() {
 const [Achievement, setItems] = useState([]);
 
 const fetchItems = async () => {
-    const data = await fetch('/get_achievements');
+    const data = await fetch('/achievements');
     console.log(data)
     const Achievement = await data.json();
     setItems(Achievement);

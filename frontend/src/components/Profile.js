@@ -49,21 +49,21 @@ function Profile() {
                 data.map((item, i) => {
                     return (
                         i==id&&<div className="mt-16 py-4 w-[98%] mx-auto">
-                            <div class="relative flex flex-col flex-auto w-full min-w-0 p-4 overflow-hidden break-words border shadow-md rounded-2xl bg-white/80 bg-clip-border mb-4 draggable mx-auto"
+                            <div className="relative flex flex-col flex-auto w-full min-w-0 p-4 overflow-hidden break-words border shadow-md rounded-2xl bg-white/80 bg-clip-border mb-4 draggable mx-auto"
                                 draggable="true">
-                                <div class="flex flex-wrap -mx-3">
-                                    <div class="flex-none w-auto max-w-full px-3">
+                                <div className="flex flex-wrap -mx-3">
+                                    <div className="flex-none w-auto max-w-full px-3">
                                         <div className="w-20 h-20 xl:w-24 xl:h-24 flex-grow-0 flex-shrink-0">
                                             <img src={item.photo} className="w-full h-full object-cover object-left-top rounded-xl shadow-xl flex-grow-0 flex-shrink-0" alt='...' />
                                         </div>
                                     </div>
-                                    <div class="flex-none w-auto max-w-full px-3 my-auto">
-                                        <div class="h-full">
-                                            <h5 class="mb-1 font-medium">{item.name}</h5>
-                                            <p class="mb-0 font-semibold leading-normal text-size-sm">{item.position}</p>
+                                    <div className="flex-none w-auto max-w-full px-3 my-auto">
+                                        <div className="h-full">
+                                            <h5 className="mb-1 font-medium">{item.name}</h5>
+                                            <p className="mb-0 font-semibold leading-normal text-size-sm">{item.position}</p>
                                         </div>
                                     </div>
-                                    <div class="w-full max-w-full px-3 mx-auto mt-4 sm:my-auto sm:mr-0 md:w-1/2 md:flex-none lg:w-4/12">
+                                    <div className="w-full max-w-full px-3 mx-auto mt-4 sm:my-auto sm:mr-0 md:w-1/2 md:flex-none lg:w-4/12">
                                     </div>
                                 </div>
                             </div>
